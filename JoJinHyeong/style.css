@@ -45,14 +45,22 @@ html,body{
     height: 30px;
     font-size: 20px;
 }
-.input_row{
+#id_box{
     display: table;
     border:1px solid black;
     width: 306px;
     border-radius: 6px;
     background-color:white;
-   
 }
+#password_box{
+    display: table;
+    border:1px solid black;
+    width: 306px;
+    border-radius: 6px;
+    background-color:white;
+}
+
+
 .input_row .icon_box{
     display: inline;
     display: table-cell;
@@ -71,15 +79,19 @@ html,body{
     margin-top: 5px;
     border-radius: 6px;
     cursor: pointer;
-    
-
 }
 .password{
+    display: table-cell;
+    outline: none;
+    margin-left: 10px;
+    width: 250px;
+    margin-bottom: 5px;
+    margin-top: 5px;
     border-radius: 6px;
     cursor: pointer;
-    margin-bottom: 30px;
 }
 .confirm{
+    margin-top:10px;
     border-radius: 6px;
     text-align: center;
     height: 36px;

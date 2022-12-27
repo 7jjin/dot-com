@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="ko">
   <head>
     <meta charset="UTF-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
@@ -26,19 +26,31 @@
         </div>
         <div class="middle">
           <form class="main_login">
-            <div class="input_row">
+            <div class="input_row" id="id_box">
               <div class="icon_box">
                 <div class="icon"><i class="fa-regular fa-user"></i></div>
               </div>
               <input
+                required
                 class="id"
                 type="text"
                 style="border: 0 solid black"
                 placeholder="아이디 또는 이메일"
               />
             </div>
+            <div class="input_row" id="password_box">
+              <div class="icon_box">
+                <div class="icon"><i class="fa-solid fa-lock"></i></div>
+              </div>
+              <input
+                required
+                class="password"
+                type="password"
+                style="border: 0 solid black"
+                placeholder="비밀번호"
+              />
+            </div>
 
-            <input class="password" type="text" placeholder="비밀번호" />
             <input class="confirm" type="submit" value="로그인" />
           </form>
         </div>
@@ -58,5 +70,6 @@
         </div>
       </div>
     </div>
+    <script src="/JoJinHyeong/id&pw.js"></script>
   </body>
 </html>
