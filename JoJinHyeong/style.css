@@ -45,8 +45,30 @@ html,body{
     height: 30px;
     font-size: 20px;
 }
+.input_row{
+    display: table;
+    border:1px solid black;
+    width: 306px;
+    border-radius: 6px;
+    background-color:white;
+   
+}
+.input_row .icon_box{
+    display: inline;
+    display: table-cell;
+    padding-left: 8px;
+}
+.icon{
+    display: inline;
+    font-size: 16px;
+}
 .id{
+    display: table-cell;
+    outline: none;
+    margin-left: 10px;
+    width: 250px;
     margin-bottom: 5px;
+    margin-top: 5px;
     border-radius: 6px;
     cursor: pointer;
     

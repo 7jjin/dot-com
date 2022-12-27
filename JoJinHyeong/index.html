@@ -13,6 +13,10 @@
       href="https://fonts.googleapis.com/css2?family=Cabin:wght@400;500;600;700&family=Open+Sans:wght@300;400;500;600;700;800&display=swap"
       rel="stylesheet"
     />
+    <script
+      src="https://kit.fontawesome.com/06b646a751.js"
+      crossorigin="anonymous"
+    ></script>
   </head>
   <body>
     <div id="login_out">
@@ -22,7 +26,18 @@
         </div>
         <div class="middle">
           <form class="main_login">
-            <input class="id" type="text" placeholder="아이디 또는 이메일" />
+            <div class="input_row">
+              <div class="icon_box">
+                <div class="icon"><i class="fa-regular fa-user"></i></div>
+              </div>
+              <input
+                class="id"
+                type="text"
+                style="border: 0 solid black"
+                placeholder="아이디 또는 이메일"
+              />
+            </div>
+
             <input class="password" type="text" placeholder="비밀번호" />
             <input class="confirm" type="submit" value="로그인" />
           </form>
