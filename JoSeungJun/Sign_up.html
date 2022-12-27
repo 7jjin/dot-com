@@ -1,38 +1,47 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Document</title>
-    <link rel="stylesheet" href="./Sign_up.css">
+    <link rel="stylesheet" href="./Sign_up.css" />
     <script src="./Sign_up.js"></script>
-</head>
-<body>
+  </head>
+  <body>
+    
     <button class="SignUpBtn">회원가입</button>
-        <div class="modal hidden">
-        <div class="bg"></div>
-        <div class="modalBox">
-            <h4>회원가입</h4>
-            <div id="Info">
-            <form id="Id" action="">
-                <input type="text", placeholder = "아이디"> 
-            </form>
-            <form id="Pass" action="">
-                <input type="text", placeholder = "비밀번호"> 
-            </form>
-            <form id="ConfirmPass" action="">
-                <input type="text", placeholder = "비밀번호 확인"> 
-            </form>
-            <form id="Name" action="">
-                <input type="text", placeholder = "이름"> 
-            </form>
-            <form id="DateBirth" action="">
-                <input type="text", placeholder = "생년월일"> 
-            </form>
-            <button style="color :white" class="joinBtn">가입하기</button>
-            </div>
+    <div class="modal hidden">
+      <div class="bg"></div>
+      <div class="modalBox">
+        <h4>회원가입</h4>
+        <div id="Info">
+          <form id="Id" action="">
+            <input type="text" , placeholder="아이디" />
+          </form>
+          <form id="Pass" action="">
+            <input type="text" , placeholder="비밀번호" />
+          </form>
+          <form id="ConfirmPass" action="">
+            <input type="text" , placeholder="비밀번호 확인" />
+          </form>   
+          <form id="Name" action="">
+            <div>이름＊</div>
+            <input type="text" , placeholder="이름을(를) 입력하세요." />
+          </form>
+          <form id="DateBirth" action="">생년월일<br>
+            <input type="text" id="Year" , placeholder="년">
+            <input type="text" id="Month" , placeholder="월">
+            <input type="text" id="Day" , placeholder="일">
+          </form>
+          <form id="Phone" action="">핸드폰 번호
+            <input type="text" , placeholder="010-0000-0000" />
+          </form>
+          <button style="color: white" class="joinBtn">가입하기</button>
         </div>
-        </div>
-</body>
+      </div>
+    </div>
+  </body>
+  <script>
+</script>
 </html>
