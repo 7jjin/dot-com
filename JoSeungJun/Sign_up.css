@@ -2,6 +2,9 @@ button {
     padding: 5px 10px;
     cursor: pointer;
   }
+  h4{
+    text-align: center;
+  }
 
   .modal {
     position: fixed;
@@ -27,8 +30,11 @@ button {
     height: 400px;
   }
 
-  .Info{
-    margin: 0 auto;
+  #Info{
+    display: flex;
+    flex-direction: column;
+    flex-wrap: wrap;
+    align-content: center;
   }
 
   .modalBox button {
