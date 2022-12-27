@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="ko">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Log-in</title>
+    <link rel="stylesheet" href="style.css" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Cabin:wght@400;500;600;700&family=Open+Sans:wght@300;400;500;600;700;800&display=swap"
+      rel="stylesheet"
+    />
+    <script
+      src="https://kit.fontawesome.com/06b646a751.js"
+      crossorigin="anonymous"
+    ></script>
+  </head>
+  <body>
+    <div id="login_out">
+      <div class="login_in">
+        <div class="logo">
+          <img src="/img/COM.png" alt="logo" />
+        </div>
+        <div class="middle">
+          <form class="main_login">
+            <div class="input_row" id="id_box">
+              <div class="icon_box">
+                <div class="icon"><i class="fa-regular fa-user"></i></div>
+              </div>
+              <input
+                required
+                class="id"
+                type="text"
+                style="border: 0 solid black"
+                placeholder="아이디 또는 이메일"
+              />
+            </div>
+            <div class="input_row" id="password_box">
+              <div class="icon_box">
+                <div class="icon"><i class="fa-solid fa-lock"></i></div>
+              </div>
+              <input
+                required
+                class="password"
+                type="password"
+                style="border: 0 solid black"
+                placeholder="비밀번호"
+              />
+            </div>
+
+            <input class="confirm" type="submit" value="로그인" />
+          </form>
+        </div>
+        <div class="bottom">
+          <div class="find">
+            <a href="">회원가입</a>
+            <a>|</a>
+            <a href="" a>아이디 찾기</a>
+            <a>|</a>
+            <a href="">비밀번호 찾기</a>
+          </div>
+          <div class="kakao_login">
+            <button type="button">
+              <p>카카오 로그인</p>
+            </button>
+          </div>
+        </div>
+      </div>
+    </div>
+    <script src="/JoJinHyeong/id&pw.js"></script>
+  </body>
+</html>

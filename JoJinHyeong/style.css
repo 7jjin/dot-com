@@ -1,0 +1,128 @@
+html,body{
+    width: 100%;
+    height: 100%;
+    margin:0;
+}
+*{
+    font-family: 'Cabin', sans-serif;
+}
+#login_out{
+    width: 1000px;
+    height: 700px;
+    margin:0 auto;  
+}
+.login_in{
+    display: flex;
+    width: 400px;
+    height: 600px;
+    margin: 0 auto;
+    top: 10%;
+    position: relative;
+    flex-direction: column;
+    align-items: center;
+    border:2px solid black;
+    border-radius: 5%;
+    background-color: antiquewhite;
+}
+.logo{
+    width: 500px;
+    height: 400px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.logo img{
+    width: 200px;
+    height: 200px;
+    border-radius: 20%;
+}
+.middle{
+    width: 300px;
+}
+.main_login > *{
+    display: block;
+    width: 100%;
+    height: 30px;
+    font-size: 20px;
+}
+#id_box{
+    display: table;
+    border:1px solid black;
+    width: 306px;
+    border-radius: 6px;
+    background-color:white;
+}
+#password_box{
+    display: table;
+    border:1px solid black;
+    width: 306px;
+    border-radius: 6px;
+    background-color:white;
+}
+
+
+.input_row .icon_box{
+    display: inline;
+    display: table-cell;
+    padding-left: 8px;
+}
+.icon{
+    display: inline;
+    font-size: 16px;
+}
+.id{
+    display: table-cell;
+    outline: none;
+    margin-left: 10px;
+    width: 250px;
+    margin-bottom: 5px;
+    margin-top: 5px;
+    border-radius: 6px;
+    cursor: pointer;
+}
+.password{
+    display: table-cell;
+    outline: none;
+    margin-left: 10px;
+    width: 250px;
+    margin-bottom: 5px;
+    margin-top: 5px;
+    border-radius: 6px;
+    cursor: pointer;
+}
+.confirm{
+    margin-top:10px;
+    border-radius: 6px;
+    text-align: center;
+    height: 36px;
+    cursor: pointer;
+    width: 308px;
+
+}
+.bottom .find{
+    display: flex;
+    flex-direction: row;
+    flex-wrap: nowrap;
+    width: 308px;
+    align-content: center;
+    justify-content: space-evenly;
+    margin-top:5px;
+}
+.find a{
+    text-decoration: none;
+    color:black;
+}
+.kakao_login{
+    margin-top: 60px;
+    margin-bottom: 15px;
+}
+.kakao_login button{
+    width:308px;
+    height: 36px;
+    border-radius: 6px;
+    cursor: pointer;
+    padding:0px;
+}
+.kakao_login button p{
+    margin:0px;
+}
