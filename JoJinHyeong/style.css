@@ -47,6 +47,7 @@ html,body{
 }
 #id_box{
     display: table;
+    position: relative;
     border:1px solid black;
     width: 306px;
     border-radius: 6px;
@@ -54,6 +55,7 @@ html,body{
 }
 #password_box{
     display: table;
+    position: relative;
     border:1px solid black;
     width: 306px;
     border-radius: 6px;
@@ -62,9 +64,15 @@ html,body{
 
 
 .input_row .icon_box{
-    display: inline;
     display: table-cell;
     padding-left: 8px;
+}
+.input_row .X_box{
+    display: inline;
+    position: absolute;
+    top:4px;
+    right: 5px;
+    visibility: hidden;
 }
 .icon{
     display: inline;
@@ -74,6 +82,7 @@ html,body{
     display: table-cell;
     outline: none;
     margin-left: 10px;
+    padding-right: 22px;
     width: 250px;
     margin-bottom: 5px;
     margin-top: 5px;
@@ -84,6 +93,7 @@ html,body{
     display: table-cell;
     outline: none;
     margin-left: 10px;
+    padding-right: 22px;
     width: 250px;
     margin-bottom: 5px;
     margin-top: 5px;
