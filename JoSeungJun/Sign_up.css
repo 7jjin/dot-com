@@ -57,6 +57,14 @@ h4{
 .Email{
   margin-top: 20px;
 }
+#email_errorbox{
+  font-size: 10px;
+  color: red;
+  display: block;
+  position: absolute;
+  left: 24px;
+  visibility: hidden;
+}
 #Year{
   width: 50px;
 }
