@@ -15,7 +15,7 @@
       <div class="modalBox">
         <h4>회원가입</h4>
         <div id="Info">
-          <form action="" class="join">
+          <form action="" class="IdPw">
             <div class="id">
               <input required type="text" class="IdInput" placeholder="아이디">
             </div>
@@ -24,9 +24,12 @@
             </div>
             <div class="ConfirmPassword">
               <input required type="text" class="ConfirmPassInput" placeholder="비밀번호 확인">
-              <input class="SubmitBtn" type="submit" value="비밀번호 확인"/>
             </div>
+            <input class="IdPwBtn" type="submit" value="ID/PW 충족 확인"/>
+          </form>
+          <form action="" class="join">
             <section class="TruePass" style="display: none;">
+              <div style="color: green;" class="Saticefied">*모든 조건이 만족되셨습니다.</div>
               <div class="Name">이름<br>
                 <input required type="text" class="NameInput" placeholder="이름을(를) 입력하세요.">
               </div>
@@ -35,6 +38,9 @@
               </div>
               <div id="Phone">핸드폰 번호<br>
                 <input required type="text" class="PhoneInput" placeholder="010-0000-0000" />
+              </div>
+              <div class="Email" action="">이메일<br>
+                <input required type="text" class="EmailInput" placeholder="Ex) jsj487@naver.com">
               </div>
             </section>
             <input style="color: white;" class="joinBtn" type="submit" value="회원가입"/>
