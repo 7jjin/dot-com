@@ -30,6 +30,7 @@ document.addEventListener("DOMContentLoaded", function() {
       }
       else {
         alert("비밀번호가 일치하지 않습니다.");
+        document.querySelector(".TruePass").style.display = "none";
         event.preventDefault();
         localStorage.clear();
         return false;
