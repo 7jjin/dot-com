@@ -39,9 +39,14 @@ h4{
   text-align: center;
 }
 
+.IdBtn{
+  text-align: right;
+}
+
 .IdPwBtn{
   margin-top: 5px;
 }
+
 .Saticefied{
   font-size: 10px;
 }
