@@ -28,26 +28,29 @@
             <div class="Password">
               <input
                 required
+                name="UserPass"
                 type="password"
-                class="PassInput"
+                id="PassInput"
                 placeholder="비밀번호"
               />
             </div>
             <div class="ConfirmPassword">
               <input
                 required
+                name="UserConfirmPass"
                 type="password"
-                class="ConfirmPassInput"
+                id="ConfirmPassInput"
                 placeholder="비밀번호 확인"
               />
             </div>
-            <input class="IdPwBtn" type="submit" value="비밀번호 확인" />
           </form>
           <form action="" class="join">
-            <section class="TruePass" style="display: none">
-              <div style="color: green" class="Saticefied">
-                *모든 조건이 만족되셨습니다.
-              </div>
+            <div style="color: red; display: none;" id="Dissaticefied" onchange="PassCheck()">
+              *비밀번호가 일치하지 않습니다.
+            </div>
+            <div style="color: green; display: none" id="Saticefied" onchange="PassCheck()">
+              *비밀번호가 일치합니다.
+            </div>
               <div class="Name">
                 이름<br />
                 <input
@@ -85,7 +88,6 @@
                 />
               </div>
               <span id="email_errorbox">이메일 주소를 다시 확인해주세요.</span>
-            </section>
             <input
               style="color: white"
               class="joinBtn"

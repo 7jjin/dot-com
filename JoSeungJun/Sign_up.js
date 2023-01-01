@@ -1,9 +1,4 @@
 document.addEventListener("DOMContentLoaded", function() {
-    // document.addEventListener('keydown', function(event) { //엔터키가 적용이 안되게 막는 이벤트
-    //     if (event.keyCode === 13) {
-    //       event.preventDefault();
-    //     };
-    //   }, true);
     const open = () => { //회원가입 모달창 열기
         document.querySelector(".modal").classList.remove("hidden");
     }
@@ -15,36 +10,13 @@ document.addEventListener("DOMContentLoaded", function() {
     const Join = document.querySelector(".join");
     const IdPw = document.querySelector(".IdPw");
     const IdInput = document.querySelector(".IdPw .IdInput");
-    const PwInput = document.querySelector(".IdPw .PassInput");
-    const ConfirmPassInput = document.querySelector(".IdPw .ConfirmPassInput");
+    const PwInput = document.querySelector(".IdPw #PassInput");
+    const ConfirmPassInput = document.querySelector(".IdPw #ConfirmPassInput");
     const NameInputs = document.querySelector(".join .NameInput");
     const DateBirthInput = document.querySelector(".join .DateBirthInput");
     const PhoneInput = document.querySelector(".join .PhoneInput");
     const EmailInput = document.querySelector(".join .EmailInput");
     const errorbox = document.querySelector("#email_errorbox");
-
-    function Confirm(e,ele){ //비밀번호와 비밀번호 확인이 일치하는지 검사하는 구문
-      if(e === ele){
-        document.querySelector(".TruePass").style.display = "block";
-        event.preventDefault();  
-        return true;
-      }
-      else {
-        alert("비밀번호가 일치하지 않습니다.");
-        document.querySelector(".TruePass").style.display = "none";
-        event.preventDefault();
-        localStorage.clear();
-        return false;
-      }
-    };
-
-    // function ReduId(e,ele){ //로컬스토리지에 아이디와 중복되는지 검사하는 구문
-    //   if(e === ele){
-    //     alert("아이디가 중복됩니다");
-    //     event.preventDefault();  
-    //     return true;
-    //   }
-    // };
 
     function IdPwSubmit(event){
       const ID = IdInput.value;     //ID의 값
@@ -53,7 +25,6 @@ document.addEventListener("DOMContentLoaded", function() {
       localStorage.setItem("아이디",ID);      // 로컬 저장소에 각각 저장
       localStorage.setItem("비밀번호",Pass);
       localStorage.setItem("비밀번호 확인",ConfirmPass);
-      Confirm(Pass,ConfirmPass);
      }
 
     function JoinSubmit(event){
@@ -81,6 +52,20 @@ document.addEventListener("DOMContentLoaded", function() {
     }
    }
 
+   function PassCheck(){
+    if(document.getElementById('PassInput').value!='' && document.getElementById('ConfirmPassInput').value!='') {
+      if(document.getElementById('PassInput').value==document.getElementById('ConfirmPassInput').value) {
+        document.querySelector("#Saticefied").style.display = "block";
+        document.querySelector("#Dissaticefied").style.display = "none";
+      }
+      else {
+        document.querySelector("#Dissaticefied").style.display = "block";
+        document.querySelector("#Saticefied").style.display = "none";
+      }
+    }
+  }
+
+  ConfirmPassInput.addEventListener('blur',PassCheck) ;  //email의 형식이 틀릴경우 오류 문자 생성
   EmailInput.addEventListener('blur',emailCheck) ;  //email의 형식이 틀릴경우 오류 문자 생성
   IdPw.addEventListener("submit",IdPwSubmit);   // submit했을때 해당 함수 실행   
   Join.addEventListener("submit",JoinSubmit);   // submit했을때 해당 함수 실행   
