@@ -32,25 +32,27 @@ h4{
 }
 
 #Info{
-  /* display: flex;
-  flex-direction: column;
-  flex-wrap: wrap;
-  align-content: center; */
   text-align: center;
 }
 
+.IdInput{
+  text-align: center;
+  width:100px;
+}
+
 .IdBtn{
-  text-align: right;
+  font-size: 10px;
+  width:80px;
 }
 
 .IdPwBtn{
   margin-top: 5px;
 }
 
-#Dissaticefied{
+#BadPass{
   font-size: 5px;
 }
-#Saticefied{
+#GoodPass{
   font-size: 10px;
 }
 .Name{

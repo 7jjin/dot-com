@@ -1,103 +1,70 @@
 <!DOCTYPE html>
 <html lang="en">
-  <head>
-    <meta charset="UTF-8" />
-    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Document</title>
-    <link rel="stylesheet" href="./Sign_up.css" />
-    <script src="./Sign_up.js"></script>
-  </head>
-  <body>
-    <button class="SignUpBtn">회원가입</button>
-    <div class="modal hidden">
-      <div class="bg"></div>
-      <div class="modalBox">
-        <h4>회원가입</h4>
-        <div id="Info">
-          <form action="" class="IdPw">
-            <div class="id">
-              <input
-                required
-                type="text"
-                class="IdInput"
-                placeholder="아이디"
-              />
-              <input class="IdBtn" type="submit" value="아이디 중복 확인" />
+
+<head>
+  <meta charset="UTF-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Document</title>
+  <link rel="stylesheet" href="./Sign_up.css" />
+  <script src="./Sign_up.js"></script>
+</head>
+
+<body>
+  <button class="SignUpBtn">회원가입</button>
+  <div class="modal hidden">
+    <div class="bg"></div>
+    <div class="modalBox">
+      <h4>회원가입</h4>
+      <div id="Info">
+        <form action="" class="IdPw">
+          <div class="id">
+            <input required type="text" class="IdInput" placeholder="아이디" />
+            <input class="IdBtn" type="submit" value="중복 확인" />
+            <div style="color: red; display: none;" id="BadId" onchange="PassCheck()">
+              *아이디가 중복됩니다.
             </div>
-            <div class="Password">
-              <input
-                required
-                name="UserPass"
-                type="password"
-                id="PassInput"
-                placeholder="비밀번호"
-              />
+            <div style="color: green; display: none" id="GoodId" onchange="PassCheck()">
+              *사용가능한 아이디입니다.
             </div>
-            <div class="ConfirmPassword">
-              <input
-                required
-                name="UserConfirmPass"
-                type="password"
-                id="ConfirmPassInput"
-                placeholder="비밀번호 확인"
-              />
-            </div>
-          </form>
-          <form action="" class="join">
-            <div style="color: red; display: none;" id="Dissaticefied" onchange="PassCheck()">
-              *비밀번호가 일치하지 않습니다.
-            </div>
-            <div style="color: green; display: none" id="Saticefied" onchange="PassCheck()">
-              *비밀번호가 일치합니다.
-            </div>
-              <div class="Name">
-                이름<br />
-                <input
-                  required
-                  type="text"
-                  class="NameInput"
-                  placeholder="이름을(를) 입력하세요."
-                />
-              </div>
-              <div class="DateBirth" action="">
-                생년월일<br />
-                <input
-                  required
-                  type="text"
-                  class="DateBirthInput"
-                  placeholder="0000.00.00"
-                />
-              </div>
-              <div id="Phone">
-                핸드폰 번호<br />
-                <input
-                  required
-                  type="text"
-                  class="PhoneInput"
-                  placeholder="010-0000-0000"
-                />
-              </div>
-              <div class="Email" action="">
-                이메일<br />
-                <input
-                  required
-                  type="text"
-                  class="EmailInput"
-                  placeholder="Ex) jsj487@naver.com"
-                />
-              </div>
-              <span id="email_errorbox">이메일 주소를 다시 확인해주세요.</span>
-            <input
-              style="color: white"
-              class="joinBtn"
-              type="submit"
-              value="회원가입"
-            />
-          </form>
-        </div>
+          </div>
+          <div class="Password">
+            <input required name="UserPass" type="password" id="PassInput" placeholder="비밀번호" />
+          </div>
+          <div class="ConfirmPassword">
+            <input required name="UserConfirmPass" type="password" id="ConfirmPassInput" placeholder="비밀번호 확인" />
+          </div>
+        </form>
+        <form action="" class="join">
+          <div style="color: red; display: none;" id="BadPass" onchange="PassCheck()">
+            *비밀번호가 일치하지 않습니다.
+          </div>
+          <div style="color: green; display: none" id="GoodPass" onchange="PassCheck()">
+            *비밀번호가 일치합니다.
+          </div>
+          <div class="Name">
+            이름<br />
+            <input required type="text" class="NameInput" placeholder="이름을(를) 입력하세요." />
+          </div>
+          <div class="DateBirth" action="">
+            생년월일<br />
+            <input required type="text" class="DateBirthInput" placeholder="0000.00.00" />
+          </div>
+          <div id="Phone">
+            핸드폰 번호<br />
+            <input required type="text" class="PhoneInput" placeholder="010-0000-0000" />
+          </div>
+          <div class="Email" action="">
+            이메일<br />
+            <input required type="text" class="EmailInput" placeholder="Ex) jsj487@naver.com" />
+          </div>
+          <span id="email_errorbox">이메일 주소를 다시 확인해주세요.</span>
+          <input style="color: white" class="joinBtn" type="submit" value="회원가입" />
+        </form>
       </div>
     </div>
-  </body>
-  <script></script>
+  </div>
+</body>
+<script></script>
+
 </html>
