@@ -1,0 +1,103 @@
+button {
+  padding: 5px 10px;
+  cursor: pointer;
+}
+h4{
+  margin-left: 10px;
+  text-align: center;
+}
+
+.modal {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.modal .bg {
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.6);
+}
+
+.modalBox {
+  position: absolute;
+  background-color: #fff;
+  width: 220px;
+  height: 500px;
+}
+
+#Info{
+  text-align: center;
+}
+
+.IdInput{
+  text-align: center;
+  width:100px;
+}
+
+.IdBtn{
+  font-size: 10px;
+  width:80px;
+}
+
+.IdPwBtn{
+  margin-top: 5px;
+}
+
+#BadPass{
+  font-size: 5px;
+}
+#GoodPass{
+  font-size: 10px;
+}
+.Name{
+  margin-top: 10px;
+}
+.DateBirth{
+  margin-top: 20px;
+}
+#Phone{
+  margin-top: 20px;
+}
+.Email{
+  margin-top: 20px;
+}
+#email_errorbox{
+  font-size: 10px;
+  color: red;
+  display: block;
+  position: absolute;
+  left: 24px;
+  visibility: hidden;
+}
+#Year{
+  width: 50px;
+}
+#Month{
+  width: 50px;
+}
+#Day{
+  width: 50px;
+}
+
+.modalBox .joinBtn {
+  position:absolute;  
+  width:100%;
+  height:30px;
+  bottom:0;
+  background-color: black;
+  display:block;
+}
+
+.hidden {
+  display: none;
+}
+
+.overlappedID {background-color: GhostWhite; width: 15%; height: 40px;}
+.olmessagef {color: red; font-style: Italic;}
+.olmessaget {color: blue; font-style: Italic;}
