@@ -1,54 +1,35 @@
-button {
-  padding: 5px 10px;
-  cursor: pointer;
-}
-h4{
-  margin-left: 10px;
-  text-align: center;
-}
-
-.modal {
-  position: fixed;
-  top: 0;
-  left: 0;
-  width: 100%;
-  height: 100%;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-}
-
-.modal .bg {
-  width: 100%;
-  height: 100%;
-  background-color: rgba(0, 0, 0, 0.6);
-}
-
-.modalBox {
-  position: absolute;
-  background-color: #fff;
-  width: 220px;
-  height: 500px;
-}
-
-#Info{
+body{
+  background-color: rgb(245, 246, 247);
   text-align: center;
 }
 
 .IdInput{
   text-align: center;
-  width:100px;
+  width: 20%;
+  height: 25px;
 }
 
 .IdBtn{
   font-size: 10px;
-  width:80px;
+  width: 9.5%;
+  height: 31px;
+  background-color: #2DB400;
+  border: #2DB400;
 }
 
 .IdPwBtn{
   margin-top: 5px;
 }
-
+#PassInput{
+  margin-top: 5px;
+  width: 30%;
+  height: 25px;
+}
+#ConfirmPassInput{
+  margin-top: 5px;
+  width: 30%;
+  height: 25px;
+}
 #BadPass{
   font-size: 5px;
 }
@@ -58,14 +39,30 @@ h4{
 .Name{
   margin-top: 10px;
 }
+.NameInput{
+  width: 30%;
+  height: 25px;
+}
 .DateBirth{
   margin-top: 20px;
+}
+.DateBirthInput{
+  width: 30%;
+  height: 25px;
 }
 #Phone{
   margin-top: 20px;
 }
+.PhoneInput{
+  width: 30%;
+  height: 25px;
+}
 .Email{
   margin-top: 20px;
+}
+.EmailInput{
+  width: 30%;
+  height: 25px;
 }
 #email_errorbox{
   font-size: 10px;
@@ -75,25 +72,15 @@ h4{
   left: 24px;
   visibility: hidden;
 }
-#Year{
-  width: 50px;
-}
-#Month{
-  width: 50px;
-}
-#Day{
-  width: 50px;
-}
-
-.modalBox .joinBtn {
-  position:absolute;  
-  width:100%;
-  height:30px;
-  bottom:0;
-  background-color: black;
-  display:block;
-}
 
 .hidden {
   display: none;
+}
+
+.joinBtn{
+  margin-top: 20px;
+  width: 30%;
+  height: 30px;
+  background-color: #2DB400;
+  border: #2DB400;
 }

@@ -1,11 +1,4 @@
 document.addEventListener("DOMContentLoaded", function () {
-  const open = () => { //회원가입 모달창 열기
-    document.querySelector(".modal").classList.remove("hidden");
-  }
-
-  const close = () => { //회원가입 모달창 닫기
-    document.querySelector(".modal").classList.add("hidden");
-  }
 
   const Comb = document.querySelector(".Combine");
   const Join = document.querySelector(".join");
@@ -72,7 +65,5 @@ document.addEventListener("DOMContentLoaded", function () {
   EmailInput.addEventListener('blur', emailCheck);  //email의 형식이 틀릴경우 오류 문자 생성
   IdPw.addEventListener("submit", IdPwSubmit);   // submit했을때 해당 함수 실행   
   Join.addEventListener("submit", JoinSubmit);   // submit했을때 해당 함수 실행   
-  document.querySelector(".SignUpBtn").addEventListener("click", open); //회원가입 버튼 눌렀을 때 이벤트
-  document.querySelector(".bg").addEventListener("click", close); //모달창 배경을 눌렀을 때 닫히는 이벤트
 });
 
