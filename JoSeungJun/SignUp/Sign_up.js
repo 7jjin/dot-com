@@ -1,6 +1,5 @@
 document.addEventListener("DOMContentLoaded", function () {
 
-  const Comb = document.querySelector(".Combine");
   const Join = document.querySelector(".join");
   const IdPw = document.querySelector(".IdPw");
   const IdInput = document.querySelector(".IdPw .IdInput");
