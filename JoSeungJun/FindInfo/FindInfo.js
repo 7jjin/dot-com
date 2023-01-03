@@ -1,15 +1,26 @@
 document.addEventListener("DOMContentLoaded", function () {
-    const IdInfo = document.querySelector(".IdInfo");
-    const PassInfo = document.querySelector(".PassInfo");
-    const IdCheck = document.querySelector("#Id");
-    const PassCheck = document.querySelector("#Pass");
+    const RadioId = document.querySelector("#Id");
+    const RadioPass = document.querySelector("#Pass");
+    const IdSub = document.querySelector(".IdBtn");
+    const PassSub = document.querySelector(".PassBtn");
+    const FindId = document.querySelector(".FindId");
+    const FindPass = document.querySelector(".FindPass");
 
-    function Check() {
-        if (IdCheck = cheked) {
-            document.querySelector(".IdInfo").style.display = "block";
+    function Check(){
+        const ID = RadioId.checked;
+        const PASS = RadioPass.checked;
+
+        if(ID){
+            document.querySelector(".IdInfo").style.display = 'block'
+            document.querySelector(".PassInfo").style.display = 'none'
+        }
+        else if(Pass){
+            document.querySelector(".IdInfo").style.display = 'none'
+            document.querySelector(".PassInfo").style.display = 'block'
         }
     }
 
-    IdCheck.addEventListener("click",Check());
+    RadioId.addEventListener("click", Check);
+    RadioPass.addEventListener("click", Check);
 });
 

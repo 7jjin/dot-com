@@ -18,6 +18,7 @@ document.addEventListener("DOMContentLoaded", function () {
     localStorage.setItem("아이디", ID);      // 로컬 저장소에 각각 저장
     localStorage.setItem("비밀번호", Pass);
     localStorage.setItem("비밀번호 확인", ConfirmPass);
+    event.preventDefault();
   }
 
   function JoinSubmit(event) {
@@ -44,8 +45,6 @@ document.addEventListener("DOMContentLoaded", function () {
       errorbox.style.visibility = "hidden";
     }
   }
-
-
 
   function PassCheck() {
     if (document.getElementById('PassInput').value != '' && document.getElementById('ConfirmPassInput').value != '') {

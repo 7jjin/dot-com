@@ -64,6 +64,7 @@ body{
   height: 25px;
 }
 #email_errorbox{
+  text-align: center;
   font-size: 10px;
   color: red;
   display: block;

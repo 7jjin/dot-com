@@ -1,4 +1,56 @@
 body{
     background-color: rgb(245, 246, 247);
+}
+.Radio{
+    margin-left: 30px;
+    margin-top: 50px;
+    margin-bottom: 10px;
+}
+
+#Pass{
+    margin-left: 20px;
+}
+
+.IdInfo{
+    border: 1px solid;
+    border-radius: 5px;
+    border-color: #ababab;
     text-align: center;
+}
+.IdEx{
+    margin-bottom: 10px;
+}
+.PassInfo{
+    border: 1px solid;
+    border-radius: 5px;
+    border-color: #ababab;
+    text-align: center;
+}
+.PassEx{
+    margin-bottom: 10px;
+}
+
+.Id{
+    width: 30%;
+}
+.Name{
+    width: 30%;
+}
+.EmailInput{
+    width: 30%;
+}
+
+.IdBtn{
+    margin: 20px;
+    width: 30%;
+    height: 30px;
+    background-color: #2DB400;
+    border: #2DB400;
+}
+.PassBtn{
+    margin: 20px;
+    width: 30%;
+    height: 30px;
+    background-color: #2DB400;
+    border: #2DB400;
   }
