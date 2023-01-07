@@ -1,36 +1,10 @@
 document.addEventListener("DOMContentLoaded", function () {
 
   const Join = document.querySelector(".join");
-  const IdPw = document.querySelector(".IdPw");
-  const IdInput = document.querySelector(".IdPw .IdInput");
-  const PwInput = document.querySelector(".IdPw #PassInput");
-  const ConfirmPassInput = document.querySelector(".IdPw #ConfirmPassInput");
-  const NameInputs = document.querySelector(".join .NameInput");
-  const DateBirthInput = document.querySelector(".join .DateBirthInput");
-  const PhoneInput = document.querySelector(".join .PhoneInput");
-  const EmailInput = document.querySelector(".join .EmailInput");
+  const PwInput = document.querySelector("#PassInput");
+  const ConfirmPassInput = document.querySelector("#ConfirmPassInput");
+  const EmailInput = document.querySelector(".EmailInput");
   const errorbox = document.querySelector("#email_errorbox");
-
-  function IdPwSubmit(event) {
-    const ID = IdInput.value;     //ID의 값
-    const Pass = PwInput.value;     //PW의 값
-    const ConfirmPass = ConfirmPassInput.value;     //비밀번호 확인의 값
-    localStorage.setItem("아이디", ID);      // 로컬 저장소에 각각 저장
-    localStorage.setItem("비밀번호", Pass);
-    localStorage.setItem("비밀번호 확인", ConfirmPass);
-    event.preventDefault();
-  }
-
-  function JoinSubmit(event) {
-    const Name = NameInputs.value;     //이름의 값
-    const DateBirth = DateBirthInput.value;     //생년월일의 값
-    const Phone = PhoneInput.value;     //핸드폰 번호의 값
-    const Email = EmailInput.value;     //이메일의 값
-    localStorage.setItem("이름", Name);
-    localStorage.setItem("생년월일", DateBirth);
-    localStorage.setItem("핸드폰 번호", Phone);
-    localStorage.setItem("이메일", Email);
-  }
 
   function emailCheck() {
     var Email = EmailInput.value;
@@ -59,9 +33,16 @@ document.addEventListener("DOMContentLoaded", function () {
     }
   }
 
+  function validatePassword() {
+    event.preventDefault();
+
+    if (PwInput.value != ConfirmPassInput.value) {
+      ConfirmPassInput.setCustomValidity("Passwords Don't Match");
+    }
+  }
+
   ConfirmPassInput.addEventListener('blur', PassCheck);  //email의 형식이 틀릴경우 오류 문자 생성
   EmailInput.addEventListener('blur', emailCheck);  //email의 형식이 틀릴경우 오류 문자 생성
-  IdPw.addEventListener("submit", IdPwSubmit);   // submit했을때 해당 함수 실행   
-  Join.addEventListener("submit", JoinSubmit);   // submit했을때 해당 함수 실행   
+  Join.addEventListener("submit", validatePassword);   // submit했을때 해당 함수 실행   
 });
 
