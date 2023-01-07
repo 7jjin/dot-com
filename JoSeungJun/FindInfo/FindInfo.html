@@ -1,68 +1,54 @@
 <!DOCTYPE html>
 <html lang="en">
-  <head>
+
+<head>
     <meta charset="UTF-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Document</title>
     <link rel="stylesheet" href="./FindInfo.css" />
     <script src="./FindInfo.js"></script>
-  </head>
+</head>
 
-  <body>
+<body>
     <div class="Radio">
-      <input type="radio" name="Check" id="Id" value="Id" onclick="" />아이디
-      찾기
-      <input
-        type="radio"
-        name="Check"
-        id="Pass"
-        value="Pass"
-        onclick=""
-      />비밀번호 찾기
+        <input type="radio" name="Check" id="Id" value="Id" onclick="" />아이디
+        찾기
+        <input type="radio" name="Check" id="Pass" value="Pass" onclick="" />비밀번호 찾기
     </div>
     <div class="IdInfo" style="display: none">
-      <h2>아이디 찾기</h2>
-      <form class="FindId">
-        <div class="IdEx">아이디는 이름 이메일을 통해 알 수 있습니다.</div>
-        <input required type="text" class="Name" placeholder="이름" /><br />
-        <input
-          required
-          type="text"
-          class="EmailInput"
-          placeholder="이메일"
-        /><br />
-        <input
-          style="color: white"
-          class="IdBtn"
-          type="submit"
-          value="아이디 찾기"
-        />
-      </form>
+        <h2>아이디 찾기</h2>
+        <form class="FindId" >
+            <div class="IdDiv">
+                <div class="IdEx">아이디는 이름 이메일을 통해 알 수 있습니다.</div>
+                <input required type="text" class="Name" placeholder="이름" /><br/>
+                <input required type="text" class="EmailInput" placeholder="이메일" /><br/>
+            </div>
+            <div class="IdDiv2" style="display: none;">
+                <div class="IdEx2">회원가입 시 사용한 아이디는 **** 입니다.</div><br>
+                <input style="color: white" class="BackBtn" type="submit" value="로그인 화면으로 돌아가기" />
+            </div>
+            <input style="color: white" class="IdBtn" type="submit" value="아이디 찾기" />
+        </form>
     </div>
     <div class="PassInfo" style="display: none">
-      <h2>비밀번호 찾기</h2>
-      <form class="FindPass">
-        <div class="PassEx">
-          비밀번호는 아이디 이름 이메일을 통해 알 수 있습니다.
-        </div>
-        <input required type="text" class="Id" placeholder="아이디" /><br />
-        <input required type="text" class="Name" placeholder="이름" /><br />
-        <input
-          required
-          type="text"
-          class="EmailInput"
-          placeholder="이메일"
-        /><br />
-        <input
-          style="color: white"
-          class="PassBtn"
-          type="submit"
-          value="비밀번호 찾기"
-        />
-      </form>
+        <h2>비밀번호 찾기</h2>
+        <form class="FindPass">
+            <div class="PassDiv">
+                <div class="PassEx">비밀번호는 아이디 이름 이메일을 통해 알 수 있습니다.</div>
+                <input required type="text" class="Id" placeholder="아이디" /><br />
+                <input required type="text" class="Name" placeholder="이름" /><br />
+                <input required type="text" class="EmailInput" placeholder="이메일" /><br />
+            </div>
+            <div class="PassDiv2" style="display: none;">
+                <div class="PassEx2">회원가입 시 사용한 비밀번호는 **** 입니다.</div><br>
+                <input style="color: white" class="BackBtn2" type="submit" value="로그인 화면으로 돌아가기" />
+            </div>
+            <input style="color: white" class="PassBtn" type="submit" value="비밀번호 찾기" />
+        </form>
     </div>
 
     <script></script>
-  </body>
+</body>
+
 </html>
