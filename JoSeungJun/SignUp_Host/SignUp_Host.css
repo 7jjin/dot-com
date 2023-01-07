@@ -1,0 +1,84 @@
+body{
+  background-color: rgb(245, 246, 247);
+  text-align: center;
+}
+
+.IdInput{
+  width: 20%;
+  height: 25px;
+}
+
+.IdBtn{
+  font-size: 10px;
+  width: 9.5%;
+  height: 31px;
+  background-color: #2DB400;
+  border: #2DB400;
+}
+
+.IdPwBtn{
+  margin-top: 5px;
+}
+#PassInput{
+  margin-top: 5px;
+  width: 30%;
+  height: 25px;
+}
+#ConfirmPassInput{
+  margin-top: 5px;
+  width: 30%;
+  height: 25px;
+}
+#BadPass{
+  font-size: 5px;
+}
+#GoodPass{
+  font-size: 10px;
+}
+.Name{
+  margin-top: 10px;
+}
+.NameInput{
+  width: 30%;
+  height: 25px;
+}
+.DateBirth{
+  margin-top: 20px;
+}
+.DateBirthInput{
+  width: 30%;
+  height: 25px;
+}
+#Phone{
+  margin-top: 20px;
+}
+.PhoneInput{
+  width: 30%;
+  height: 25px;
+}
+.Email{
+  margin-top: 20px;
+}
+.EmailInput{
+  width: 30%;
+  height: 25px;
+}
+#email_errorbox{
+  text-align: center;
+  font-size: 10px;
+  color: red;
+  display: block;
+  visibility: hidden;
+}
+
+.hidden {
+  display: none;
+}
+
+.joinBtn{
+  margin-top: 30px;
+  width: 30%;
+  height: 30px;
+  background-color: #2DB400;
+  border: #2DB400;
+}
