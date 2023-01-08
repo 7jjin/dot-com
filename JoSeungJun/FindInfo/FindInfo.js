@@ -41,6 +41,11 @@ document.addEventListener("DOMContentLoaded", function () {
         }
     }
 
+    document.addEventListener('keydown', function(event) {
+        if (event.keyCode === 13) {
+          event.preventDefault();
+        };
+      }, true);
     RadioId.addEventListener("click", Check);
     RadioPass.addEventListener("click", Check);
     IdSub.addEventListener("submit", IdFind);

@@ -25,19 +25,23 @@ document.addEventListener("DOMContentLoaded", function () {
       if (document.getElementById('PassInput').value == document.getElementById('ConfirmPassInput').value) {
         document.querySelector("#GoodPass").style.display = "block";
         document.querySelector("#BadPass").style.display = "none";
+        document.querySelector(".joinBtn").disabled = false;
       }
       else {
         document.querySelector("#BadPass").style.display = "block";
         document.querySelector("#GoodPass").style.display = "none";
+        document.querySelector(".joinBtn").disabled = true;
       }
     }
   }
 
-  function validatePassword() {
+  function validatePassword(){
     event.preventDefault();
 
-    if (PwInput.value != ConfirmPassInput.value) {
+    if(PwInput.value != ConfirmPassInput.value) {
       ConfirmPassInput.setCustomValidity("Passwords Don't Match");
+    } else {
+      ConfirmPassInput.setCustomValidity(''); // 오류가 없으면 메시지를 빈 문자열로 설정해야한다. 오류 메시지가 비어 있지 않은 한 양식은 유효성 검사를 통과하지 않고 제출되지 않는다.
     }
   }
 
