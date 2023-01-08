@@ -84,3 +84,47 @@ header{
     display: table-cell;
     padding-right: 25px;
 }
+.filter{
+    width: 100%;
+    height: 300px;
+    margin-top: 50px;
+}
+.filterWapper{
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+}
+.filterRegion{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background: url("/img/main-region.jpg") no-repeat center center/ 100px 90px;
+    background-size: cover;
+    border-radius: 10%;
+    width: 300px;
+    height: 300px;
+}
+.filterCost{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background: url("/img/main-cost.png")  no-repeat center center/ 100px 90px;
+    background-size: cover;
+    background-color: #f2afd791;
+    border-radius: 10%;
+
+    width: 300px;
+    height: 300px;
+}
+.filterMenu{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background: url("/img/main-menu.png")  no-repeat center center/ 100px 90px;
+    background-color: tan;
+    background-size: cover;
+    border-radius: 10%;
+
+    width: 300px;
+    height: 300px;
+}
