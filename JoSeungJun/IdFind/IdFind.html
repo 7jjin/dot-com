@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <link rel="stylesheet" href="./IdFind.css" />
+    <script src="./IdFind.js"></script>
+</head>
+
+<body>
+    <div class="IdInfo">
+        <h2>아이디 찾기</h2>
+        <form class="FindId" >
+            <div class="IdDiv">
+                <div class="IdEx">아이디는 이름 이메일을 통해 알 수 있습니다.</div>
+                <input required type="text" class="Name" placeholder="이름" /><br/>
+                <input required type="text" class="EmailInput" placeholder="이메일" /><br/>
+            </div>
+            <div class="IdDiv2" style="display: none;">
+                <div class="IdEx2">회원가입 시 사용한 아이디는 **** 입니다.</div><br>
+                <input style="color: white" class="BackBtn" type="submit" value="로그인 화면으로 돌아가기" onclick="location.href='/JoJinHyeong/loginPage/login.html'"/>
+            </div>
+            <input style="color: white" class="IdBtn" type="submit" value="아이디 찾기" />
+        </form>
+    </div>
+</body>
+
+</html>
