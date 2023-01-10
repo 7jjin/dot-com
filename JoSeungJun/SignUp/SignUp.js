@@ -39,7 +39,7 @@ document.addEventListener("DOMContentLoaded", function () {
     event.preventDefault();
 
     if(PwInput.value != ConfirmPassInput.value) {
-      ConfirmPassInput.setCustomValidity("Passwords Don't Match");
+      alert("비밀번호가 일치하지 않습니다.");
     } else {
       ConfirmPassInput.setCustomValidity(''); // 오류가 없으면 메시지를 빈 문자열로 설정해야한다. 오류 메시지가 비어 있지 않은 한 양식은 유효성 검사를 통과하지 않고 제출되지 않는다.
     }
