@@ -3,9 +3,7 @@ body{
 }
 
 .IdInfo{
-    border: 1px solid;
-    border-radius: 5px;
-    border-color: #ababab;
+    margin-top: 200px;
     text-align: center;
 }
 .IdEx{

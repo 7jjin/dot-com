@@ -3,6 +3,11 @@ body{
   text-align: center;
 }
 
+#Info{
+  display: flex;
+  justify-content: center;
+}
+
 .IdInput{
   width: 20%;
   height: 25px;
@@ -10,7 +15,6 @@ body{
 
 .IdBtn{
   font-size: 10px;
-  width: 9.5%;
   height: 31px;
   background-color: #2DB400;
   border: #2DB400;
@@ -21,7 +25,6 @@ body{
 }
 #PassInput{
   margin-top: 5px;
-  width: 30%;
   height: 25px;
 }
 #ConfirmPassInput{
