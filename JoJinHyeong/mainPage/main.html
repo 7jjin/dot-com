@@ -9,8 +9,10 @@
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
     <link
-      href="https://fonts.googleapis.com/css2?family=Cabin:wght@400;500;600;700&family=Open+Sans:wght@300;400;500;600;700;800&display=swap"
+      href="https://fonts.googleapis.com/css2?family=Cabin:wght@400;500;600;700&family=Nanum+Pen+Script&family=Noto+Sans+KR:wght@100;400;700&family=Open+Sans:wght@300;400;500;600;700;800&display=swap"
       rel="stylesheet"
     />
     <script
@@ -56,18 +58,89 @@
         </div>
       </div>
     </header>
-    <section class="filter">
-      <div class="filterWapper">
-        <div class="filterRegion">
-          <div class="Region"></div>
+    <section id="InfoBar">
+      <div class="RestaurantName">
+        <p>식당을 골라주세요!</p>
+      </div>
+      <div class="InfoMenu">
+        <div class="call">
+          <a
+            href="#"
+            onclick="location.href='/JoJinHyeong/mainPage/main.html'"
+          ></a>
         </div>
-        <div class="filterCost">
-          <div class="Cost"></div>
+        <div class="comfirm">
+          <a
+            href="#"
+            onclick="location.href='/JoJinHyeong/mainPage/main.html'"
+          ></a>
         </div>
-        <div class="filterMenu">
-          <div class="Menu"></div>
+        <div class="memberChange">
+          <a
+            href="#"
+            onclick="location.href='/JoJinHyeong/mainPage/main.html'"
+          ></a>
+        </div>
+        <div class="map">
+          <a
+            href="#"
+            onclick="location.href='/JoJinHyeong/mainPage/main.html'"
+          ></a>
+        </div>
+        <div class="wait">
+          <a
+            href="#"
+            onclick="location.href='/JoJinHyeong/mainPage/main.html'"
+          ></a>
+        </div>
+        <div class="cancel">
+          <a
+            href="#"
+            onclick="location.href='/JoJinHyeong/mainPage/main.html'"
+          ></a>
         </div>
       </div>
     </section>
+    <section id="slideshow-container">
+      <div class="mySlides fade">
+        <div class="numbertext">1 / 6</div>
+        <img src="/img/slide_img1.jpg" style="width: 100%" />
+      </div>
+      <div class="mySlides fade">
+        <div class="numbertext">2 / 6</div>
+        <img src="/img/slide_img2.jpg" style="width: 100%" />
+      </div>
+      <div class="mySlides fade">
+        <div class="numbertext">3 / 6</div>
+        <img src="/img/slide_img3.jpg" style="width: 100%" />
+      </div>
+      <div class="mySlides fade">
+        <div class="numbertext">4 / 6</div>
+        <img src="/img/slide_img4.jpg" style="width: 100%" />
+      </div>
+      <div class="mySlides fade">
+        <div class="numbertext">5 / 6</div>
+        <img src="/img/slide_img5.jpg" style="width: 100%" />
+      </div>
+      <div class="mySlides fade">
+        <div class="numbertext">6 / 6</div>
+        <img src="/img/slide_img6.jpg" style="width: 100%" />
+      </div>
+      <a class="prev" onclick="moveSlides(-1)">&#10094;</a>
+      <a class="next" onclick="moveSlides(1)">&#10095;</a>
+    </div>
+    <br/>
+
+    <!-- The dots/circles -->
+    <div class="mp_wap">
+      <span class="dot" onclick="currentSlide(0)"></span>
+      <span class="dot" onclick="currentSlide(1)"></span>
+      <span class="dot" onclick="currentSlide(2)"></span>
+      <span class="dot" onclick="currentSlide(3)"></span>
+      <span class="dot" onclick="currentSlide(4)"></span>
+      <span class="dot" onclick="currentSlide(5)"></span>
+    </div>
+    </section>
+    <script src="/JoJinHyeong/mainPage/main.js"></script>
   </body>
 </html>
