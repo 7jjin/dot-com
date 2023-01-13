@@ -11,10 +11,7 @@
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-    <link
-      href="https://fonts.googleapis.com/css2?family=Cabin:wght@400;500;600;700&family=Nanum+Pen+Script&family=Noto+Sans+KR:wght@100;400;700&family=Open+Sans:wght@300;400;500;600;700;800&display=swap"
-      rel="stylesheet"
-    />
+    <link href="https://fonts.googleapis.com/css2?family=Cabin:wght@400;500;600;700&family=Nanum+Pen+Script&family=Noto+Sans+KR:wght@100;400;700&family=Open+Sans:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
     <script
       src="https://kit.fontawesome.com/06b646a751.js"
       crossorigin="anonymous"
@@ -58,6 +55,7 @@
         </div>
       </div>
     </header>
+    <!-- 현재 사용자 선택 옵션 -->
     <section id="InfoBar">
       <div class="RestaurantName">
         <p>식당을 골라주세요!</p>
@@ -101,37 +99,30 @@
         </div>
       </div>
     </section>
+    <!-- 슬라이드 이미지 -->
     <section id="slideshow-container">
       <div class="mySlides fade">
-        <div class="numbertext">1 / 6</div>
         <img src="/img/slide_img1.jpg" style="width: 100%" />
       </div>
       <div class="mySlides fade">
-        <div class="numbertext">2 / 6</div>
         <img src="/img/slide_img2.jpg" style="width: 100%" />
       </div>
       <div class="mySlides fade">
-        <div class="numbertext">3 / 6</div>
         <img src="/img/slide_img3.jpg" style="width: 100%" />
       </div>
       <div class="mySlides fade">
-        <div class="numbertext">4 / 6</div>
         <img src="/img/slide_img4.jpg" style="width: 100%" />
       </div>
       <div class="mySlides fade">
-        <div class="numbertext">5 / 6</div>
         <img src="/img/slide_img5.jpg" style="width: 100%" />
       </div>
       <div class="mySlides fade">
-        <div class="numbertext">6 / 6</div>
         <img src="/img/slide_img6.jpg" style="width: 100%" />
       </div>
       <a class="prev" onclick="moveSlides(-1)">&#10094;</a>
       <a class="next" onclick="moveSlides(1)">&#10095;</a>
     </div>
     <br/>
-
-    <!-- The dots/circles -->
     <div class="mp_wap">
       <span class="dot" onclick="currentSlide(0)"></span>
       <span class="dot" onclick="currentSlide(1)"></span>
@@ -141,6 +132,39 @@
       <span class="dot" onclick="currentSlide(5)"></span>
     </div>
     </section>
+    <section id="quickfilter">
+      <div class="filterBar_Names">
+        <button class="myplace"style="background-color: #ffffff;">
+          <div class="myplaceIcon">
+            <i class="fa-solid fa-location-dot"></i>
+          </div>
+          <p>지역</p>
+        </button>
+        <button class="menu"style="background-color:#da9c68bf">
+          <div class="menuIcon">
+            <i class="fa-solid fa-utensils"></i>
+          </div>
+          <p>메뉴</p>
+        </button>
+      </div>
+      <div class="filterRegion">
+        <div class="nowplace">
+          <button>내위치</button>
+          <div class="selfplace">
+            <div class="do">
+              <input type="text" placeholder="예) 경기도">
+              <div class="doicon"><i class="fa-solid fa-location-crosshairs"></i></div>
+            </div>
+            <div class="si">
+              <input type="text" placeholder="예) 수원시">
+              <div class="siicon"><i class="fa-solid fa-location-crosshairs"></i></div>
+            </div>
+          </div>
+        </div>
+        <input type="submit" class="find" value="조회"style="width:100px; height:56px">
+      </div>
+    </section>
     <script src="/JoJinHyeong/mainPage/main.js"></script>
+    <script src="/JoJinHyeong/mainPage/filter.js"></script>
   </body>
 </html>

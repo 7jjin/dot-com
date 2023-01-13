@@ -3,16 +3,12 @@ var slideIndex = 0; //slide index
 // HTML 로드가 끝난 후 동작
 window.onload=function(){
   showSlides(slideIndex);
-
   var sec = 3000;
   setInterval(function(){
     slideIndex++;
     showSlides(slideIndex);
-
   }, sec);
 }
-
-
 function moveSlides(n) {
   slideIndex = slideIndex + n
   showSlides(slideIndex);
@@ -42,7 +38,6 @@ function showSlides(n) {
   for (i = 0; i < dots.length; i++) {
       dots[i].className = dots[i].className.replace(" active", "");
   }
-
   slides[n].style.display = "block";
   dots[n].className += " active";
 }
