@@ -3,7 +3,9 @@ html{
 }
 body{
     margin:0;
+    backdrop-filter: blur(5px);
 }
+
 header{
     width: 100%;
     height: 90px;
@@ -211,12 +213,15 @@ header{
   position: absolute;
   width: 1300px;
   top: 0px;
-  left:8%;
+  left:50%;
   margin-top: 516px;
+  translate: -650px;
+  z-index:9999;
 }
+
 #quickfilter .filterBar_Names button{
   padding:10px;
-  width: 150px;
+  width: 200px;
   border:none;
   border-radius: 10px 10px 0 0;
   font-size: 20px;
@@ -259,21 +264,21 @@ header{
   align-items: center;
   justify-content: flex-start;
 }
-.do{
+.doo{
   display: flex;
   width: 232px;
   margin-right: 40px;
   justify-content: center;
   border-bottom: 2px solid #5c5f67;
 }
-.do input{
+.doo input{
   border:none;
   font-size: 26px;
   width: 196px;
   outline: none;
 
 }
-.do .doicon{
+.doo .dooicon{
   font-size: 24px;
   cursor: pointer;
 }
@@ -302,4 +307,20 @@ header{
   background-color: #ddd;
   border-radius: 3px;
   font-size: 30px;
+}
+.filterMenu{
+  height: 120px;
+  display: flex;
+  background-color: white;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+  padding: 30px 50px;
+  box-shadow: rgb(128 128 128 / 85%) 4px 1px 17px 1px;
+  border-radius: 0px 10px 10px 10px;
+}
+.korea, .japen, .china, .america, .germany, .italy{
+  display: flex;
+  flex-direction: column;
+  align-items: center;
 }
