@@ -1,4 +1,66 @@
 body{
   background-color: rgb(245, 246, 247);
+}
+
+#logo{
   text-align: center;
+}
+
+#Box{
+  display: flex;
+  margin-top: 100px;
+}
+
+#Host{
+  width: 500px;
+  height: 300px;
+  margin-left: 150px;
+  display: flex;
+  justify-content: center;
+  align-items: flex-start;
+  border-style: solid;
+  border-color: rgb(189, 189, 189);
+  overflow:hidden;
+  flex-direction: column;
+  background-color: black;
+  background-image: url("/img/Chef.jpg");
+  background-size: 50% 100%;
+  background-repeat: no-repeat;
+  background-position: right;
+}
+#Host_label{
+  font-size: 50px;
+  margin-left: 40px;
+  margin-top: 10px;
+}
+#Host_Ex{
+  font-size: 20px;
+  margin-left: 20px;
+}
+
+#Customer{
+  width: 500px;
+  height: 300px;
+  margin-left: 150px;
+  display: flex;
+  justify-content: center;
+  align-items: flex-start;
+  border-style: solid;
+  border-color: rgb(189, 189, 189);
+  overflow:hidden;
+  flex-direction: column;
+  background: linear-gradient( to right, red, red );
+  background-image: url("/img/Customer.jpg");
+  background-size: 100% 100%;
+  background-repeat: no-repeat;
+  background-position: right;
+}
+#Customer_label{
+  font-size: 50px;
+  margin-left: 40px;
+  margin-top: 10px;
+}
+#Customer_Ex{
+  font-size: 20px;
+  margin-left: 20px;
 }
