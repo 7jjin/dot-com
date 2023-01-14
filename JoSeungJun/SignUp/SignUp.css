@@ -121,6 +121,16 @@ body{
   font-size: 18px;
   font-weight: 700;
 }
+.NotBtn{
+  margin-top: 30px;
+  width: 484px;
+  background-color: hwb(25 64% 0%);
+  border: hwb(25 64% 0%);
+  padding: 8px 0 8px;
+  border-radius: 6px;
+  font-size: 18px;
+  font-weight: 700;
+}
 
 #Id_label{
   margin: 19px 0 8px;
