@@ -3,38 +3,51 @@ body{
 }
 
 .PassInfo{
-    border: 1px solid;
-    border-radius: 5px;
-    border-color: #ababab;
+    margin-top: 200px;
     text-align: center;
 }
 .PassEx{
     margin-bottom: 10px;
 }
 .Id{
-    width: 30%;
+    width: 460px;
+    margin-top: 5px;
+    height: 25px;
+    padding: 10px;
 }
 .Name{
-    width: 30%;
+    width: 460px;
+    margin-top: 5px;
+    height: 25px;
+    padding: 10px;
 }
 .EmailInput{
-    width: 30%;
+    width: 460px;
+    margin-top: 5px;
+    height: 25px;
+    padding: 10px;
 }
 
 .PassBtn{
-    margin: 20px;
-    width: 30%;
-    height: 30px;
-    background-color: #2DB400;
-    border: #2DB400;
+    margin-top: 30px;
+    width: 484px;
+    background-color: #fcaa72;
+    border: #fcaa72;
+    padding: 8px 0 8px;
+    border-radius: 6px;
+    font-size: 18px;
+    font-weight: 700;
 }
 
 .BackBtn{
-    margin: 20px;
-    width: 30%;
-    height: 30px;
-    background-color: #2DB400;
-    border: #2DB400;
+    margin-top: 20px;
+    width: 484px;
+    background-color: #fcaa72;
+    border: #fcaa72;
+    padding: 8px 0 8px;
+    border-radius: 6px;
+    font-size: 18px;
+    font-weight: 700;
 }
 
 
