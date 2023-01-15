@@ -10,12 +10,13 @@ body{
 #logo img{
   margin-top: 38px;
   width: 320px;
-  margin-right: 40px;
+  margin-right: 20px;
 }
 
 #Box{
   display: flex;
   margin-top: 100px;
+  margin-left: 25px;
 }
 
 #Host{
@@ -30,9 +31,10 @@ body{
   border-color: black;
   overflow:hidden;
   flex-direction: column;
-  /* background-image: linear-gradient(to right, #FFAFBD, #ffc3a0); */
-  /* background-image: url("/img/Chef.jpg"); */
-  background-size: 100% 100%;
+  background-color: black;
+  /* background-image: linear-gradient(to right, #FFAFBD, #ffc3a0);
+  background-image: url("/img/Chef.jpg"); */
+  background-size: 50% 100%;
   background-repeat: no-repeat;
   background-position: right;
 }
@@ -58,7 +60,7 @@ body{
   overflow:hidden;
   flex-direction: column;
   /* background-image: linear-gradient(to right, #ec8575, #ed709d); */
-  /* background-image: url("/img/Customer.jpg"); */
+  background-image: url("/img/Customer.jpg");
   background-size: 100% 100%;
   background-repeat: no-repeat;
   background-position: right;
