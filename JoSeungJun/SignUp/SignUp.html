@@ -1,121 +1,90 @@
 <!DOCTYPE html>
 <html lang="en">
-  <head>
-    <meta charset="UTF-8" />
-    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Document</title>
-    <link rel="stylesheet" href="./SignUp.css" />
-    <script src="./SignUp.js"></script>
-  </head>
 
-  <body>
-    <div id="Info">
-      <div id="Box">
-        <form action="" class="join">
-          <div class="id">
+<head>
+  <meta charset="UTF-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Document</title>
+  <link rel="stylesheet" href="./SignUp.css" />
+  <script src="./SignUp.js"></script>
+</head>
+
+<body>
+  <div id="logo">
+    <img src="/img/FOODEAT.png" alt="logo" style="width: 240px;" onclick="location.href='/JoJinHyeong/mainPage/main.html'"  />
+  </div>
+  <div id="Info">
+    <div id="box">
+      <form action="" class="join">
+        <div class="id">
+          <h3 id="Id_label">
+            아이디
+          </h3>
+          <div id="Id_Table">
             <input required type="text" class="IdInput" placeholder="아이디" />
-            <input
-              style="color: white"
-              class="IdBtn"
-              type="submit"
-              value="중복 확인"
-            />
-            <div
-              style="color: red; display: none"
-              id="BadId"
-              onchange="PassCheck()"
-            >
+            <input style="color: black" class="IdBtn" type="submit" value="중복 확인" />
+            <div style="color: red; display: none" id="BadId" onchange="PassCheck()">
               *아이디가 중복됩니다.
             </div>
-            <div
-              style="color: green; display: none"
-              id="GoodId"
-              onchange="PassCheck()"
-            >
+            <div style="color: green; display: none" id="GoodId" onchange="PassCheck()">
               *사용가능한 아이디입니다.
             </div>
           </div>
-          <div class="Password">
-            <input
-              required
-              name="UserPass"
-              type="password"
-              id="PassInput"
-              placeholder="비밀번호"
-            />
-          </div>
-          <div class="ConfirmPassword">
-            <input
-              required
-              name="UserConfirmPass"
-              type="password"
-              id="ConfirmPassInput"
-              placeholder="비밀번호 확인"
-            />
-          </div>
-          <div
-            style="color: red; display: none"
-            id="BadPass"
-            onchange="PassCheck()"
-          >
-            *비밀번호가 일치하지 않습니다.
-          </div>
-          <div
-            style="color: green; display: none"
-            id="GoodPass"
-            onchange="PassCheck()"
-          >
-            *비밀번호가 일치합니다.
-          </div>
-          <div class="Name">
-            이름<br />
-            <input
-              required
-              type="text"
-              class="NameInput"
-              placeholder="이름을(를) 입력하세요."
-            />
-          </div>
-          <div class="DateBirth" action="">
-            생년월일<br />
-            <input
-              required
-              type="text"
-              class="DateBirthInput"
-              placeholder="0000.00.00"
-            />
-          </div>
-          <div id="Phone">
-            핸드폰 번호<br />
-            <input
-              required
-              type="text"
-              class="PhoneInput"
-              placeholder="010-0000-0000"
-            />
-          </div>
-          <div class="Email" action="">
-            이메일<br />
-            <input
-              required
-              type="text"
-              class="EmailInput"
-              placeholder="Ex) jsj487@naver.com"
-            />
-          </div>
-          <span id="email_errorbox">이메일 주소를 다시 확인해주세요.</span>
-          <input
-            style="color: white"
-            class="joinBtn"
-            type="submit"
-            value="회원가입"
-            onclick="location.href='/JoJinHyeong/loginPage/login.html'"
-          />
-        </form>
-      </div>
+        </div>
+        <div class="Password">
+          <h3 id="Pass_label">
+            비밀번호
+          </h3>
+          <input required name="UserPass" type="password" id="PassInput" placeholder="비밀번호" />
+        </div>
+        <div class="ConfirmPassword">
+          <h3 id="ConfirmPass_label">
+            비밀번호 재확인
+          </h3>
+          <input required name="UserConfirmPass" type="password" id="ConfirmPassInput" placeholder="비밀번호 확인" />
+        </div>
+        <div style="color: red; display: none" id="BadPass" onchange="PassCheck()">
+          *비밀번호가 일치하지 않습니다.
+        </div>
+        <div style="color: green; display: none" id="GoodPass" onchange="PassCheck()">
+          *비밀번호가 일치합니다.
+        </div>
+        <div class="Name">
+          <h3 id="Name_label">
+            이름
+          </h3>
+          <input required type="text" class="NameInput" placeholder="이름을(를) 입력하세요." />
+        </div>
+        <div class="DateBirth" action="">
+          <h3 id="Birth_label">
+            생년월일
+          </h3>
+          <input required type="text" class="DateBirthInput" placeholder="0000.00.00" />
+        </div>
+        <div id="Phone">
+          <h3 id="Phone_label">
+            휴대전화
+          </h3>
+          <input required type="text" class="PhoneInput" placeholder="010-0000-0000" />
+        </div>
+        <div class="Email" action="">
+          <h3 id="Email_label">
+            이메일
+          </h3>
+          <input required type="text" class="EmailInput" placeholder="Ex) jsj487@naver.com" />
+        </div>
+        <span id="email_errorbox">이메일 주소를 다시 확인해주세요.</span>
+        <div id="Join">
+          <input style="color: black; display: none;" class="joinBtn" type="submit" value="회원가입" 
+            onclick="location.href='/JoJinHyeong/loginPage/login.html'"  />
+          <input style="color: grey; display: block;" class="NotBtn" type="submit" value="회원가입" />
+        </div>
+      </form>
     </div>
-  </body>
+  </div>
+</body>
 
-  <script></script>
+<script></script>
+
 </html>

@@ -1,4 +1,73 @@
 body{
   background-color: rgb(245, 246, 247);
+}
+
+#logo{
   text-align: center;
+
+}
+
+#logo img{
+  margin-top: 38px;
+  width: 320px;
+  margin-right: 40px;
+}
+
+#Box{
+  display: flex;
+  margin-top: 100px;
+}
+
+#Host{
+  width: 500px;
+  height: 300px;
+  margin-left: 150px;
+  display: flex;
+  justify-content: center;
+  align-items: flex-start;
+  border-style: solid;
+  border-image: linear-gradient(to right, #FFAFBD, #ffc3a0);
+  overflow:hidden;
+  flex-direction: column;
+  background-image: linear-gradient(to right, #FFAFBD, #ffc3a0);
+  /* background-image: url("/img/Chef.jpg"); */
+  background-size: 100% 100%;
+  background-repeat: no-repeat;
+  background-position: right;
+}
+#Host_label{
+  font-size: 50px;
+  margin-left: 40px;
+  margin-top: 10px;
+}
+#Host_Ex{
+  font-size: 20px;
+  margin-left: 20px;
+}
+
+#Customer{
+  width: 500px;
+  height: 300px;
+  margin-left: 150px;
+  display: flex;
+  justify-content: center;
+  align-items: flex-start;
+  border-style: solid;
+  border-color: rgb(189, 189, 189);
+  overflow:hidden;
+  flex-direction: column;
+  background-image: linear-gradient(to right, #ec8575, #ed709d);
+  /* background-image: url("/img/Customer.jpg"); */
+  background-size: 100% 100%;
+  background-repeat: no-repeat;
+  background-position: right;
+}
+#Customer_label{
+  font-size: 50px;
+  margin-left: 40px;
+  margin-top: 10px;
+}
+#Customer_Ex{
+  font-size: 20px;
+  margin-left: 20px;
 }
