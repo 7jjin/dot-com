@@ -209,7 +209,7 @@ header{
   from {opacity: .4}
   to {opacity: 1}
 }
-#quickfilter{
+.quickfilter{
   position: absolute;
   width: 1300px;
   top: 0px;
@@ -219,7 +219,7 @@ header{
   z-index:9999;
 }
 
-#quickfilter .filterBar_Names button{
+.quickfilter .filterBar_Names button{
   padding:10px;
   width: 200px;
   border:none;

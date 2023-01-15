@@ -1,4 +1,4 @@
-const quickfilter  = document.querySelector("#quickfilter");
+const quickfilter  = document.querySelector(".quickfilter");
 const myplace = document.querySelector(".myplace");
 const menu = document.querySelector(".menu");
 const meun = document.querySelector(".meun");
@@ -12,7 +12,7 @@ const nowbutton = document.querySelector(".nowplace button");
 const section = document.querySelector("section");
 
 
-// quickfilter.addEventListener("click",filterUp);
+quickfilter.addEventListener("click",filterUp);
 body.addEventListener("click",filterDown);
 
 function filterUp(event){
@@ -27,10 +27,19 @@ function filterUp(event){
 
 
 function filterDown(event){
-    var target = event.target;
-    if(target == event.currentTarget.quickfilter);
-        return;
-
+    var filterclass = quickfilter.className;
+    var regionname = filterRegion.className;
+    var menuname =  menu.className;
+    var placename  = myplace.className;
+    var target = event.target.closest("section").className;
+    if(quickfilter.style.marginTop="100px"){
+        if(filterclass!==target){
+            quickfilter.style.marginTop = "516px";
+            wrap.style.filter="none";
+            wrap.style.backgroundColor="";
+        }
+    }   
+    
 }
 
     
