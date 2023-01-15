@@ -26,10 +26,11 @@ body{
   justify-content: center;
   align-items: flex-start;
   border-style: solid;
-  border-image: linear-gradient(to right, #FFAFBD, #ffc3a0);
+  /* border-image: linear-gradient(to right, #FFAFBD, #ffc3a0); */
+  border-color: black;
   overflow:hidden;
   flex-direction: column;
-  background-image: linear-gradient(to right, #FFAFBD, #ffc3a0);
+  /* background-image: linear-gradient(to right, #FFAFBD, #ffc3a0); */
   /* background-image: url("/img/Chef.jpg"); */
   background-size: 100% 100%;
   background-repeat: no-repeat;
@@ -53,10 +54,10 @@ body{
   justify-content: center;
   align-items: flex-start;
   border-style: solid;
-  border-color: rgb(189, 189, 189);
+  border-color: black;
   overflow:hidden;
   flex-direction: column;
-  background-image: linear-gradient(to right, #ec8575, #ed709d);
+  /* background-image: linear-gradient(to right, #ec8575, #ed709d); */
   /* background-image: url("/img/Customer.jpg"); */
   background-size: 100% 100%;
   background-repeat: no-repeat;
