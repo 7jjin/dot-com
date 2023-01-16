@@ -1,3 +1,5 @@
+'use strict';
+
 const quickfilter  = document.querySelector(".quickfilter");
 const myplace = document.querySelector(".myplace");
 const menu = document.querySelector(".menu");
@@ -10,38 +12,46 @@ const filterRegion = document.querySelector(".filterRegion");
 const filterMenu = document.querySelector(".filterMenu");
 const nowbutton = document.querySelector(".nowplace button");
 const section = document.querySelector("section");
+const movein = document.querySelector(".movein");
+const moveout = document.querySelector(".moveout");
 
 
-quickfilter.addEventListener("click",filterUp);
-body.addEventListener("click",filterDown);
+
+let margin = window.getComputedStyle(quickfilter).marginTop;
+
+document.addEventListener("click",filterUp);
+document.addEventListener("click",filterDown);
 
 function filterUp(event){
-    let target = event.target;
-    if(target.closest(".doo")||target.closest(".si")||target.closest("button")){
-        quickfilter.style.marginTop = "100px";
-        wrap.style.filter="blur(5px)";
-        wrap.style.backgroundColor="rgb(128 128 128 / 26%)";
+    var target = event.target.closest("section").className;
+    console.log(target)
+        if(target==='quickfilter'){
+            quickfilter.classList.remove("moveout");
+            quickfilter.classList.add("movein");
+            wrap.classList.remove("blurout");   
+            wrap.classList.add("blurin");
+            wrap.style.backgroundColor="rgb(128 128 128 / 26%)";
+        }
+        console.log(quickfilter.classList.contains('movein'))
     }
-}
-// '도','시','내위치' 만 클릭했을때 filterbox가 올라가는 함수.
+
+// filterBox를 클릭했을때 filterbox가 올라가는 함수.
 
 
 function filterDown(event){
     var filterclass = quickfilter.className;
-    var regionname = filterRegion.className;
-    var menuname =  menu.className;
-    var placename  = myplace.className;
     var target = event.target.closest("section").className;
-    if(quickfilter.style.marginTop="100px"){
-        if(filterclass!==target){
-            quickfilter.style.marginTop = "516px";
-            wrap.style.filter="none";
+    if(margin === "100px"){
+        if(target!=='quickfilter'|| target===null){
+            quickfilter.classList.remove("movein");
+            quickfilter.classList.add("moveout");
+            wrap.classList.remove("blurin");
+            wrap.classList.add("blurout");
             wrap.style.backgroundColor="";
         }
     }   
-    
 }
-
+// filterBox를 제외한 곳을 눌렀을 경우에는 내려가는 함수
     
     
 
