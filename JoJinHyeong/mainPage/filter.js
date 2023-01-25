@@ -32,28 +32,42 @@ function filterUp(event){
             wrap.classList.add("blurin");
             wrap.style.backgroundColor="rgb(128 128 128 / 26%)";
         }
-        console.log(quickfilter.classList.contains('movein'))
     }
 
 // filterBox를 클릭했을때 filterbox가 올라가는 함수.
 
 
 function filterDown(event){
+    var target = event.target.closest("section").className;
+    //await filterUp();
     var filterclass = quickfilter.className;
     var target = event.target.closest("section").className;
-    if(margin === "100px"){
-        if(target!=='quickfilter'|| target===null){
-            quickfilter.classList.remove("movein");
-            quickfilter.classList.add("moveout");
-            wrap.classList.remove("blurin");
-            wrap.classList.add("blurout");
-            wrap.style.backgroundColor="";
-        }
+    if(quickfilter.classList.contains("movein")===true){
+        // quickfilter.classList.remove("movein");
+        // quickfilter.classList.add("moveout");
+        // wrap.classList.remove("blurin");
+        // wrap.classList.add("blurout");
+        // wrap.style.backgroundColor="";
     }   
-}
+} 
 // filterBox를 제외한 곳을 눌렀을 경우에는 내려가는 함수
     
-    
+// function filterup(){
+//     return new Promise((resolve,reject)=>{
+//         document.addEventListener("click",function(){
+//             if(target==='quickfilter'){
+//                 quickfilter.classList.remove("moveout");
+//                 quickfilter.classList.add("movein");
+//                 wrap.classList.remove("blurout");   
+//                 wrap.classList.add("blurin");
+//                 wrap.style.backgroundColor="rgb(128 128 128 / 26%)";
+//             }
+//         });
+//     })
+//     async function filterDown(){
+//         await filterup().then;
+//     }
+// }
 
 
 myplace.addEventListener("click",()=>{
