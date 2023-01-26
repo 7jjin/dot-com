@@ -14,42 +14,42 @@ const nowbutton = document.querySelector(".nowplace button");
 const section = document.querySelector("section");
 const movein = document.querySelector(".movein");
 const moveout = document.querySelector(".moveout");
-
+const blurin = document.querySelector(".blurin")
 
 
 let margin = window.getComputedStyle(quickfilter).marginTop;
 
+//document.addEventListener("click",filterDown);
 document.addEventListener("click",filterUp);
-document.addEventListener("click",filterDown);
 
 function filterUp(event){
     var target = event.target.closest("section").className;
-    console.log(target)
-        if(target==='quickfilter'){
-            quickfilter.classList.remove("moveout");
-            quickfilter.classList.add("movein");
-            wrap.classList.remove("blurout");   
-            wrap.classList.add("blurin");
-            wrap.style.backgroundColor="rgb(128 128 128 / 26%)";
-        }
+    const quickfilter  = document.querySelector(".quickfilter");
+    //console.log(target)
+    if(target==='quickfilter'||quickfilter.classList.contains("moveout")===true){
+        console.log("a")
+        quickfilter.classList.remove("moveout");
+        quickfilter.classList.add("movein");
+        wrap.classList.remove("blurout");   
+        wrap.classList.add("blurin");
+        wrap.style.backgroundColor="rgb(128 128 128 / 26%)";
     }
+}
 
-// filterBox를 클릭했을때 filterbox가 올라가는 함수.
+// // filterBox를 클릭했을때 filterbox가 올라가는 함수.
 
-
-function filterDown(event){
-    var target = event.target.closest("section").className;
-    //await filterUp();
-    var filterclass = quickfilter.className;
-    var target = event.target.closest("section").className;
-    if(quickfilter.classList.contains("movein")===true){
-        // quickfilter.classList.remove("movein");
-        // quickfilter.classList.add("moveout");
-        // wrap.classList.remove("blurin");
-        // wrap.classList.add("blurout");
-        // wrap.style.backgroundColor="";
-    }   
-} 
+// function filterDown(event){
+//     var target = event.target.closest("section").className;
+//     const quickfilter  = document.querySelector(".quickfilter");
+//     console.log("b")
+//     if(target!=='quickfilter'&&quickfilter.classList.contains("movein")===true)
+//     console.log("c")
+//         quickfilter.classList.remove("movein");
+//         quickfilter.classList.add("moveout");
+//         wrap.classList.remove("blurin");
+//         wrap.classList.add("blurout");
+//         wrap.style.backgroundColor="";
+// } 
 // filterBox를 제외한 곳을 눌렀을 경우에는 내려가는 함수
     
 // function filterup(){
