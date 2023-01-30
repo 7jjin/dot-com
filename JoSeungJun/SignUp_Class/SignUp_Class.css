@@ -19,7 +19,7 @@ body{
   margin-left: 25px;
 }
 
-#Host{
+#Host {
   width: 500px;
   height: 300px;
   margin-left: 150px;
@@ -27,28 +27,24 @@ body{
   justify-content: center;
   align-items: flex-start;
   border-style: solid;
-  /* border-image: linear-gradient(to right, #FFAFBD, #ffc3a0); */
-  border-color: black;
+  border-color:  rgb(67, 67, 67);
+  background-color: rgb(67, 67, 67);
   overflow:hidden;
   flex-direction: column;
-  background-color: black;
-  /* background-image: linear-gradient(to right, #FFAFBD, #ffc3a0);
-  background-image: url("/img/Chef.jpg"); */
-  background-size: 50% 100%;
-  background-repeat: no-repeat;
-  background-position: right;
 }
 #Host_label{
   font-size: 50px;
   margin-left: 40px;
   margin-top: 10px;
+  font-family: 'Nanum Gothic';
 }
 #Host_Ex{
   font-size: 20px;
   margin-left: 20px;
+  font-family: 'Nanum Gothic';
 }
 
-#Customer{
+#Customer ,#host{
   width: 500px;
   height: 300px;
   margin-left: 150px;
@@ -56,21 +52,18 @@ body{
   justify-content: center;
   align-items: flex-start;
   border-style: solid;
-  border-color: black;
   overflow:hidden;
   flex-direction: column;
-  /* background-image: linear-gradient(to right, #ec8575, #ed709d); */
-  background-image: url("/img/Customer.jpg");
-  background-size: 100% 100%;
-  background-repeat: no-repeat;
-  background-position: right;
+  background-color: white;
 }
 #Customer_label{
   font-size: 50px;
   margin-left: 40px;
-  margin-top: 10px;
+  margin-top: -15px;
+  font-family: 'Nanum Gothic';
 }
 #Customer_Ex{
   font-size: 20px;
   margin-left: 20px;
+  font-family: 'Nanum Gothic';
 }

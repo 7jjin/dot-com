@@ -71,6 +71,18 @@ body {
     height: 170px;
     box-shadow: 0 3px 6px 0 rgb(29 34 53 / 8%);
 }
+.Photo_Edit{
+    position: absolute;
+    right: -13px;
+    bottom: 0;
+    width: 30px;
+    height: 30px;
+    border-radius: 50%;
+    border: 2px solid #fff;
+    background-color: #02da78;
+    box-shadow: 2px 6px 8px 0 rgb(30 30 35 / 8%);
+    box-sizing: border-box;
+}
 
 .UserName{
     font-size: 26px;
@@ -105,7 +117,6 @@ body {
     font-weight: 700;
     margin-top: 30px;
     color: white;
-    
 }
 
 .Menu{
@@ -125,7 +136,7 @@ body {
 }
 
 .Account{
-    margin-top: 150px;
+    margin-top: 180px;
     font-size: 18px;
     font-weight: 700;
     line-height: 24px;
