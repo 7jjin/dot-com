@@ -1,45 +1,21 @@
-function getLocation() {
-    if (navigator.geolocation) {
-        navigator.geolocation.getCurrentPosition(function(position) {
-            let lon = position.coords.latitude; //위도
-            let lat = position.coords.longitude; //경도
-            toAddress(lon,lat);
-        }, function(error) {
-          console.error(error);
-        }, {
-          enableHighAccuracy: false,
-          maximumAge: 0,
-          timeout: Infinity
-        });
-    }
-}
+const nowplace = document.querySelector(".nowplace");
+const place = document.querySelector(".place");
 
-
-function toAddress(lon,lat){
-    console.log(`lon: ${lon}, lat: ${lat}`);
-    $.ajax({
-        url : `https://dapi.kakao.com/v2/local/geo/coord2address.json?x=${lat}&y=${lon}&input_coord=WGS84`,
-        type : 'GET',
-        headers : {
-          Authorization : 'kakaoAK {4c52e79e01d745f8fccd4b35c17788e6}'
-        },
-        success : function(result) {
-            let totatlCount = result.meta.total_count; //총 문서 수 
-             if (totatlCount > 0) {
-                if (result.documents[0].road_address === null) {
-                    addressName = result.documents[0].address.region_1depth_name; //지역(시) 이름 
-                } else {
-                    addressName = result.documents[0].road_address.region_1depth_name;
-                }
+nowplace.addEventListener("click",function(){
+    navigator.geolocation.getCurrentPosition(function(position){
+        var geocoder = new kakao.maps.services.Geocoder();        
+        var callback = function(result,status){
+            if(status === kakao.maps.services.Status.OK){
+                var location = result[0].address_name;
+                nowplace.style.display = "none";
+                var div = document.createElement("div");
+                var txt = document.createTextNode(`현재 위치는 ${location} 입니다.`);
+                div.appendChild(txt);
+                place.prepend(div);
+                div.style.marginBottom = "30px";
+                div.style.fontSize = "30px";
             }
-            addr = addressName;
-        },
-        error : function(e) {
-          console.log(e);
-        }
+        };
+        geocoder.coord2RegionCode(position.coords.longitude,position.coords.latitude,callback);
     });
-}
-
-$("#btnTest").click(function() {
-	getLocation();
-})
+});

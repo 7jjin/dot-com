@@ -292,7 +292,7 @@ body{
   box-shadow:rgb(128 128 128 / 85%) 4px 1px 17px 1px;
   border-radius: 0px 10px 10px 10px;
 }
-.nowplace button{
+.place button{
   margin-bottom: 30px;
   font-size: 30px;
   cursor: pointer;
