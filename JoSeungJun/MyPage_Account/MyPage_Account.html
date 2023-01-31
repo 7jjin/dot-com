@@ -7,7 +7,6 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
     <link rel="stylesheet" href="./MyPage_Account.css" />
-    <script src="./MyPage_Account.js"></script>
 </head>
 
 <body>
@@ -24,10 +23,9 @@
             <div class="Profile_Area">
                 <div class="Profile_Inner">
                     <div class="Photo">
-                        <img src="/img/Profile.png" alt="profile_image">
-                        <span class="Photo_Edit">
-                            
-                        </span>
+                        <img src="/img/Profile.png" alt="profile_image" class="Profile_Image">
+                        <input type="file" accept="image/*" class="Upload">
+                        <span class="Photo_Edit"></span>
                     </div>
                     <div class="Profile">
                         <p class="UserName">조승준</p>
@@ -96,5 +94,6 @@
         </div>
     </div>
 </body>
+<script src="./MyPage_Account.js"></script>
 
 </html>

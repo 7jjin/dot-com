@@ -71,7 +71,23 @@ body {
     height: 170px;
     box-shadow: 0 3px 6px 0 rgb(29 34 53 / 8%);
 }
-
+.Photo{
+    position:relative;
+}
+.Photo_Edit{
+    position: absolute;
+    top: 120px;
+    right: 115px;
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    border: 2px solid #fff;
+    box-shadow: 2px 6px 8px 0 rgb(30 30 35 / 8%);
+    box-sizing: border-box;
+    background-image: url("/img/Edit.png");
+    background-size: 100% 100%;
+    background-color: white;
+}
 .UserName{
     font-size: 26px;
     font-weight: 700;

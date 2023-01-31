@@ -1,7 +1,3 @@
-html {
-    height: 100%;
-}
-
 body {
     margin: 0;
     background-color: rgb(245, 246, 247);
@@ -15,7 +11,7 @@ body {
 /*왼쪽 내 정보 탭*/
 .SideBar {
     width: 400px;
-    height: 753px;
+    height: 100vh;
     margin-left: 150px;
     border-left: 1px solid #ddd;
     border-right: 1px solid #ddd;
@@ -71,17 +67,25 @@ body {
     height: 170px;
     box-shadow: 0 3px 6px 0 rgb(29 34 53 / 8%);
 }
+.Upload{
+    display: none;
+}
+.Photo{
+    position:relative;
+}
 .Photo_Edit{
     position: absolute;
-    right: -13px;
-    bottom: 0;
-    width: 30px;
-    height: 30px;
+    top: 120px;
+    right: 115px;
+    width: 40px;
+    height: 40px;
     border-radius: 50%;
     border: 2px solid #fff;
-    background-color: #02da78;
     box-shadow: 2px 6px 8px 0 rgb(30 30 35 / 8%);
     box-sizing: border-box;
+    background-image: url("/img/Edit.png");
+    background-size: 100% 100%;
+    background-color: white;
 }
 
 .UserName{
