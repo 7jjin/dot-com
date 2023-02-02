@@ -1,5 +1,3 @@
-'use strict';
-
 const quickfilter  = document.querySelector(".quickfilter");
 const myplace = document.querySelector(".myplace");
 const menu = document.querySelector(".menu");
@@ -12,21 +10,23 @@ const filterRegion = document.querySelector(".filterRegion");
 const filterMenu = document.querySelector(".filterMenu");
 const nowbutton = document.querySelector(".nowplace button");
 const section = document.querySelector("section");
-const movein = document.querySelector(".movein");
-const moveout = document.querySelector(".moveout");
-const blurin = document.querySelector(".blurin")
 
-
-let margin = window.getComputedStyle(quickfilter).marginTop;
-
-//document.addEventListener("click",filterDown);
 document.addEventListener("click",filterUp);
 
 function filterUp(event){
     var target = event.target.closest("section").className;
     const quickfilter  = document.querySelector(".quickfilter");
-    //console.log(target)
-    if(target==='quickfilter'||quickfilter.classList.contains("moveout")===true){
+    console.log(target)
+    
+    if(target!=='quickfilter movein'&&quickfilter.classList.contains("movein")===true){
+        console.log('b')
+        quickfilter.classList.remove("movein");
+        quickfilter.classList.add("moveout");
+        wrap.classList.remove("blurin");
+        wrap.classList.add("blurout");
+        wrap.style.backgroundColor="";
+    }    
+    if(target==='quickfilter'|| target==="quickfilter moveout"){
         console.log("a")
         quickfilter.classList.remove("moveout");
         quickfilter.classList.add("movein");
@@ -35,40 +35,7 @@ function filterUp(event){
         wrap.style.backgroundColor="rgb(128 128 128 / 26%)";
     }
 }
-
-// // filterBox를 클릭했을때 filterbox가 올라가는 함수.
-
-// function filterDown(event){
-//     var target = event.target.closest("section").className;
-//     const quickfilter  = document.querySelector(".quickfilter");
-//     console.log("b")
-//     if(target!=='quickfilter'&&quickfilter.classList.contains("movein")===true)
-//     console.log("c")
-//         quickfilter.classList.remove("movein");
-//         quickfilter.classList.add("moveout");
-//         wrap.classList.remove("blurin");
-//         wrap.classList.add("blurout");
-//         wrap.style.backgroundColor="";
-// } 
-// filterBox를 제외한 곳을 눌렀을 경우에는 내려가는 함수
-    
-// function filterup(){
-//     return new Promise((resolve,reject)=>{
-//         document.addEventListener("click",function(){
-//             if(target==='quickfilter'){
-//                 quickfilter.classList.remove("moveout");
-//                 quickfilter.classList.add("movein");
-//                 wrap.classList.remove("blurout");   
-//                 wrap.classList.add("blurin");
-//                 wrap.style.backgroundColor="rgb(128 128 128 / 26%)";
-//             }
-//         });
-//     })
-//     async function filterDown(){
-//         await filterup().then;
-//     }
-// }
-
+// 필터를 올리고 내리는 함수
 
 myplace.addEventListener("click",()=>{
     filterRegion.style.display="flex";
@@ -82,6 +49,6 @@ menu.addEventListener("click",()=>{
     myplace.style.backgroundColor="#0de0e5ed";
     filterRegion.style.display="none";
 });
-
+// 해당버튼 누르면 해당 메뉴 나오는 함수
 
 

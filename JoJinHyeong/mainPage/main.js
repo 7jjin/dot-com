@@ -9,6 +9,7 @@ window.onload=function(){
     showSlides(slideIndex);
   }, sec);
 }
+
 function moveSlides(n) {
   slideIndex = slideIndex + n
   showSlides(slideIndex);

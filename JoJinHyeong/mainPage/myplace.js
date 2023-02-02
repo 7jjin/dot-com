@@ -19,3 +19,6 @@ nowplace.addEventListener("click",function(){
         geocoder.coord2RegionCode(position.coords.longitude,position.coords.latitude,callback);
     });
 });
+
+// 버튼 클릭시 역지오코딩으로 현재 사용자 위치를 좌표로 구해서 지역으로 나타내는 방법을 사용했다.
+// 

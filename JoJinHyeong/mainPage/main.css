@@ -386,7 +386,7 @@ body{
 
 .movein{
   animation-name: movein;
-  animation-duration: 2s;
+  animation-duration: 0.65s;
   animation-fill-mode: forwards;
 }
 @keyframes movein{
@@ -400,7 +400,7 @@ body{
 
 .moveout{
   animation-name: moveout;
-  animation-duration: 2s;
+  animation-duration: 0.65s;
   animation-fill-mode: forwards;
 
 
@@ -417,7 +417,7 @@ body{
 
 
 .blurin{
-  animation: blurin 2s forwards;
+  animation: blurin 0.65s forwards;
 }
 @keyframes blurin{
   from{
@@ -428,7 +428,7 @@ body{
   }
 }
 .blurout{
-  animation: blurout 2s forwards;
+  animation: blurout 0.65s forwards;
 }
 @keyframes blurout{
   from{
