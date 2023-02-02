@@ -10,16 +10,16 @@ const filterRegion = document.querySelector(".filterRegion");
 const filterMenu = document.querySelector(".filterMenu");
 const nowbutton = document.querySelector(".nowplace button");
 const section = document.querySelector("section");
+const filterBar_button = document.querySelector(".filterBar_Names")
 
 document.addEventListener("click",filterUp);
 
 function filterUp(event){
     var target = event.target.closest("section").className;
     const quickfilter  = document.querySelector(".quickfilter");
-    console.log(target)
+
     
     if(target!=='quickfilter movein'&&quickfilter.classList.contains("movein")===true){
-        console.log('b')
         quickfilter.classList.remove("movein");
         quickfilter.classList.add("moveout");
         wrap.classList.remove("blurin");
@@ -27,7 +27,6 @@ function filterUp(event){
         wrap.style.backgroundColor="";
     }    
     if(target==='quickfilter'|| target==="quickfilter moveout"){
-        console.log("a")
         quickfilter.classList.remove("moveout");
         quickfilter.classList.add("movein");
         wrap.classList.remove("blurout");   

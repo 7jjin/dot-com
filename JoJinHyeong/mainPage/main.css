@@ -8,7 +8,7 @@ body{
 .mp_wap{
   position:absolute;
   top:53%;
-  left:20%;
+  left:10%;
 }
 
 .header{
@@ -254,7 +254,7 @@ body{
 .quickfilter{
   position: absolute;
   width: 1300px;
-  top: 0px;
+  top: 85px;
   left:50%;
   translate: -650px;
   margin-top:516px;
@@ -273,7 +273,11 @@ body{
 }
 .filterBar_Names{
   display: flex;
-  align-items: center;
+    align-items: center;
+    width: 400px;
+    position: absolute;
+    left: 0;
+    top: -87px;
 }
 .myplaceIcon{
   margin-right: 5px;
