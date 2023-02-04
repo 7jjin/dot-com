@@ -27,14 +27,14 @@ function showSlides(n) {
   var size = slides.length;
 
   if ((n+1) > size) {
-    slideIndex = 0; n = 0;
+    slideIndex = 0; n = 0;    // 슬라이드가 다돌면 다시 처음으로 
   }else if (n < 0) {
-    slideIndex = (size-1);
+    slideIndex = (size-1);    // 슬라이드가 첫번째에서 뒤로더가면 끝으로 이동
     n = (size-1);
   }
 
   for (i = 0; i < slides.length; i++) {
-      slides[i].style.display = "none";
+      slides[i].style.display = "none";   // 해당 
   }
   for (i = 0; i < dots.length; i++) {
       dots[i].className = dots[i].className.replace(" active", "");
