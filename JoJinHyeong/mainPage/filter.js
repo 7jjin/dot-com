@@ -12,9 +12,9 @@ const nowbutton = document.querySelector(".nowplace button");
 const section = document.querySelector("section");
 const filterBar_button = document.querySelector(".filterBar_Names")
 
-document.addEventListener("click",filterUp);
+document.addEventListener("click",filter);
 
-function filterUp(event){
+function filter(event){
     var target = event.target.closest("section").className;
     const quickfilter  = document.querySelector(".quickfilter");
 
