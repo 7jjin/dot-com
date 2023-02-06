@@ -152,3 +152,30 @@ html,body{
 .kakao_login button img{
     width: 22px;
 }
+
+.naver_login{
+    margin-top: 5px;
+    margin-bottom: 15px;
+}
+.naver_login button{
+    width:308px;
+    height: 36px;
+    border-radius: 6px;
+    cursor: pointer;
+    padding:0px;
+}
+.naver_login button p{
+    margin:0px;
+}
+
+.naver_login button{
+    margin:0px;
+    background-color: #19ce60;
+    display: flex;
+    align-items: center;
+    border:none;
+    justify-content: center;
+}
+.naver_login button img{
+    width: 22px;
+}
