@@ -369,6 +369,40 @@ body{
   flex-direction: column;
   align-items: center;
 }
+
+
+.base{
+  display: flex;
+  padding-bottom: 20px;
+  flex-direction: column;
+  background-color: wheat;
+  border: 5px solid black;
+  margin-top: 10px;
+
+}
+.base .storeName{
+  font-size: 30px;
+  display: flex;
+  margin-left: 30px;
+  align-items: center;
+  justify-content: space-between;
+}
+.storeName .distance{
+  margin-right: 30px;
+}
+.base p{
+  display: inline-block;
+  margin-left: 62px;
+}
+.base .placeURL{
+  margin-left: 62px;
+  display: inline-block;
+  text-decoration: none;
+  color:inherit;
+}
+
+
+
 /* 애니메이션 효과 */
 .fade {
   -webkit-animation-name: fade;
