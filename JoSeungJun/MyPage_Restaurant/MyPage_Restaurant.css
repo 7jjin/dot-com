@@ -182,6 +182,14 @@ body {
     color: #7b8994;
 }
 
+.Confirm_Btn{
+    font-size: 14px;
+    font-weight: 500;
+    line-height: 17px;
+    letter-spacing: -.47px;
+    color: #7b8994;
+}
+
 /*메뉴 사이 선*/
 .line{
     border-top: 1px solid #e5e5e5;
@@ -218,7 +226,7 @@ body {
     padding: 10px;
 }
 
-.Btn{ 
+.Edit, .Confirm, .Open, .Close, .Last { 
     float: right;
     padding: 2px 9px 3px;
     border-radius: 4px;

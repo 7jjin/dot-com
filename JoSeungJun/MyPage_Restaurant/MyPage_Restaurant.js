@@ -3,8 +3,13 @@ document.addEventListener("DOMContentLoaded", function () {
     const realUpload = document.querySelector('.Upload');
     const load = document.querySelector('.Photo_Edit');
     const photo = document.querySelector('.Profile_Image');
-    const Edit_Btn = document.querySelector('.Btn');
+    const Open_Btn = document.querySelector('.Open');
+    const Close_Btn = document.querySelector('.Close');
+    const Last_Btn = document.querySelector('.Last');
+    const Confirm_Btn = document.querySelector('.Confirm')
     const Edit_Input = document.querySelector('.Time_Input');
+    const Week_Check = document.querySelector('#week_check');
+
 
     function handleSubmit(event) {
         event.preventDefault()
@@ -32,7 +37,14 @@ document.addEventListener("DOMContentLoaded", function () {
         })
     }
 
-    Edit_Btn.addEventListener('click', Edit);
+    function week(){
+        alert(Week_Check.value + "요일로 수정 되었습니다.")
+    }
+
+    Open_Btn.addEventListener('click', Edit);
+    Close_Btn.addEventListener('click', Edit);
+    Last_Btn.addEventListener('click', Edit);
+    Confirm_Btn.addEventListener('click', week);
     load.addEventListener('click', () => realUpload.click());
     realUpload.addEventListener('change', change);
     });

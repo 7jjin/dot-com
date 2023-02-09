@@ -36,7 +36,7 @@
             <div class="Menu_Area">
                 <li>
                     <a href="#" onclick="location.href='/JoSeungJun/MyPage_Account/MyPage_Account.html'">
-                        <div class="Menu" >정보수정</div>
+                        <div class="Menu">정보수정</div>
                     </a>
                 </li>
                 <li>
@@ -67,7 +67,7 @@
                 <li>
                     <div class="Time_Box">
                         <span class="Time">개점 시간</span>
-                        <button class="Btn">
+                        <button class="Open">
                             <span class="Time_Btn">설정</span>
                         </button>
                         <span class="Time_Input">오전 9시</span>
@@ -77,42 +77,53 @@
                 <li>
                     <div class="Time_Box">
                         <span class="Time">폐점 시간</span>
-                        <button class="Btn">
+                        <button class="Close">
                             <span class="Time_Btn">설정</span>
                         </button>
-                        <span class="Time_Input">오전 9시</span>
                     </div>
                 </li>
                 <div class="line"></div>
                 <li>
                     <div class="Time_Box">
                         <span class="Time">라스트 오더</span>
-                        <button class="Btn">
+                        <button class="Last">
                             <span class="Time_Btn">설정</span>
                         </button>
-                        <span class="Time_Input">오전 9시</span>
                     </div>
                 </li>
                 <div class="line"></div>
                 <li>
-                    <div class="Time_Box">
-                        <span class="Time">개점 요일</span>
-                        <span class="Id_Info"></span>
-                    </div>
-                </li>
+                    <form action="" class="week_submit">
+                        <div class="Time_Box">
+                            <span class="Time">개점 요일</span>
+                            <span class="week">
+                                <input type="checkbox" name="week" id="week_check" value="">월
+                                <input type="checkbox" name="week" id="week_check" value="">화
+                                <input type="checkbox" name="week" id="week_check" value="">수
+                                <input type="checkbox" name="week" id="week_check" value="">목
+                                <input type="checkbox" name="week" id="week_check" value="">금
+                                <input type="checkbox" name="week" id="week_check" value="">토
+                                <input type="checkbox" name="week" id="week_check" value="">일
+                            </span>
+                            <button class="Confirm">
+                                <span class="Confirm_Btn">수정</span>
+                            </button>
+                    </form>
             </div>
-            <h2 class="Account_Confirm">매장 사진</h2>
-            <div class="Confirm_Box">
-                <li>
-                    <div class="Pass_Box">
-                        <span class="Pass">비밀번호 변경</span>
-                        <button class="Btn">
-                            <span class="Pass_Btn">수정</span>
-                        </button>
-                    </div>
-                </li>
-            </div>
+            </li>
         </div>
+        <h2 class="Account_Confirm">매장 사진</h2>
+        <div class="Confirm_Box">
+            <li>
+                <div class="Pass_Box">
+                    <span class="Pass">비밀번호 변경</span>
+                    <button class="Edit">
+                        <span class="Pass_Btn">수정</span>
+                    </button>
+                </div>
+            </li>
+        </div>
+    </div>
     </div>
 </body>
 <script src="./MyPage_Restaurant.js"></script>
