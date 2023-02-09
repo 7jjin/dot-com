@@ -10,7 +10,8 @@ const filterRegion = document.querySelector(".filterRegion");
 const filterMenu = document.querySelector(".filterMenu");
 const nowbutton = document.querySelector(".nowplace button");
 const section = document.querySelector("section");
-const filterBar_button = document.querySelector(".filterBar_Names")
+const filterBar_button = document.querySelector(".filterBar_Names");
+
 
 document.addEventListener("click",filter);
 
@@ -25,6 +26,7 @@ function filter(event){
         wrap.classList.remove("blurin");
         wrap.classList.add("blurout");
         wrap.style.backgroundColor="";
+        store.style.display="none";         // 필터가 내려가면 가게 정보 안보이게 함
     }    
     if(target==='quickfilter'|| target==="quickfilter moveout"){
         quickfilter.classList.remove("moveout");
