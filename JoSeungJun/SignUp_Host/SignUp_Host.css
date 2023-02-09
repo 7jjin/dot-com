@@ -76,8 +76,8 @@ body{
 .DateBirth{
   margin-top: 20px;
 }
-.DateBirthInput{
-  width: 460px;
+.Date{
+  width: 134px;
   height: 25px;
   padding: 10px;
 }

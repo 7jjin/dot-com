@@ -6,7 +6,7 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
-    <link rel="stylesheet" href="./MyPage_Account.css" />
+    <link rel="stylesheet" href="./MyPage_Restaurant.css" />
 </head>
 
 <body>
@@ -34,9 +34,9 @@
                 </div>
             </div>
             <div class="Menu_Area">
-                <li class="Act">
+                <li>
                     <a href="#" onclick="location.href='/JoSeungJun/MyPage_Account/MyPage_Account.html'">
-                        <div class="Menu_Act" >정보수정</div>
+                        <div class="Menu" >정보수정</div>
                     </a>
                 </li>
                 <li>
@@ -54,44 +54,60 @@
                         <div class="Menu">방문목록</div>
                     </a>
                 </li>
-                <li>
+                <li class="Act">
                     <a href="#" onclick="location.href='/JoSeungJun/MyPage_Restaurant/MyPage_Restaurant.html'">
-                        <div class="Menu">식당관리</div>
+                        <div class="Menu_Act">식당관리</div>
                     </a>
                 </li>
             </div>
         </div>
         <div class="Info">
-            <h2 class="Account">계정 정보</h2>
+            <h2 class="Account">매장 시간 정보</h2>
             <div class="Account_Box">
                 <li>
-                    <div class="Id_Box">
-                        <span class="Id">아이디</span>
-                        <span class="Id_Info">jsj487</span>
+                    <div class="Time_Box">
+                        <span class="Time">개점 시간</span>
+                        <button class="Btn">
+                            <span class="Time_Btn">설정</span>
+                        </button>
+                        <span class="Time_Input">오전 9시</span>
                     </div>
                 </li>
                 <div class="line"></div>
                 <li>
-                    <div class="Email_Box">
-                        <span class="Email">이메일</span>
-                        <span class="Id_Info">jsj487@naver.com</span>
+                    <div class="Time_Box">
+                        <span class="Time">폐점 시간</span>
+                        <button class="Btn">
+                            <span class="Time_Btn">설정</span>
+                        </button>
+                        <span class="Time_Input">오전 9시</span>
                     </div>
                 </li>
                 <div class="line"></div>
                 <li>
-                    <div class="Name_Box">
-                        <span class="Name">이름</span>
-                        <span class="Id_Info">조승준</span>
+                    <div class="Time_Box">
+                        <span class="Time">라스트 오더</span>
+                        <button class="Btn">
+                            <span class="Time_Btn">설정</span>
+                        </button>
+                        <span class="Time_Input">오전 9시</span>
+                    </div>
+                </li>
+                <div class="line"></div>
+                <li>
+                    <div class="Time_Box">
+                        <span class="Time">개점 요일</span>
+                        <span class="Id_Info"></span>
                     </div>
                 </li>
             </div>
-            <h2 class="Account_Confirm">보안 설정</h2>
+            <h2 class="Account_Confirm">매장 사진</h2>
             <div class="Confirm_Box">
                 <li>
                     <div class="Pass_Box">
                         <span class="Pass">비밀번호 변경</span>
-                        <button class="Pass_Btn" href="#" onclick="location.href='/JoSeungJun/Confirm_Pass/Confirm_Pass.html'">
-                            <span class="Pass_Info">수정</span>
+                        <button class="Btn">
+                            <span class="Pass_Btn">수정</span>
                         </button>
                     </div>
                 </li>
@@ -99,6 +115,6 @@
         </div>
     </div>
 </body>
-<script src="./MyPage_Account.js"></script>
+<script src="./MyPage_Restaurant.js"></script>
 
 </html>
