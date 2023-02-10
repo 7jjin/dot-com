@@ -2,8 +2,9 @@ body {
     margin: 0;
     background-color: rgb(245, 246, 247);
 }
+
 /*전체를 감싸는 div*/
-.Main{
+.Main {
     display: flex;
     height: 100%;
 }
@@ -18,12 +19,14 @@ body {
     box-shadow: 5px 1px 8px 0 rgb(0 0 0 / 6%);
     background-color: #fff
 }
+
 /*로고 구역*/
 .Title_Area {
     display: flex;
     height: 10%;
     width: 100%;
 }
+
 /*로고 공간*/
 .headerLogo {
     display: flex;
@@ -46,34 +49,40 @@ body {
     background-size: 100px;
     margin-left: 20px;
 }
+
 /*"내 정보" 글씨*/
-.Title{
+.Title {
     width: 150px;
     font-size: 38px;
     margin-top: 10px;
 }
+
 /*프로필 사진과 이름 이메일 공간*/
-.Profile_Area{
+.Profile_Area {
     margin-top: 30px;
     /* border-bottom: 2px solid #ddd; */
 }
 
-.Profile_Inner{
+.Profile_Inner {
     text-align: center;
 }
-.Photo img{
+
+.Photo img {
     border-radius: 50%;
     width: 170px;
     height: 170px;
     box-shadow: 0 3px 6px 0 rgb(29 34 53 / 8%);
 }
-.Upload{
+
+.Upload, .Edit_Restaurant1, .Edit_Restaurant2, .Edit_Restaurant3 {
     display: none;
 }
-.Photo{
-    position:relative;
+
+.Photo {
+    position: relative;
 }
-.Photo_Edit{
+
+.Photo_Edit {
     position: absolute;
     top: 120px;
     right: 115px;
@@ -88,33 +97,35 @@ body {
     background-color: white;
 }
 
-.UserName{
+.UserName {
     font-size: 26px;
     font-weight: 700;
     line-height: 0px;
 }
-.UserEmail{
+
+.UserEmail {
     font-size: 15px;
     color: #929294;
     line-height: 10px;
 }
 
-.Menu_Area{
-    list-style:none;
+.Menu_Area {
+    list-style: none;
     width: 90%;
     padding-left: 5%;
     margin-top: 30px;
 }
 
-.Menu_Area a{
+.Menu_Area a {
     text-decoration-line: none;
 }
-.Act{
+
+.Act {
     background-color: #fcaa72;
     border-radius: 5px;
 }
 
-.Menu_Act{
+.Menu_Act {
     margin-left: 20px;
     padding: 5px;
     font-size: 20px;
@@ -123,7 +134,7 @@ body {
     color: white;
 }
 
-.Menu{
+.Menu {
     margin-left: 20px;
     padding: 5px;
     border-radius: 5px;
@@ -134,15 +145,14 @@ body {
 }
 
 /*오른쪽 메인 정보*/
-.Info{
+.Info {
     padding: 0 30px;
     width: 50%;
     padding-left: 70px;
 }
 
 /*1번째 메뉴*/
-.Account{
-    margin-top: 180px;
+.Time_Info {
     font-size: 18px;
     font-weight: 700;
     line-height: 24px;
@@ -150,7 +160,7 @@ body {
     color: #303038;
 }
 
-.Account_Box{
+.Restaurant_Box {
     padding: 0 17px;
     list-style: none;
     border-radius: 5px;
@@ -159,10 +169,11 @@ body {
     background-color: #fff;
 }
 
-.Time_Box{
+.Time_Box {
     padding: 12px 0 12px;
 }
-.Time{   
+
+.Time {
     font-size: 16px;
     font-weight: 500;
     line-height: 24px;
@@ -170,11 +181,15 @@ body {
     color: #303038;
     padding: 10px;
 }
-.Time_Input{
+
+.Open_Input,
+.Close_Input,
+.Last_Input {
     float: right;
     margin-right: 50px;
 }
-.Time_Btn{
+
+.Time_Btn {
     font-size: 14px;
     font-weight: 500;
     line-height: 17px;
@@ -182,7 +197,7 @@ body {
     color: #7b8994;
 }
 
-.Confirm_Btn{
+.Confirm_Btn {
     font-size: 14px;
     font-weight: 500;
     line-height: 17px;
@@ -191,12 +206,12 @@ body {
 }
 
 /*메뉴 사이 선*/
-.line{
+.line {
     border-top: 1px solid #e5e5e5;
 }
 
 /*2번째 메뉴*/
-.Account_Confirm{
+.Account_Confirm {
     margin-top: 50px;
     font-size: 18px;
     font-weight: 700;
@@ -205,7 +220,7 @@ body {
     color: #303038;
 }
 
-.Confirm_Box{
+.Confirm_Box {
     padding: 0 17px;
     list-style: none;
     border-radius: 5px;
@@ -214,30 +229,82 @@ body {
     background-color: #fff;
 }
 
-.Pass_Box{
+.Confirm,
+.Open,
+.Close,
+.Last {
+    float: right;
+    padding: 2px 9px 3px;
+    border-radius: 4px;
+    border: solid 1px rgba(212, 216, 229, .5);
+    background-color: rgba(212, 216, 229, .25);
+}
+
+.week {
+    float: right;
+    margin-right: 45px;
+}
+
+.Picture_Box {
     padding: 12px 0 12px;
 }
-.Pass{   
+
+.Picture {
     font-size: 16px;
     font-weight: 500;
     line-height: 24px;
     letter-spacing: -.8px;
     color: #303038;
-    padding: 10px;
 }
 
-.Edit, .Confirm, .Open, .Close, .Last { 
+.Edit_Restaurant {
     float: right;
-    padding: 2px 9px 3px;
-    border-radius: 4px;
-    border: solid 1px rgba(212,216,229,.5);
-    background-color: rgba(212,216,229,.25);
 }
 
-.Pass_Btn{
-    font-size: 14px;
-    font-weight: 500;
-    line-height: 17px;
-    letter-spacing: -.47px;
-    color: #7b8994;
+.Under {
+    display: flex;
+    margin-left: 60px;
+}
+
+.Picture_Restaurant_1 {
+    margin-top: 20px;
+    border: 1px solid #ddd;
+    width: 400px;
+    height: 402px;
+    font-size: 50px;
+    color: #ddd;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.Picture_Restaurant_2 {
+    margin-top: 20px;
+    border: 1px solid #ddd;
+    width: 200px;
+    height: 200px;
+    font-size: 25px;
+    color: #ddd;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.Picture_Restaurant_3 {
+    border: 1px solid #ddd;
+    width: 200px;
+    height: 200px;
+    font-size: 25px;
+    color: #ddd;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.Main_Ex, .Serve1_Ex, .Serve2_Ex{
+    position: absolute;
+}
+.Main_Image, .Serve_Image1, .Serve_Image2{
+    width:100%;
+    height:100%;
 }
