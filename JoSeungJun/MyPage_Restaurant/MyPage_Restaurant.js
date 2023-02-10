@@ -9,7 +9,7 @@ document.addEventListener("DOMContentLoaded", function () {
     const Confirm_Btn = document.querySelector('.Confirm')
     const Edit_Input = document.querySelector('.Time_Input');
     const Week_Check = document.querySelector('#week_check');
-
+    console.log(Edit_Input.innerHTML)
 
     function handleSubmit(event) {
         event.preventDefault()
@@ -26,14 +26,14 @@ document.addEventListener("DOMContentLoaded", function () {
     function Edit(){
         Edit_Input.innerHTML = `
         <form class="TimeEdit" action="">
-            <input type="text", placeholder = "시간을 입력 해 주세요"> 
+            <input class="inputvalue" type="text", placeholder = "시간을 입력 해 주세요"> 
         </form>
         `;
 
         document.querySelector(".TimeEdit").addEventListener("submit",function() {
-            const Input = document.querySelector(".TimeEdit");
+            const Input = document.querySelector(".inputvalue");
 
-            Edit_Input.value = Input.value;
+            Edit_Input.innerHTML = Input.value;
         })
     }
 
