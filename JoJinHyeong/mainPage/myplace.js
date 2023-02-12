@@ -23,36 +23,6 @@ nowplace.addEventListener("click",function(){
     });
 });
 
-// 버튼 클릭시 역지오코딩으로 현재 사용자 위치를 좌표로 구해서 지역으로 나타내는 방법을 사용했다.
-
-// find.addEventListener("click",function(){
-//     navigator.geolocation.getCurrentPosition(function(position){
-//         var places = new kakao.maps.services.Places();
-//         let long = position.coords.longitude;
-//         let lat = position.coords.latitude;
-//         var callback = function(result, status) {
-//             if (status === kakao.maps.services.Status.OK) {
-//                 result = result.sort((a,b)=>a.distance-b.distance);
-//                 console.log(result)
-//                 for(let i=0;i<5;i++){
-//                     var div = document.createElement("div");
-//                     var txt = document.createTextNode(`음식점${i}은 ${result[i].place_name} 입니다.`);
-//                     div.appendChild(txt);
-//                     quickfilter.append(div);
-//                     div.style.fontSize="40px";
-//                     div.style.height="150px";
-//                     div.style.border="1px solid black";
-//                     div.style.background="white";
-//                 }
-                
-//             }
-//         };
-//         places.categorySearch('FD6', callback, {
-//             // Map 객체를 지정하지 않았으므로 좌표객체를 생성하여 넘겨준다.
-//             location: new kakao.maps.LatLng(lat,long)
-//         });
-//     });
-// });
 
 find.addEventListener("click",function(){
     store.style.display="block";        // 찾기 버튼 누를 시 가게 정보 보이게 함
