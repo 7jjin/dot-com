@@ -1,0 +1,190 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="./Restaurant.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Nanum+Gothic:wght@400;700;800&display=swap" rel="stylesheet">
+    <title>Document</title>
+</head>
+
+<body>
+    <div>
+        <section class="header">
+            <div class="headerWapper">
+                <div class="headerInner">
+                    <div class="headerLogo">
+                        <div class="logo">
+                            <a href="#" onclick="location.href='/JoJinHyeong/mainPage/main.html'"></a>
+                        </div>
+                    </div>
+                    <div class="headerSearch">
+                        <form class="searchForm">
+                            <input type="text" class="search" placeholder="식당을 입력하세요" />
+                            <div class="searchIcon">
+                                <i class="fa-solid fa-magnifying-glass"></i>
+                            </div>
+                        </form>
+                        <div class="iconBox"></div>
+                    </div>
+                    <div class="headerUtil">
+                        <div class="utilList">
+                            <div class="utilList_login">
+                                <i class="fa-regular fa-user" style="font-size: 25px"
+                                    onclick="location.href='/JoJinHyeong/loginPage/login.html'"></i>
+                            </div>
+                            <div class="utilList_Wait">
+                                <i class="fa-regular fa-clock" style="font-size: 25px"></i>
+                            </div>
+                            <button id="logout">로그아웃</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <!-- 현재 사용자 선택 옵션 -->
+        <section id="InfoBar">
+            <div class="RestaurantName">
+                <p>식당을 골라주세요!</p>
+            </div>
+            <div class="InfoMenu">
+                <div class="call">
+                    <a href="#" onclick="location.href='/JoJinHyeong/mainPage/main.html'"></a>
+                </div>
+                <div class="comfirm">
+                    <a href="#" onclick="location.href='/JoJinHyeong/mainPage/main.html'"></a>
+                </div>
+                <div class="memberChange">
+                    <a href="#" onclick="location.href='/JoJinHyeong/mainPage/main.html'"></a>
+                </div>
+                <div class="map">
+                    <a href="#" onclick="location.href='/JoJinHyeong/mainPage/main.html'"></a>
+                </div>
+                <div class="wait">
+                    <a href="#" onclick="location.href='/JoJinHyeong/mainPage/main.html'"></a>
+                </div>
+                <div class="cancel">
+                    <a href="#" onclick="location.href='/JoJinHyeong/mainPage/main.html'"></a>
+                </div>
+            </div>
+        </section>
+        <!-- 레스토랑 페이지 -->
+        <section class="Restaurant">
+            <div class="Entire">
+                <div class="img"></div>
+                <div class="RestaurantInfo">
+                    <h1 class="Name">레스토란트</h1>
+                    <hr class="line">
+                    <div class="Ex">
+                        <div class="Address">
+                            <h4 class="SubEx">주소</h4>
+                            <h4 class="AddressInfo">서울시 강동구 명일로 172로</h4>
+                        </div>
+                        <div class="Call">
+                            <h4 class="SubEx">전화 번호</h4>
+                            <h4 class="CallInfo">02-487-9828</h4>
+                        </div>
+                        <div class="Date">
+                            <h4 class="SubEx">운영 요일</h4>
+                            <h4 class="Week">월 | 화 | 수 | 목 | 금 | 토</h4>
+                        </div>
+                        <div class="Time">
+                            <h4 class="SubEx">운영 시간</h4>
+                            <div class="TimeBox">
+                                <div class="OpenBox">
+                                    <h4 class="Open">오픈 시간&nbsp;&nbsp;&nbsp;&nbsp;-&nbsp;</h4>
+                                    <h4 class="OpenTime">AM 09:00</h4>
+                                </div>
+                                <div class="CloseBox">
+                                    <h4 class="Close">마감 시간&nbsp;&nbsp;&nbsp;&nbsp;-&nbsp;</h4>
+                                    <h4 class="CloseTime">PM 10:00</h4>
+                                </div>
+                                <div class="LastBox">
+                                    <h4 class="Last">라스트 오더&nbsp;-&nbsp;</h4>
+                                    <h4 class="LastTime">PM 09:00</h4>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="Introduce">
+                            <h4 class="SubEx">가게 소개</h4>
+                            <h4 class="IntroInfo">레스토란트에서 어디에서도 느껴본 적 없는 맛과 서비스를 느껴보세요.<br>
+                                연인과 가족과 편안하게 식사하실 수 있게 정성스럽게 모시겠습니다.
+                            </h4>
+                        </div>
+                    </div>
+                    <hr class="line">
+                </div>
+                <div class="MenuBar">
+                    <li class="active" style="flex:1;">
+                        <a>
+                            <span class="MenuTab">메뉴</span>
+                        </a>
+                    </li>
+                    <li style="flex:1;">
+                        <a>
+                            <span class="ReviewTab">리뷰 목록</span>
+                        </a>
+                    </li>
+                </div>
+                <div class="Menu">
+                    <a class="MenuItem">
+                        <h1 class="Menu1">스테이크</h1>
+                        <a class="SubItem">
+                            <div class="MenuInfo">
+                                <div class="MenuName">
+                                    <h4>
+                                        <strong>안심 스테이크</strong>
+                                    </h4>
+                                </div>
+                                <span class="MenuPrice">20,000원</span>
+                            </div>
+                            <div class="MenuImg" style="background-image: URL(/img/Relief.jpg);"></div>
+                        </a>
+                        <a class="SubItem">
+                            <div class="MenuInfo">
+                                <div class="MenuName">
+                                    <h4>
+                                        <strong>토마호크 스테이크</strong>
+                                    </h4>
+                                </div>
+                                <span class="MenuPrice">40,000원</span>
+                            </div>
+                            <div class="MenuImg" style="background-image: URL(/img/Tomahawk.jpg);"></div>
+                        </a>
+                    </a><hr class="line">
+                    <a class="MenuItem">
+                        <h1 class="Menu2">파스타</h1>
+                        <a class="SubItem">
+                            <div class="MenuInfo">
+                                <div class="MenuName">
+                                    <h4>
+                                        <strong>크림 파스타</strong>
+                                    </h4>
+                                </div>
+                                <span class="MenuPrice">11,000원</span>
+                            </div>
+                            <div class="MenuImg" style="background-image: URL(/img/Cream_Pasta.jpg);"></div>
+                        </a>
+                        <a class="SubItem">
+                            <div class="MenuInfo">
+                                <div class="MenuName">
+                                    <h4>
+                                        <strong>토마토 파스타</strong>
+                                    </h4>
+                                </div>
+                                <span class="MenuPrice">9,000원</span>
+                            </div>
+                            <div class="MenuImg" style="background-image: URL(/img/Tomato_Pasta.jpg);"></div>
+                        </a>
+                    </a><hr class="line">
+                </div>
+            </div>
+        </section>
+    </div>
+</body>
+
+</html>
