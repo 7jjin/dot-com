@@ -274,7 +274,7 @@ body{
     border-bottom: 2px solid black;
     box-shadow: 0px 20px 20px 0px #ddd;
 }
-.home, .Menu, .photo, .userReview{
+.homeTab, .MenuTab, .photoTab, .userReviewTab{
     display: flex;
     flex: 1;
     height: 100%;
@@ -317,3 +317,88 @@ body{
     left: 50%;
 }
 
+/**/
+
+.line{
+    margin-top: 0px;
+    height: 8px;
+    background:rgb(245, 246, 247);
+    border: rgb(245, 246, 247);
+}
+/*가게 이름*/
+.Name{
+    font-size: 40px;
+    margin: 20px 0px 20px 30px;
+}
+/*가게 정보 페이지*/
+.SubEx{
+    color: gray;
+}
+
+.Ex{
+    margin-left: 30px;
+}
+
+.Time,.Date,.Address,.Introduce,.Call{
+    display: flex;
+    font-size: 20px;
+    font-family: 'Nanum Gothic', sans-serif;
+}
+
+.OpenBox,.CloseBox,.LastBox{
+    margin-left: 50px;
+    display: flex;
+    font-size: 20px;
+}
+
+.CloseBox,.LastBox{
+    margin-top: -40px;
+}
+
+.Date,.Call,.Time,.Introduce{
+    margin-top: -25px;
+}
+
+.Week,.IntroInfo,.CallInfo{
+    margin-left: 50px;
+}
+
+.AddressInfo{
+    margin-left: 93px;
+}
+
+.IntroInfo{
+    margin-top: 20px;
+    line-height: 1.6
+}
+
+.Menu1,.Menu2{
+    font-size: 30px;
+    margin: 20px 0px 20px 30px;
+}
+
+.SubItem{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    min-height: 85px;
+    padding: 16px 20px;
+    box-sizing: border-box;
+    border-bottom: 2px solid rgb(245, 246, 247);
+}
+
+.MenuName{
+    margin-bottom: 2px;
+    font-weight: 700;
+}
+.MenuName h4{
+    margin-bottom: 10px;
+}
+
+.MenuImg{
+    background-position: center;
+    background-size: cover;
+    width: 150px;
+    height: 150px;
+    float: right;
+}
