@@ -1,0 +1,223 @@
+body{
+    margin:0px;
+    word-break: keep-all;
+    background-color: #fafafa;
+}
+.header{
+    width: 100%;
+    height: 90px;
+    border-bottom:2px solid #ddd;
+
+}
+.headerWapper{
+    width: 1300px;
+    height: 100%;
+    margin:0 auto;
+}
+.headerInner{
+    display: flex;
+    height: 100%;
+    width: 100%;
+
+}
+.headerLogo{
+    display: flex;
+    flex-basis: 25%;
+    align-items: center;
+    justify-content: center;
+}
+.logo{
+    display: flex;
+    padding-right: 5px;
+    width: 140px;
+    height: 100%;
+}
+.logo a{
+    background: url("/img/FOODEAT.png") no-repeat center center / 100px 90px;
+    width: 100%;
+    height: 100%;
+    background-size: 130px;
+    
+}
+.headerSearch{
+    display: flex;
+    align-items: center;
+    flex-basis: 50%;
+    width: 100%;
+    height: 100%;
+}
+.searchForm{
+    display: flex;
+    align-items: center;
+    border-radius: 20px;
+    background: #f8f8f8;
+    border: 1px solid #ddd;
+}
+.searchForm .search{
+    outline:none;
+    width: 370px;
+    height: 20px;
+    border-style: none;
+    background-color: #f8f8f8;
+    padding:10px 40px 10px 0px;
+    margin: 3px 0px 3px 15px;
+}
+.searchIcon{
+    position: relative;
+    right: 20px;
+    display: inline;
+}
+.headerUtil{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-basis: 25%;
+    width: 100%;
+    height: 100%;
+}
+.utilList{
+    display: flex;
+    margin-top: 5px;
+}
+.utilList_login ,.utilList_Wait{
+    padding-right: 20px;
+}
+/* 추가내용 */
+.store_Img{
+    width: 800px;
+    height: 300px;
+    margin-right: auto;
+    margin-left: auto;
+    background-image: url("./1.png");
+    background-repeat: no-repeat;
+    background-size:cover;
+    background-position:center;
+    box-shadow: 0px 9px 20px 5px #ddd;
+}
+.store_Info{
+    display: flex;
+    width: 800px;
+    flex-direction: column;
+    justify-content: center;
+    margin-right: auto;
+    margin-left: auto;
+    background-color: #FFFFFF;
+    box-shadow: 0px 9px 20px 5px #ddd;
+}
+.storeName{
+    display: flex;
+    font-size: 30px;
+    font-weight: 700;
+    margin-top: 20px;
+    padding-left: 20px;
+    align-items: baseline;
+}
+.storeName .storePlace{
+    font-size: 15px;
+    margin-left: 5px;
+    color:gray;
+}
+
+.storeIntro{
+    font-size: 20px;
+    font-weight: 500;
+    margin-top: 10px;
+    padding-left: 20px;
+}
+.storeRank{
+    display: flex;
+    font-size: 20px;
+    margin-top: 20px;
+    padding-left: 20px;
+}
+.storeRank .star{
+    margin-right: 10px;
+}
+.review{
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    padding-left: 20px;
+    margin-top: 10px;
+    color:grey;
+}
+.review .client{
+    margin-right: 10px;
+}
+.bar{
+    background-color:rgba(128, 128, 128, 0.693);
+    width: 1.7px;
+    height: 16px;
+    margin-right: 10px;
+}
+.etc{
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+}
+.phone, .hart, .share{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.etc p{
+    margin-left: 5px;
+}
+.filter{
+    display: flex;
+    width: 800px;
+    justify-content: space-around;
+    align-items: center;
+    font-size: 20px;
+    font-weight: 700;
+    margin-right: auto;
+    margin-left: auto;
+    height: 100px;
+    cursor: pointer;
+    background-color: white;
+    border-bottom: 2px solid black;
+    box-shadow: 0px 20px 20px 0px #ddd;
+}
+.home, .Menu, .photo, .userReview{
+    display: flex;
+    flex: 1;
+    height: 100%;
+    align-items: center;
+    justify-content: center;
+}
+.store_Home{
+    width: 800px;
+    margin: 0 auto;
+    background-color: antiquewhite;
+}
+.people{
+    
+}
+.people p{
+    margin:0;
+    padding-top: 20px;
+    font-size: 20px;
+    font-weight: 700;
+    padding-left: 20px;
+}
+.number{
+    display: flex;
+    flex-wrap: nowrap;
+    width: 800px;
+    white-space: nowrap;
+    overflow: auto;
+    margin-top: 20px;
+}
+.numberSlide{
+    display: block;
+    width: 48px;
+    height: 48px;
+    position:relative;
+    margin-right: 6px;
+}
+.numberSlide input{
+    position:absolute;
+    top:50%;
+    left: 50%;
+}
+

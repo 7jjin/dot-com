@@ -84,12 +84,11 @@ body{
     height: 100%;
 }
 .utilList{
-    display: table;
+    display: flex;
     margin-top: 5px;
 }
-.utilList_login{
-    display: table-cell;
-    padding-right: 25px;
+.utilList_login ,.utilList_Wait{
+    padding-right: 20px;
 }
 #InfoBar{
   display: flex;
