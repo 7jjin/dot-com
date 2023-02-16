@@ -235,6 +235,9 @@ body{
     margin: 20px 0px 20px 30px;
 }
 /*가게 정보 페이지*/
+.Entire{
+    width: 80%;
+}
 .SubEx{
     color: gray;
 }
