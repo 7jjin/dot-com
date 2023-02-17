@@ -1,287 +1,305 @@
 <!DOCTYPE html>
 <html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <link rel="stylesheet" href="store.css" />
+    <script
+      src="https://kit.fontawesome.com/06b646a751.js"
+      crossorigin="anonymous"
+    ></script>
+    <script defer src="./store.js"></script>
+  </head>
 
-<head>
-  <meta charset="UTF-8" />
-  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Document</title>
-  <link rel="stylesheet" href="store.css" />
-  <script src="https://kit.fontawesome.com/06b646a751.js" crossorigin="anonymous"></script>
-</head>
-
-<body>
-  <section class="header">
-    <div class="headerWapper">
-      <div class="headerInner">
-        <div class="headerLogo">
-          <div class="logo">
-            <a href="#" onclick="location.href='/JoJinHyeong/mainPage/main.html'"></a>
+  <body>
+    <section class="header">
+      <div class="headerWapper">
+        <div class="headerInner">
+          <div class="headerLogo">
+            <div class="logo">
+              <a
+                href="#"
+                onclick="location.href='/JoJinHyeong/mainPage/main.html'"
+              ></a>
+            </div>
           </div>
-        </div>
-        <div class="headerSearch">
-          <form class="searchForm">
-            <input type="text" class="search" placeholder="식당을 입력하세요" />
-            <div class="searchIcon">
-              <i class="fa-solid fa-magnifying-glass"></i>
+          <div class="headerSearch">
+            <form class="searchForm">
+              <input
+                type="text"
+                class="search"
+                placeholder="식당을 입력하세요"
+              />
+              <div class="searchIcon">
+                <i class="fa-solid fa-magnifying-glass"></i>
+              </div>
+            </form>
+            <div class="iconBox"></div>
+          </div>
+          <div class="headerUtil">
+            <div class="utilList">
+              <div class="utilList_login">
+                <i
+                  class="fa-regular fa-user"
+                  style="font-size: 25px"
+                  onclick="location.href='/JoJinHyeong/loginPage/login.html'"
+                ></i>
+              </div>
+              <div class="utilList_Wait">
+                <i class="fa-regular fa-clock" style="font-size: 25px"></i>
+              </div>
+              <button id="logout">로그아웃</button>
             </div>
-          </form>
-          <div class="iconBox"></div>
-        </div>
-        <div class="headerUtil">
-          <div class="utilList">
-            <div class="utilList_login">
-              <i class="fa-regular fa-user" style="font-size: 25px"
-                onclick="location.href='/JoJinHyeong/loginPage/login.html'"></i>
-            </div>
-            <div class="utilList_Wait">
-              <i class="fa-regular fa-clock" style="font-size: 25px"></i>
-            </div>
-            <button id="logout">로그아웃</button>
           </div>
         </div>
       </div>
+    </section>
+    <div class="Entire">
+      <section class="store_Img"></section>
+      <section class="store_Info">
+        <div class="storeName">
+          BBQ 광교호수공원점
+          <div class="storePlace">경기도•수원</div>
+        </div>
+        <div class="storeIntro">올리브 기름으로 튀긴 국내 1위 치킨</div>
+        <div class="storeRank">
+          <div class="star">⭐⭐⭐⭐⭐</div>
+          <div class="staravg">5.0</div>
+        </div>
+        <div class="review">
+          <div class="client">최근리뷰 993</div>
+          <div class="bar"></div>
+          <div class="manger">최근사장님리뷰 25</div>
+        </div>
+        <div class="etc">
+          <div class="phone">
+            <i class="fa-solid fa-mobile-screen"></i>
+            <p>전화</p>
+          </div>
+          <div class="hart">
+            <i class="fa-regular fa-heart"></i>
+            <p>1,120</p>
+          </div>
+          <div class="share">
+            <i class="fa-solid fa-arrow-up-right-from-square"></i>
+            <p>공유</p>
+          </div>
+        </div>
+      </section>
+      <section class="filter">
+        <div class="homeTab">홈</div>
+        <div class="MenuTab">메뉴</div>
+        <div class="photoTab">사진</div>
+        <div class="userReviewTab">리뷰</div>
+      </section>
+      <section class="store_Home">
+        <div class="people">
+          <p>인원수</p>
+          <div class="barlist">
+            <div class="number">
+              <label class="numberSlide">
+                <input type="radio" name="count" value="1" />
+                <span>1명</span>
+              </label>
+              <label class="numberSlide">
+                <input type="radio" name="count" value="1" />
+                <span>2명</span>
+              </label>
+              <label class="numberSlide">
+                <input type="radio" name="count" value="1" />
+                <span>3명</span>
+              </label>
+              <label class="numberSlide">
+                <input type="radio" name="count" value="1" />
+                <span>4명</span>
+              </label>
+              <label class="numberSlide">
+                <input type="radio" name="count" value="1" />
+                <span>5명</span>
+              </label>
+              <label class="numberSlide">
+                <input type="radio" name="count" value="1" />
+                <span>6명</span>
+              </label>
+              <label class="numberSlide">
+                <input type="radio" name="count" value="1" />
+                <span>7명</span>
+              </label>
+              <label class="numberSlide">
+                <input type="radio" name="count" value="1" />
+                <span>8명</span>
+              </label>
+              <label class="numberSlide">
+                <input type="radio" name="count" value="1" />
+                <span>9명</span>
+              </label>
+              <label class="numberSlide">
+                <input type="radio" name="count" value="1" />
+                <span>10명</span>
+              </label>
+              <label class="numberSlide">
+                <input type="radio" name="count" value="1" />
+                <span>11명</span>
+              </label>
+              <label class="numberSlide">
+                <input type="radio" name="count" value="1" />
+                <span>12명</span>
+              </label>
+              <label class="numberSlide">
+                <input type="radio" name="count" value="1" />
+                <span>13명</span>
+              </label>
+              <label class="numberSlide">
+                <input type="radio" name="count" value="1" />
+                <span>14명</span>
+              </label>
+              <label class="numberSlide">
+                <input type="radio" name="count" value="1" />
+                <span>15명</span>
+              </label>
+            </div>
+          </div>
+        </div>
+        <div class="RestaurantInfo">
+          <hr class="line" />
+          <div class="Ex">
+            <p>가게 정보</p>
+            <div class="Address">
+              <h4 class="SubEx">주소</h4>
+              <h4 class="AddressInfo">서울시 강동구 명일로 172로</h4>
+            </div>
+            <div class="Call">
+              <h4 class="SubEx">전화 번호</h4>
+              <h4 class="CallInfo">02-487-9828</h4>
+            </div>
+            <div class="Date">
+              <h4 class="SubEx">운영 요일</h4>
+              <h4 class="Week">월 | 화 | 수 | 목 | 금 | 토</h4>
+            </div>
+            <div class="Time">
+              <h4 class="SubEx">운영 시간</h4>
+              <div class="TimeBox">
+                <div class="OpenBox">
+                  <h4 class="Open">오픈 시간&nbsp;&nbsp;&nbsp;&nbsp;-&nbsp;</h4>
+                  <h4 class="OpenTime">AM 09:00</h4>
+                </div>
+                <div class="CloseBox">
+                  <h4 class="Close">
+                    마감 시간&nbsp;&nbsp;&nbsp;&nbsp;-&nbsp;
+                  </h4>
+                  <h4 class="CloseTime">PM 10:00</h4>
+                </div>
+                <div class="LastBox">
+                  <h4 class="Last">라스트 오더&nbsp;-&nbsp;</h4>
+                  <h4 class="LastTime">PM 09:00</h4>
+                </div>
+              </div>
+            </div>
+            <div class="Introduce">
+              <h4 class="SubEx">가게 소개</h4>
+              <h4 class="IntroInfo">
+                레스토란트에서 어디에서도 느껴본 적 없는 맛과 서비스를
+                느껴보세요.<br />
+                연인과 가족과 편안하게 식사하실 수 있게 정성스럽게 모시겠습니다.
+              </h4>
+            </div>
+            <div class="Facilities">
+              <h4 class="Subtitle">편의시설</h4>
+              <div class="emg">
+                <div class="icon">
+                  <i class="fa-solid fa-child-reaching"></i>
+                  <p>키즈존</p>
+                </div>
+                <div class="icon">
+                  <i class="fa-solid fa-square-parking"></i>
+                  <p>주차 가능</p>
+                </div>
+                <div class="icon">
+                  <i class="fa-solid fa-dog"></i>
+                  <p>애완동물 가능</p>
+                </div>
+                <div class="icon">
+                  <i class="fa-solid fa-wine-glass"></i>
+                  <p>콜키지 가능</p>
+                </div>
+              </div>
+            </div>
+          </div>
+          <hr class="line" />
+        </div>
+      </section>
+      <section class="store_Menu">
+        <div class="Menu">
+          <a class="MenuItem">
+            <h1 class="Menu1">스테이크</h1>
+            <a class="SubItem">
+              <div class="MenuInfo">
+                <div class="MenuName">
+                  <h4>
+                    <strong>안심 스테이크</strong>
+                  </h4>
+                </div>
+                <span class="MenuPrice">20,000원</span>
+              </div>
+              <div
+                class="MenuImg"
+                style="background-image: URL(/img/Relief.jpg)"
+              ></div>
+            </a>
+            <a class="SubItem">
+              <div class="MenuInfo">
+                <div class="MenuName">
+                  <h4>
+                    <strong>토마호크 스테이크</strong>
+                  </h4>
+                </div>
+                <span class="MenuPrice">40,000원</span>
+              </div>
+              <div
+                class="MenuImg"
+                style="background-image: URL(/img/Tomahawk.jpg)"
+              ></div>
+            </a>
+          </a>
+          <hr class="line" />
+          <a class="MenuItem">
+            <h1 class="Menu2">파스타</h1>
+            <a class="SubItem">
+              <div class="MenuInfo">
+                <div class="MenuName">
+                  <h4>
+                    <strong>크림 파스타</strong>
+                  </h4>
+                </div>
+                <span class="MenuPrice">11,000원</span>
+              </div>
+              <div
+                class="MenuImg"
+                style="background-image: URL(/img/Cream_Pasta.jpg)"
+              ></div>
+            </a>
+            <a class="SubItem">
+              <div class="MenuInfo">
+                <div class="MenuName">
+                  <h4>
+                    <strong>토마토 파스타</strong>
+                  </h4>
+                </div>
+                <span class="MenuPrice">9,000원</span>
+              </div>
+              <div
+                class="MenuImg"
+                style="background-image: URL(/img/Tomato_Pasta.jpg)"
+              ></div>
+            </a>
+          </a>
+          <hr class="line" />
+        </div>
+      </section>
+      <section class="store_photo"></section>
+      <section class="store_review"></section>
     </div>
-  </section>
-  <div class="Entire">
-    <section class="store_Img"></section>
-    <section class="store_Info">
-      <div class="storeName">
-        BBQ 광교호수공원점
-        <div class="storePlace">경기도•수원</div>
-      </div>
-      <div class="storeIntro">올리브 기름으로 튀긴 국내 1위 치킨</div>
-      <div class="storeRank">
-        <div class="star">⭐⭐⭐⭐⭐</div>
-        <div class="staravg">5.0</div>
-      </div>
-      <div class="review">
-        <div class="client">최근리뷰 993</div>
-        <div class="bar"></div>
-        <div class="manger">최근사장님리뷰 25</div>
-      </div>
-      <div class="etc">
-        <div class="phone">
-          <i class="fa-solid fa-mobile-screen"></i>
-          <p>전화</p>
-        </div>
-        <div class="hart">
-          <i class="fa-regular fa-heart"></i>
-          <p>1,120</p>
-        </div>
-        <div class="share">
-          <i class="fa-solid fa-arrow-up-right-from-square"></i>
-          <p>공유</p>
-        </div>
-      </div>
-    </section>
-    <section class="filter">
-      <div class="homeTab">홈</div>
-      <div class="MenuTab">메뉴</div>
-      <div class="photoTab">사진</div>
-      <div class="userReviewTab">리뷰</div>
-    </section>
-    <section class="store_Home">
-      <div class="people">
-        <p>인원수</p>
-        <div class="number">
-          <label class="numberSlide">
-            <input type="radio" name="count" value="1" />
-            <span>1명</span>
-          </label>
-          <label class="numberSlide">
-            <input type="radio" name="count" value="1" />
-            <span>1명</span>
-          </label>
-          <label class="numberSlide">
-            <input type="radio" name="count" value="1" />
-            <span>1명</span>
-          </label>
-          <label class="numberSlide">
-            <input type="radio" name="count" value="1" />
-            <span>1명</span>
-          </label>
-          <label class="numberSlide">
-            <input type="radio" name="count" value="1" />
-            <span>1명</span>
-          </label>
-          <label class="numberSlide">
-            <input type="radio" name="count" value="1" />
-            <span>1명</span>
-          </label>
-          <label class="numberSlide">
-            <input type="radio" name="count" value="1" />
-            <span>1명</span>
-          </label>
-          <label class="numberSlide">
-            <input type="radio" name="count" value="1" />
-            <span>1명</span>
-          </label>
-          <label class="numberSlide">
-            <input type="radio" name="count" value="1" />
-            <span>1명</span>
-          </label>
-          <label class="numberSlide">
-            <input type="radio" name="count" value="1" />
-            <span>1명</span>
-          </label>
-          <label class="numberSlide">
-            <input type="radio" name="count" value="1" />
-            <span>1명</span>
-          </label>
-          <label class="numberSlide">
-            <input type="radio" name="count" value="1" />
-            <span>1명</span>
-          </label>
-          <label class="numberSlide">
-            <input type="radio" name="count" value="1" />
-            <span>1명</span>
-          </label>
-          <label class="numberSlide">
-            <input type="radio" name="count" value="1" />
-            <span>1명</span>
-          </label>
-          <label class="numberSlide">
-            <input type="radio" name="count" value="1" />
-            <span>1명</span>
-          </label>
-          <label class="numberSlide">
-            <input type="radio" name="count" value="1" />
-            <span>1명</span>
-          </label>
-          <label class="numberSlide">
-            <input type="radio" name="count" value="1" />
-            <span>1명</span>
-          </label>
-          <label class="numberSlide">
-            <input type="radio" name="count" value="1" />
-            <span>1명</span>
-          </label>
-          <label class="numberSlide">
-            <input type="radio" name="count" value="1" />
-            <span>1명</span>
-          </label>
-
-          <label class="numberSlide">
-            <input type="radio" name="count" value="1" />
-            <span>1명</span>
-          </label>
-          <label class="numberSlide">
-            <input type="radio" name="count" value="1" />
-            <span>1명</span>
-          </label>
-          <label class="numberSlide">
-            <input type="radio" name="count" value="1" />
-            <span>1명</span>
-          </label>
-          <label class="numberSlide">
-            <input type="radio" name="count" value="1" />
-            <span>1명</span>
-          </label>
-
-        </div>
-      </div>
-      <div class="RestaurantInfo">
-        <hr class="line">
-        <div class="Ex">
-          <div class="Address">
-            <h4 class="SubEx">주소</h4>
-            <h4 class="AddressInfo">서울시 강동구 명일로 172로</h4>
-          </div>
-          <div class="Call">
-            <h4 class="SubEx">전화 번호</h4>
-            <h4 class="CallInfo">02-487-9828</h4>
-          </div>
-          <div class="Date">
-            <h4 class="SubEx">운영 요일</h4>
-            <h4 class="Week">월 | 화 | 수 | 목 | 금 | 토</h4>
-          </div>
-          <div class="Time">
-            <h4 class="SubEx">운영 시간</h4>
-            <div class="TimeBox">
-              <div class="OpenBox">
-                <h4 class="Open">오픈 시간&nbsp;&nbsp;&nbsp;&nbsp;-&nbsp;</h4>
-                <h4 class="OpenTime">AM 09:00</h4>
-              </div>
-              <div class="CloseBox">
-                <h4 class="Close">마감 시간&nbsp;&nbsp;&nbsp;&nbsp;-&nbsp;</h4>
-                <h4 class="CloseTime">PM 10:00</h4>
-              </div>
-              <div class="LastBox">
-                <h4 class="Last">라스트 오더&nbsp;-&nbsp;</h4>
-                <h4 class="LastTime">PM 09:00</h4>
-              </div>
-            </div>
-          </div>
-          <div class="Introduce">
-            <h4 class="SubEx">가게 소개</h4>
-            <h4 class="IntroInfo">레스토란트에서 어디에서도 느껴본 적 없는 맛과 서비스를 느껴보세요.<br>
-              연인과 가족과 편안하게 식사하실 수 있게 정성스럽게 모시겠습니다.
-            </h4>
-          </div>
-        </div>
-        <hr class="line">
-      </div>
-    </section>
-    <section class="store_Menu">
-      <div class="Menu">
-        <a class="MenuItem">
-          <h1 class="Menu1">스테이크</h1>
-          <a class="SubItem">
-            <div class="MenuInfo">
-              <div class="MenuName">
-                <h4>
-                  <strong>안심 스테이크</strong>
-                </h4>
-              </div>
-              <span class="MenuPrice">20,000원</span>
-            </div>
-            <div class="MenuImg" style="background-image: URL(/img/Relief.jpg);"></div>
-          </a>
-          <a class="SubItem">
-            <div class="MenuInfo">
-              <div class="MenuName">
-                <h4>
-                  <strong>토마호크 스테이크</strong>
-                </h4>
-              </div>
-              <span class="MenuPrice">40,000원</span>
-            </div>
-            <div class="MenuImg" style="background-image: URL(/img/Tomahawk.jpg);"></div>
-          </a>
-        </a>
-        <hr class="line">
-        <a class="MenuItem">
-          <h1 class="Menu2">파스타</h1>
-          <a class="SubItem">
-            <div class="MenuInfo">
-              <div class="MenuName">
-                <h4>
-                  <strong>크림 파스타</strong>
-                </h4>
-              </div>
-              <span class="MenuPrice">11,000원</span>
-            </div>
-            <div class="MenuImg" style="background-image: URL(/img/Cream_Pasta.jpg);"></div>
-          </a>
-          <a class="SubItem">
-            <div class="MenuInfo">
-              <div class="MenuName">
-                <h4>
-                  <strong>토마토 파스타</strong>
-                </h4>
-              </div>
-              <span class="MenuPrice">9,000원</span>
-            </div>
-            <div class="MenuImg" style="background-image: URL(/img/Tomato_Pasta.jpg);"></div>
-          </a>
-        </a>
-        <hr class="line">
-      </div>
-    </section>
-    <section class="store_photo"></section>
-    <section class="store_review"></section>
-  </div>
-</body>
-
+  </body>
 </html>
