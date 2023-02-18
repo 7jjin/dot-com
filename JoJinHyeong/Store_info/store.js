@@ -4,9 +4,8 @@ let startX, scrollLeft;
 
 slider.addEventListener('mousedown', (e) => {
   isMouseDown = true;
-  console.log(e.pageX,slider.offsetLeft)
-  startX = e.pageX - slider.offsetLeft;
   scrollLeft = slider.scrollLeft;
+  startX = e.pageX - slider.offsetLeft;
 });
 
 slider.addEventListener('mouseleave', () => {
@@ -27,4 +26,15 @@ slider.addEventListener('mousemove', (e) => {
 
 // 인원수 가로 스크롤
 // ---------------------------------------------------------------------------
+
+const bar = document.querySelector(".remote_Bar");
+
+console.log(bar.offsetTop)
+
+window.addEventListener('scroll', function(){
+    var currentPosition = bar.offsetTop;
+    var position = window.scrollY;
+    currentPosition +=position;
+    console.log(currentPosition) /// 바의 높이가 scroll에 따라 달라지는 것을 확인
+  });
 

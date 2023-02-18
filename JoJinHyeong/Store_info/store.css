@@ -3,6 +3,11 @@ body{
     word-break: keep-all;
     background-color: #fafafa;
 }
+.Entire{
+    position: relative;
+    width: 800px;
+    margin:0 auto;
+}
 .header{
     width: 100%;
     height: 90px;
@@ -83,6 +88,19 @@ body{
     padding-right: 20px;
 }
 /* 추가내용 */
+.remote_Bar{
+    position: absolute;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 70px;
+    height: 70px;
+    right: -11%;
+    top: 1%;
+    background-color: #ddd;
+    border: 2px solid black;
+    border-radius: 50%;
+}
 .store_Img{
     width: 800px;
     height: 300px;
