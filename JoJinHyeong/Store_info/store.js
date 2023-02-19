@@ -28,13 +28,11 @@ slider.addEventListener('mousemove', (e) => {
 // ---------------------------------------------------------------------------
 
 const bar = document.querySelector(".remote_Bar");
-
-console.log(bar.offsetTop)
-
+    
 window.addEventListener('scroll', function(){
-    var currentPosition = bar.offsetTop;
-    var position = window.scrollY;
-    currentPosition +=position;
-    console.log(currentPosition) /// 바의 높이가 scroll에 따라 달라지는 것을 확인
-  });
-
+    bar.style.top = `${window.scrollY}px`;
+    bar.style.transition = "all 0.7s ease-out";
+    if(window.scrollY===0){
+      bar.style.top = '100px';
+    }
+})
