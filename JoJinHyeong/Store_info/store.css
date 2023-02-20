@@ -263,6 +263,9 @@ body{
     background-color: rgb(240 181 181 / 58%);
     transition: 0.4s;
 }
+.active{
+    background-color: rgb(240 181 181 / 58%);
+}
 
 /**/
 

@@ -35,4 +35,19 @@ window.addEventListener('scroll', function(){
     if(window.scrollY===0){
       bar.style.top = '100px';
     }
-})
+});
+// 플로팅 버튼
+// ---------------------------------------------------------------------------
+
+function change_btn(e) {
+  var btns = document.querySelectorAll(".number span");
+  btns.forEach(function (btn) {
+    if (e.currentTarget == btn) {
+      btn.classList.add("active");
+    } else {
+      btn.classList.remove("active");
+    }
+  });
+}
+// 가로 스크롤 - 버튼 누르면 해당 버튼의 색이 변하고 다른 버튼을 누르면 해제되는 함수
+// ----------------------------------------------------------------------------
