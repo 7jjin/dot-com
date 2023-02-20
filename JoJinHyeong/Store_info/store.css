@@ -94,12 +94,19 @@ body{
     align-items: center;
     justify-content: center;
     width: 70px;
-    height: 70px;
     right: -20%;
     top: 100px;
     background-color: #ddd;
     border: 2px solid black;
     border-radius: 50%;
+    transition:1s;
+}
+.remote_Bar p{
+    margin-left: 20px;
+}
+.noitem_bar p{
+    margin:0px;
+    padding:25px;
 }
 .store_Img{
     width: 800px;
