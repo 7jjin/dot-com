@@ -58,7 +58,7 @@ number.forEach((item,index)=>{
     bar.style.borderRadius = "20px";
     bar.style.justifyContent= 'flex-Start';
     bar.style.marginLeft = ""
-    bar.style.width = "170px";
+    bar.style.width = "220px";
     bar.style.right = "-35%";
     bar.style.flexDirection = "column";
     bar.style.height = "none"
@@ -68,9 +68,20 @@ number.forEach((item,index)=>{
     </div>`;
   });
 });
-menu.forEach((item,index)=>{
+// ------ 인원
+menu.forEach((item)=>{
   item.addEventListener("click",function(e){
     bar.innerHTML += `
-    <p>메뉴${index+1}: ${e.target.firstElementChild.firstElementChild.innerText}</p>`;
-  })
+    <div class="menuBox">
+      <div class="menuName">${e.target.firstElementChild.firstElementChild.innerText}</div>
+      <div class="menuCost">
+        <div class="menuCost_left>
+          <button class="delete"></button>
+          <div class="cost">19000</div>
+        </div>
+        <div class="menuCost_right>
+          <div
+      </div>
+    </div>`;
+  },{once:true})  // once:true 한번만 클릭하게 하기
 })

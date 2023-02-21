@@ -103,6 +103,10 @@ body{
 }
 .remote_Bar p{
     margin-left: 20px;
+
+}
+.remote_Bar .member{
+    border-bottom: 1px solid #AAA;
 }
 .noitem_bar p{
     margin:0px;
