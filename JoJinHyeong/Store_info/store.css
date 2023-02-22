@@ -3,6 +3,11 @@ body{
     word-break: keep-all;
     background-color: #fafafa;
 }
+.Entire{
+    position: relative;
+    width: 800px;
+    margin:0 auto;
+}
 .header{
     width: 100%;
     height: 90px;
@@ -83,6 +88,55 @@ body{
     padding-right: 20px;
 }
 /* 추가내용 */
+.remote_Bar{
+    position: absolute;
+    display: flex;
+    justify-content: center;
+    width: 70px;
+    right: -20%;
+    top: 100px;
+    background-color: #ddd;
+    border: 2px solid black;
+    border-radius: 50%;
+    transition:1s;
+}
+.remote_Bar p{
+    margin-left: 20px;
+}
+.remote_Bar .member{
+    border-bottom: 1px solid #AAA;
+}
+.menuBox{
+    padding:20px;
+}
+.menuCost{
+    display: flex;
+    justify-content: space-between;
+    margin-top: 10px;
+}
+.menuCost_left{
+    display: flex;
+    align-items: center;
+}
+.menuCost_left .cost{
+    padding-left: 10px;
+    margin-bottom: 5px;
+}
+.menuCost_right{
+    display: flex;
+    align-items: center;
+}
+.minus{
+    margin-left: 5px;
+}
+.menuCost_right .su{
+    margin-right: 5px;
+    margin-left: 15px;
+}
+.noitem_bar p{
+    margin:0px;
+    padding:25px;
+}
 .store_Img{
     width: 800px;
     height: 300px;
@@ -109,7 +163,7 @@ body{
     font-size: 30px;
     font-weight: 700;
     margin-top: 20px;
-    padding-left: 20px;
+    padding-left: 30px;
     align-items: baseline;
 }
 .storeName .storePlace{
@@ -122,13 +176,13 @@ body{
     font-size: 20px;
     font-weight: 500;
     margin-top: 10px;
-    padding-left: 20px;
+    padding-left: 30px;
 }
 .storeRank{
     display: flex;
     font-size: 20px;
     margin-top: 20px;
-    padding-left: 20px;
+    padding-left: 30px;
 }
 .storeRank .star{
     margin-right: 10px;
@@ -137,7 +191,7 @@ body{
     display: flex;
     justify-content: flex-start;
     align-items: center;
-    padding-left: 20px;
+    padding-left: 30px;
     margin-top: 10px;
     color:grey;
 }
@@ -175,8 +229,22 @@ body{
     height: 100px;
     cursor: pointer;
     background-color: white;
-    border-bottom: 2px solid black;
     box-shadow: 0px 20px 20px 0px #ddd;
+}
+.Fix_Filter{
+    position: fixed;
+    top:0;
+    display: flex;
+    width: 800px;
+    justify-content: space-around;
+    align-items: center;
+    font-size: 20px;
+    font-weight: 700;
+    margin-right: auto;
+    margin-left: auto;
+    height: 100px;
+    cursor: pointer;
+    background-color: white;
 }
 .homeTab, .MenuTab, .photoTab, .userReviewTab{
     display: flex;
@@ -188,37 +256,66 @@ body{
 .store_Home{
     width: 800px;
     margin: 0 auto;
-    background-color: antiquewhite;
+    background-color: white;
+    box-shadow: 0px 20px 20px 0px #ddd;
+}
+.homeTab:hover, .MenuTab:hover, .photoTab:hover, .userReviewTab:hover{
+    border-bottom: 2px solid black;
 }
 .people{
-    
+    height: 180px;
 }
 .people p{
     margin:0;
     padding-top: 20px;
-    font-size: 20px;
+    font-size: 30px;
     font-weight: 700;
-    padding-left: 20px;
+    padding-left: 30px;
+}
+.barlist{
+    display: flex;
+    align-items: center;
+    width: 82%;
+    height: 70px;
+    margin-right: auto;
+    margin-left: auto;
+    overflow: hidden;
+    margin-top: 30px;
+    margin-bottom: 30px;
 }
 .number{
     display: flex;
-    flex-wrap: nowrap;
-    width: 800px;
-    white-space: nowrap;
-    overflow: auto;
-    margin-top: 20px;
+    border-radius: 20px;
 }
 .numberSlide{
-    display: block;
-    width: 48px;
-    height: 48px;
+    display: flex;
     position:relative;
-    margin-right: 6px;
+    margin-right: 25px;
 }
 .numberSlide input{
     position:absolute;
     top:50%;
     left: 50%;
+    outline:0;
+    appearance: none;
+    border-radius: 0;
+}
+.numberSlide span{
+    width: 60px;
+    height: 60px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border: 1px solid #aaa;
+    border-radius: 50%;
+    box-sizing: border-box;
+}
+.numberSlide span:hover{
+    background-color: rgb(240 181 181 / 58%);
+    transition: 0.4s;
+}
+.active{
+    background-color: rgb(240 181 181 / 58%);
 }
 
 /**/
@@ -236,16 +333,16 @@ body{
 }
 /*가게 정보 페이지*/
 
-.Entire{
-    width: 40%;
-}
-
 .SubEx{
     color: gray;
 }
 
 .Ex{
     margin-left: 30px;
+}
+.Ex p{
+    font-size: 30px;
+    font-weight: 700;
 }
 
 .Time,.Date,.Address,.Introduce,.Call{
@@ -285,6 +382,28 @@ body{
     font-size: 30px;
     margin: 20px 0px 20px 30px;
 }
+.Subtitle{
+    font-size: 20px;
+    color:gray;
+    font-family: 'Nanum Gothic', sans-serif;
+}
+.emg{
+    display: flex;
+}
+.emg .icon{
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    align-items: center;
+    margin-right: 35px;
+}
+.emg i{
+    font-size: 35px;
+}
+.emg p{
+    font-size: 20px;
+}
+
 
 .SubItem{
     display: flex;
@@ -294,6 +413,10 @@ body{
     padding: 16px 20px;
     box-sizing: border-box;
     border-bottom: 2px solid rgb(245, 246, 247);
+}
+
+.Menu{
+    background-color: white;
 }
 
 .MenuName{
