@@ -91,7 +91,6 @@ body{
 .remote_Bar{
     position: absolute;
     display: flex;
-    align-items: center;
     justify-content: center;
     width: 70px;
     right: -20%;
@@ -103,10 +102,36 @@ body{
 }
 .remote_Bar p{
     margin-left: 20px;
-
 }
 .remote_Bar .member{
     border-bottom: 1px solid #AAA;
+}
+.menuBox{
+    padding:20px;
+}
+.menuCost{
+    display: flex;
+    justify-content: space-between;
+    margin-top: 10px;
+}
+.menuCost_left{
+    display: flex;
+    align-items: center;
+}
+.menuCost_left .cost{
+    padding-left: 10px;
+    margin-bottom: 5px;
+}
+.menuCost_right{
+    display: flex;
+    align-items: center;
+}
+.minus{
+    margin-left: 5px;
+}
+.menuCost_right .su{
+    margin-right: 5px;
+    margin-left: 15px;
 }
 .noitem_bar p{
     margin:0px;
