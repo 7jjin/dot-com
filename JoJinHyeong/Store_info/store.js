@@ -28,7 +28,7 @@ slider.addEventListener('mousemove', (e) => {
 // ---------------------------------------------------------------------------
 
 const bar = document.querySelector(".remote_Bar");
-    
+
 window.addEventListener('scroll', function(){
     bar.style.top = `${window.scrollY}px`;
     bar.style.transition = "all 0.7s ease-out";
@@ -53,6 +53,7 @@ function change_btn(e) {
 // ----------------------------------------------------------------------------
 const number = document.querySelectorAll(".number span");
 const menu = document.querySelectorAll(".SubItem");
+
 number.forEach((item,index)=>{
   item.addEventListener("click",function(e){
     bar.style.borderRadius = "20px";
@@ -65,12 +66,15 @@ number.forEach((item,index)=>{
     bar.style.alignItems = "normal";
     bar.innerHTML = `<div class="member">
     <p>인원: ${e.target.innerText}</p>
-    </div>`;
+    </div>
+    <div class="bottomline"></div>`;
   });
 });
 // ------ 인원추가
 menu.forEach((item)=>{
   item.addEventListener("click",function(e){
+    const line = document.querySelector(".bottomline");
+    line.style.visibility = "visible";
     bar.innerHTML += `
     <div class="menuBox">
           <div class="menuName">${e.target.firstElementChild.firstElementChild.innerText}</div>
@@ -88,6 +92,8 @@ menu.forEach((item)=>{
           </div>`;
   },{once:true})  // once:true 한번만 클릭하게 하기
 })
+
+    
 
 
 // 메뉴 추가하기
@@ -119,7 +125,7 @@ function minus(el){
   cost.innerText = `${total}`;
 }
 
-function del(el){
+function del(el){         //박스 삭제
   const menuBox = document.querySelector(".menuBox");
   menuBox.remove();
 }

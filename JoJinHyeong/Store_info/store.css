@@ -100,13 +100,16 @@ body{
     border-radius: 50%;
     transition:1s;
 }
+.bottomline{
+    width: 100%;
+    height: 1px;
+    background-color:black;
+    visibility: hidden;
+}
 .remote_Bar p{
     margin-left: 20px;
 }
-.remote_Bar .member{
-    border-bottom: 1px solid #AAA;
-}
-.menuBox{
+.menuBox {
     padding:20px;
 }
 .menuCost{
