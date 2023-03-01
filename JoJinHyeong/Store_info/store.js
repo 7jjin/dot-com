@@ -90,6 +90,7 @@ menu.forEach((item)=>{
               <button class="plus" onclick="plus(this)">+</button>
             </div>
           </div>`;
+    
   },{once:true})  // once:true 한번만 클릭하게 하기
 })
 

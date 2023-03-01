@@ -123,7 +123,6 @@ body{
 }
 .menuCost_left .cost{
     padding-left: 10px;
-    margin-bottom: 5px;
 }
 .menuCost_right{
     display: flex;
