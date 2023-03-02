@@ -1,6 +1,5 @@
-
 const Filter = document.querySelector('.filter');
-const Fix_Filter = document.querySelector('.Fix_Filter');
+const Blank = document.querySelector('.blank');
 const HomeTab = document.querySelector('.homeTab');
 const MenuTab = document.querySelector('.MenuTab');
 const PhotoTab = document.querySelector('.photoTab');
@@ -11,18 +10,23 @@ const Menu = document.querySelector('.store_Menu');
 const Menu_Top = window.pageYOffset + Menu.getBoundingClientRect().top;
 
 function Top(){
+  var rect1 = Filter.getBoundingClientRect();
+  var rect2 = Blank.getBoundingClientRect();
+
   if(window.scrollY > 625){
-    Filter.style.visibility = 'hidden';
-    Fix_Filter.style.visibility = 'visible';
+    Filter.style.position = "fixed";
+    Filter.style.top = "0";
+    Filter.style.boxShadow = "0px 0px 0px 0px";
   }
   else if(window.scrollY < 625){
-    Filter.style.visibility = 'visible';
-    Fix_Filter.style.visibility = 'hidden';
+    Filter.style.position = "";
+    Filter.style.top = "";
+    Filter.style.boxShadow = "0px 20px 20px 0px #ddd";
   }
 }
 
 function Move(element){
-  window.scroll({top : element - 100, behavior: 'smooth'});
+  window.scroll({top : element - 200, behavior: 'smooth'});
 }
 
 HomeTab.addEventListener('click', function(){
