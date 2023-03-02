@@ -545,3 +545,25 @@ body{
   color: #999;
   font-family: 'Noto Sans KR', sans-serif;
 }
+
+.Facilities{
+  display: flex;
+  margin-left: 30px;
+}
+
+.icon{
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+  align-items: center;
+  margin-right: 35px;
+}
+
+.Facilities .fa-solid{
+  font-size: 40px;
+}
+
+.Facilities p{
+  font-size: 20px;
+  font-weight: 700;
+}
