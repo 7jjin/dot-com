@@ -8,6 +8,9 @@
   <title>Document</title>
   <link rel="stylesheet" href="store.css" />
   <script src="https://kit.fontawesome.com/06b646a751.js" crossorigin="anonymous"></script>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Nanum+Gothic:wght@400;700;800&display=swap" rel="stylesheet">
 </head>
 
 <body>
@@ -76,12 +79,12 @@
       </div>
     </section>
     <div class="blank">
-    <section class="filter" >
-      <div class="homeTab">홈</div>
-      <div class="MenuTab">메뉴</div>
-      <div class="photoTab">사진</div>
-      <div class="userReviewTab">리뷰</div>
-    </section>
+      <section class="filter">
+        <div class="homeTab">홈</div>
+        <div class="MenuTab">메뉴</div>
+        <div class="photoTab">사진</div>
+        <div class="userReviewTab">리뷰</div>
+      </section>
     </div>
     <section class="store_Home">
       <div class="people">
@@ -227,6 +230,9 @@
     </section>
     <section class="store_Menu">
       <div class="Menu">
+        <div class="MenuBar">
+          <span class="MenuText">메뉴</span>
+        </div>
         <a class="MenuItem">
           <h1 class="Menu1">스테이크</h1>
           <a class="SubItem">
@@ -281,8 +287,50 @@
         <hr class="line">
       </div>
     </section>
-    <section class="store_photo"></section>
-    <section class="store_review"></section>
+    <section class="storePhoto">
+      <div class="PhotoBar">
+        <span class="PhotoText">방문자 사진</span>
+        <span class="PhotoMore">더 보기></span>
+      </div>
+      <div class="PhotoBox">
+        <div class="PhotoZone">
+          <li class="Photo"></li>
+          <li class="Photo"></li>
+          <li class="Photo"></li>
+          <li class="Photo"></li>
+          <li class="Photo"></li>
+        </div>
+      </div>
+    </section>
+    <hr class="line">
+    <section class="storeReview">
+      <div class="ReviewBar">
+        <div class="ReviewGroup">
+          <span class="ReviewText">방문자 리뷰</span>
+          <span class="ReviewCount">148</span>
+        </div>
+        <span class="ReviewMore">더 보기></span>
+      </div>
+      <div class="ReviewBox">
+        <div class="ReviewZone">
+          <li class="Review">
+            <div class="ReviewPhoto">사진</div>
+            <div class="UserZone">
+              <div class="UserInfo">
+              <h4 class="NickName">jsj487</h4>
+              <span class="UserCount">2번째 방문</span>
+              </div>
+              <div class="ReviewContent">
+                간짬뽕은 처음인데 색다르니 맛있었어요!!ㅎㅎ 국물없는 짬뽕이라니!!😋
+                맵긴한데 못먹을정도로 매운게 아니라 딱 알맞게 매콤해서 매운거 좋아하시는 분들 꼭 도전해보세요🔥
+                짜장면, 탕수육도 맛있어서 세트 드시는 거 추천이요ㅎㅎ
+              </div>
+            </div>
+          </li>
+          <li class="Review"></li>
+        </div>
+      </div>
+    </section>
   </div>
 </body>
 <script src="./store.js"></script>
