@@ -3,11 +3,15 @@ const Blank = document.querySelector('.blank');
 const HomeTab = document.querySelector('.homeTab');
 const MenuTab = document.querySelector('.MenuTab');
 const PhotoTab = document.querySelector('.photoTab');
-const ReviewTab = document.querySelector('.userRevieTab');
+const ReviewTab = document.querySelector('.userReviewTab');
 const Home = document.querySelector('.store_Home');
 const Home_Top = window.pageYOffset + Home.getBoundingClientRect().top;
 const Menu = document.querySelector('.store_Menu');
 const Menu_Top = window.pageYOffset + Menu.getBoundingClientRect().top;
+const Photo = document.querySelector('.storePhoto');
+const Photo_Top = window.pageYOffset + Photo.getBoundingClientRect().top;
+const Review = document.querySelector('.storeReview');
+const Review_Top = window.pageYOffset + Review.getBoundingClientRect().top;
 
 function Top(){
   var rect1 = Filter.getBoundingClientRect();
@@ -26,7 +30,7 @@ function Top(){
 }
 
 function Move(element){
-  window.scroll({top : element - 200, behavior: 'smooth'});
+  window.scroll({top : element - 100, behavior: 'smooth'});
 }
 
 HomeTab.addEventListener('click', function(){
@@ -34,6 +38,12 @@ HomeTab.addEventListener('click', function(){
 });
 MenuTab.addEventListener('click', function(){
   Move(Menu_Top);
+});
+PhotoTab.addEventListener('click', function(){
+  Move(Photo_Top);
+});
+ReviewTab.addEventListener('click', function(){
+  Move(Review_Top);
 });
 
 window.addEventListener('scroll', () => { 
