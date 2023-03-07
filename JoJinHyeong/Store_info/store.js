@@ -153,8 +153,6 @@ const Review = document.querySelector('.storeReview');
 const Review_Top = window.pageYOffset + Review.getBoundingClientRect().top;
 
 function Top(){
-  var rect1 = Filter.getBoundingClientRect();
-  var rect2 = Blank.getBoundingClientRect();
 
   if(window.scrollY > 625){
     Filter.style.position = "fixed";
@@ -164,7 +162,7 @@ function Top(){
   else if(window.scrollY < 625){
     Filter.style.position = "";
     Filter.style.top = "";
-    Filter.style.boxShadow = "0px 20px 20px 0px #ddd";
+    Filter.style.boxShadow = "0px 0px 0px 0px #ddd";
   }
 }
 
