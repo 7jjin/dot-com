@@ -476,3 +476,95 @@ body{
     filter:blur(0px);
   }
 }
+
+.Store_Zone{
+  position: absolute;
+  width: 1000px;
+  left: 60%;
+  translate: -650px;
+  margin-top: 215px;
+}
+
+.Sign{
+  height: 180px;
+  display: flex;
+  background-color: white;
+  flex-direction: row;
+  align-items: center;
+  padding: 0px 50px;
+  box-shadow: rgb(128 128 128 / 85%) 4px 1px 17px 1px;
+  border-radius: 10px 10px 10px;
+}
+
+.Store_Sign{
+  display: flex;
+}
+
+.Store_Image{
+  display: flex;
+  width: 100px;
+  height: 150px;
+  margin-right: 30px;
+  background-image: url('/img/Store_Image.jpg');
+  background-repeat: no-repeat;
+  background-position: center center;
+  background-size: cover;
+}
+
+.Store_Title{
+  font-size: 30px;
+  font-weight: 700;
+  word-break: break-word;
+  line-height: 1.4;
+  margin: 0px 0px 5px 0px;
+  font-family: 'Noto Sans KR', sans-serif;
+}
+
+.detail{
+  font-size: 14px;
+  line-height: 15px;
+  margin: 0px 0px 10px 0px;
+  font-family: 'Noto Sans KR', sans-serif;
+}
+
+.rating{
+  margin-bottom: 10px;
+}
+.Star_Rating{
+  font-size: 15px;
+  font-weight: 700;
+}
+.Review_Rating{
+  font-size: 15px;
+  color: #999;
+  font-weight: 400;
+}
+
+.tags, .address{
+  font-size: 14px;
+  line-height: 15px;
+  color: #999;
+  font-family: 'Noto Sans KR', sans-serif;
+}
+
+.Facilities{
+  display: flex;
+  margin-left: 30px;
+}
+
+.icon{
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+  align-items: center;
+  margin-right: 35px;
+}
+
+.Facilities .fa-solid{
+  font-size: 40px;
+}
+
+.Facilities p{
+  font-size: 20px;
+  font-weight: 700;
+}
