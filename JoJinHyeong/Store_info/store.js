@@ -1,28 +1,31 @@
-const slider = document.querySelector('.barlist');
+const Bar_slider = document.querySelector('.barlist');
+const Photo_slider = document.querySelector('.PhotoList');
 let isMouseDown = false;
 let startX, scrollLeft;
 
-slider.addEventListener('mousedown', (e) => {
+function slider(Element){
+Element.addEventListener('mousedown', (e) => {
   isMouseDown = true;
-  scrollLeft = slider.scrollLeft;
-  startX = e.pageX - slider.offsetLeft;
+  scrollLeft = Element.scrollLeft;
+  startX = e.pageX - Element.offsetLeft;
 });
 
-slider.addEventListener('mouseleave', () => {
+Element.addEventListener('mouseleave', () => {
   isMouseDown = false;
 });
 
-slider.addEventListener('mouseup', () => {
+Element.addEventListener('mouseup', () => {
   isMouseDown = false;
 });
 
-slider.addEventListener('mousemove', (e) => {
+Element.addEventListener('mousemove', (e) => {
   if (!isMouseDown) return;
   e.preventDefault();
-  const x = e.pageX - slider.offsetLeft;
+  const x = e.pageX - Element.offsetLeft;
   const walk = (x - startX) * 1;
-  slider.scrollLeft = scrollLeft - walk;
+  Element.scrollLeft = scrollLeft - walk;
 });
+}
 
 // 인원수 가로 스크롤
 // ---------------------------------------------------------------------------
@@ -134,15 +137,13 @@ function del(el){         //박스 삭제
 // 버튼 누르면 해당 이벤트 적용
 // --------------------------------------------------------------------------------------------
 
-
-
-
 const Filter = document.querySelector('.filter');
 const Blank = document.querySelector('.blank');
 const HomeTab = document.querySelector('.homeTab');
 const MenuTab = document.querySelector('.MenuTab');
 const PhotoTab = document.querySelector('.photoTab');
 const ReviewTab = document.querySelector('.userReviewTab');
+const Photos = document.querySelector('.Photo');
 const Home = document.querySelector('.store_Home');
 const Home_Top = window.pageYOffset + Home.getBoundingClientRect().top;
 const Menu = document.querySelector('.store_Menu');
@@ -157,17 +158,19 @@ function Top(){
   if(window.scrollY > 625){
     Filter.style.position = "fixed";
     Filter.style.top = "0";
-    Filter.style.boxShadow = "0px 0px 0px 0px";
   }
   else if(window.scrollY < 625){
     Filter.style.position = "";
     Filter.style.top = "";
-    Filter.style.boxShadow = "0px 0px 0px 0px #ddd";
   }
 }
 
 function Move(element){
-  window.scroll({top : element - 100, behavior: 'smooth'});
+  window.scroll({top : element - 60, behavior: 'smooth'});
+}
+
+function ArrowHide(element){
+  
 }
 
 HomeTab.addEventListener('click', function(){
@@ -183,6 +186,15 @@ ReviewTab.addEventListener('click', function(){
   Move(Review_Top);
 });
 
+Bar_slider.addEventListener('mousemove', function(){
+  slider(Bar_slider);
+});
+Photo_slider.addEventListener('mousemove', function(){
+  slider(Photo_slider);
+});
+
 window.addEventListener('scroll', () => { 
   Top();
 });
+
+

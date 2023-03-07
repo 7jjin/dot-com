@@ -228,7 +228,7 @@ body{
 }
 .filter{
     display: flex;
-    z-index: 1;
+    z-index: 9999;
     width: 800px;
     justify-content: space-around;
     align-items: center;
@@ -477,7 +477,17 @@ body{
     height: 90%;
     display: flex;
 }
-
+.PhotoList{
+    width: 80%;
+    margin-right: auto;
+    margin-left: auto;
+    overflow: hidden;
+    display: flex;
+}
+.PhotoNum{
+    display: flex;
+    height: 99%;
+}
 .Right, .Left{
     display: flex;
     align-items: center;
