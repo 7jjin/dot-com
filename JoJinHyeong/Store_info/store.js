@@ -53,7 +53,7 @@ function change_btn(e) {
 // ----------------------------------------------------------------------------
 const number = document.querySelectorAll(".number span");
 const menu = document.querySelectorAll(".SubItem");
-
+let cart =[];   // 장바구니 배열
 number.forEach((item,index)=>{
   item.addEventListener("click",function(e){
     bar.style.borderRadius = "20px";
@@ -71,12 +71,12 @@ number.forEach((item,index)=>{
   });
 });
 // ------ 인원추가
-menu.forEach((item)=>{
+menu.forEach((item,index)=>{
   item.addEventListener("click",function(e){
     const line = document.querySelector(".bottomline");
     line.style.visibility = "visible";
     bar.innerHTML += `
-    <div class="menuBox">
+    <div class="menuBox" value="${index}">
           <div class="menuName">${e.target.firstElementChild.firstElementChild.innerText}</div>
           <div class="menuCost">
             <div class="menuCost_left">
@@ -90,8 +90,17 @@ menu.forEach((item)=>{
               <button class="plus" onclick="plus(this)">+</button>
             </div>
           </div>`;
-    
+    const product = {
+      name:`${e.target.firstElementChild.firstElementChild.innerText}`,
+      quantity: 1,
+      price: `${e.target.firstElementChild.children[1].innerText}`
+    };
+    // 새로 추가될때마다 총합 태그는 가장 아래 위치됨
+    const newElement = document.createElement("div")
+      bar.appendChild(newElement);
+    cart.push(product);
   },{once:true})  // once:true 한번만 클릭하게 하기
+  
 })
 
     
@@ -101,6 +110,7 @@ menu.forEach((item)=>{
 // -------------------------------------------------------------------------------------------------------
 
 function plus(el){
+  let uni = el.parentNode.parentNode.parentNode.getAttribute("value");
   const result = el.parentNode.parentNode.childNodes[3].childNodes[3];  //총 인원태그
   let cost = el.parentNode.parentNode.firstElementChild.childNodes[3];  //총 가격태그
   let total = el.parentNode.parentNode.firstElementChild.childNodes[3].innerText;  //총 가격
@@ -110,7 +120,11 @@ function plus(el){
   total = parseInt(total)+parseInt(realcost);
   result.innerText = number;
   cost.innerText = `${total}`;
+  cart[uni].price = total;          // 변화된 가격을 각각의 요소에 맞는 객체를 찾아서 바꿔준다.
+  
 }
+
+
 
 function minus(el){
   const result = el.parentNode.parentNode.childNodes[3].childNodes[3];  //총 인원태그
@@ -130,6 +144,14 @@ function del(el){         //박스 삭제
   const menuBox = document.querySelector(".menuBox");
   menuBox.remove();
 }
+
+// 총 가격 구하는 함수
+//---------------------------------------------------------------------------------------------
+
+console.log(cart);
+console.log(cart.price);
+
+
 
 // 버튼 누르면 해당 이벤트 적용
 // --------------------------------------------------------------------------------------------
@@ -155,7 +177,7 @@ const Review_Top = window.pageYOffset + Review.getBoundingClientRect().top;
 function Top(){
 
   if(window.scrollY > 625){
-    Filter.style.position = "absolute";
+    Filter.style.position = "fixed";
     Filter.style.top = "0";
     Filter.style.boxShadow = "0px 0px 0px 0px";
   }
