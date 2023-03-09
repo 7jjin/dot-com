@@ -155,7 +155,7 @@ const Review_Top = window.pageYOffset + Review.getBoundingClientRect().top;
 function Top(){
 
   if(window.scrollY > 625){
-    Filter.style.position = "fixed";
+    Filter.style.position = "absolute";
     Filter.style.top = "0";
     Filter.style.boxShadow = "0px 0px 0px 0px";
   }
