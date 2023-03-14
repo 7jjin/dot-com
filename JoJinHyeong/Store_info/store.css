@@ -108,15 +108,24 @@ body{
     background-color:black;
     visibility: hidden;
 }
-.remote_Bar p{
-    margin-left: 20px;
-}
 
 .remote_Bar p{
     margin-left: 20px;
 }
-.remote_Bar .member{
-    border-bottom: 1px solid #AAA;
+
+.costHap{
+    height: 50px;
+    border-top: 1px solid black;
+    display: none;
+    align-items: center;
+    justify-content: flex-start;
+    padding-left: 20px;
+}
+.hapname{
+    padding-right: 5px;
+}
+.hapDiv{
+    display: flex;
 }
 .menuBox{
     padding:20px;
