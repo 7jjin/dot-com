@@ -72,7 +72,8 @@ number.forEach((item,index)=>{
     </div>
     <div class="bottomline"></div>
     <div class="menuBoxOuter"></div>
-    <div class="costHap"></div>`;
+    <div class="costHap"></div>
+    <div class="count" onclick="sent()"</div>`;
   });
 });
 // ------ 메뉴추가
@@ -100,22 +101,25 @@ menu.forEach((item,index)=>{
     const product = {
       name:`${e.target.firstElementChild.firstElementChild.innerText}`,
       quantity: 1,
-      price: `${e.target.firstElementChild.children[1].innerText}`
+      price: Number(e.target.firstElementChild.children[1].innerText)
     };
     // 새로 추가될때마다 총합 태그는 가장 아래 위치됨
     cart.push(product);
-    hap();
     line.style.visibility = "visible";
     const costhap = document.querySelector(".costHap");
+    const count = document.querySelector(".count");
     costhap.style.display="flex";       // 합계 DIV 보이게 하기
+    count.style.display="block";
     costhap.innerHTML = `
     <div class="hapDiv">
       <div class="hapname">합계: </div>
-      <div class="hap">아직몰라</div>
+      <div class="hap"></div>
       <div>원</div>
     </div>
     `
-    
+    count.innerHTML = `
+    <button>주문하기</button>`
+    hap();
   },{once:true})  // once:true 한번만 클릭하게 하기
   
 })
@@ -127,7 +131,7 @@ menu.forEach((item,index)=>{
 // -------------------------------------------------------------------------------------------------------
 
 function plus(el){
-  let uni = el.parentNode.parentNode.parentNode.getAttribute("value");
+  let uni = el.parentNode.parentNode.parentNode.childNodes[1].innerText;
   const result = el.parentNode.parentNode.childNodes[3].childNodes[3];  //총 인원태그
   let cost = el.parentNode.parentNode.firstElementChild.childNodes[3];  //총 가격태그
   let total = el.parentNode.parentNode.firstElementChild.childNodes[3].innerText;  //총 가격
@@ -137,15 +141,20 @@ function plus(el){
   total = parseInt(total)+parseInt(realcost);
   result.innerText = number;
   cost.innerText = `${total}`;
-  cart[uni].price = total;          // 변화된 가격을 각각의 요소에 맞는 객체를 찾아서 바꿔준다.
+            
+  for(let i=0;i<cart.length;i++){
+    if(cart[i].name===uni){
+      cart[i].price = total;    // 변화된 가격을 각각의 요소에 맞는 객체를 찾아서 바꿔준다.
+      cart[i].quantity = number;
+    }
+  }
   hap();
-
 }
 
 
 
 function minus(el){
-  let uni = el.parentNode.parentNode.parentNode.getAttribute("value");
+  let uni = el.parentNode.parentNode.parentNode.childNodes[1].innerText;
   const result = el.parentNode.parentNode.childNodes[3].childNodes[3];  //총 인원태그
   let cost = el.parentNode.parentNode.firstElementChild.childNodes[3];  //총 가격태그
   let total = el.parentNode.parentNode.firstElementChild.childNodes[3].innerText;  //총 가격
@@ -157,30 +166,46 @@ function minus(el){
   }
   result.innerText = number;
   cost.innerText = `${total}`;
-  cart[uni].price = total;
+  for(let i=0;i<cart.length;i++){
+    if(cart[i].name===uni){
+      cart[i].price = total;
+      cart[i].quantity = number;
+    }
+  }
+  
   hap();
-  console.log(cart)
 
 }
 
 function del(el){         //박스 삭제
-  let uni = el.parentNode.parentNode.parentNode.getAttribute("value");
-  const menuBox = document.querySelector(".menuBox");
+  let uni = el.parentNode.parentNode.parentNode.childNodes[1].innerText;
+  let menuBox = el.parentNode.parentNode.parentNode;
   menuBox.remove();
-  cart.splice(uni,1);
-  hap();
-  console.log(cart)
+  for(let i=0;i<cart.length;i++){
+    if(cart[i].name===uni){
+      cart.splice(i,1)
+    }
+  }
+  
+   hap();
 }
 
 // 총 가격 구하는 함수
 //---------------------------------------------------------------------------------------------
 
 function hap(){
-    var hapcost = 0;
-    for(let i=0;i<cart.length;i++){
-      hapcost +=Number(cart[i].price);
-    }
-    console.log(hapcost)
+  var hapcost = 0;
+  const hapdiv = document.querySelector(".hap");
+  for(let i=0;i<cart.length;i++){
+    hapcost +=Number(cart[i].price);
+  }
+  hapdiv.innerText=hapcost;
+}
+
+//데이터(인원,메뉴) 내보내는 함수
+//--------------------------------------------------------------------------------------------
+function sent(){
+  console.log(cart)
 }
 
 
