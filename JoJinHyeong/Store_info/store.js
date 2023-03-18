@@ -79,47 +79,52 @@ number.forEach((item,index)=>{
 // ------ 메뉴추가
 menu.forEach((item)=>{
   item.addEventListener("click",function(e){
-    
     const line = document.querySelector(".bottomline");
     const menuBoxOuter = document.querySelector(".menuBoxOuter");     // 총합DIV을 맨 아래 넣기 위해 각각의 메뉴태그들을 감싸는 부모 태그를 만들었다.
-    menuBoxOuter.innerHTML += `
-    <div class="menuBox">
-          <div class="menuName">${item.childNodes[1].childNodes[1].innerText}</div>
-          <div class="menuCost">
-            <div class="menuCost_left">
-              <button class="delete" onclick="del(this)">X</button>
-              <div class="cost" value="${item.childNodes[1].childNodes[3].innerText}">${item.childNodes[1].childNodes[3].innerText}</div>
-              <div>원</div>
-            </div>
-            <div class="menuCost_right">
-              <button class="minus" onclick="minus(this)">-</button>
-              <div class="su">1</div>
-              <button class="plus" onclick="plus(this)">+</button>
-            </div>
-          </div>`;
-    const product = {
-      name:`${item.childNodes[1].childNodes[1].innerText}`,
-      quantity: 1,
-      price: Number(item.childNodes[1].childNodes[3].innerText)
-    };
-    // 새로 추가될때마다 총합 태그는 가장 아래 위치됨
-    cart.push(product);
-    line.style.visibility = "visible";
-    const costhap = document.querySelector(".costHap");
-    const count = document.querySelector(".count");
-    costhap.style.display="flex";       // 합계 DIV 보이게 하기
-    count.style.display="block";
-    costhap.innerHTML = `
-    <div class="hapDiv">
-      <div class="hapname">합계: </div>
-      <div class="hap"></div>
-      <div>원</div>
-    </div>
-    `
-    count.innerHTML = `
-    <button>주문하기</button>`
-    hap();
-  },{once:true})  // once:true 한번만 클릭하게 하기
+    console.log()
+    if(cart.every((menu)=>menu.name!==item.childNodes[1].childNodes[1].innerText)){
+      menuBoxOuter.innerHTML += `
+      <div class="menuBox">
+            <div class="menuName">${item.childNodes[1].childNodes[1].innerText}</div>
+            <div class="menuCost">
+              <div class="menuCost_left">
+                <button class="delete" onclick="del(this)">X</button>
+                <div class="cost" value="${item.childNodes[1].childNodes[3].innerText}">${item.childNodes[1].childNodes[3].innerText}</div>
+                <div>원</div>
+              </div>
+              <div class="menuCost_right">
+                <button class="minus" onclick="minus(this)">-</button>
+                <div class="su">1</div>
+                <button class="plus" onclick="plus(this)">+</button>
+              </div>
+      </div>`;
+      const product = {
+        name:`${item.childNodes[1].childNodes[1].innerText}`,
+        quantity: 1,
+        price: Number(item.childNodes[1].childNodes[3].innerText)
+      };
+      // 새로 추가될때마다 총합 태그는 가장 아래 위치됨
+      cart.push(product);
+  
+      line.style.visibility = "visible";
+      const costhap = document.querySelector(".costHap");
+      const count = document.querySelector(".count");
+      costhap.style.display="flex";       // 합계 DIV 보이게 하기
+      count.style.display="block";
+      costhap.innerHTML = `
+      <div class="hapDiv">
+        <div class="hapname">합계: </div>
+        <div class="hap"></div>
+        <div>원</div>
+      </div>
+      `
+      count.innerHTML = `
+      <button>주문하기</button>`
+      console.log(cart)
+      hap();
+    }
+  });
+
   
 })
 
