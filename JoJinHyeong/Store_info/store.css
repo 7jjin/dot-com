@@ -22,6 +22,7 @@ body{
 }
 .headerInner{
     display: flex;
+    justify-content: center;
     height: 100%;
     width: 100%;
 
@@ -107,15 +108,38 @@ body{
     background-color:black;
     visibility: hidden;
 }
-.remote_Bar p{
-    margin-left: 20px;
-}
 
 .remote_Bar p{
     margin-left: 20px;
 }
-.remote_Bar .member{
-    border-bottom: 1px solid #AAA;
+
+.costHap{
+    height: 50px;
+    border-top: 1px solid black;
+    display: none;
+    align-items: center;
+    justify-content: flex-start;
+    padding-left: 20px;
+}
+.count{
+    height: 50px;
+    display: none;
+}
+.count button{
+    width: 100%;
+    height: 100%;
+    border-radius: 0px 0px 20px 20px;
+    border: 1px solid rgb(245, 246, 247);
+    border-top: 1px solid black;
+    background-color: #fcaa72;
+    font-weight: 600;
+    font-size: 20px;
+}
+.hapname{
+    padding-right: 5px;
+}
+.hapDiv{
+    display: flex;
 }
 .menuBox{
     padding:20px;
