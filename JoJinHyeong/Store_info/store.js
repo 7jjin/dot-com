@@ -81,7 +81,6 @@ menu.forEach((item)=>{
   item.addEventListener("click",function(e){
     const line = document.querySelector(".bottomline");
     const menuBoxOuter = document.querySelector(".menuBoxOuter");     // 총합DIV을 맨 아래 넣기 위해 각각의 메뉴태그들을 감싸는 부모 태그를 만들었다.
-    console.log()
     if(cart.every((menu)=>menu.name!==item.childNodes[1].childNodes[1].innerText)){
       menuBoxOuter.innerHTML += `
       <div class="menuBox">
@@ -120,7 +119,6 @@ menu.forEach((item)=>{
       `
       count.innerHTML = `
       <button>주문하기</button>`
-      console.log(cart)
       hap();
     }
   });
