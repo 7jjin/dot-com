@@ -59,10 +59,8 @@ function change_btn(e) {
 //--------------------------------------------------------------------------------
 const number = document.querySelectorAll(".number span");
 const menu = document.querySelectorAll(".SubItem");
-
-number.forEach((item, index) => {
-  item.addEventListener("click", function (e) {
-    let cart = [];   // 장바구니 배열
+let cart = [];   // 장바구니 배열
+  
     number.forEach((item, index) => {
       item.addEventListener("click", function (e) {
         bar.style.borderRadius = "20px";
@@ -82,8 +80,6 @@ number.forEach((item, index) => {
     <div class="count" onclick="sent()"</div>`;
       });
     });
-  });
-});
 
 
     // ------ 메뉴추가
@@ -132,8 +128,6 @@ number.forEach((item, index) => {
           hap();
         }
       });
-
-
     })
 
 
