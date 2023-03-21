@@ -17,7 +17,7 @@ body{
 }
 
 .Home{
-    width: 20%;
+    width: 30%;
     height: 100%;
     margin-left: 65px;
     display: flex;
@@ -40,14 +40,14 @@ body{
 }
 
 .Logo{
-    width: 20%;
+    width: 40%;
     height: 10%;
     display: flex;
     justify-content: center;
     align-items: center;
     position: absolute;
-    right: 37%;
-    left: 37%;
+    left: 30%;
+    right: 30%;
 }
 .LogoImg{
     background: url("/img/FOODEAT.png") no-repeat center center / 100px 90px;
@@ -58,7 +58,7 @@ body{
 }
 
 .Side{
-    width: 40%;
+    width: 30%;
     height: 100%;
     margin-right: 58px;
     display: flex;
@@ -132,22 +132,16 @@ body{
     padding-top: 20px;
 }
 
-.first{
-    width: 28%;
-    height: 100%;
+.first,.second,.third{
+    width: 430px;
+    height: 527px;
     background-color: #FAD0C9;
     border-radius: 18px;
     box-shadow: 2px 4px 12px rgba(0,0,0,.08);
     transition: all .3s cubic-bezier(0,0,.5,1);
 }
 .second, .third{
-    width: 28%;
-    height: 100%;
     margin-left: 60px;
-    background-color: #FAD0C9;
-    border-radius: 18px;
-    box-shadow: 2px 4px 12px rgba(0,0,0,.08);;
-    transition: all .3s cubic-bezier(0,0,.5,1);
 }
 
 .FirstBox,.SecondBox,.ThirdBox{
@@ -229,17 +223,12 @@ body{
     display: flex;
     align-items: center;
 }
-.Line{
-    height: 50%;
-    width: 1px;
-    background-color: rgb(205, 205, 205);
-}
 
 .first:hover,
 .second:hover,
 .third:hover{
-    width: 29%;
-    height: 101%;
+    width: 432px;
+    height: 530px;
     box-shadow: 2px 4px 16px rgba(0,0,0,.16);
 }
 
