@@ -2,7 +2,6 @@ const Bar_slider = document.querySelector('.barlist');
 const Photo_slider = document.querySelector('.PhotoList');
 // 인원수 가로 스크롤
 // ---------------------------------------------------------------------------
-const slider = document.querySelector('.barlist');
 let isMouseDown = false;
 let startX, scrollLeft;
 
@@ -85,6 +84,7 @@ number.forEach((item, index) => {
     });
   });
 });
+
 
     // ------ 메뉴추가
     menu.forEach((item) => {
