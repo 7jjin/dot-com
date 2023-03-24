@@ -209,7 +209,20 @@ let cart = [];   // 장바구니 배열
     //데이터(인원,메뉴) 내보내는 함수
     //--------------------------------------------------------------------------------------------
     function sent() {
-      console.log(cart)
+      fetch("http://localhost:3000/list",{
+        method:"post",
+        body:JSON.stringify(cart),
+        headers:{
+          "Content-Type":"application/json"
+        }
+      })
+      .then((response)=>response.json())
+      .then((json) =>{
+        console.log("성공",json);
+      })
+      .catch((error)=>{
+        console.log("실패",error);
+      })
     }
 
 
