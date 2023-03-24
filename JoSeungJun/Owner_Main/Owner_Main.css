@@ -13,7 +13,8 @@ body{
     height: 10%;
     display: flex;
     justify-content: space-between;
-    padding-top: 10px;
+    padding: 5px 0px;
+    margin-bottom: 10px;
 }
 
 .Home{
@@ -24,7 +25,7 @@ body{
     align-items: center;
 }
 .HomeImg{
-    background-image: url(/JoSeungJun/Owner_Main/Home.png);
+    background-image: url(/img/Home.png);
     width: 40px;
     height: 40px;
     background-size:cover;
@@ -41,11 +42,10 @@ body{
 
 .Logo{
     width: 40%;
-    height: 10%;
+    height: 100%;
     display: flex;
     justify-content: center;
     align-items: center;
-    position: absolute;
     left: 30%;
     right: 30%;
 }
@@ -85,35 +85,35 @@ body{
     text-align: center;
 }
 .Phone{
-    background: url("/JoSeungJun/Owner_Main/Phone.png") no-repeat center center / 100px 90px;
+    background: url("/img/Telephone.png") no-repeat center center / 100px 90px;
     width: 100%;
     height: 80%;
     background-size: 45px;
     cursor: pointer;
 }
 .Alarm{
-    background: url("/JoSeungJun/Owner_Main/Alarm.png") no-repeat center center / 100px 90px;
+    background: url("/img/Alarm.png") no-repeat center center / 100px 90px;
     width: 100%;
     height: 80%;
     background-size: 45px;
     cursor: pointer;
 }
 .Customer{
-    background: url("/JoSeungJun/Owner_Main/Customer.png") no-repeat center center / 100px 90px;
+    background: url("/img/Customer.png") no-repeat center center / 100px 90px;
     width: 100%;
     height: 80%;
     background-size: 45px;
     cursor: pointer;
 }
 .Help{
-    background: url("/JoSeungJun/Owner_Main/Help.png") no-repeat center center / 100px 90px;
+    background: url("/img/Help.png") no-repeat center center / 100px 90px;
     width: 100%;
     height: 80%;
     background-size: 45px;
     cursor: pointer;
 }
 .Option{
-    background: url("/JoSeungJun/Owner_Main/Option.png") no-repeat center center / 100px 90px;
+    background: url("/img/Option.png") no-repeat center center / 100px 90px;
     width: 100%;
     height: 80%;
     background-size: 45px;
@@ -125,7 +125,6 @@ body{
     height: 70%;
     display: flex;
     justify-content: center;
-    padding-top: 20px;
 }
 
 .first,.second,.third{
@@ -151,19 +150,19 @@ body{
     align-items: center;    
 }
 .FirstImg{
-    background: url("/JoSeungJun/Owner_Main/Line.png") no-repeat center center / 100px 90px;
+    background: url("/img/Line.png") no-repeat center center / 100px 90px;
     width: 100%;
     height: 40%;
     background-size: 180px;
 }
 .SecondImg{
-    background: url("/JoSeungJun/Owner_Main/Store.png") no-repeat center center / 100px 90px;
+    background: url("/img/Store.png") no-repeat center center / 100px 90px;
     width: 100%;
     height: 40%;
     background-size: 180px;
 }
 .ThirdImg{
-    background: url("/JoSeungJun/Owner_Main/Review.png") no-repeat center center / 100px 90px;
+    background: url("/img/Review.png") no-repeat center center / 100px 90px;
     width: 100%;
     height: 40%;
     background-size: 180px;
@@ -206,13 +205,13 @@ body{
 }
 
 .LeftImg{
-    background-image: url(/JoSeungJun/Owner_Main/Calender.png);
+    background-image: url(/img/Calender.png);
     background-size: cover;
     width: 35px;
     height: 35px;
 }
 .RightImg{
-    background-image: url(/JoSeungJun/Owner_Main/Message.png);
+    background-image: url(/img/Message.png);
     background-size: cover;
     width: 35px;
     height: 35px;

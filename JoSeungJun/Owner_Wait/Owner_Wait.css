@@ -1,0 +1,270 @@
+html{
+    height: 100%;
+    font-family: 'Nanum Gothic', sans-serif;
+}
+body{
+    height: 100%;
+    margin: 0;
+    background-color: #fafafa;
+}
+/*상간 가게 이름, 로고, 아이콘*/
+.head{
+    width: 100%;
+    height: 10%;
+    display: flex;
+    justify-content: space-between;
+    padding: 5px 0px;
+    margin-bottom: 10px;
+}
+/*가게이름, 이미지*/
+.Home{
+    width: 30%;
+    height: 100%;
+    margin-left: 65px;
+    display: flex;
+    align-items: center;
+}
+.HomeImg{
+    background-image: url(/img/Home.png);
+    width: 40px;
+    height: 40px;
+    background-size:cover;
+    
+}
+.HomeName{
+    width: 80px;
+    margin-left: 20px;
+    font-weight: 600;
+    font-size: 20px;
+    color: black;
+    text-shadow:0px 1px 1px #000;
+}
+/*사이트 로고*/
+.Logo{
+    width: 40%;
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    left: 30%;
+    right: 30%;
+}
+.LogoImg{
+    background: url("/img/FOODEAT.png") no-repeat center center / 100px 90px;
+    width: 100%;
+    height: 100%;
+    background-size: 180px;
+    margin: auto;
+}
+/*아이콘 구역*/
+.Side{
+    width: 30%;
+    height: 100%;
+    margin-right: 58px;
+    display: flex;
+    align-items: center;
+    justify-content: flex-end;
+}
+
+.IconZone,.IconZone2{
+    width: 60px;
+    height: 75px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+.IconZone2{
+    margin-left: 10px;
+}
+.IconText{
+    width: 100%;
+    height: 20px;   
+    font-weight: 600;
+    font-size: 18px;
+    text-align: center;
+}
+.Phone{
+    background: url("/img/Telephone.png") no-repeat center center / 100px 90px;
+    width: 100%;
+    height: 80%;
+    background-size: 45px;
+    cursor: pointer;
+}
+.Alarm{
+    background: url("/img/Alarm.png") no-repeat center center / 100px 90px;
+    width: 100%;
+    height: 80%;
+    background-size: 45px;
+    cursor: pointer;
+}
+.Customer{
+    background: url("/img/Customer.png") no-repeat center center / 100px 90px;
+    width: 100%;
+    height: 80%;
+    background-size: 45px;
+    cursor: pointer;
+}
+.Help{
+    background: url("/img/Help.png") no-repeat center center / 100px 90px;
+    width: 100%;
+    height: 80%;
+    background-size: 45px;
+    cursor: pointer;
+}
+.Option{
+    background: url("/img/Option.png") no-repeat center center / 100px 90px;
+    width: 100%;
+    height: 80%;
+    background-size: 45px;
+    cursor: pointer;
+}
+/*대기자 상세정보, 대기자 명단*/
+.body{
+    height: 85%;
+    width: 100%;
+    float: right;
+    display: flex;
+}
+/*대기자 상세정보, 큰 구역*/
+.details{
+    width: 500px;
+    height: 650px;
+    box-shadow: 1px 1px 1px #fff;
+    margin-right: 50px;
+}
+.Top{
+    width: 500px;
+    height: 75px;
+    border-right: 1px solid rgb(186, 186, 186);
+    border-top: 1px solid rgb(186, 186, 186);
+    display: flex;
+    align-items: center;
+}
+.Middle{
+    padding: 20px 0px 20px 20px;
+    width: 480px;
+    height: 445px;
+    border-right: 1px solid rgb(186, 186, 186);
+    background-color: #efefef;
+}
+.Under{
+    padding: 0px 20px 0px 20px;
+    width: 460px;
+    height: 97px;
+    border-right: 1px solid rgb(186, 186, 186);
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+}
+/*상세정보 상단 구역*/
+.WaiterInfo{
+    display: flex;
+    width: 500px;
+    justify-content: space-between;
+}
+.LeftInfo{
+    width: 380px;
+    padding-left: 20px;
+    display: flex;
+}
+.WaiterName{
+    font-size: 40px;
+    font-weight: 700;
+    margin-right: 20px;
+}
+.DetailInfo{
+    font-size: 20px;
+    font-weight: 600;
+    display: flex;
+    align-items: flex-end;
+    color: rgb(143,143,143);
+}
+.RightInfo{
+    width: 58px;
+    height: 40px;
+    display: flex;
+}
+.X-image{
+    background: url("/img/X.png") no-repeat center center / 100px 90px;
+    width: 50px;
+    height: 45px;
+    background-size: 25px;
+    cursor: pointer;
+}
+/*상세정보 중단 구역*/
+.VisitDate,.VisitCount,.VisitPhone,.VisitPeople,.CallMenu{
+    line-height: 25px;
+}
+.VisitText,.CountText,.PhoneText,.PeopleText,.MenuText{
+    font-size: 20px;
+    font-weight: 700;
+    color: rgb(143,143,143);
+}
+.DateText,.CountNumText,.NumText,.PepleNumText,.MenuOrder{
+    font-size: 17px;
+    font-weight: 600;
+}
+
+.VisitCount,.VisitPhone,.VisitPeople,.CallMenu{
+    margin-top: 20px;
+}
+/*상세정보 하단 구역*/
+.AllBtn{
+    display: flex;
+}
+.LeftBtn{
+    margin-right: 60px;
+}
+.ReserveBtn,.CustomerBtn{
+    padding: 20px 20px 20px 20px;
+    background-color: #FAD0C9;
+    border: 0px solid;
+    border-radius: 5px;
+    color: white;
+    font-weight: 600;
+    font-size: 15px;
+    cursor: pointer;
+}
+
+/*대기자 명단*/
+.wait{
+    display: flex;
+    justify-content: center;
+    margin-top: 20px;
+}
+
+.Number{
+    width: 100px;
+    height: 30px;
+    font-size: 20px;
+    font-weight: 700;
+    color: white;
+    background-color: black;
+}
+.Name,.Men,.Visit,.PhoneNum{
+    width: 200px;
+    height: 30px;
+    font-size: 20px;
+    font-weight: 700;
+    background-color: gray;
+    color: white;
+}
+
+.NumberTD{
+    height: 70px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-weight: 500;
+    font-size: 20px;
+    color: white;
+    background-color: black;
+}
+.NameTD,.MenTD,.VisitTD,.PhoneTD{
+    background-color: rgb(234, 234, 234);
+    color: black;
+    text-align: center;
+    font-weight: 500;
+    font-size: 20px;
+}
