@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org" xmlns:sec="http://www.thymeleaf.org/thymeleaf-extras-springsecurity5" lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+       <link rel="stylesheet" th:href="@{/css/Mypage_History.css}" />
+    <script src="./MyPage_History.js"></script>
+</head>
+
+<body>
+    <div class="Main">
+        <div class="SideBar">
+            <div class="Title_Area">
+                <div class="headerLogo">
+                    <div class="logo">
+                        <a href="#" onclick="location.href='/mainpage'"></a>
+                        <h1 class="Title">내정보</h1>
+                    </div>
+                </div>
+            </div>
+            <div class="Profile_Area">
+                <div class="Profile_Inner">
+                    <div class="Photo">
+                        <img src="/img/Profile.png" alt="profile_image">
+                        <span class="Photo_Edit">
+                            
+                        </span>
+                    </div>
+                    <div class="Profile">
+                        <p class="UserName" th:text="${infoName}"></p>
+                        <p class="UserEmail"th:text="${infoEmail}"></p>
+                    </div>
+                </div>
+            </div>
+           <div class="Menu_Area">
+                <li class="Act">
+                    <a href="#" onclick="location.href='/Mypage_Account'">
+                        <div class="Menu_Act" >정보수정</div>
+                    </a>
+                </li>
+                <li>
+                    <a href="#" onclick="location.href='/Mypage_Fav'">
+                        <div class="Menu">즐겨찾기</div>
+                    </a>
+                </li>
+                <li>
+                    <a href="#" onclick="location.href='/Mypage_Review'">
+                        <div class="Menu">리뷰목록</div>
+                    </a>
+                </li>
+                <li>
+                    <a href="#" onclick="location.href='/Mypage_History'">
+                        <div class="Menu">방문목록</div>
+                    </a>
+                </li>
+                <li>
+                    <a href="#" onclick="location.href='/Mypage_Restaurant'">
+                        <div class="Menu" sec:authorize="hasRole('ROLE_ADMIN')">식당관리</div>
+                    </a>
+                </li>
+            </div>
+        </div>
+    </div>
+</body>
+
+</html>

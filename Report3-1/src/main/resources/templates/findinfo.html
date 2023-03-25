@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org" lang="en">
+<head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <link rel="stylesheet"th:href="@{/css/signinfo.css}" />
+     <script src="js/signinfo.js"></script>
+     <script src="https://code.jquery.com/jquery-3.6.3.min.js"></script>	
+     <script type="text/javascript">
+
+     function idSearch_click(){
+ 		var userName=$('#userName').val()
+ 		var userEmail=$('#userEmail').val()		
+ 		$.ajax({
+ 			url:"/findinfo",
+ 			type:"POST",
+ 			data:{"userName":userName, "userEmail":userEmail} ,
+ 			success:function(data){
+ 				if(data == 0){
+ 					alert("회원정보를 다시 입력해주세요");
+ 					console.log("data : " +  data);
+ 				
+ 				} else {
+ 					$('#id_value2').text("회원가입한 이용한 아이디는 " + data +"입니다");
+ 					idV = data;
+ 				}
+ 			},
+ 			 error:function(){
+ 	                alert("에러입니다");
+ 	            }
+ 		});
+ 	};
+     </script>    
+</head>
+
+<body>
+   <form action="/findinfo" method ="post" class="FindId" >
+      <div class="IdInfo">
+        <div id="Box">
+        <h2>아이디 찾기</h2>
+            <div class="IdDiv">
+                <div class="IdEx">아이디는 이름 이메일을 통해 알 수 있습니다.</div>
+                <input required id="userName"type="text" class="Name" placeholder="이름" /><br/>
+                <input required id="userEmail"type="text" class="EmailInput" placeholder="이메일" /><br/>
+            </div>
+         
+            <div class="IdDiv2" style="display: none;">
+                <font id="id_value2", size="2"></font>
+                <br>
+                <input style="color: black" class="BackBtn" type="submit" value="로그인 화면으로 돌아가기" onclick="location.href='/login'"/>
+            </div>
+            <input style="color: black" class="IdBtn" type="submit" value="아이디 찾기" onclick="idSearch_click()" />
+    
+    </div>
+    </div>
+    </form>
+</body>
+
+</html>

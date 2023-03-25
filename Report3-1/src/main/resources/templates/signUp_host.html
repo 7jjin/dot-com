@@ -1,0 +1,183 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org" lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <link rel="stylesheet"th:href="@{/css/signUp_host.css}" />
+     <script src="js/signUp_host.js"></script>
+  <script src="https://code.jquery.com/jquery-3.6.3.min.js"></script>	
+ <script type="text/javascript">
+ function idOverlap(){
+	 var userId = $("#userId").val();
+	 var special= /[`~!@#$%^&*|\\\'\";:\/?]/gi;
+	 if(userId.search(/\W|\s/g) > -1) { 
+		 $('#result').text('특수문자 또는 공백이 입력되었습니다.');
+		 $("#result").attr('color','red');
+	 } else{
+		 if(userId.trim().length !=0){
+		$.ajax({
+			url: "/idCheck",
+			type: "POST",
+			async : false,
+			dataType: "JSON", //서버에서 반환하는 데이터 타입 
+			data: {"userId" : userId},//서버에 보내는 데이터 타입 
+			success: function(count) {    
+                if(count ==0 ) {
+                	$('#result').text('사용 가능한 아이디입니다.');
+            		$("#result").attr('color','green');
+            		isCertification1=true;
+                   
+                } else {
+                	$('#result').text('이미 사용중인 아이디입니다.');
+                	$("#result").attr('color','red');
+                	isCertification1=false;
+                }            
+            },
+            error: function(error) {
+                alert("아이디를 입력해주세요.");
+            }        
+        });
+	 }else{
+			alert("아이디를 입력해주세요")
+			
+		}
+    } 
+ }
+ 
+ $(document).on("click", '#checkEmail', function(){
+	 var userEmail = $("#userEmail").val();
+	 const checkInput = $('#mail-check') // 인증번호 입력하는곳 
+	
+	   $.ajax({
+	      type : "POST",
+	      url : "/mailCheck",
+	      data : {"userEmail" : userEmail},
+	      success : function(data){
+	    	  console.log("data : " +  data);
+			  checkInput.attr('disabled',false);
+			  code = data;
+			  alert('인증번호가 전송되었습니다.')
+	      },
+	      error : function(error){
+	    	  alert("이메일을 입력해주세요.")
+	      }
+	   })
+})
+ 
+ $(document).on("blur", '#mail-check', function (){
+	    const inputCode = $(this).val();
+		if(inputCode == code){
+		  	$('#mail-check-warn').text('인증번호가 일치합니다!.');
+			$("#mail-check-warn").attr('color','green');;
+			$('#mail-Check-Btn').attr('disabled',true);
+			$('#userEamil').attr('readonly',true);
+			isCertification =true;
+	
+		}else{
+		  	$('#mail-check-warn').text('인증번호가 일치하지 않습니다..');
+			$("#mail-check-warn").attr('color','red');;
+			isCertification = false;
+		
+		}
+	});
+ 
+ $(document).on("click", '#check2', function submitcheck(){
+	 if(isCertification==false){
+		 alert("메일 인증이 완료되지 않았습니다");
+		 return false;
+	 }
+		 else if(isCertification1==false){
+			 alert("아이디가 중복됩니다 다시 입력해주세요");
+			 return false;
+		 }
+	 else{
+		 true;
+	 }
+ });
+  
+	
+	</script>
+  </head>
+<body>
+	<div id="logo">
+    <img src="/img/FOODEAT.png" alt="logo" style="width: 240px;" onclick="location.href='/login'"  />
+  </div>
+    <div id="Info">
+         <form action="/signUp_host" class="IdPw" method="post" onsubmit="return submitcheck()">
+        <div id="box">
+        <div class="id">
+          <h3 id="Id_label">
+            아이디
+          </h3>
+          <div id="Id_Table">
+            <input required type="text" id="userId" class="IdInput" name="userId" placeholder="아이디(특수문자,공백 불가)" />
+            <input style="color: black" class="IdBtn" type="button" value="중복 확인"  onclick="idOverlap()"/>
+            <div style="color: red; display: none" id="BadId" onchange="PassCheck()">
+              *아이디가 중복됩니다.
+            </div>
+            <div style="color: green; display: none" id="GoodId" onchange="PassCheck()">
+              *사용가능한 아이디입니다.
+            </div>
+          </div>
+        </div>
+        <font id = "result" size = "2"></font>
+          <div class="Password">
+          <h3 id="Pass_label">
+            비밀번호
+          </h3>
+          <input required  name="userPw" type="password" id="PassInput" placeholder="비밀번호" />
+        </div>
+        <div class="ConfirmPassword">
+          <h3 id="ConfirmPass_label">
+            비밀번호 재확인
+          </h3>
+          <input required name="UserConfirmPass" type="password" id="ConfirmPassInput" placeholder="비밀번호 확인" />
+        </div>
+        <div style="color: red; display: none" id="BadPass" onchange="PassCheck()">
+          *비밀번호가 일치하지 않습니다.
+        </div>
+        <div style="color: green; display: none" id="GoodPass" onchange="PassCheck()">
+          *비밀번호가 일치합니다.
+        </div>
+          <div class="Name">
+            이름<br />
+            <input required type="text" class="NameInput" name="userName" placeholder="이름을(를) 입력하세요." />
+          </div>
+          <div class="DateBirth" action="">
+            생년월일<br />
+            <input required type="text" class="DateBirthInput" name="userBirth" placeholder="0000.00.00" />
+          </div>
+          <div id="Phone">
+            핸드폰 번호<br />
+            <input required type="text" class="PhoneInput" name="userPhone" placeholder="010-0000-0000" />
+          </div>
+         <div class="Email">
+          <h3 id="Email_label">
+            이메일
+          </h3>
+          <input required type="text" id="userEmail" class="EmailInput" name="userEmail" placeholder="Ex) asdf@naver.com" />
+           <input style="color: black" type="button" class="mailBtn"id="checkEmail" value ="인증번호전송"/>
+        </div>
+        <span id="email_errorbox">이메일 주소를 다시 확인해주세요.</span> 
+          <div class="mail-check-box">
+          <input class="form-control mail-check-input" id="mail-check" placeholder="인증번호 6자리를 입력해주세요!" disabled ="disabled">
+           </div>
+	     <font id="mail-check-warn" size="2"></font>
+	       <div class="cafe" action="">
+            식당이름<br />
+            <input required type="text" class="DateBirthInput" name="userCafe" placeholder="엄마돈국수" />
+          </div>
+         <div id="Join">
+          <input style="color: black; display: none;" class="joinBtn" type="submit"value="회원가입" 
+            id="check2"/>
+          <div style="color: grey; display: block;" class="NotBtn"></div>
+        </div>
+          </div>
+        </form>
+      </div>
+
+</body>
+<script></script>
+</html>

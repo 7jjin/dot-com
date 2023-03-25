@@ -1,0 +1,214 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org" lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Main-Page</title>
+    <link rel="stylesheet" th:href="@{/css/mainpage.css}"/>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <lin href="https://fonts.googleapis.com/css2?family=Cabin:wght@400;500;600;700&family=Nanum+Pen+Script&family=Noto+Sans+KR:wght@100;400;700&family=Open+Sans:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+    <script
+      src="https://kit.fontawesome.com/06b646a751.js"
+      crossorigin="anonymous"
+    ></script>
+  </head>
+  <body>
+    <div id="wrap">
+      <section class="header">
+        <div class="headerWapper">
+          <div class="headerInner">
+            <div class="headerLogo">
+              <div class="logo">
+                <a
+                  href="#"
+                  onclick="location.href='/mainpage3'"
+                ></a>
+              </div>
+            </div>
+            <div class="headerSearch">
+              <form class="searchForm">
+                <input
+                  type="text"
+                  class="search"
+                  placeholder="식당을 입력하세요"
+                />
+                <div class="searchIcon">
+                  <i class="fa-solid fa-magnifying-glass"></i>
+                </div>
+              </form>
+              <div class="iconBox"></div>
+            </div>
+            <form action="/logout" method="post">
+            <div class="headerUtil">           
+              <div class="utilList">           
+                <div class="utilList_login"> 
+                  <div th:text="${name}"></div>    
+                </div>
+                <div class="utilList_Wait">
+                  <i class="fa-regular fa-clock" style="font-size: 25px"></i>
+                     <button id="logout">로그아웃</button>
+                </div>
+              </div>
+            </div>
+            </form>
+          </div>
+        </div>
+      </section>
+      <!-- 현재 사용자 선택 옵션 -->
+      <section id="InfoBar">
+        <div class="RestaurantName">
+          <p>식당을 골라주세요!</p>
+        </div>
+        <div class="InfoMenu">
+          <div class="call">
+            <a
+              href="#"
+              onclick="location.href='/JoJinHyeong/mainPage/main.html'"
+            ></a>
+          </div>
+          <div class="comfirm">
+            <a
+              href="#"
+              onclick="location.href='/JoJinHyeong/mainPage/main.html'"
+            ></a>
+          </div>
+          <div class="memberChange">
+            <a
+              href="#"
+              onclick="location.href='/JoJinHyeong/mainPage/main.html'"
+            ></a>
+          </div>
+          <div class="map">
+            <a
+              href="#"
+              onclick="location.href='/JoJinHyeong/mainPage/main.html'"
+            ></a>
+          </div>
+          <div class="wait">
+            <a
+              href="#"
+              onclick="location.href='/JoJinHyeong/mainPage/main.html'"
+            ></a>
+          </div>
+          <div class="cancel">
+            <a
+              href="#"
+              onclick="location.href='/JoJinHyeong/mainPage/main.html'"
+            ></a>
+          </div>
+        </div>
+      </section>
+      <!-- 슬라이드 이미지 -->
+      <section id="slideshow-container">
+        <div class="mySlides fade">
+          <img src="/img/mainpage/slide_img1.jpg" style="width: 100%" />
+        </div>
+        <div class="mySlides fade">
+          <img src="/img/mainpage/slide_img2.jpg" style="width: 100%" />
+        </div>
+        <div class="mySlides fade">
+          <img src="/img/mainpage/slide_img3.jpg" style="width: 100%" />
+        </div>
+        <div class="mySlides fade">
+          <img src="/img/mainpage/slide_img4.jpg" style="width: 100%" />
+        </div>
+        <div class="mySlides fade">
+          <img src="/img/mainpage/slide_img5.jpg" style="width: 100%" />
+        </div>
+        <div class="mySlides fade">
+          <img src="/img/mainpage/slide_img6.jpg" style="width: 100%" />
+        </div>
+        <a class="prev" onclick="moveSlides(-1)">&#10094;</a>
+        <a class="next" onclick="moveSlides(1)">&#10095;</a>
+      </div>
+      <br/>
+      <div class="mp_wap">
+        <span class="dot" onclick="currentSlide(0)"></span>
+        <span class="dot" onclick="currentSlide(1)"></span>
+        <span class="dot" onclick="currentSlide(2)"></span>
+        <span class="dot" onclick="currentSlide(3)"></span>
+        <span class="dot" onclick="currentSlide(4)"></span>
+        <span class="dot" onclick="currentSlide(5)"></span>
+      </div>
+      </section>
+      <section class="quickfilter">
+        <div class="filterBar_Names">
+          <button class="myplace"style="background-color: #ffffff;">
+            <div class="myplaceIcon">
+              <i class="fa-solid fa-location-dot"></i>
+            </div>
+            <p>지역</p>
+          </button>
+          <button class="menu"style="background-color:#da9c68bf">
+            <div class="menuIcon">
+              <i class="fa-solid fa-utensils"></i>
+            </div>
+            <p>메뉴</p>
+          </button>
+        </div>
+        <div class="filterRegion" >
+          <div class="nowplace">
+            <button>내위치</button>
+            <div class="selfplace">
+              <div class="doo">
+                <input type="text" placeholder="예) 경기도">
+                <div class="dooicon"><i class="fa-solid fa-location-crosshairs"></i></div>
+              </div>
+              <div class="si">
+                <input type="text" placeholder="예) 수원시">
+                <div class="siicon"><i class="fa-solid fa-location-crosshairs"></i></div>
+              </div>
+            </div>
+          </div>
+          <input type="submit" class="find" value="조회"style="width:100px; height:56px">
+        </div>
+        <div class="filterMenu" style="display:none">
+          <div class="korea">
+            <div class="imgKorea">
+              <img src="/img/mainpage/kor.png" alt="kor">
+            </div>
+            <p>한식</p>
+          </div>
+          <div class="japen">
+            <div class="imgJapen">
+              <img src="/img/mainpage/japen.png" alt="jap">
+            </div>
+            <p>일식</p>
+          </div>
+          <div class="china">
+            <div class="imgChina">
+              <img src="/img/mainpage/china.png" alt="chi">
+            </div>
+            <p>중식</p>
+          </div>
+          <div class="america">
+            <div class="imgAmerica">
+              <img src="/img/mainpage/america.png" alt="america">
+            </div>
+            <p>미국식</p>
+          </div>
+          <div class="germany">
+            <div class="imgGermany">
+              <img src="/img/mainpage/germany.png" alt="Ger">
+            </div>
+            <p>독일식</p>
+          </div>
+          <div class="italy">
+            <div class="imgItaly">
+              <img src="/img/mainpage/italy.png" alt="italy">
+            </div>
+            <p>이탈리아식</p>
+          </div>
+        </div>
+      </section>
+      </div>
+    </div> 
+    <script src="/js/mainpage.js"></script>
+    <script src="/js/filter.js"></script>
+  </body>
+</html>

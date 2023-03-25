@@ -1,0 +1,134 @@
+html {
+    height: 100%;
+}
+
+body {
+    margin: 0;
+    background-color: rgb(245, 246, 247);
+}
+/*전체를 감싸는 div*/
+.Main{
+    display: flex;
+    height: 100%;
+}
+
+/*왼쪽 내 정보 탭*/
+.SideBar {
+    width: 400px;
+    height: 753px;
+    margin-left: 150px;
+    border-left: 1px solid #ddd;
+    border-right: 1px solid #ddd;
+    box-shadow: 5px 1px 8px 0 rgb(0 0 0 / 6%);
+    background-color: #fff
+}
+/*로고 구역*/
+.Title_Area {
+    display: flex;
+    height: 10%;
+    width: 100%;
+}
+/*로고 공간*/
+.headerLogo {
+    display: flex;
+    flex-basis: 25%;
+    align-items: center;
+    justify-content: center;
+}
+
+.logo {
+    display: flex;
+    padding-right: 5px;
+    width: 300px;
+    height: 100%;
+}
+
+.logo a {
+    background: url("/img/FOODEAT.png") no-repeat center center / 100px 90px;
+    width: 35%;
+    height: 100%;
+    background-size: 100px;
+    margin-left: 20px;
+}
+/*"내 정보" 글씨*/
+.Title{
+    width: 150px;
+    font-size: 38px;
+    margin-top: 10px;
+}
+/*프로필 사진과 이름 이메일 공간*/
+.Profile_Area{
+    margin-top: 30px;
+    /* border-bottom: 2px solid #ddd; */
+}
+
+.Profile_Inner{
+    text-align: center;
+}
+.Photo img{
+    border-radius: 50%;
+    width: 170px;
+    height: 170px;
+    box-shadow: 0 3px 6px 0 rgb(29 34 53 / 8%);
+}
+.Photo{
+    position:relative;
+}
+.Photo_Edit{
+    position: absolute;
+    top: 120px;
+    right: 115px;
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    border: 2px solid #fff;
+    box-shadow: 2px 6px 8px 0 rgb(30 30 35 / 8%);
+    box-sizing: border-box;
+    background-image: url("/img/Edit.png");
+    background-size: 100% 100%;
+    background-color: white;
+}
+.UserName{
+    font-size: 26px;
+    font-weight: 700;
+    line-height: 0px;
+}
+.UserEmail{
+    font-size: 15px;
+    color: #929294;
+    line-height: 10px;
+}
+
+.Menu_Area{
+    list-style:none;
+    width: 90%;
+    padding-left: 5%;
+    margin-top: 30px;
+}
+
+.Menu_Area a{
+    text-decoration-line: none;
+}
+.Act{
+    background-color: #fcaa72;
+    border-radius: 5px;
+}
+
+.Menu_Act{
+    margin-left: 20px;
+    padding: 5px;
+    font-size: 20px;
+    font-weight: 700;
+    margin-top: 30px;
+    color: white;
+}
+
+.Menu{
+    margin-left: 20px;
+    padding: 5px;
+    border-radius: 5px;
+    font-size: 20px;
+    font-weight: 700;
+    margin-top: 30px;
+    color: black;
+}

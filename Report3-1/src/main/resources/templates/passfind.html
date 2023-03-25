@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org" lang="en">
+<head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+     <link rel="stylesheet" th:href="@{/css/passfind.css}"/>
+     <script src="js/passfind.js"></script>
+        <script src="https://code.jquery.com/jquery-3.6.3.min.js"></script>	
+     <script type="text/javascript">
+   
+     function pwChk(){
+  		var id=$('#id').val()
+  		var email=$('#email').val()		
+  		$.ajax({
+  			url:"/passfind",
+  			type:"POST",
+  			data:{"id":id, "email":email} ,
+  			success:function(data){
+  				if(data == 0){
+  					alert("회원정보를 다시 입력해주세요");
+  				} else {
+  					alert("인증번호가 전송되었습니다");
+  					console.log("data : " +  data);
+  					
+  				}
+  			},
+  			 error:function(){
+  	                alert("에러입니다");
+  	            }
+  		});
+  	};
+     </script>  
+</head>
+
+<body>
+   <form action="/passfind" class="FindPass" method="post">
+    <div class="PassInfo">
+        <h2>비밀번호 찾기</h2>
+            <div class="PassDiv">
+                <div class="PassEx">비밀번호는 아이디 이름 이메일을 통해 알 수 있습니다.</div>
+                <input required id="id"type="text" class="Id" placeholder="아이디" /><br />
+                <input required id="email"type="text" class="EmailInput" placeholder="이메일" /><br />
+                <font id="id_value1" size="2"></font>
+            </div>
+            <div class="PassDiv2" style="display: none;">
+                <div class="PassEx2">임시 비밀번호가 발급되었습니다! 이메일을 확인해주세요! 30초정도 소요됩니다</div><br>
+                <input style="color: white" class="BackBtn" type="submit" value="로그인 화면으로 돌아가기" onclick="location.href='/login'"/>
+            </div>
+            <div class="PassDiv2" style="display: none;">
+    </div>
+            <input style="color: white" class="PassBtn" type="submit" onclick="pwChk()" value="비밀번호 찾기" />
+    </div>
+</form>
+</body>
+
+</html>

@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org" lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Document</title>
+     <link rel="stylesheet"th:href="@{/css/SignUp_Class.css}" />
+  <script src="js/SignUp_Class.js"></script>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Nanum+Gothic:wght@400;700;800&display=swap" rel="stylesheet">
+
+</head>
+
+<body>
+  <div id="logo">
+    <img src="/img/FOODEAT.png" alt="logo" style="width: 400px;" onclick="location.href='/mainpage'" />
+  </div>
+  <div id="Box">
+    <div id="Host" onclick="location.href='/signUp_host'">
+      <h1 id="Host_label" style="color: white;">
+        점주용
+      </h1><br>
+      <span id="Host_Ex" style="color: white;">
+        식당을 운영하고 있는<br>  
+        점주분들은 이 곳을
+        이용해 주세요.
+      </span>
+    </div>
+    <div id="Customer" onclick="location.href='/signUp'">
+      <h1 id="Customer_label" style="color: black;">
+        고객용
+      </h1><br>
+      <span id="Customer_Ex" style="color: black;">
+        식당을 이용 할 손님분들은
+        이 곳을 이용해 주세요.
+      </span>
+    </div>
+  </div>
+</body>
+
+</html>

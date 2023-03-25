@@ -1,0 +1,569 @@
+html{
+    height: 100%;
+}
+body{
+    margin:0;
+}
+
+.mp_wap{
+  position:absolute;
+  top:53%;
+  left:10%;
+}
+
+.header{
+    width: 100%;
+    height: 90px;
+    border-bottom:2px solid #ddd;
+
+}
+.headerWapper{
+    width: 1300px;
+    height: 100%;
+    margin:0 auto;
+}
+.headerInner{
+    display: flex;
+    height: 100%;
+    width: 100%;
+
+}
+.headerLogo{
+    display: flex;
+    flex-basis: 25%;
+    align-items: center;
+    justify-content: center;
+}
+.logo{
+    display: flex;
+    padding-right: 5px;
+    width: 140px;
+    height: 100%;
+}
+.logo a{
+    background: url("/img/FOODEAT.png") no-repeat center center / 100px 90px;
+    width: 100%;
+    height: 100%;
+    background-size: 130px;
+    
+}
+.headerSearch{
+    display: flex;
+    align-items: center;
+    flex-basis: 50%;
+    width: 100%;
+    height: 100%;
+}
+.searchForm{
+    display: flex;
+    align-items: center;
+    border-radius: 20px;
+    background: #f8f8f8;
+    border: 1px solid #ddd;
+}
+.searchForm .search{
+    outline:none;
+    width: 370px;
+    height: 20px;
+    border-style: none;
+    background-color: #f8f8f8;
+    padding:10px 40px 10px 0px;
+    margin: 3px 0px 3px 15px;
+}
+.searchIcon{
+    position: relative;
+    right: 20px;
+    display: inline;
+}
+.headerUtil{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-basis: 25%;
+    width: 100%;
+    height: 100%;
+}
+.utilList{
+    display: flex;
+    margin-top: 5px;
+}
+.utilList_login ,.utilList_Wait{
+    padding-right: 20px;
+}
+#InfoBar{
+  display: flex;
+  width: 1300px;
+  height: 110px;
+  margin: 0 auto;
+  justify-content: space-around;
+  align-items: center;
+}
+.RestaurantName{
+  display: flex;
+  align-items: center;
+  margin-right: 64px;
+}
+.RestaurantName p{
+    margin:0;
+    font-size: 40px;
+    font-family: 'Noto Sans KR', sans-serif;
+}
+.InfoMenu{
+    display: flex;
+    width: 600px;
+    height: 100%;
+    align-items: center;
+    
+}
+/* .call , .comfirm, .memberChange,.map,.wait,.cancel{
+    background: url(/img/COM.png) no-repeat center center;
+    background-size: cover;
+    width: 100%;
+    height: 65px;
+    margin-right: 30px;
+} */
+.call{
+  background: url(/img/phone.png) no-repeat center center;
+  background-size: cover;
+  width: 100%;
+  height: 65px;
+  margin-right: 30px;
+  transition: all .35s cubic-bezier(0.4,0,0.2,1);
+}
+.call:hover,.comfirm:hover,.memberChange:hover,.map:hover,.wait:hover,.cancel:hover{
+  box-shadow: 0 10px 20px rgba(0,0,0,0.19), 0 6px 6px rgba(0,0,0,0.23);
+}
+.comfirm{
+  background: url(/img/menu.png) no-repeat center center;
+  background-size: cover;
+  width: 100%;
+  height: 65px;
+  margin-right: 30px;
+  transition: all .35s cubic-bezier(0.4,0,0.2,1);
+
+}
+.memberChange{
+  background: url(/img/people.png) no-repeat center center;
+  background-size: cover;
+  width: 100%;
+  height: 65px;
+  margin-right: 30px;
+  transition: all .35s cubic-bezier(0.4,0,0.2,1);
+
+}
+.map{
+  background: url(/img/map.png) no-repeat center center;
+  background-size: cover;
+  width: 100%;
+  height: 65px;
+  margin-right: 30px;
+  transition: all .35s cubic-bezier(0.4,0,0.2,1);
+
+}
+.wait{
+  background: url(/img/1.png) no-repeat center center;
+  background-size: cover;
+  width: 100%;
+  height: 65px;
+  margin-right: 30px;
+  transition: all .35s cubic-bezier(0.4,0,0.2,1);
+
+}
+.cancel{
+  background: url(/img/cancel.png) no-repeat center center;
+  background-size: cover;
+  width: 100%;
+  height: 65px;
+  margin-right: 30px;
+  transition: all .35s cubic-bezier(0.4,0,0.2,1);
+
+}
+
+#slideshow-container .mySlides img {
+    height: 400px;
+  }
+#slideshow-container{
+  position:relative;
+  height: 400px;
+}
+
+/* Hide the images by default */
+.mySlides {
+  display: none;
+}
+
+/* Next & previous buttons */
+.prev, .next {
+  cursor: pointer;
+  position: absolute;
+  top: 50%;
+  width: auto;
+  margin-top: -22px;
+  padding: 16px;
+  color: white;
+  font-weight: bold;
+  font-size: 55px;
+  transition: 0.6s ease;
+  border-radius: 0 3px 3px 0;
+  user-select: none;
+}
+
+/* Position the "next button" to the right */
+.next {
+  right: 0;
+  border-radius: 3px 0 0 3px;
+}
+
+/* On hover, add a black background color with a little bit see-through */
+.prev:hover, .next:hover {
+  background-color: rgba(0,0,0,0.8);
+}
+
+/* Caption text */
+.text {
+  color: #f2f2f2;
+  font-size: 15px;
+  padding: 8px 12px;
+  position: absolute;
+  bottom: 8px;
+  width: 100%;
+  text-align: center;
+}
+
+
+
+/* The dots/bullets/indicators */
+.dot {
+  cursor: pointer;
+  height: 4px;
+  width: 38px;
+  margin: 0 2px;
+  background-color: white;
+  display: inline-block;
+  border-radius: 5px;
+  transition: background-color 0.6s ease;
+}
+
+
+.active, .dot:hover {
+  background-color: red;
+}
+
+
+.quickfilter{
+  position: absolute;
+  width: 1300px;
+  top: 85px;
+  left:50%;
+  translate: -650px;
+  margin-top:516px;
+}
+
+.quickfilter .filterBar_Names button{
+  padding:10px;
+  width: 200px;
+  border:none;
+  border-radius: 10px 10px 0 0;
+  font-size: 20px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+}
+.filterBar_Names{
+  display: flex;
+    align-items: center;
+    width: 400px;
+    position: absolute;
+    left: 0;
+    top: -86px;
+}
+.myplaceIcon{
+  margin-right: 5px;
+}
+.menuIcon{
+  margin-right: 5px;
+}
+.filterRegion{
+  height: 120px;
+  display: flex;
+  background-color: white;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+  padding:30px 50px;
+  box-shadow:rgb(128 128 128 / 85%) 4px 1px 17px 1px;
+  border-radius: 0px 10px 10px 10px;
+}
+.place button{
+  margin-bottom: 30px;
+  font-size: 30px;
+  cursor: pointer;
+  background-color: #ddd;
+  border: none;
+  border-radius: 5px;
+}
+.selfplace{
+  display: flex;
+  align-items: center;
+  justify-content: flex-start;
+}
+.doo{
+  display: flex;
+  width: 232px;
+  margin-right: 40px;
+  justify-content: center;
+  border-bottom: 2px solid #5c5f67;
+}
+.doo input{
+  border:none;
+  font-size: 26px;
+  width: 196px;
+  outline: none;
+
+}
+.doo .dooicon{
+  font-size: 24px;
+  cursor: pointer;
+}
+.si{
+  display: flex;
+  width: 232px;
+  margin-right: 40px;
+  justify-content: center;
+  border-bottom: 2px solid #5c5f67;
+}
+.si input{
+  border:none;
+  font-size: 26px;
+  width: 196px;
+  outline:none;
+  background-color:white;
+
+}
+.si .siicon{
+  font-size: 24px;
+  cursor: pointer;
+}
+.filterRegion .find{
+  background:none;
+  border:none;
+  background-color: #ddd;
+  border-radius: 3px;
+  font-size: 30px;
+}
+.filterMenu{
+  height: 120px;
+  display: flex;
+  background-color: white;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+  padding: 30px 50px;
+  box-shadow: rgb(128 128 128 / 85%) 4px 1px 17px 1px;
+  border-radius: 0px 10px 10px 10px;
+}
+.korea, .japen, .china, .america, .germany, .italy{
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+
+.base{
+  display: flex;
+  padding-bottom: 20px;
+  flex-direction: column;
+  background-color: wheat;
+  border: 5px solid black;
+  margin-top: 10px;
+
+}
+.base .storeName{
+  font-size: 30px;
+  display: flex;
+  margin-left: 30px;
+  align-items: center;
+  justify-content: space-between;
+}
+.storeName .distance{
+  margin-right: 30px;
+}
+.base p{
+  display: inline-block;
+  margin-left: 62px;
+}
+.base .placeURL{
+  margin-left: 62px;
+  display: inline-block;
+  text-decoration: none;
+  color:inherit;
+}
+
+
+
+/* 애니메이션 효과 */
+.fade {
+  -webkit-animation-name: fade;
+  -webkit-animation-duration: 1.5s;
+  animation-name: fade;
+  animation-duration: 1.5s;
+}
+
+@-webkit-keyframes fade {
+  from {opacity: .4}
+  to {opacity: 1}
+}
+
+@keyframes fade {
+  from {opacity: .4}
+  to {opacity: 1}
+}
+
+
+.movein{
+  animation-name: movein;
+  animation-duration: 0.65s;
+  animation-fill-mode: forwards;
+}
+@keyframes movein{
+  from{
+    margin-top: 516px;
+  }
+  to{
+    margin-top:100px;
+  }
+}
+
+.moveout{
+  animation-name: moveout;
+  animation-duration: 0.65s;
+  animation-fill-mode: forwards;
+
+
+}
+@keyframes moveout{
+  from{
+    margin-top: 100px;
+  }
+  to{
+    margin-top:516px;
+  }
+}
+
+
+
+.blurin{
+  animation: blurin 0.65s forwards;
+}
+@keyframes blurin{
+  from{
+    filter: blur(0px);
+  }
+  to{
+    filter:blur(6px);
+  }
+}
+.blurout{
+  animation: blurout 0.65s forwards;
+}
+@keyframes blurout{
+  from{
+    filter: blur(6px);
+  }
+  to{
+    filter:blur(0px);
+  }
+}
+
+.Store_Zone{
+  position: absolute;
+  width: 1000px;
+  left: 60%;
+  translate: -650px;
+  margin-top: 215px;
+}
+
+.Sign{
+  height: 180px;
+  display: flex;
+  background-color: white;
+  flex-direction: row;
+  align-items: center;
+  padding: 0px 50px;
+  box-shadow: rgb(128 128 128 / 85%) 4px 1px 17px 1px;
+  border-radius: 10px 10px 10px;
+}
+
+.Store_Sign{
+  display: flex;
+}
+
+.Store_Image{
+  display: flex;
+  width: 100px;
+  height: 150px;
+  margin-right: 30px;
+  background-image: url('/img/Store_Image.jpg');
+  background-repeat: no-repeat;
+  background-position: center center;
+  background-size: cover;
+}
+
+.Store_Title{
+  font-size: 30px;
+  font-weight: 700;
+  word-break: break-word;
+  line-height: 1.4;
+  margin: 0px 0px 5px 0px;
+  font-family: 'Noto Sans KR', sans-serif;
+}
+
+.detail{
+  font-size: 14px;
+  line-height: 15px;
+  margin: 0px 0px 10px 0px;
+  font-family: 'Noto Sans KR', sans-serif;
+}
+
+.rating{
+  margin-bottom: 10px;
+}
+.Star_Rating{
+  font-size: 15px;
+  font-weight: 700;
+}
+.Review_Rating{
+  font-size: 15px;
+  color: #999;
+  font-weight: 400;
+}
+
+.tags, .address{
+  font-size: 14px;
+  line-height: 15px;
+  color: #999;
+  font-family: 'Noto Sans KR', sans-serif;
+}
+
+.Facilities{
+  display: flex;
+  margin-left: 30px;
+}
+
+.icon{
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+  align-items: center;
+  margin-right: 35px;
+}
+
+.Facilities .fa-solid{
+  font-size: 40px;
+}
+
+.Facilities p{
+  font-size: 20px;
+  font-weight: 700;
+}

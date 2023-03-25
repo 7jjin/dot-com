@@ -1,0 +1,359 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org" xmlns:sec="http://www.thymeleaf.org/extras/spring-security">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Document</title>
+    <link rel="stylesheet"th:href="@{/css/store.css}" />
+  <script defer src="js/store.js"></script>
+  <script src="https://kit.fontawesome.com/06b646a751.js" crossorigin="anonymous"></script>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Nanum+Gothic:wght@400;700;800&display=swap" rel="stylesheet">
+</head>
+
+<body>
+  <section class="header">
+    <div class="headerWapper">
+      <div class="headerInner">
+        <div class="headerLogo">
+          <div class="logo">
+            <a href="#" onclick="location.href='/JoJinHyeong/mainPage/main.html'"></a>
+          </div>
+          <div class="headerSearch">
+            <form class="searchForm">
+              <input
+                type="text"
+                class="search"
+                placeholder="식당을 입력하세요"
+              />
+              <div class="searchIcon">
+                <i class="fa-solid fa-magnifying-glass"></i>
+              </div>
+            </form>
+            <div class="iconBox"></div>
+          </div>
+          <div class="headerUtil">
+            <div class="utilList">
+              <div class="utilList_login">
+                <i
+                  class="fa-regular fa-user"
+                  style="font-size: 25px"
+                  onclick="location.href='/JoJinHyeong/loginPage/login.html'"
+                ></i>
+              </div>
+              <div class="utilList_Wait">
+                <i class="fa-regular fa-clock" style="font-size: 25px"></i>
+              </div>
+              <button id="logout">로그아웃</button>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+    <div class="Entire"th:each="list : ${list}">
+      <section class="remote_Bar">
+        <div class="noitem_bar">
+          <p>예약</p>
+        </div>
+      </section>
+      <div class="Entire_Width">
+          <section class="store_Img"></section>
+    <section class="store_Info">
+      <div class="storeName">
+      <div th:text="${list.adminCafe}"></div>
+       </div>
+        <div class="storePlace">경기도•수원</div>
+      <div class="storeIntro">올리브 기름으로 튀긴 국내 1위 치킨</div>
+      <div class="storeRank">
+        <div class="star">⭐⭐⭐⭐⭐</div>
+        <div class="staravg">5.0</div>
+      </div>
+      <div class="review">
+        <div class="client">최근리뷰 993</div>
+        <div class="bar"></div>
+        <div class="manger">최근사장님리뷰 25</div>
+      </div>
+      <div class="etc">
+        <div class="phone">
+          <i class="fa-solid fa-mobile-screen"></i>
+          <p>전화</p>
+        </div>
+        <div class="hart">
+          <i class="fa-regular fa-heart"></i>
+          <p>1,120</p>
+        </div>
+        <div class="share">
+          <i class="fa-solid fa-arrow-up-right-from-square"></i>
+          <p>공유</p>
+        </div>
+      </div>
+      </section>
+      <div class="blank">
+      <section class="filter">   
+        <div class="homeTab">홈</div>
+        <div class="MenuTab">메뉴</div>
+        <div class="photoTab">사진</div>
+        <div class="userReviewTab">리뷰</div>
+      </section>
+    </div>
+      <section class="store_Home">
+        <div class="people">
+          <p>인원수</p>
+          <div class="barlist">
+            <div class="number">
+              <label class="numberSlide">
+                <input type="radio" name="count" value="1" />
+                <span onclick="change_btn(event)">1명</span>
+              </label>
+              <label class="numberSlide">
+                <input type="radio" name="count" value="1" />
+                <span onclick="change_btn(event)">2명</span>
+              </label>
+              <label class="numberSlide">
+                <input type="radio" name="count" value="1" />
+                <span onclick="change_btn(event)">3명</span>
+              </label>
+              <label class="numberSlide">
+                <input type="radio" name="count" value="1" />
+                <span onclick="change_btn(event)">4명</span>
+              </label>
+              <label class="numberSlide">
+                <input type="radio" name="count" value="1" />
+                <span>5명</span>
+              </label>
+              <label class="numberSlide">
+                <input type="radio" name="count" value="1" />
+                <span onclick="change_btn(event)">6명</span>
+              </label>
+              <label class="numberSlide">
+                <input type="radio" name="count" value="1" />
+                <span onclick="change_btn(event)">7명</span>
+              </label>
+              <label class="numberSlide">
+                <input type="radio" name="count" value="1" />
+                <span onclick="change_btn(event)">8명</span>
+              </label>
+              <label class="numberSlide">
+                <input type="radio" name="count" value="1" />
+                <span onclick="change_btn(event)">9명</span>
+              </label>
+              <label class="numberSlide">
+                <input type="radio" name="count" value="1" />
+                <span onclick="change_btn(event)">10명</span>
+              </label>
+              <label class="numberSlide">
+                <input type="radio" name="count" value="1" />
+                <span onclick="change_btn(event)">11명</span>
+              </label>
+              <label class="numberSlide">
+                <input type="radio" name="count" value="1" />
+                <span onclick="change_btn(event)">12명</span>
+              </label>
+              <label class="numberSlide">
+                <input type="radio" name="count" value="1" />
+                <span onclick="change_btn(event)">13명</span>
+              </label>
+              <label class="numberSlide">
+                <input type="radio" name="count" value="1" />
+                <span onclick="change_btn(event)">14명</span>
+              </label>
+              <label class="numberSlide">
+                <input type="radio" name="count" value="1" />
+                <span onclick="change_btn(event)">15명</span>
+              </label>
+            </div>
+          </div>
+        </div>
+        <div class="RestaurantInfo">
+          <hr class="line" />
+          <div class="Ex">
+            <p>가게 정보</p>
+            <div class="Address">
+              <h4 class="SubEx">주소</h4>
+              <h4 class="AddressInfo">서울시 강동구 명일로 172로</h4>
+            </div>
+            <div class="Call">
+              <h4 class="SubEx">전화 번호</h4>
+              <h4 class="CallInfo">02-487-9828</h4>
+            </div>
+            <div class="Date">
+              <h4 class="SubEx">운영 요일</h4>
+              <h4 class="Week">월 | 화 | 수 | 목 | 금 | 토</h4>
+            </div>
+            <div class="Time">
+              <h4 class="SubEx">운영 시간</h4>
+              <div class="TimeBox">
+                <div class="OpenBox">
+                  <h4 class="Open">오픈 시간&nbsp;&nbsp;&nbsp;&nbsp;-&nbsp;</h4>
+                  <h4 class="OpenTime">AM 09:00</h4>
+                </div>
+                <div class="CloseBox">
+                  <h4 class="Close">
+                    마감 시간&nbsp;&nbsp;&nbsp;&nbsp;-&nbsp;
+                  </h4>
+                  <h4 class="CloseTime">PM 10:00</h4>
+                </div>
+                <div class="LastBox">
+                  <h4 class="Last">라스트 오더&nbsp;-&nbsp;</h4>
+                  <h4 class="LastTime">PM 09:00</h4>
+                </div>
+              </div>
+            </div>
+            <div class="Introduce">
+              <h4 class="SubEx">가게 소개</h4>
+              <h4 class="IntroInfo">
+                레스토란트에서 어디에서도 느껴본 적 없는 맛과 서비스를
+                느껴보세요.<br />
+                연인과 가족과 편안하게 식사하실 수 있게 정성스럽게 모시겠습니다.
+              </h4>
+            </div>
+            <div class="Facilities">
+              <h4 class="Subtitle">편의시설</h4>
+              <div class="emg">
+                <div class="icon">
+                  <i class="fa-solid fa-child-reaching"></i>
+                  <p>키즈존</p>
+                </div>
+                <div class="icon">
+                  <i class="fa-solid fa-square-parking"></i>
+                  <p>주차 가능</p>
+                </div>
+                <div class="icon">
+                  <i class="fa-solid fa-dog"></i>
+                  <p>애완동물 가능</p>
+                </div>
+                <div class="icon">
+                  <i class="fa-solid fa-wine-glass"></i>
+                  <p>콜키지 가능</p>
+                </div>
+              </div>
+            </div>
+          </div>
+          <hr class="line" />
+        </div>
+      </section>
+      
+        <hr class="line">
+      </div>
+    </section>
+    <section class="store_Menu">
+    
+      <div class="Menu">
+        <div class="MenuBar">
+          <span class="MenuText">메뉴</span>
+        </div>
+        <a class="MenuItem">
+        <c:forEach var="category" items="${menuMap}">
+          <h3>${category.key}</h3>
+          <a class="SubItem">
+            <div class="MenuInfo">
+              <div class="MenuName">
+                <c:forEach var="menu" items="${category.value}">
+                <h4>
+                  <strong>안심 스테이크</strong>
+                </h4>
+              </div>
+              <span class="MenuPrice">20000</span>
+              <span>원</span>
+            </div>
+            <div class="MenuImg" style="background-image: URL(/img/Relief.jpg);"></div>
+          </a>
+          <a class="SubItem">
+            <div class="MenuInfo">
+              <div class="MenuName">
+                <h4>
+                  <strong>토마호크 스테이크</strong>
+                </h4>
+              </div>
+              <span class="MenuPrice">40000</span>
+              <span>원</span>
+            </div>
+            <div class="MenuImg" style="background-image: URL(/img/Tomahawk.jpg);"></div>
+          </a>
+        </a>
+        <hr class="line">
+        <a class="MenuItem">
+          <h1 class="Menu2">파스타</h1>
+          <a class="SubItem">
+            <div class="MenuInfo">
+              <div class="MenuName">
+                <h4>
+                  <strong>크림 파스타</strong>
+                </h4>
+              </div>
+              <span class="MenuPrice">11000</span>
+              <span>원</span>
+            </div>
+            <div class="MenuImg" style="background-image: URL(/img/Cream_Pasta.jpg);"></div>
+          </a>
+          <a class="SubItem">
+            <div class="MenuInfo">
+              <div class="MenuName">
+                <h4>
+                  <strong>토마토 파스타</strong>
+                </h4>
+              </div>
+              <span class="MenuPrice">9000</span>
+              <span>원</span>
+            </div>
+            <div class="MenuImg" style="background-image: URL(/img/Tomato_Pasta.jpg);"></div>
+          </a>
+        </a>
+        <hr class="line">
+      </div>
+    </section>
+    <section class="storePhoto">
+      <div class="PhotoBar">
+        <span class="PhotoText">방문자 사진</span>
+        <span class="PhotoMore">더 보기></span>
+      </div>
+      <div class="PhotoBox">
+        <div class="PhotoZone">
+          <span class="Left"><</span>
+          <li class="Photo"></li>
+          <li class="Photo"></li>
+          <li class="Photo"></li>
+          <li class="Photo"></li>
+          <li class="Photo"></li>
+          <span class="Right">></span>
+        </div>
+      </div>
+    </section>
+    <hr class="line">
+    <section class="storeReview">
+      <div class="ReviewBar">
+        <div class="ReviewGroup">
+          <span class="ReviewText">방문자 리뷰</span>
+          <span class="ReviewCount">148</span>
+        </div>
+        <span class="ReviewMore">더 보기></span>
+      </div>
+      <div class="ReviewBox">
+        <div class="ReviewZone">
+          <li class="Review">
+            <div class="ReviewPhoto">사진</div>
+            <div class="UserZone">
+              <div class="UserInfo">
+              <h4 class="NickName">jsj487</h4>
+              <span class="UserCount">2번째 방문</span>
+              </div>
+              <div class="ReviewContent">
+                간짬뽕은 처음인데 색다르니 맛있었어요!!ㅎㅎ 국물없는 짬뽕이라니!!😋
+                맵긴한a데 못먹을정도로 매운게 아니라 딱 알맞게 매콤해서 매운거 좋아하시는 분들 꼭 도전해보세요🔥
+                짜장면, 탕수육도 맛있어서 세트 드시는 거 추천이요ㅎㅎ
+              </div>
+            </div>
+          </li>
+          <li class="Review"></li>
+        </div>
+      </div>
+    </section>
+  </div>
+</body>
+
+
+
+</html>

@@ -1,0 +1,69 @@
+body{
+  background-color: rgb(245, 246, 247);
+}
+
+#logo{
+  text-align: center;
+
+}
+
+#logo img{
+  margin-top: 38px;
+  width: 320px;
+  margin-right: 20px;
+}
+
+#Box{
+  display: flex;
+  margin-top: 100px;
+  margin-left: 25px;
+}
+
+#Host {
+  width: 500px;
+  height: 300px;
+  margin-left: 150px;
+  display: flex;
+  justify-content: center;
+  align-items: flex-start;
+  border-style: solid;
+  border-color:  rgb(67, 67, 67);
+  background-color: rgb(67, 67, 67);
+  overflow:hidden;
+  flex-direction: column;
+}
+#Host_label{
+  font-size: 50px;
+  margin-left: 40px;
+  margin-top: 10px;
+  font-family: 'Nanum Gothic';
+}
+#Host_Ex{
+  font-size: 20px;
+  margin-left: 20px;
+  font-family: 'Nanum Gothic';
+}
+
+#Customer ,#host{
+  width: 500px;
+  height: 300px;
+  margin-left: 150px;
+  display: flex;
+  justify-content: center;
+  align-items: flex-start;
+  border-style: solid;
+  overflow:hidden;
+  flex-direction: column;
+  background-color: white;
+}
+#Customer_label{
+  font-size: 50px;
+  margin-left: 40px;
+  margin-top: -15px;
+  font-family: 'Nanum Gothic';
+}
+#Customer_Ex{
+  font-size: 20px;
+  margin-left: 20px;
+  font-family: 'Nanum Gothic';
+}

@@ -1,0 +1,92 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper
+        PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+        "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.hyeonsik.boot.mapper.UserMapper">
+    <!-- 로그인 -->
+    <select id="getUserAccount" resultType="com.hyeonsik.boot.vo.UserVo">
+        SELECT * FROM TB_USER
+        WHERE USER_ID= #{userId}
+    </select>
+    
+    <!-- 아이디 중복 -->
+	 <select id="idOverlap" parameterType="String" resultType="int">
+	  SELECT count(*) FROM TB_USER
+	  WHERE USER_ID = #{userId}
+	</select>
+    
+    <!-- 회원가입 -->
+    <insert id="saveUser" parameterType="com.hyeonsik.boot.vo.UserVo">
+        INSERT INTO TB_USER
+        (USER_ID, USER_PW, USER_NAME, USER_BIRTH, USER_PHONE, USER_EMAIL,USER_AUTH, APPEND_DATE, UPDATE_DATE, USER_CAFE)
+        VALUES(#{userId},#{userPw},#{userName},#{userBirth},#{userPhone},#{userEmail},#{userAuth},#{appendDate},#{updateDate},#{userCafe});
+    </insert>
+    
+    
+    
+    <insert id="createMemberKakao" parameterType="com.hyeonsik.boot.vo.UserVo">
+        INSERT INTO TB_USER
+        (USER_ID,USER_NAME, USER_EMAIL,USER_AUTH)
+        VALUES(#{userName},#{userEmail},#{userAuth});
+    </insert>
+    
+    <select id="searchId" resultType="String">
+		select ifnull(USER_ID, 0) from TB_USER 
+        where USER_NAME = #{userName} and USER_EMAIL = #{userEmail}
+	</select>
+	
+	
+	 <update id="updateImg" parameterType="Map">
+		update TB_USER set saved_nm = #{param1} where USER_ID = #{param2} 
+	</update>
+	
+	 <update id="searchPassword" parameterType="Map">
+		update TB_USER set USER_PW = #{param3} where USER_ID = #{param1} and USER_EMAIL = #{param2}
+	</update>
+	
+	
+	 <select id="Mapfound" resultType="com.hyeonsik.boot.vo.MapVo">
+       SELECT ST_X(clty_loc) as latitude, ST_Y(clty_loc) as longitude FROM cafe Where admin_no = 1;
+    </select>
+    
+     <select id="Cafefound" resultType="com.hyeonsik.boot.vo.MapVo">
+       SELECT *, ST_X(clty_loc) as latitude, ST_Y(clty_loc) as longitude
+       FROM cafe 
+    </select>
+    
+       <select id="Menufound" resultMap="MapVoResult">
+    SELECT cafe.*,menu_categories.category_name , menu.MENU_NAME , menu.MENU_PRICE, menu.MENU_saved_nm
+    FROM menu 
+    JOIN menu_categories ON menu.MENU_category_id = menu_categories.id
+    JOIN cafe ON menu.MENU_restaurant_id = cafe.ADMIN_NO
+    WHERE cafe.ADMIN_NO =#{adminNo}
+    ORDER BY menu_categories.category_name;
+</select>    
+<resultMap id="MapVoResult" type="com.hyeonsik.boot.vo.MapVo">
+    <id property="adminNo" column="ADMIN_NO" />
+    <result property="adminCafe" column="ADMIN_CAFE" />
+    <result property="guName" column="GU_NAME" />
+    <result property="neadresName" column="NEADRES_NAME" />
+    <result property="introduce" column="INTRODUCE" />
+    <result property="type" column="TYPE" />
+    <result property="star" column="STAR" />
+    <result property="savedNm" column="SAVED_NM" />
+    <result property="latitude" column="LATITUDE" />
+    <result property="longitude" column="LONGITUDE" />
+    <collection property="menuList" ofType="com.hyeonsik.boot.vo.MapVo" resultMap="menuResult" />
+</resultMap>
+<resultMap id="menuResult" type="com.hyeonsik.boot.vo.MenuVo">
+     <id property="id" column="id" />
+    <result property="categoryName" column="category_name" />
+    <result property="menusavedNm" column="MENU_saved_nm" />
+    <result property="menuName" column="MENU_NAME" />
+    <result property="menuPrice" column="MENU_PRICE" />
+</resultMap>
+
+    
+     <select id="found" resultType="com.hyeonsik.boot.vo.MapVo">
+      SELECT * FROM cafe WHERE  <![CDATA[(6371 * acos(cos(radians(#{latitude})) * cos(radians(ST_Y(clty_loc))) * cos(radians(ST_X(clty_loc)) 
+    - radians(#{longitude})) + sin(radians(37.3834711)) * sin(radians(ST_Y(clty_loc))))) <= #{distance}]]>;
+    </select>
+	
+</mapper>

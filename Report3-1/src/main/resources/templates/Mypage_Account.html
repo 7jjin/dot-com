@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org" xmlns:sec="http://www.thymeleaf.org/thymeleaf-extras-springsecurity5" lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+       <link rel="stylesheet" th:href="@{/css/Mypage_Account.css}" />
+</head>
+
+<body>
+    <div class="Main">
+        <div class="SideBar">
+            <div class="Title_Area">
+                <div class="headerLogo">
+                    <div class="logo">
+                        <a href="#" onclick="location.href='/mainpage'"></a>
+                        <h1 class="Title">내정보</h1>
+                    </div>
+                </div>
+            </div>
+            <div class="Profile_Area">
+                <div class="Profile_Inner">
+                    <div class="Photo">
+                        <img src="/img/Profile.png" alt="profile_image" class="Profile_Image">
+                        <input type="file" accept="image/*" class="Upload">
+                        <span class="Photo_Edit"></span>
+                    </div>
+                    <div class="Profile">
+                        <p class="UserName" th:text="${infoName}"></p>
+                        <p class="UserEmail"th:text="${infoEmail}"></p>
+                    </div>
+                </div>
+            </div>
+            <div class="Menu_Area">
+                <li class="Act">
+                    <a href="#" onclick="location.href='/Mypage_Account'">
+                        <div class="Menu_Act" >정보수정</div>
+                    </a>
+                </li>
+                <li>
+                    <a href="#" onclick="location.href='/Mypage_Fav'">
+                        <div class="Menu">즐겨찾기</div>
+                    </a>
+                </li>
+                <li>
+                    <a href="#" onclick="location.href='/Mypage_Review'">
+                        <div class="Menu">리뷰목록</div>
+                    </a>
+                </li>
+                <li>
+                    <a href="#" onclick="location.href='/Mypage_History'">
+                        <div class="Menu">방문목록</div>
+                    </a>
+                </li>
+                <li>
+                    <a href="#" onclick="location.href='/Mypage_Restaurant'">
+                    <div class="Menu" sec:authorize="hasRole('ROLE_ADMIN')">식당관리</div>
+                    </a>
+                </li>
+            </div>
+        </div>
+        <div class="Info">
+            <h2 class="Account">계정 정보</h2>
+            <div class="Account_Box">
+                <li>
+                    <div class="Id_Box">
+                        <span class="Id">아이디</span>
+                        <span class="Id_Info"th:text="${infoId}"></span>
+                    </div>
+                </li>
+                <div class="line"></div>
+                <li>
+                    <div class="Email_Box">
+                        <span class="Email">이메일</span>
+                        <span class="Id_Info" th:text="${infoEmail}"></span>
+                    </div>
+                </li>
+                <div class="line"></div>
+                <li>
+                    <div class="Name_Box">
+                        <span class="Name">이름</span>
+                        <span class="Id_Info"th:text="${infoName}"></span>
+                    </div>
+                </li>
+            </div>
+            <h2 class="Account_Confirm">보안 설정</h2>
+            <div class="Confirm_Box">
+                <li>
+                    <div class="Pass_Box">
+                        <span class="Pass">비밀번호 변경</span>
+                        <button class="Pass_Btn" href="#" onclick="location.href='/Confirm_Pass'">
+                            <span class="Pass_Info">수정</span>
+                        </button>
+                    </div>
+                </li>
+            </div>
+        </div>
+    </div>
+</body>
+<script src="/js/Mypage_Account.js"></script>
+
+</html>
