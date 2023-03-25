@@ -19,64 +19,6 @@
   "list": [
     [
       {
-        "name": "토마호크 스테이크",
-        "quantity": 1,
-        "price": 40000
-      },
-      {
-        "name": "안심 스테이크",
-        "quantity": 4,
-        "price": 80000
-      },
-      {
-        "name": "크림 파스타",
-        "quantity": 1,
-        "price": 11000
-      },
-      {
-        "name": "토마토 파스타",
-        "quantity": 3,
-        "price": 27000
-      }
-    ],
-    [
-      {
-        "name": "토마호크 스테이크",
-        "quantity": 1,
-        "price": 40000
-      },
-      {
-        "name": "안심 스테이크",
-        "quantity": 1,
-        "price": 20000
-      }
-    ],
-    [
-      {
-        "name": "안심 스테이크",
-        "quantity": 1,
-        "price": 20000
-      },
-      {
-        "name": "토마토 파스타",
-        "quantity": 7,
-        "price": 63000
-      },
-      {
-        "name": "크림 파스타",
-        "quantity": 1,
-        "price": 11000
-      }
-    ],
-    [
-      {
-        "name": "안심 스테이크",
-        "quantity": 1,
-        "price": 20000
-      }
-    ],
-    [
-      {
         "name": "안심 스테이크",
         "quantity": 1,
         "price": 20000
@@ -104,18 +46,30 @@
         "price": 20000
       }
     ],
-    [
-      {
-        "name": "안심 스테이크",
-        "quantity": 1,
-        "price": 20000
-      },
-      {
-        "name": "토마호크 스테이크",
-        "quantity": 1,
-        "price": 40000
-      }
-    ],
-    []
+    {
+      "title": "테스트2",
+      "body": "테스트 2 내",
+      "userId": "3",
+      "id": "4"
+    },
+    {
+      "name": "안심 스테이크",
+      "quantity": 1,
+      "price": 20000,
+      "id": "Og1R6Kh"
+    },
+    {
+      "id": "YVPyZlZ"
+    },
+    {
+      "id": "a8gqxYY"
+    },
+    {
+      "id": "ghAlDqS"
+    },
+    {
+      "query": "\n    query IntrospectionQuery {\n      __schema {\n        \n        queryType { name }\n        mutationType { name }\n        subscriptionType { name }\n        types {\n          ...FullType\n        }\n        directives {\n          name\n          description\n          \n          locations\n          args {\n            ...InputValue\n          }\n        }\n      }\n    }\n\n    fragment FullType on __Type {\n      kind\n      name\n      description\n      \n      fields(includeDeprecated: true) {\n        name\n        description\n        args {\n          ...InputValue\n        }\n        type {\n          ...TypeRef\n        }\n        isDeprecated\n        deprecationReason\n      }\n      inputFields {\n        ...InputValue\n      }\n      interfaces {\n        ...TypeRef\n      }\n      enumValues(includeDeprecated: true) {\n        name\n        description\n        isDeprecated\n        deprecationReason\n      }\n      possibleTypes {\n        ...TypeRef\n      }\n    }\n\n    fragment InputValue on __InputValue {\n      name\n      description\n      type { ...TypeRef }\n      defaultValue\n      \n      \n    }\n\n    fragment TypeRef on __Type {\n      kind\n      name\n      ofType {\n        kind\n        name\n        ofType {\n          kind\n          name\n          ofType {\n            kind\n            name\n            ofType {\n              kind\n              name\n              ofType {\n                kind\n                name\n                ofType {\n                  kind\n                  name\n                  ofType {\n                    kind\n                    name\n                  }\n                }\n              }\n            }\n          }\n        }\n      }\n    }\n  ",
+      "id": "ORPiftD"
+    }
   ]
 }
