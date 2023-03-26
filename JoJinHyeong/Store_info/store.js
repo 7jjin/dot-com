@@ -218,7 +218,7 @@ let cart = [];   // 장바구니 배열
       })
       .then((response)=>{
         if(!response.ok) throw new Error(response.statusText);
-        return response.jsoin();
+        return response.json();
       })
       .then((json) =>{
         console.log("성공",json);
