@@ -90,6 +90,6 @@
       SELECT * FROM cafe WHERE  <![CDATA[(6371 * acos(
             cos(radians(#{latitude})) * cos(radians(ST_Y(clty_loc))) * cos(radians(ST_X(clty_loc)) - radians(#{longitude})) +
             sin(radians(#{latitude})) * sin(radians(ST_Y(clty_loc)))
-        ) )<= 5.0]]>;
+        ) )<= 4.0]]>;
     </select>
 </mapper>

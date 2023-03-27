@@ -13,7 +13,7 @@ import org.apache.ibatis.annotations.Param;
 
 @Mapper
 public interface UserMapper {
-    // 로그인
+    // 로그인s
     UserVo getUserAccount(String userId);
 
     // 회원가입

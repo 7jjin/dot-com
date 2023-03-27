@@ -273,7 +273,7 @@ public class UserController {
 	    public String usercAcess(Model model, Authentication authentication) {
     	if (authentication != null) {
             if (authentication.getPrincipal() instanceof UserVo) {
-                // 도메인 로그인
+                // 도메인 로그인1
                 UserVo userVo = (UserVo) authentication.getPrincipal();
                 model.addAttribute("info", userVo.getUserName() + "님");
                 return "mainpage";
