@@ -17,6 +17,9 @@
       src="https://kit.fontawesome.com/06b646a751.js"
       crossorigin="anonymous"
     ></script>
+     <script type="text/javascript"
+    src="//dapi.kakao.com/v2/maps/sdk.js?appkey=575e00627ad336160ee258c5c9ed0525&libraries=services"></script>
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
   </head>
   <body>
     <div id="wrap">
@@ -222,15 +225,14 @@
         <div class="Store_Image" th:style="'background-image: url('+ @{/image/}+${list.savedNm} +');'"></div>
         <div class="Store_Name">
           <a id="id" name="id" th:text="${list.adminCafe}" th:href="@{/store(adminNo=${list.adminNo})}" class="Store_Title"></a>
-          <p class="detail" th:text="${list.introduce}"></p>
+          <p class="detail" th:text="${list.storeIntroduce}"></p>
           <div class="rating">
             <span class="Star">⭐</span>
-            <span class="Star_Rating" th:text="${list.star}"></span>
             
             <span class="Review_Rating">(412)</span>
           </div>
-          <span class="tags" th:text="${list.type}"></span><br>
-          <span class="address" th:text="${list.neadresName}"></span>
+          <span class="tags" th:text="${list.foodType}"></span><br>
+          <span class="address" th:text="${list.addressName}"></span>
         </div>
         <!-- <div class="Facilities">
           <div class="icon">

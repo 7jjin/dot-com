@@ -43,7 +43,7 @@ public interface UserMapper {
     public MapVo Menufound(int adminNo);
     
     
-    List<MapVo> found(@Param("latitude") double latitude, @Param("longitude") double longitude, @Param("distance") double distance);
+    List<MapVo> found(@Param("latitude") double latitude, @Param("longitude") double longitude);
     
     
  

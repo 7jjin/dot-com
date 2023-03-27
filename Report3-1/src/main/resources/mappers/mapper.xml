@@ -63,16 +63,18 @@
     ORDER BY menu_categories.category_name;
 </select>    
 <resultMap id="MapVoResult" type="com.hyeonsik.boot.vo.MapVo">
+
     <id property="adminNo" column="ADMIN_NO" />
     <result property="adminCafe" column="ADMIN_CAFE" />
     <result property="guName" column="GU_NAME" />
-    <result property="neadresName" column="NEADRES_NAME" />
-    <result property="introduce" column="INTRODUCE" />
-    <result property="type" column="TYPE" />
-    <result property="star" column="STAR" />
+    <result property="addressName" column="ADDRESS_NAME" />
+    <result property="storeIntroduce" column="STORE_INTRODUCE" />
+    <result property="foodType" column="FOOD_TYPE" />
     <result property="savedNm" column="SAVED_NM" />
-    <result property="latitude" column="LATITUDE" />
-    <result property="longitude" column="LONGITUDE" />
+    <result property="openingTime" column="OPENING_TIME" />
+    <result property="closingTime" column="CLSOING_TIME" />
+    <result property="weekday" column="WEEKDAY" />
+    <result property="storePhone" column="STORE_PHONE" />
     <collection property="menuList" ofType="com.hyeonsik.boot.vo.MapVo" resultMap="menuResult" />
 </resultMap>
 <resultMap id="menuResult" type="com.hyeonsik.boot.vo.MenuVo">
@@ -84,9 +86,10 @@
 </resultMap>
 
     
-     <select id="found" resultType="com.hyeonsik.boot.vo.MapVo">
-      SELECT * FROM cafe WHERE  <![CDATA[(6371 * acos(cos(radians(#{latitude})) * cos(radians(ST_Y(clty_loc))) * cos(radians(ST_X(clty_loc)) 
-    - radians(#{longitude})) + sin(radians(37.3834711)) * sin(radians(ST_Y(clty_loc))))) <= #{distance}]]>;
+     <select id="found" parameterType="java.util.Map"  resultType="com.hyeonsik.boot.vo.MapVo">
+      SELECT * FROM cafe WHERE  <![CDATA[(6371 * acos(
+            cos(radians(#{latitude})) * cos(radians(ST_Y(clty_loc))) * cos(radians(ST_X(clty_loc)) - radians(#{longitude})) +
+            sin(radians(#{latitude})) * sin(radians(ST_Y(clty_loc)))
+        ) )<= 5.0]]>;
     </select>
-	
 </mapper>

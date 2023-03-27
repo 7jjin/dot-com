@@ -18,6 +18,7 @@ import org.springframework.web.multipart.MultipartFile;
 import java.text.SimpleDateFormat;
 import java.util.Date;
 import java.util.HashMap;
+import java.util.List;
 import java.util.Map;
 import java.util.UUID;
 
@@ -77,6 +78,10 @@ public class UserService implements UserDetailsService{
     
     public MapVo storefound(int adminNo) {
     	return userMapper.Menufound(adminNo);
+    }
+    
+    public List<MapVo> found(double latitude, double longitude) {
+    	return userMapper.found(latitude,longitude);
     }
     
     

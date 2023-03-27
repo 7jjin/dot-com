@@ -3,6 +3,7 @@ import lombok.Builder;
 
 import lombok.Data;
 
+import java.time.LocalTime;
 import java.util.List;
 
 import org.locationtech.jts.geom.Point;
@@ -20,12 +21,15 @@ public class MapVo {
 	 private int adminNo;
 	 private String adminCafe;
 	 private String guName;
-	 private String neadresName;
+	 private String addressName;
 	 private Point clty_loc;
-	 private String introduce;
-	 private String type;
-	 private String star;
+	 private String storeIntroduce;
+	 private String foodType;
 	 private String savedNm;
+	 private LocalTime openingTime;
+	 private LocalTime closingTime;
+	 private int weekday;
+	 private String storePhone;
 	 private double latitude;
 	 private double longitude;
 	 private List<MenuVo> menuList;

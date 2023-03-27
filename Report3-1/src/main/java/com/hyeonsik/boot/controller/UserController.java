@@ -269,32 +269,43 @@ public class UserController {
 	    }
 	
 	  List<MapVo> list2 = new ArrayList<>(); 	
-	  List<MapVo> list3 = new ArrayList<>(); 	
     @GetMapping("/mainpage")
 	    public String usercAcess(Model model, Authentication authentication) {
-	    if(authentication!=null) {	    
-	    UserVo userVo = (UserVo) authentication.getPrincipal();	    
-	    model.addAttribute("info", userVo.getUserName()+ "님");
-	    }
-	    list2 = ss.selectList("com.hyeonsik.boot.mapper.UserMapper.Cafefound");
-	    double x1 = 37.400654249172604;
-	    double x2 = 37.3834711;
-	    double y1 = 126.92174376799079;
-	    double y2 = 126.9218479;
-	    double distance;
-	    distance = UserService.distanceInKilometerByHaversine(x1,y1,x2,y2);
-	    list3 = ss.selectList("com.hyeonsik.boot.mapper.UserMapper.found");
-	    System.out.println(distance);
-		System.out.println(list2);
-		model.addAttribute("list",list2);
-    
-	  //OAuth2User oAuth2User = (OAuth2User) authentication.getPrincipal();
-	  //Map<String, Object> attributes = oAuth2User.getAttributes();
-      //model.addAttribute("name", attributes.get("name").toString()+"님");
+    	if (authentication != null) {
+            if (authentication.getPrincipal() instanceof UserVo) {
+                // 도메인 로그인
+                UserVo userVo = (UserVo) authentication.getPrincipal();
+                model.addAttribute("info", userVo.getUserName() + "님");
+                return "mainpage";
+            } else if (authentication.getPrincipal() instanceof OAuth2User) {
+                // 소셜 로그인
+                OAuth2User oAuth2User = (OAuth2User) authentication.getPrincipal();
+                Map<String, Object> attributes = oAuth2User.getAttributes();
+                model.addAttribute("name", attributes.get("name").toString() + "님");
+                return "mainpage";
+            }
+        }
 	    
+    	 list2 = ss.selectList("com.hyeonsik.boot.mapper.UserMapper.Cafefound");
+         System.out.println(list2);
+         model.addAttribute("list", list2);
+    	
+    	
 	   return "mainpage" ;
 	    }
     
-  
+    
+    @PostMapping("/mainpage/location")
+    @ResponseBody
+    public  String saveLocation(@RequestParam("latitude") Double latitude,
+                               @RequestParam("longitude") Double longitude
+                               ,Model model) {
+    	 List<MapVo> Result = userService.found(latitude,longitude);
+         model.addAttribute("result", Result);
+     	 System.out.println(latitude);
+     	 System.out.println(longitude);
+     	 System.out.println(Result);
+        return "mainpage";
+    }
     
 }
