@@ -43,3 +43,7 @@ function showSlides(n) {
   dots[n].className += " active";
 }
 
+function number(){
+  const sign = document.querySelector(".Sign");
+  console.log(sign.getAttribute("value"))
+}

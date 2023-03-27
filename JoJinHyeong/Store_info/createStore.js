@@ -9,13 +9,14 @@ console.log(Menu1.innerHTML)
 
 
 
-fetch(" http://localhost:3000/store")
+fetch(" http://localhost:3000/api/store?adminNo=1")
 .then((res)=>{
     return res.json()
 })
 .then((obj)=>{
     Info(obj);
 })
+.catch((err)=>console.log(err))
 
 function Info(obj){
     Menu1.innerHTML = Object.keys(obj)[0]
