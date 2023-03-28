@@ -125,13 +125,25 @@ body{
     width: 100%;
     float: right;
     display: flex;
+    justify-content: center;
 }
 /*대기자 상세정보, 큰 구역*/
 .details{
+    position: absolute;
     width: 500px;
     height: 650px;
     box-shadow: 1px 1px 1px #fff;
     margin-right: 50px;
+    transition: all 1.4s;
+    left: -500px;
+}
+.details.show{
+    left: 0px;
+    position: relative;
+}
+.details.close{
+    position: absolute;
+    left: -500px;
 }
 .Top{
     width: 500px;
@@ -232,6 +244,7 @@ body{
     display: flex;
     justify-content: center;
     margin-top: 20px;
+    transition: 1s;
 }
 
 .Number{
