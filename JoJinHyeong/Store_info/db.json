@@ -1,14 +1,15 @@
 {
-  "posts": [
-    {
-      "id": 1,
-      "title": "json-server",
-      "author": "John Doe"
-    },
-    {
-      "id": 2,
-      "title": "Another post",
-      "author": "Jane Doe"
-    }
-  ]
-}
+    "posts": [
+      {
+        "id": 1,
+        "title": "Post 1",
+        "author": "John Doe"
+      },
+      {
+        "id": 2,
+        "title": "Post 2",
+        "author": "Jane Doe"
+      }
+    ]
+  }
+  
