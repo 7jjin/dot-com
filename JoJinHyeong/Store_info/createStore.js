@@ -9,7 +9,7 @@ console.log(Menu1.innerHTML)
 
 
 
-fetch(" http://localhost:3000/api/store?adminNo=1")
+fetch(" http://localhost:3000/list")
 .then((res)=>{
     return res.json()
 })
