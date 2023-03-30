@@ -1,3 +1,7 @@
+
+const Store_Zone = document.querySelector(".Store_Zone");
+
+// db의 데이터를 가져와서 가게 리스트들을 나열
 fetch("http://localhost:4000/mainpage")
 .then(res=>{
     return res.json();
@@ -8,8 +12,9 @@ fetch("http://localhost:4000/mainpage")
 .catch(err=>{
     console.log(err);
 });
-const Store_Zone = document.querySelector(".Store_Zone");
 
+
+//각각의 가게들을 만드는 함수
 function storeList(data){
     for(let i=0;i<data.length;i++){
         let adminCafe = data[i].adminCafe;
@@ -17,8 +22,8 @@ function storeList(data){
         let addr = data[i].addressName;
         let stores = document.createElement("div");
         stores.setAttribute("class","store");
-        stores.setAttribute("id",i+1);
-        stores.innerHTML = `<div class="Sign">
+        stores.setAttribute("value",i+1);
+        stores.innerHTML = `<div class="Sign" onclick=location.href="/JoJinHyeong/Store_info/store.html">
         <div class="Store_Sign">
           <div class="Store_Image"></div>
           <div class="Store_Name">
@@ -37,3 +42,10 @@ function storeList(data){
       Store_Zone.appendChild(stores);
     }
 }
+
+const store = document.querySelectorAll(".store");
+store.forEach((item)=>{
+    console.log(item)
+})
+
+

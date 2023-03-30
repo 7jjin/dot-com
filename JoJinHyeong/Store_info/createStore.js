@@ -1,25 +1,18 @@
-const Menu1 = document.querySelector(".Menu1");
-const menuName1 = document.querySelector(".MenuName1");
-const MenuPrice1 = document.querySelector(".MenuPrice1");
-console.log(MenuPrice1.innerHTML)
-console.log(menuName1.innerHTML)
-console.log(Menu1.innerHTML)
+import {number} from '../mainPage/storeList.js';
 
-
-
-
-
-fetch(" http://localhost:3000/list")
+fetch(" http://localhost:3000/store?adminNo=1")
 .then((res)=>{
     return res.json()
 })
-.then((obj)=>{
-    Info(obj);
+.then((data)=>{
+    console.log(data);
+    number();
 })
 .catch((err)=>console.log(err))
 
-function Info(obj){
-    Menu1.innerHTML = Object.keys(obj)[0]
-    menuName1.innerHTML = obj.스테이크[0].menuName;
-    MenuPrice1.innerHTML = obj.스테이크[0].menuPrice;
+function Info(data){
+    console.log(data)
 }
+
+//http://127.0.0.1:5501/JoJinHyeong/Store_info/store.html
+
