@@ -52,7 +52,7 @@
           "menuList": null
       }
   ],
-  "store":{
+  "store":[{
     "adminNo": 1,
     "adminCafe": "성결대학교",
     "guName": "만안구",
@@ -99,6 +99,52 @@
             ]
         }
     ]
-}
-  
+    },{
+        "adminNo": 2,
+        "adminCafe": "진형식당",
+        "guName": "만안구",
+        "addressName": "경기도 수원시",
+        "clty_loc": null,
+        "storeIntroduce": "환영합니다 진형입니다",
+        "foodType": "한식",
+        "savedNm": "Storeimage1.jpg",
+        "openingTime": "09:00:00",
+        "closingTime": "21:00:00",
+        "weekday": 1234,
+        "storePhone": "031-1234-4566",
+        "latitude": 0,
+        "longitude": 0,
+        "categories": [
+            {
+                "categoryName": "음료",
+                "menuList": [
+                    {
+                        "menuName": "크림 파스타",
+                        "menuPrice": "11000",
+                        "menusavedNm": "pasta1.jpg"
+                    }
+                ]
+            },
+            {
+                "categoryName": "피자",
+                "menuList": [
+                    {
+                        "menuName": "안심 스테이크",
+                        "menuPrice": "20000",
+                        "menusavedNm": "steak1.jpg"
+                    },
+                    {
+                        "menuName": "토마호크 스테이크",
+                        "menuPrice": "40000",
+                        "menusavedNm": "steak2.jpg"
+                    },
+                    {
+                        "menuName": "토마토 파스타",
+                        "menuPrice": "9000",
+                        "menusavedNm": "pasta2.jpg"
+                    }
+                ]
+            }
+        ]
+  }]
 }
