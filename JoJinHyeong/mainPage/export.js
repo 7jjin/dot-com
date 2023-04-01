@@ -1,17 +1,19 @@
 // export function fn2(el){
 //     console.log(el.parentNode.getAttribute("value"));
 // }
-// const Store_Zone = document.querySelectorAll(".Store_Zone .store")
-// console.log(Store_Zone.length)
+// console.log(Store_Zone.childNodes)
 // export function Access(){
 //     Store_Zone.forEach((item)=>{
 //         return item
 //     })
 //     return "A";
 // }
-
-const store = document.querySelectorAll(".store");
-store.forEach((item)=>{
-    console.log(item)
-})
+// store.childNodes.forEach((item)=>{
+//     console.log(item)
+// })
+// const store = document.querySelectorAll(".store");
+// console.log(store)
+// console.log(Store_Zone.childNodes)
+// const list = Array.from(Store_Zone.childNodes);
+// console.log(list)
 
