@@ -17,11 +17,12 @@ fetch("http://localhost:4000/mainpage")
 function storeList(data){
   for(let i=0;i<data.length;i++){
     let adminCafe = data[i].adminCafe;
-    let intro = data[i].storeIntroduce; 
+    let intro = data[i].storeIntroduce;
     let addr = data[i].addressName;
+    let adminNo = data[i].adminNo;
     let stores = document.createElement("div");
     stores.setAttribute("class","store");
-    stores.setAttribute("value",i+1);
+    //stores.setAttribute("value",i+1);
     stores.innerHTML = `<div class="Sign">
       <div class="Store_Sign">
         <div class="Store_Image"></div>
@@ -38,14 +39,13 @@ function storeList(data){
         </div>
       </div>
     </div>`;
-      
     stores.onclick = function(event){
-      const selectedValue = stores.getAttribute("value");
-      sessionStorage.setItem("selectedValue", selectedValue);
-      location.href="/JoJinHyeong/Store_info/store.html";
+      //const selectedValue = stores.getAttribute("value");
+      sessionStorage.setItem("selectedValue", adminNo);
+      window.location.href="/JoJinHyeong/Store_info/store.html";
     };
-    
     Store_Zone.appendChild(stores);
   }
 }
+
 

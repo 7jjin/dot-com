@@ -1,6 +1,7 @@
 {
   "mainpage" : [
       {
+      "id":"local",
       "adminNo": 1,
       "adminCafe": "성결대학교",
       "guName": "만안구",
@@ -18,6 +19,7 @@
       "menuList": null
       },
       {
+          "id":"local",
           "adminNo": 2,
           "adminCafe": "현식돈국수",
           "guName": "강서구",
