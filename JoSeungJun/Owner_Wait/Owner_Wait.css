@@ -141,10 +141,6 @@ body{
     left: 0px;
     position: relative;
 }
-.details.close{
-    position: absolute;
-    left: -500px;
-}
 .Top{
     width: 500px;
     height: 75px;

@@ -11,18 +11,6 @@ const NumText = document.querySelector(".NumText");
 const CountNumText = document.querySelector(".CountNumText");
 const PepleNumText = document.querySelector(".PepleNumText");
 
-// function TextPrint(element) {
-//     TRtables.forEach(TRtable => {
-//         TRtable.addEventListener('click', () => {
-//             const clickTDS = TRtable.querySelectorAll(element);
-//             clickTDS.forEach(element => {
-//                 console.log(element.textContent);
-//                 details.classList.add("show");
-//             });
-//         });
-//     });
-// };
-
 TRtables.forEach(TRtable => {
     TRtable.addEventListener('click', () => {
         const clickTDS = TRtable.querySelectorAll(".NameTD");
