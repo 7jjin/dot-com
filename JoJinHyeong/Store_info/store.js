@@ -208,25 +208,8 @@ let cart = [];   // 장바구니 배열
 
     //데이터(인원,메뉴) 내보내는 함수
     //--------------------------------------------------------------------------------------------
-<<<<<<< HEAD
-    const value = sessionStorage.getItem("selectedValue");
-    const date = new Date();
-    const year = date.getFullYear();
-    const month = ('0' + (date.getMonth() + 1)).slice(-2);
-    const day = ('0' + date.getDate()).slice(-2);
-    const dateStr = year + '-' + month + '-' + day;
-    const hours = ('0' + date.getHours()).slice(-2);
-    const minutes = ('0' + date.getMinutes()).slice(-2);
-    const seconds = ('0' + date.getSeconds()).slice(-2);
-    const timeStr = hours + ':' + minutes + ':' + seconds;
-    const today = `${dateStr} ${timeStr}`;
-
-    function sent() {
-      fetch("http://localhost:4000/cart",{
-=======
     function sent() {
       fetch("http://localhost:4000/list",{
->>>>>>> ebb4e24540714090ccf16f3ab18180bfaa762e7b
         method:"post",
         body:JSON.stringify(cart),
         headers:{
@@ -351,15 +334,4 @@ let cart = [];   // 장바구니 배열
       Expansion(ReviewBox);
       ReviewMore.style.display = "none";
       ReviewReduce.style.display = "block";
-<<<<<<< HEAD
     });
-
-
-
-// fetch("http://127.0.0.1:5501/JoJinHyeong/Store_info/db.json")
-//   .then(response => response.json())
-//   .then(data => console.log(data))
-//   .catch(error => console.error(error));
-=======
-    });
->>>>>>> ebb4e24540714090ccf16f3ab18180bfaa762e7b

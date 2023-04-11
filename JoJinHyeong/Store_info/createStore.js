@@ -7,10 +7,9 @@ const menuName1 = document.querySelector(".MenuName1");
 const menuName2 = document.querySelector(".MenuName2")
 const menuPrice1 = document.querySelector(".MenuPrice1");
 const menuPrice2 = document.querySelector(".MenuPrice2");
-console.log(value)
-const value = sessionStorage.getItem("selectedValue");
+const uni = sessionStorage.getItem("selectedValue");
 
-const url = `http://localhost:4000/store?adminNo=${value}`;
+const url = `http://localhost:4000/store?adminNo=${uni}`;
 fetch(url)
 .then((res)=>{
     return res.json()
