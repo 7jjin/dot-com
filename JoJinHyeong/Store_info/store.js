@@ -208,7 +208,7 @@ let cart = [];   // 장바구니 배열
 
     //데이터(인원,메뉴) 내보내는 함수
     //--------------------------------------------------------------------------------------------
-    //const value = sessionStorage.getItem("selectedValue");
+    const value = sessionStorage.getItem("selectedValue");
     const date = new Date();
     const year = date.getFullYear();
     const month = ('0' + (date.getMonth() + 1)).slice(-2);
@@ -220,10 +220,8 @@ let cart = [];   // 장바구니 배열
     const timeStr = hours + ':' + minutes + ':' + seconds;
     const today = `${dateStr} ${timeStr}`;
 
-
-    const url = `http://localhost:4000/cart`;
     function sent() {
-      fetch(url,{
+      fetch("http://localhost:4000/cart",{
         method:"post",
         body:JSON.stringify({
           a:`${today}`,
@@ -355,7 +353,7 @@ let cart = [];   // 장바구니 배열
 
 
 
-fetch("http://127.0.0.1:5501/JoJinHyeong/Store_info/db.json")
-  .then(response => response.json())
-  .then(data => console.log(data))
-  .catch(error => console.error(error));
+// fetch("http://127.0.0.1:5501/JoJinHyeong/Store_info/db.json")
+//   .then(response => response.json())
+//   .then(data => console.log(data))
+//   .catch(error => console.error(error));

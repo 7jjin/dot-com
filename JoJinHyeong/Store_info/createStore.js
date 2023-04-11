@@ -1,4 +1,4 @@
-const value = sessionStorage.getItem("selectedValue");
+
 const storeName = document.querySelector(".storeName");
 const storeIntro = document.querySelector(".storeIntro");
 const addr = document.querySelector(".AddressInfo");
@@ -7,7 +7,8 @@ const menuName1 = document.querySelector(".MenuName1");
 const menuName2 = document.querySelector(".MenuName2")
 const menuPrice1 = document.querySelector(".MenuPrice1");
 const menuPrice2 = document.querySelector(".MenuPrice2");
-
+console.log(value)
+const value = sessionStorage.getItem("selectedValue");
 
 const url = `http://localhost:4000/store?adminNo=${value}`;
 fetch(url)
