@@ -125,17 +125,15 @@ body{
 /*대기자 상세정보, 큰 구역*/
 .details{
     display: none;
-    width: 0;
+    width: 500px;
     height: 650px;
     box-shadow: 1px 1px 1px #fff;
     margin-right: 50px;
-    opacity: 0;
     transition: width 1s ease-in-out, opacity 0.5s ease-in-out;
 }
 .details.show{
     display: block;
     width: 500px;
-    opacity: 1;
 }
 .Top{
     width: 500px;
@@ -277,4 +275,5 @@ body{
     text-align: center;
     font-weight: 500;
     font-size: 20px;
+    cursor: pointer;
 }

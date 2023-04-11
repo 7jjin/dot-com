@@ -87,7 +87,7 @@ let cart = [];   // 장바구니 배열
       item.addEventListener("click", function (e) {
         const line = document.querySelector(".bottomline");
         const menuBoxOuter = document.querySelector(".menuBoxOuter");     // 총합DIV을 맨 아래 넣기 위해 각각의 메뉴태그들을 감싸는 부모 태그를 만들었다.
-        if (cart.every((menu) => menu.name !== item.childNodes[1].childNodes[1].innerText)) { //중복 방지
+        if (cart.every((menu) => menu.name !== item.childNodes[1].childNodes[1].innerText)) {
           menuBoxOuter.innerHTML += `
       <div class="menuBox">
             <div class="menuName">${item.childNodes[1].childNodes[1].innerText}</div>
@@ -208,6 +208,7 @@ let cart = [];   // 장바구니 배열
 
     //데이터(인원,메뉴) 내보내는 함수
     //--------------------------------------------------------------------------------------------
+<<<<<<< HEAD
     const value = sessionStorage.getItem("selectedValue");
     const date = new Date();
     const year = date.getFullYear();
@@ -222,11 +223,12 @@ let cart = [];   // 장바구니 배열
 
     function sent() {
       fetch("http://localhost:4000/cart",{
+=======
+    function sent() {
+      fetch("http://localhost:4000/list",{
+>>>>>>> ebb4e24540714090ccf16f3ab18180bfaa762e7b
         method:"post",
-        body:JSON.stringify({
-          a:`${today}`,
-          b:`${2}`
-        }),
+        body:JSON.stringify(cart),
         headers:{
           "Content-Type":"application/json"
         }
@@ -349,6 +351,7 @@ let cart = [];   // 장바구니 배열
       Expansion(ReviewBox);
       ReviewMore.style.display = "none";
       ReviewReduce.style.display = "block";
+<<<<<<< HEAD
     });
 
 
@@ -357,3 +360,6 @@ let cart = [];   // 장바구니 배열
 //   .then(response => response.json())
 //   .then(data => console.log(data))
 //   .catch(error => console.error(error));
+=======
+    });
+>>>>>>> ebb4e24540714090ccf16f3ab18180bfaa762e7b
