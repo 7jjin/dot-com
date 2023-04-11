@@ -109,16 +109,6 @@ body{
     cursor: pointer;
 }
 
-/* .Phone:hover,
-.Alarm:hover,
-.Customer:hover,
-.Help:hover,
-.Option:hover{
-    width: 101%;
-    height: 81%;
-    transform: scale3d(1.01,1.01,1.01);
-} */
-
 .IconZone:hover,
 .IconZone2:hover{
     width: 65px;
