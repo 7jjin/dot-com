@@ -29,7 +29,7 @@ body{
     width: 40px;
     height: 40px;
     background-size:cover;
-    
+    cursor: pointer;
 }
 .HomeName{
     width: 80px;
@@ -73,6 +73,8 @@ body{
     flex-direction: column;
     justify-content: center;
     align-items: center;
+    transition: all .3s cubic-bezier(0,0,.5,1);
+    cursor: pointer;
 }
 .IconZone2{
     margin-left: 10px;
@@ -86,38 +88,41 @@ body{
 }
 .Phone{
     background: url("/img/Telephone.png") no-repeat center center / 100px 90px;
-    width: 100%;
-    height: 80%;
-    background-size: 45px;
-    cursor: pointer;
 }
 .Alarm{
     background: url("/img/Alarm.png") no-repeat center center / 100px 90px;
-    width: 100%;
-    height: 80%;
-    background-size: 45px;
-    cursor: pointer;
 }
 .Customer{
     background: url("/img/Customer.png") no-repeat center center / 100px 90px;
-    width: 100%;
-    height: 80%;
-    background-size: 45px;
-    cursor: pointer;
 }
 .Help{
     background: url("/img/Help.png") no-repeat center center / 100px 90px;
+}
+.Option{
+    background: url("/img/Option.png") no-repeat center center / 100px 90px;
+}
+
+.Phone, .Alarm, .Customer, .Help, .Option{
     width: 100%;
     height: 80%;
     background-size: 45px;
     cursor: pointer;
 }
-.Option{
-    background: url("/img/Option.png") no-repeat center center / 100px 90px;
-    width: 100%;
-    height: 80%;
-    background-size: 45px;
-    cursor: pointer;
+
+/* .Phone:hover,
+.Alarm:hover,
+.Customer:hover,
+.Help:hover,
+.Option:hover{
+    width: 101%;
+    height: 81%;
+    transform: scale3d(1.01,1.01,1.01);
+} */
+
+.IconZone:hover,
+.IconZone2:hover{
+    width: 65px;
+    height: 80px;
 }
 /*대기자 상세정보, 대기자 명단*/
 .body{
