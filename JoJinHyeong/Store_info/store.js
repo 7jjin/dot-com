@@ -355,3 +355,7 @@ let cart = [];   // 장바구니 배열
 
 
 
+fetch("http://127.0.0.1:5501/JoJinHyeong/Store_info/db.json")
+  .then(response => response.json())
+  .then(data => console.log(data))
+  .catch(error => console.error(error));

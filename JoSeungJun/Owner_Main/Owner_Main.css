@@ -13,22 +13,23 @@ body{
     height: 10%;
     display: flex;
     justify-content: space-between;
-    padding-top: 10px;
+    padding: 5px 0px;
+    margin-bottom: 10px;
 }
 
 .Home{
-    width: 20%;
+    width: 30%;
     height: 100%;
     margin-left: 65px;
     display: flex;
     align-items: center;
 }
 .HomeImg{
-    background-image: url(/JoSeungJun/Owner_Main/Home.png);
+    background-image: url(/img/Home.png);
     width: 40px;
     height: 40px;
     background-size:cover;
-    
+    cursor: pointer;
 }
 .HomeName{
     width: 80px;
@@ -40,14 +41,13 @@ body{
 }
 
 .Logo{
-    width: 20%;
-    height: 10%;
+    width: 40%;
+    height: 100%;
     display: flex;
     justify-content: center;
     align-items: center;
-    position: absolute;
-    right: 37%;
-    left: 37%;
+    left: 30%;
+    right: 30%;
 }
 .LogoImg{
     background: url("/img/FOODEAT.png") no-repeat center center / 100px 90px;
@@ -58,7 +58,7 @@ body{
 }
 
 .Side{
-    width: 40%;
+    width: 30%;
     height: 100%;
     margin-right: 58px;
     display: flex;
@@ -66,28 +66,18 @@ body{
     justify-content: flex-end;
 }
 
-.IconZone{
+.IconZone,.IconZone2{
     width: 60px;
     height: 75px;
     display: flex;
     flex-direction: column;
     justify-content: center;
     align-items: center;
+    transition: all .3s cubic-bezier(0,0,.5,1);
+    cursor: pointer;
 }
 .IconZone2{
-    width: 60px;
-    height: 75px;
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
     margin-left: 10px;
-}
-.Phone{
-    background: url("/JoSeungJun/Owner_Main/Phone.png") no-repeat center center / 100px 90px;
-    width: 100%;
-    height: 80%;
-    background-size: 45px;
 }
 .IconText{
     width: 100%;
@@ -96,32 +86,33 @@ body{
     font-size: 18px;
     text-align: center;
 }
+.Phone{
+    background: url("/img/Telephone.png") no-repeat center center / 100px 90px;
+}
 .Alarm{
-    background: url("/JoSeungJun/Owner_Main/Alarm.png") no-repeat center center / 100px 90px;
-    width: 100%;
-    height: 80%;
-    background-size: 45px;
-
+    background: url("/img/Alarm.png") no-repeat center center / 100px 90px;
 }
 .Customer{
-    background: url("/JoSeungJun/Owner_Main/Customer.png") no-repeat center center / 100px 90px;
-    width: 100%;
-    height: 80%;
-    background-size: 45px;
-
+    background: url("/img/Customer.png") no-repeat center center / 100px 90px;
 }
 .Help{
-    background: url("/JoSeungJun/Owner_Main/Help.png") no-repeat center center / 100px 90px;
-    width: 100%;
-    height: 80%;
-    background-size: 45px;
-
+    background: url("/img/Help.png") no-repeat center center / 100px 90px;
 }
 .Option{
-    background: url("/JoSeungJun/Owner_Main/Option.png") no-repeat center center / 100px 90px;
+    background: url("/img/Option.png") no-repeat center center / 100px 90px;
+}
+
+.Phone, .Alarm, .Customer, .Help, .Option{
     width: 100%;
     height: 80%;
     background-size: 45px;
+    cursor: pointer;
+}
+
+.IconZone:hover,
+.IconZone2:hover{
+    width: 65px;
+    height: 80px;
 }
 
 .body{  
@@ -129,49 +120,44 @@ body{
     height: 70%;
     display: flex;
     justify-content: center;
-    padding-top: 20px;
 }
 
-.first{
-    width: 28%;
-    height: 100%;
+.first,.second,.third{
+    width: 430px;
+    height: 527px;
+    position: relative;
     background-color: #FAD0C9;
     border-radius: 18px;
     box-shadow: 2px 4px 12px rgba(0,0,0,.08);
     transition: all .3s cubic-bezier(0,0,.5,1);
+    cursor: pointer;
 }
 .second, .third{
-    width: 28%;
-    height: 100%;
     margin-left: 60px;
-    background-color: #FAD0C9;
-    border-radius: 18px;
-    box-shadow: 2px 4px 12px rgba(0,0,0,.08);;
-    transition: all .3s cubic-bezier(0,0,.5,1);
 }
 
 .FirstBox,.SecondBox,.ThirdBox{
-    width: 100%;
-    height: 100%;
+    width: 430px;
+    height: 527px;
     display: flex;
     flex-direction: column;
     justify-content: center;
-    align-items: center
+    align-items: center;    
 }
 .FirstImg{
-    background: url("/JoSeungJun/Owner_Main/Line.png") no-repeat center center / 100px 90px;
+    background: url("/img/Line.png") no-repeat center center / 100px 90px;
     width: 100%;
     height: 40%;
     background-size: 180px;
 }
 .SecondImg{
-    background: url("/JoSeungJun/Owner_Main/Line.png") no-repeat center center / 100px 90px;
+    background: url("/img/Store.png") no-repeat center center / 100px 90px;
     width: 100%;
     height: 40%;
     background-size: 180px;
 }
 .ThirdImg{
-    background: url("/JoSeungJun/Owner_Main/Line.png") no-repeat center center / 100px 90px;
+    background: url("/img/Review.png") no-repeat center center / 100px 90px;
     width: 100%;
     height: 40%;
     background-size: 180px;
@@ -191,6 +177,7 @@ body{
     display: flex;
     position: absolute;
     bottom: 0;
+    justify-content: center;
 }
 
 .LeftText,.RightText{
@@ -202,45 +189,40 @@ body{
 }
 
 .Left,.Right{
-    width: 50%;
-    height: 100%;
+    width: 690px;
+    height: 100px;
     display: flex;
     align-items: center;
     justify-content: center;
     transition: all .3s cubic-bezier(0,0,.5,1);
     border-radius: 18px;
+    cursor: pointer;
 }
+
 .LeftImg{
-    background-image: url(/JoSeungJun/Owner_Main/Calender.png);
+    background-image: url(/img/Calender.png);
     background-size: cover;
     width: 35px;
     height: 35px;
 }
 .RightImg{
-    background-image: url(/JoSeungJun/Owner_Main/Message.png);
+    background-image: url(/img/Message.png);
     background-size: cover;
     width: 35px;
     height: 35px;
 }
 
 .Middle{
-    height: 100%;
-    width: 1px;
-    display: flex;
-    align-items: center;
-}
-.Line{
-    height: 50%;
-    width: 1px;
-    background-color: rgb(205, 205, 205);
+    margin: 0px 20px;
 }
 
 .first:hover,
 .second:hover,
 .third:hover{
-    width: 29%;
-    height: 101%;
+    width: 435px;
+    height: 530px;
     box-shadow: 2px 4px 16px rgba(0,0,0,.16);
+    transform: scale3d(1.01,1.01,1.01);
 }
 
 .Right:hover,
