@@ -1,7 +1,7 @@
 {
-  "mainpage" : [
-      {
-      "id":"local",
+  "mainpage": [
+    {
+      "id": "local",
       "adminNo": 1,
       "adminCafe": "성결대학교",
       "guName": "만안구",
@@ -17,9 +17,9 @@
       "latitude": 126.92883626779027,
       "longitude": 37.37989691469408,
       "menuList": null
-      },
-      {
-      "id":"local",
+    },
+    {
+      "id": "local",
       "adminNo": 2,
       "adminCafe": "현식돈국수",
       "guName": "강서구",
@@ -35,154 +35,173 @@
       "latitude": 127.0243,
       "longitude": 37.5434,
       "menuList": null
-      },
-      {
-          "adminNo": 3,
-          "adminCafe": "안양현식",
-          "guName": "만안구",
-          "addressName": "안양대학교 구구구 123",
-          "clty_loc": null,
-          "storeIntroduce": "어서오세요 안양현식",
-          "foodType": "중식",
-          "savedNm": "Storeimage3.png",
-          "openingTime": "08:00:00",
-          "closingTime": "19:00:00",
-          "weekday": 123456,
-          "storePhone": "014-1234-4566",
-          "latitude": 126.92042079261175,
-          "longitude": 37.391462944015544,
-          "menuList": null
-      }
-  ],
-  "store":[{
-    "adminNo": 1,
-    "adminCafe": "성결대학교",
-    "guName": "만안구",
-    "addressName": "성결대학교 만안구 구구구 123",
-    "clty_loc": null,
-    "storeIntroduce": "환영합니다 현식돈국수입니다",
-    "foodType": "한식",
-    "savedNm": "Storeimage1.jpg",
-    "openingTime": "09:00:00",
-    "closingTime": "21:00:00",
-    "weekday": 1234,
-    "storePhone": "031-1234-4566",
-    "latitude": 0,
-    "longitude": 0,
-    "categories": [
-        {
-            "categoryName": "음료",
-            "menuList": [
-                {
-                    "menuName": "크림 파스타",
-                    "menuPrice": "11000",
-                    "menusavedNm": "pasta1.jpg"
-                }
-            ]
-        },
-        {
-            "categoryName": "피자",
-            "menuList": [
-                {
-                    "menuName": "안심 스테이크",
-                    "menuPrice": "20000",
-                    "menusavedNm": "steak1.jpg"
-                },
-                {
-                    "menuName": "토마호크 스테이크",
-                    "menuPrice": "40000",
-                    "menusavedNm": "steak2.jpg"
-                },
-                {
-                    "menuName": "토마토 파스타",
-                    "menuPrice": "9000",
-                    "menusavedNm": "pasta2.jpg"
-                }
-            ]
-        }
-    ]
-    },{
-        "adminNo": 2,
-        "adminCafe": "진형식당",
-        "guName": "만안구",
-        "addressName": "경기도 수원시",
-        "clty_loc": null,
-        "storeIntroduce": "환영합니다 진형입니다",
-        "foodType": "한식",
-        "savedNm": "Storeimage1.jpg",
-        "openingTime": "09:00:00",
-        "closingTime": "21:00:00",
-        "weekday": 1234,
-        "storePhone": "031-1234-4566",
-        "latitude": 0,
-        "longitude": 0,
-        "categories": [
-            {
-                "categoryName": "음료",
-                "menuList": [
-                    {
-                        "menuName": "크림 파스타",
-                        "menuPrice": "11000",
-                        "menusavedNm": "pasta1.jpg"
-                    }
-                ]
-            },
-            {
-                "categoryName": "피자",
-                "menuList": [
-                    {
-                        "menuName": "안심 스테이크",
-                        "menuPrice": "20000",
-                        "menusavedNm": "steak1.jpg"
-                    },
-                    {
-                        "menuName": "토마호크 스테이크",
-                        "menuPrice": "40000",
-                        "menusavedNm": "steak2.jpg"
-                    },
-                    {
-                        "menuName": "토마토 파스타",
-                        "menuPrice": "9000",
-                        "menusavedNm": "pasta2.jpg"
-                    }
-                ]
-            }
-        ]
-  }],
-  "local":[
-    {
-        "adminNo": 1,
-        "adminCafe": "성결대학교",
-        "guName": "만안구",
-        "addressName": "성결대학교 만안구 구구구 123",
-        "clty_loc": null,
-        "storeIntroduce": "환영합니다 현식돈국수입니다",
-        "foodType": "한식",
-        "savedNm": "Storeimage1.jpg",
-        "openingTime": "09:00:00",
-        "closingTime": "21:00:00",
-        "weekday": 1234,
-        "storePhone": "031-1234-4566",
-        "latitude": 0,
-        "longitude": 0,
-        "categories": null
     },
     {
-        "adminNo": 3,
-        "adminCafe": "안양현식",
-        "guName": "만안구",
-        "addressName": "안양대학교 구구구 123",
-        "clty_loc": null,
-        "storeIntroduce": "어서오세요 안양현식",
-        "foodType": "중식",
-        "savedNm": "Storeimage3.png",
-        "openingTime": "08:00:00",
-        "closingTime": "19:00:00",
-        "weekday": 123456,
-        "storePhone": "014-1234-4566",
-        "latitude": 0,
-        "longitude": 0,
-        "categories": null
+      "adminNo": 3,
+      "adminCafe": "안양현식",
+      "guName": "만안구",
+      "addressName": "안양대학교 구구구 123",
+      "clty_loc": null,
+      "storeIntroduce": "어서오세요 안양현식",
+      "foodType": "중식",
+      "savedNm": "Storeimage3.png",
+      "openingTime": "08:00:00",
+      "closingTime": "19:00:00",
+      "weekday": 123456,
+      "storePhone": "014-1234-4566",
+      "latitude": 126.92042079261175,
+      "longitude": 37.391462944015544,
+      "menuList": null
     }
-]
+  ],
+  "store": [
+    {
+      "adminNo": 1,
+      "adminCafe": "성결대학교",
+      "guName": "만안구",
+      "addressName": "성결대학교 만안구 구구구 123",
+      "clty_loc": null,
+      "storeIntroduce": "환영합니다 현식돈국수입니다",
+      "foodType": "한식",
+      "savedNm": "Storeimage1.jpg",
+      "openingTime": "09:00:00",
+      "closingTime": "21:00:00",
+      "weekday": 1234,
+      "storePhone": "031-1234-4566",
+      "latitude": 0,
+      "longitude": 0,
+      "categories": [
+        {
+          "categoryName": "음료",
+          "menuList": [
+            {
+              "menuName": "크림 파스타",
+              "menuPrice": "11000",
+              "menusavedNm": "pasta1.jpg"
+            }
+          ]
+        },
+        {
+          "categoryName": "피자",
+          "menuList": [
+            {
+              "menuName": "안심 스테이크",
+              "menuPrice": "20000",
+              "menusavedNm": "steak1.jpg"
+            },
+            {
+              "menuName": "토마호크 스테이크",
+              "menuPrice": "40000",
+              "menusavedNm": "steak2.jpg"
+            },
+            {
+              "menuName": "토마토 파스타",
+              "menuPrice": "9000",
+              "menusavedNm": "pasta2.jpg"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "adminNo": 2,
+      "adminCafe": "진형식당",
+      "guName": "만안구",
+      "addressName": "경기도 수원시",
+      "clty_loc": null,
+      "storeIntroduce": "환영합니다 진형입니다",
+      "foodType": "한식",
+      "savedNm": "Storeimage1.jpg",
+      "openingTime": "09:00:00",
+      "closingTime": "21:00:00",
+      "weekday": 1234,
+      "storePhone": "031-1234-4566",
+      "latitude": 0,
+      "longitude": 0,
+      "categories": [
+        {
+          "categoryName": "음료",
+          "menuList": [
+            {
+              "menuName": "크림 파스타",
+              "menuPrice": "11000",
+              "menusavedNm": "pasta1.jpg"
+            }
+          ]
+        },
+        {
+          "categoryName": "피자",
+          "menuList": [
+            {
+              "menuName": "안심 스테이크",
+              "menuPrice": "20000",
+              "menusavedNm": "steak1.jpg"
+            },
+            {
+              "menuName": "토마호크 스테이크",
+              "menuPrice": "40000",
+              "menusavedNm": "steak2.jpg"
+            },
+            {
+              "menuName": "토마토 파스타",
+              "menuPrice": "9000",
+              "menusavedNm": "pasta2.jpg"
+            }
+          ]
+        }
+      ]
+    }
+  ],
+  "local": [
+    {
+      "adminNo": 1,
+      "adminCafe": "성결대학교",
+      "guName": "만안구",
+      "addressName": "성결대학교 만안구 구구구 123",
+      "clty_loc": null,
+      "storeIntroduce": "환영합니다 현식돈국수입니다",
+      "foodType": "한식",
+      "savedNm": "Storeimage1.jpg",
+      "openingTime": "09:00:00",
+      "closingTime": "21:00:00",
+      "weekday": 1234,
+      "storePhone": "031-1234-4566",
+      "latitude": 0,
+      "longitude": 0,
+      "categories": null
+    },
+    {
+      "adminNo": 3,
+      "adminCafe": "안양현식",
+      "guName": "만안구",
+      "addressName": "안양대학교 구구구 123",
+      "clty_loc": null,
+      "storeIntroduce": "어서오세요 안양현식",
+      "foodType": "중식",
+      "savedNm": "Storeimage3.png",
+      "openingTime": "08:00:00",
+      "closingTime": "19:00:00",
+      "weekday": 123456,
+      "storePhone": "014-1234-4566",
+      "latitude": 0,
+      "longitude": 0,
+      "categories": null
+    }
+  ],
+  "list": [
+    [
+      {
+        "name": "크림 파스타",
+        "quantity": 1,
+        "price": 11000
+      }
+    ],
+    [
+      {
+        "name": "안심 스테이크",
+        "quantity": 1,
+        "price": 20000
+      }
+    ]
+  ]
 }
