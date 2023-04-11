@@ -1,7 +1,4 @@
-//import {getSelectedValue} from '../mainPage/storeList.js';
-
 const value = sessionStorage.getItem("selectedValue");
-
 const storeName = document.querySelector(".storeName");
 const storeIntro = document.querySelector(".storeIntro");
 const addr = document.querySelector(".AddressInfo");

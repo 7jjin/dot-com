@@ -87,7 +87,7 @@ let cart = [];   // 장바구니 배열
       item.addEventListener("click", function (e) {
         const line = document.querySelector(".bottomline");
         const menuBoxOuter = document.querySelector(".menuBoxOuter");     // 총합DIV을 맨 아래 넣기 위해 각각의 메뉴태그들을 감싸는 부모 태그를 만들었다.
-        if (cart.every((menu) => menu.name !== item.childNodes[1].childNodes[1].innerText)) {
+        if (cart.every((menu) => menu.name !== item.childNodes[1].childNodes[1].innerText)) { //중복 방지
           menuBoxOuter.innerHTML += `
       <div class="menuBox">
             <div class="menuName">${item.childNodes[1].childNodes[1].innerText}</div>
@@ -208,10 +208,27 @@ let cart = [];   // 장바구니 배열
 
     //데이터(인원,메뉴) 내보내는 함수
     //--------------------------------------------------------------------------------------------
+    //const value = sessionStorage.getItem("selectedValue");
+    const date = new Date();
+    const year = date.getFullYear();
+    const month = ('0' + (date.getMonth() + 1)).slice(-2);
+    const day = ('0' + date.getDate()).slice(-2);
+    const dateStr = year + '-' + month + '-' + day;
+    const hours = ('0' + date.getHours()).slice(-2);
+    const minutes = ('0' + date.getMinutes()).slice(-2);
+    const seconds = ('0' + date.getSeconds()).slice(-2);
+    const timeStr = hours + ':' + minutes + ':' + seconds;
+    const today = `${dateStr} ${timeStr}`;
+
+
+    const url = `http://localhost:4000/cart`;
     function sent() {
-      fetch("http://localhost:3000/list",{
+      fetch(url,{
         method:"post",
-        body:JSON.stringify(cart),
+        body:JSON.stringify({
+          a:`${today}`,
+          b:`${2}`
+        }),
         headers:{
           "Content-Type":"application/json"
         }

@@ -184,5 +184,6 @@
         "longitude": 0,
         "categories": null
     }
-]
+    ],
+    "cart":[{}]
 }
