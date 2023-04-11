@@ -16,7 +16,7 @@ TRtables.forEach(TRtable => {
         const clickTDS = TRtable.querySelectorAll(".NameTD");
         clickTDS.forEach(e => {
             WaiterName.textContent = e.textContent
-            details.classList.add("show");
+            showdetails();
         });
     });
 });
@@ -45,6 +45,9 @@ TRtables.forEach(TRtable => {
     });
 });
 
+function showdetails()  {
+    details.classList.add('show');
+}
 
 X.addEventListener("click", () => {
     details.classList.remove("show");

@@ -134,17 +134,19 @@ body{
 }
 /*대기자 상세정보, 큰 구역*/
 .details{
-    position: absolute;
-    width: 500px;
+    display: none;
+    width: 0;
     height: 650px;
     box-shadow: 1px 1px 1px #fff;
     margin-right: 50px;
-    transition: all 1.4s;
-    left: -500px;
+    opacity: 0;
+    transition: width 1s ease-in-out, opacity 0.5s ease-in-out;
 }
 .details.show{
-    left: 0px;
-    position: relative;
+    overflow: hidden;
+    display: block;
+    width: 500px;
+    opacity: 1;
 }
 .Top{
     width: 500px;
