@@ -143,7 +143,6 @@ body{
     transition: width 1s ease-in-out, opacity 0.5s ease-in-out;
 }
 .details.show{
-    overflow: hidden;
     display: block;
     width: 500px;
     opacity: 1;
