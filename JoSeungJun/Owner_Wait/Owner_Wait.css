@@ -206,20 +206,20 @@ body{
     cursor: pointer;
 }
 /*상세정보 중단 구역*/
-.VisitDate,.VisitCount,.VisitPhone,.VisitPeople,.CallMenu{
+.VisitDate,.VisitCount,.VisitPhone,.VisitPeople{
     line-height: 25px;
 }
-.VisitText,.CountText,.PhoneText,.PeopleText,.MenuText{
+.VisitText,.CountText,.PhoneText,.PeopleText{
     font-size: 20px;
     font-weight: 700;
     color: rgb(143,143,143);
 }
-.DateText,.CountNumText,.NumText,.PepleNumText,.MenuOrder{
+.DateText,.CountNumText,.NumText,.PepleNumText{
     font-size: 17px;
     font-weight: 600;
 }
 
-.VisitCount,.VisitPhone,.VisitPeople,.CallMenu{
+.VisitCount,.VisitPhone,.VisitPeople{
     margin-top: 20px;
 }
 /*상세정보 하단 구역*/
@@ -246,6 +246,11 @@ body{
     justify-content: center;
     margin-top: 20px;
     transition: 1s;
+}
+
+.wait tbody{
+    transition: 1s;
+
 }
 
 .Number{
