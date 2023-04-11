@@ -208,8 +208,6 @@ let cart = [];   // 장바구니 배열
 
     //데이터(인원,메뉴) 내보내는 함수
     //--------------------------------------------------------------------------------------------
-    const value = sessionStorage.getItem("selectedValue");
-    
     function sent() {
       fetch("http://localhost:4000/list",{
         method:"post",
@@ -337,4 +335,3 @@ let cart = [];   // 장바구니 배열
       ReviewMore.style.display = "none";
       ReviewReduce.style.display = "block";
     });
-
