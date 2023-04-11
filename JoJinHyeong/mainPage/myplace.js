@@ -75,7 +75,6 @@ fetch("http://localhost:4000/local")
 function findStore(data){
     
     find.addEventListener("click",function(){
-        console.log(data)
         Store_Zone.innerHTML="";
         for(let i=0;i<data.length;i++){
             let adminCafe = data[i].adminCafe;

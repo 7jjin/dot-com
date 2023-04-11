@@ -335,6 +335,3 @@ let cart = [];   // 장바구니 배열
       ReviewMore.style.display = "none";
       ReviewReduce.style.display = "block";
     });
-
-
-
