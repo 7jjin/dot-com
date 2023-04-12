@@ -109,8 +109,14 @@ body{
     visibility: hidden;
 }
 
-.remote_Bar p{
+.remote_Bar .member{
+    display: flex;
+    height: 40px;
     margin-left: 20px;
+    align-items: center;
+}
+.remote_Bar .member div{
+    margin-right: 6px;
 }
 
 .costHap{

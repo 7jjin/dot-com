@@ -80,18 +80,34 @@ fetch(url1)
 
 
 function getCurrentDateTime() {
-  const now = new Date();
-  const year = now.getFullYear();
-  const month = now.getMonth() + 1; // getMonth()는 0부터 시작하므로 1을 더해줌
-  const day = now.getDate();
-  const hour = now.getHours();
-  const minute = now.getMinutes();
-  const second = now.getSeconds();
+  const date = new Date();
+  const year = date.getFullYear();
+  const month = ('0' + (date.getMonth() + 1)).slice(-2);
+  const day = ('0' + date.getDate()).slice(-2);
+  const dateStr = year + '-' + month + '-' + day;
+  const hours = ('0' + date.getHours()).slice(-2);
+  const minutes = ('0' + date.getMinutes()).slice(-2);
+  const seconds = ('0' + date.getSeconds()).slice(-2);
+  const timeStr = hours + ':' + minutes + ':' + seconds;
+  const today = `${dateStr} ${timeStr}`;
   
   // YYYY-MM-DD HH:MM:SS 형식으로 반환
-  return `${year}-${month.toString().padStart(2, '0')}-${day.toString().padStart(2, '0')} ${hour.toString().padStart(2, '0')}:${minute.toString().padStart(2, '0')}:${second.toString().padStart(2, '0')}`;
+  return today;
 }
 // 현재 시간을 알려주는 함수
+
+const date = new Date();
+const year = date.getFullYear();
+const month = ('0' + (date.getMonth() + 1)).slice(-2);
+const day = ('0' + date.getDate()).slice(-2);
+const dateStr = year + '-' + month + '-' + day;
+const hours = ('0' + date.getHours()).slice(-2);
+const minutes = ('0' + date.getMinutes()).slice(-2);
+const seconds = ('0' + date.getSeconds()).slice(-2);
+const timeStr = hours + ':' + minutes + ':' + seconds;
+const today = `${dateStr} ${timeStr}`;
+
+
 
 
     number.forEach((item, index) => {
@@ -105,13 +121,14 @@ function getCurrentDateTime() {
         bar.style.height = "none"
         bar.style.alignItems = "normal";
         bar.innerHTML = `<div class="member">
-    <p>인원: ${e.target.innerText}</p>
+    <div>인원:</div>
+    <div>${e.target.innerText}</div>
     </div>
     <div class="bottomline"></div>
     <div class="menuBoxOuter"></div>
     <div class="costHap"></div>
     <div class="count" onclick="sent()"</div>`;
-    list.인원 = `${e.target.innerText}`;
+    list.인원 = `${Number(e.target.innerText[0])}`;
       });
     });
     // 리모트바 원형에서 직사각형으로 모형 바꾸기
