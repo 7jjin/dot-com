@@ -7,8 +7,10 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Document</title>
   <link rel="stylesheet" href="store.css"/>
-  <script defer src="./store.js"></script>
+
   <script defer src="./createStore.js"></script>
+  <script defer src="./store.js"></script>
+
   <script src="https://kit.fontawesome.com/06b646a751.js" crossorigin="anonymous"></script>
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -57,6 +59,7 @@
       <section class="store_Img"></section>
       <section class="store_Info">
         <div class="storeName">
+          <div class="name"></div>
           <div class="storePlace">경기도•수원</div>
         </div>
         <div class="storeIntro"></div>
@@ -115,7 +118,7 @@
               </label>
               <label class="numberSlide">
                 <input type="radio" name="count" value="1" />
-                <span>5명</span>
+                <span onclick="change_btn(event)">5명</span>
               </label>
               <label class="numberSlide">
                 <input type="radio" name="count" value="1" />
@@ -170,7 +173,7 @@
             </div>
             <div class="Call">
               <h4 class="SubEx">전화 번호</h4>
-              <h4 class="CallInfo">02-487-9828</h4>
+              <h4 class="CallInfo"></h4>
             </div>
             <div class="Date">
               <h4 class="SubEx">운영 요일</h4>

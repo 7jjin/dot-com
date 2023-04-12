@@ -59,8 +59,41 @@ function change_btn(e) {
 //--------------------------------------------------------------------------------
 const number = document.querySelectorAll(".number span");
 const menu = document.querySelectorAll(".SubItem");
+const storename = document.querySelector(".name");
+
 let cart = [];   // 장바구니 배열
+let list ={};   // 서버에 보낼 리스트
+
+
+const uni1 = sessionStorage.getItem("selectedValue");
+const url1 = `http://localhost:4000/store?adminNo=${uni1}`;
+fetch(url1)
+.then((res)=>{
+    return res.json()
+})
+.then((data)=>{
+    list.가게이름 = data[0].adminCafe;
+    list.전화번호 = data[0].storePhone;
+})
+.catch((err)=>console.log(err))
+// fetch함수로 API가져와서 바로 객체에 데이터 넣어주기 )가게이름,전화번호
+
+
+function getCurrentDateTime() {
+  const now = new Date();
+  const year = now.getFullYear();
+  const month = now.getMonth() + 1; // getMonth()는 0부터 시작하므로 1을 더해줌
+  const day = now.getDate();
+  const hour = now.getHours();
+  const minute = now.getMinutes();
+  const second = now.getSeconds();
   
+  // YYYY-MM-DD HH:MM:SS 형식으로 반환
+  return `${year}-${month.toString().padStart(2, '0')}-${day.toString().padStart(2, '0')} ${hour.toString().padStart(2, '0')}:${minute.toString().padStart(2, '0')}:${second.toString().padStart(2, '0')}`;
+}
+// 현재 시간을 알려주는 함수
+
+
     number.forEach((item, index) => {
       item.addEventListener("click", function (e) {
         bar.style.borderRadius = "20px";
@@ -78,9 +111,10 @@ let cart = [];   // 장바구니 배열
     <div class="menuBoxOuter"></div>
     <div class="costHap"></div>
     <div class="count" onclick="sent()"</div>`;
+    list.인원 = `${e.target.innerText}`;
       });
     });
-
+    // 리모트바 원형에서 직사각형으로 모형 바꾸기
 
     // ------ 메뉴추가
     menu.forEach((item) => {
@@ -208,10 +242,13 @@ let cart = [];   // 장바구니 배열
 
     //데이터(인원,메뉴) 내보내는 함수
     //--------------------------------------------------------------------------------------------
+
+
     function sent() {
+      list.현재시간 = getCurrentDateTime();
       fetch("http://localhost:4000/list",{
         method:"post",
-        body:JSON.stringify(cart),
+        body:JSON.stringify(list),
         headers:{
           "Content-Type":"application/json"
         }
@@ -221,12 +258,13 @@ let cart = [];   // 장바구니 배열
         return response.json();
       })
       .then((json) =>{
-        console.log("성공",json);
+        console.log(list)
       })
       .catch((error)=>{
         console.log("실패",error);
       })
     }
+
     // json-server --watch db.json  가상서버 실행
 
 
