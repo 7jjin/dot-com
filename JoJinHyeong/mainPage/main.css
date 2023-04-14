@@ -1,6 +1,4 @@
-html{
-    height: 100%;
-}
+
 body{
     margin:0;
 }
@@ -11,6 +9,7 @@ body{
   left:10%;
 }
 
+
 .header{
     width: 100%;
     height: 90px;
@@ -18,15 +17,13 @@ body{
 
 }
 .headerWapper{
-    width: 1300px;
     height: 100%;
-    margin:0 auto;
 }
 .headerInner{
     display: flex;
     height: 100%;
     width: 100%;
-
+    transition: all 0.5s ease;
 }
 .headerLogo{
     display: flex;
@@ -45,12 +42,12 @@ body{
     width: 100%;
     height: 100%;
     background-size: 130px;
-    
+    transition: all 0.5s ease;
 }
 .headerSearch{
     display: flex;
     align-items: center;
-    flex-basis: 50%;
+    flex-basis: 46%;
     width: 100%;
     height: 100%;
 }
@@ -69,6 +66,7 @@ body{
     background-color: #f8f8f8;
     padding:10px 40px 10px 0px;
     margin: 3px 0px 3px 15px;
+    transition: all 0.5s ease;
 }
 .searchIcon{
     position: relative;
@@ -91,12 +89,15 @@ body{
     padding-right: 20px;
 }
 #InfoBar{
+  width: 100%;
+}
+.infoWapper{
+  width: 100%;
   display: flex;
-  width: 1300px;
   height: 110px;
-  margin: 0 auto;
   justify-content: space-around;
   align-items: center;
+  transition: all 0.5s ease;
 }
 .RestaurantName{
   display: flex;
@@ -104,6 +105,7 @@ body{
   margin-right: 64px;
 }
 .RestaurantName p{
+  word-break: keep-all;
     margin:0;
     font-size: 40px;
     font-family: 'Noto Sans KR', sans-serif;
@@ -241,7 +243,7 @@ body{
   background-color: white;
   display: inline-block;
   border-radius: 5px;
-  transition: background-color 0.6s ease;
+  transition: all 0.5s ease;
 }
 
 
@@ -252,12 +254,13 @@ body{
 
 .quickfilter{
   position: absolute;
-  width: 1300px;
+  width: 83%;
   top: 85px;
-  left:50%;
-  translate: -650px;
-  margin-top:516px;
+  left: 50%;
+  translate: -50%;
+  margin-top: 516px;
 }
+
 
 .quickfilter .filterBar_Names button{
   padding:10px;
@@ -273,7 +276,7 @@ body{
 .filterBar_Names{
   display: flex;
     align-items: center;
-    width: 400px;
+    width: 35%;
     position: absolute;
     left: 0;
     top: -86px;
@@ -285,6 +288,7 @@ body{
   margin-right: 5px;
 }
 .filterRegion{
+  width: 90%;
   height: 120px;
   display: flex;
   background-color: white;
@@ -302,15 +306,17 @@ body{
   background-color: #ddd;
   border: none;
   border-radius: 5px;
+  transition: all 0.5s ease;
 }
 .selfplace{
   display: flex;
   align-items: center;
   justify-content: flex-start;
+  width: 65%;
 }
 .doo{
   display: flex;
-  width: 232px;
+  width: 100%;
   margin-right: 40px;
   justify-content: center;
   border-bottom: 2px solid #5c5f67;
@@ -318,9 +324,9 @@ body{
 .doo input{
   border:none;
   font-size: 26px;
-  width: 196px;
+  width: 85%;
   outline: none;
-
+  transition: all 0.5s ease;
 }
 .doo .dooicon{
   font-size: 24px;
@@ -328,7 +334,7 @@ body{
 }
 .si{
   display: flex;
-  width: 232px;
+  width: 100%;
   margin-right: 40px;
   justify-content: center;
   border-bottom: 2px solid #5c5f67;
@@ -336,21 +342,24 @@ body{
 .si input{
   border:none;
   font-size: 26px;
-  width: 196px;
+  width: 85%;
   outline:none;
   background-color:white;
-
+  transition: all 0.5s ease;
 }
 .si .siicon{
   font-size: 24px;
   cursor: pointer;
 }
 .filterRegion .find{
+  width: 100px;
+  height: 56px;
   background:none;
   border:none;
   background-color: #ddd;
   border-radius: 3px;
   font-size: 30px;
+  transition: all 0.5s ease;
 }
 .filterMenu{
   height: 120px;
@@ -478,10 +487,13 @@ body{
 
 .Store_Zone{
   position: absolute;
-  width: 1000px;
+  width: 60%;
   left: 60%;
-  translate: -650px;
+  translate: -69%;
   margin-top: 215px;
+  display: flex;
+  flex-direction: column;
+  align-content: center;
 }
 
 .Sign{
@@ -569,4 +581,71 @@ body{
 }
 .store{
   margin-bottom: 20px;
+}
+
+@media screen and (max-width: 1050px) {
+  .headerInner{
+    transform: scale(0.95);
+  }
+  .infoWapper{
+    transform: scale(0.9);
+  }
+  .RestaurantName p{
+    font-size: 30px;
+  }
+  .InfoMenu{
+    width: 500px;
+  }
+  .dot{
+    width: 30px;
+  }
+  .prev, .next {
+    font-size: 30px;
+  }
+  .place button{
+    font-size: 25px;
+  }
+  .doo input, .si input{
+    font-size: 21px;
+  }
+  .doo .dooicon, .si .siicon {
+    font-size: 22px;
+    cursor: pointer;
+  }
+  .filterRegion .find {
+    width: 85px;
+    font-size: 25px;
+  }
+}
+
+@media screen and (max-width: 800px) {
+  .header{
+    height: 60px;
+  }
+  .filterRegion .find {
+    width: 85px;
+    font-size: 25px;
+  }
+  .logo a{
+    background-size: 105px;
+  }
+  .searchForm .search{
+    width: 220px;
+    height: 10px;
+  }
+  .infoWapper {
+    height: 90px;
+  }
+  .InfoMenu{
+    width: 400px;
+  }
+  .InfoMenu>*{
+    height: 55px;
+  }
+  .RestaurantName p{
+    font-size: 25px;
+  }
+  .RestaurantName{
+    margin-right: 0px;
+  }
 }

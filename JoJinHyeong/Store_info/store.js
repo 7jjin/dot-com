@@ -91,7 +91,7 @@ function getCurrentDateTime() {
   const timeStr = hours + ':' + minutes + ':' + seconds;
   const today = `${dateStr} ${timeStr}`;
   
-  // YYYY-MM-DD HH:MM:SS 형식으로 반환
+
   return today;
 }
 // 현재 시간을 알려주는 함수
@@ -275,7 +275,8 @@ const today = `${dateStr} ${timeStr}`;
         return response.json();
       })
       .then((json) =>{
-        console.log(list)
+        console.log(list);
+        sessionStorage.setItem("selectedValue", adminNo);
       })
       .catch((error)=>{
         console.log("실패",error);
