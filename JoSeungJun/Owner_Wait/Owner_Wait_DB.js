@@ -1,4 +1,5 @@
 const wait_Zone = document.querySelector(".wait");
+const waiting = document.querySelector(".wait tbody");
 
 fetch("http://localhost:4000/waiting")
     .then(res => {
@@ -16,21 +17,12 @@ function waitingList(data) {
         let waitingName = data[i].adminCafe;
         let waitingNum = data[i].storePhone;
 
-        wait_Zone.innerHTML = `<div class="Sign">
-        <div class="Store_Sign">
-          <div class="Store_Image"></div>
-          <div class="Store_Name">
-            <h4 class="Store_Title">"${adminCafe}"</h4>
-            <p class="detail">"${intro}"</p>
-            <div class="rating">
-              <span class="Star">⭐</span>
-              <span class="Star_Rating">4.5</span>
-              <span class="Review_Rating">(412)</span>
-            </div>
-            <span class="tags">연어 및 각종 일식</span><br>
-            <span class="address">"${addr}"</span>
-          </div>
-        </div>
-      </div>`;
+        waiting.innerHTML = `<tr class = "TRtable" name = "${i}">
+        <td class="NumberTD">${i+1} 번</td>
+        <td class="NameTD">${waitingName}</td>
+        <td class="MenTD">2 명</td>
+        <td class="VisitTD">4 번</td>
+        <td class="PhoneTD">${waitingNum}</td>
+        </tr>`;
     }
 }
