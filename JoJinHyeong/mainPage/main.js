@@ -43,3 +43,35 @@ function showSlides(n) {
   dots[n].className += " active";
 }
 
+//  스크롤을 내리면 유틸바 사라지고 다시 올라갔을때도 사라지게 함.
+const toggleBar = document.querySelector(".headerUtil_toggleBar");
+const subBar = document.querySelector(".toggleOn");
+const header = document.querySelector(".header");
+let toggle = true;
+const headerHeight = header.getBoundingClientRect().height+subBar.getBoundingClientRect().height;
+console.log(headerHeight,window.scrollY)
+document.addEventListener("scroll",()=>{
+  if(window.scrollY>headerHeight){
+    subBar.style.display="none";
+    toggle=!toggle;
+  }else{
+    subBar.style.display="flex";
+    subBar.style.height="0px";
+  }
+  
+})
+
+
+// 토클 버튼누르면 유틸바 내려옴
+function showList(){
+  if(toggle){
+    subBar.style.height="120px";
+    toggle=!toggle;
+  }else{
+    subBar.style.height="0px";
+    toggle=!toggle;
+  }
+}
+toggleBar.addEventListener("click",showList);
+
+

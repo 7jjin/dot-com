@@ -81,12 +81,38 @@ body{
     width: 100%;
     height: 100%;
 }
+.headerUtil_toggleBar{
+  display: none;
+}
+
 .utilList{
     display: flex;
     margin-top: 5px;
 }
 .utilList_login ,.utilList_Wait{
     padding-right: 20px;
+}
+.toggleOn{
+  position: fixed;
+  display: flex;
+  width: 100%;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  z-index: 1;
+  background-color: white;
+  height: 0px;
+  overflow: hidden;
+  transition: all 0.5s ease;
+  cursor: pointer;
+}
+.toggleOn > * {
+  padding: 20px;
+  width: 100%;
+  margin: 0 auto;
+  display: flex;
+  justify-content: center;
+  border-bottom:2px solid #ddd;
 }
 #InfoBar{
   width: 100%;
@@ -183,6 +209,7 @@ body{
 
 #slideshow-container .mySlides img {
     height: 400px;
+    transition: all .5s ease;
   }
 #slideshow-container{
   position:relative;
@@ -259,6 +286,11 @@ body{
   left: 50%;
   translate: -50%;
   margin-top: 516px;
+  transition: all 0.5s ease;
+}
+.localname{
+  margin-bottom: 30px;
+  font-size: 24px;
 }
 
 
@@ -296,8 +328,9 @@ body{
   justify-content: space-between;
   align-items: center;
   padding:30px 50px;
-  box-shadow:rgb(128 128 128 / 85%) 4px 1px 17px 1px;
+  box-shadow:rgb(128 128 128 / 85%) 0px 5px 9px 1px;
   border-radius: 0px 10px 10px 10px;
+  transition: all 0.5s ease;
 }
 .place button{
   margin-bottom: 30px;
@@ -494,6 +527,7 @@ body{
   display: flex;
   flex-direction: column;
   align-content: center;
+  transition:all .5s ease;
 }
 
 .Sign{
@@ -509,6 +543,7 @@ body{
 
 .Store_Sign{
   display: flex;
+  align-items: center;
 }
 
 .Store_Image{
@@ -623,8 +658,8 @@ body{
     height: 60px;
   }
   .filterRegion .find {
-    width: 85px;
-    font-size: 25px;
+    width: 75px;
+    font-size: 19px;
   }
   .logo a{
     background-size: 105px;
@@ -640,7 +675,8 @@ body{
     width: 400px;
   }
   .InfoMenu>*{
-    height: 55px;
+    height: 46px;
+    margin-right: 10px;
   }
   .RestaurantName p{
     font-size: 25px;
@@ -648,4 +684,140 @@ body{
   .RestaurantName{
     margin-right: 0px;
   }
+  .quickfilter{
+    top:37px;
+  }
+  .filterRegion{
+    height: 90px;
+    width: 85%;
+  }
+  .quickfilter .filterBar_Names button{
+    padding: 0px;
+    font-size: 17px;
+  }
+  .filterBar_Names{
+    top:-58px;
+  }
+  .place button{
+    font-size: 20px;
+  }
+  .doo input, .si input{
+    font-size: 15px;
+  }
+  .doo .dooicon, .si .siicon{
+    font-size: 18px;
+  }
+  .Store_Title {
+    font-size: 20px;
+  }
+  .detail{
+    font-size: 12px;
+  }
+  .Store_Zone {
+    margin-top: 165px;
+  }
+  .rating > *, .tags, .address{
+    font-size: 12px;
+  }
+  .Store_Image {
+    height: 132px;
+  }
+  .localname{
+    font-size: 18px;
+  }
+}
+@media screen and (max-width: 680px) {
+  .logo a{
+    background-size: 90px;
+  }
+  .searchForm .search {
+    width: 100%;
+    height: 5px;
+  }
+  .toggleOn{
+    border-top: 2px solid #ddd;
+  }
+  .headerUtil{
+    display: none;
+  }
+  .headerUtil_toggleBar{
+    display: flex;
+    align-items: center;
+    position: absolute;
+    right: 5%;
+    top: 35%;
+    font-size: 20px;
+  }
+  #slideshow-container .mySlides img{
+    height: 300px;
+  }
+  .prev, .next{
+    top: 34%;
+    font-size: 25px;
+  }
+  .dot {
+    width: 23px;
+  }
+  .quickfilter {
+    top: -63px;
+  }
+.filterRegion {
+  height: 50px;
+  width: 72%;
+  }
+  .quickfilter .filterBar_Names button{
+    font-size: 14px;
+  }
+  .filterBar_Names{
+    top:-44%;
+  }
+  .place button { 
+    font-size: 17px;
+    margin-bottom: 13px;
+  }
+  .selfplace{
+    width: 100%;
+  }
+  .doo {
+    display: flex;
+    width: 100%;
+    margin-right: 10px;
+    justify-content: center;
+    border-bottom: 2px solid #5c5f67;
+  }
+  .doo input, .si input{
+    font-size: 12px;
+  }
+  .doo .dooicon, .si .siicon{
+    font-size: 15px;
+  }
+  .Store_Zone {
+    margin-top: 15px;
+}
+.Sign{
+  height: 131px;
+  padding: 0px 23px;
+}
+.Store_Image {
+  height: 80px;
+}
+.Store_name{
+  font-size: 10px;
+}
+.Store_Title {
+  font-size: 12px;
+}
+.rating > *, .tags, .address {
+  font-size: 9px;
+}
+.Store_Name{
+  height: 100%;
+  line-height: .3;
+}
+.filterRegion .find {
+  width: 70px;
+  font-size: 14px;
+  height: 29px;
+}
+
 }
