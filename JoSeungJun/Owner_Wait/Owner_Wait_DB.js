@@ -16,7 +16,7 @@ function waitingList(data) {
         let waitingName = data[i].adminCafe;
         let waitingNum = data[i].storePhone;
 
-        stores.innerHTML = `<div class="Sign">
+        wait_Zone.innerHTML = `<div class="Sign">
         <div class="Store_Sign">
           <div class="Store_Image"></div>
           <div class="Store_Name">
