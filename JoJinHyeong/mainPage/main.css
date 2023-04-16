@@ -819,5 +819,9 @@ body{
   font-size: 14px;
   height: 29px;
 }
+.localname{
+  font-size: 13px;
+  margin-bottom: 18px;
+}
 
 }
