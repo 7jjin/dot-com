@@ -59,9 +59,8 @@ function change_btn(e) {
 //--------------------------------------------------------------------------------
 const number = document.querySelectorAll(".number span");
 const menu = document.querySelectorAll(".SubItem");
-const storename = document.querySelector(".name");
-
 let cart = [];   // 장바구니 배열
+<<<<<<< HEAD
 let list ={};   // 서버에 보낼 리스트
 
 
@@ -110,6 +109,9 @@ const today = `${dateStr} ${timeStr}`;
 
 
 
+=======
+  
+>>>>>>> parent of 51fb37b (주문정보 리스트 POST방식)
     number.forEach((item, index) => {
       item.addEventListener("click", function (e) {
         bar.style.borderRadius = "20px";
@@ -128,10 +130,13 @@ const today = `${dateStr} ${timeStr}`;
     <div class="menuBoxOuter"></div>
     <div class="costHap"></div>
     <div class="count" onclick="sent()"</div>`;
+<<<<<<< HEAD
     list.인원 = `${Number(e.target.innerText[0])}`;
+=======
+>>>>>>> parent of 51fb37b (주문정보 리스트 POST방식)
       });
     });
-    // 리모트바 원형에서 직사각형으로 모형 바꾸기
+
 
     // ------ 메뉴추가
     menu.forEach((item) => {
@@ -259,13 +264,10 @@ const today = `${dateStr} ${timeStr}`;
 
     //데이터(인원,메뉴) 내보내는 함수
     //--------------------------------------------------------------------------------------------
-
-
     function sent() {
-      list.현재시간 = getCurrentDateTime();
       fetch("http://localhost:4000/list",{
         method:"post",
-        body:JSON.stringify(list),
+        body:JSON.stringify(cart),
         headers:{
           "Content-Type":"application/json"
         }
@@ -275,14 +277,17 @@ const today = `${dateStr} ${timeStr}`;
         return response.json();
       })
       .then((json) =>{
+<<<<<<< HEAD
         console.log(list);
         sessionStorage.setItem("selectedValue", adminNo);
+=======
+        console.log("성공",json);
+>>>>>>> parent of 51fb37b (주문정보 리스트 POST방식)
       })
       .catch((error)=>{
         console.log("실패",error);
       })
     }
-
     // json-server --watch db.json  가상서버 실행
 
 
