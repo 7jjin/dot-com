@@ -10,6 +10,7 @@ const call = document.querySelector(".CallInfo");
 const week = document.querySelector(".Week");
 const openTime = document.querySelector(".OpenTime");
 const closeTime = document.querySelector(".CloseTime");
+
 const uni = sessionStorage.getItem("selectedValue");
 const url = `http://localhost:4000/store?adminNo=${uni}`;
 fetch(url)
@@ -17,8 +18,8 @@ fetch(url)
     return res.json()
 })
 .then((data)=>{
-    renderPage(data);
     openingDay(data);
+    renderPage(data);
 })
 .catch((err)=>console.log(err))
 
@@ -32,38 +33,34 @@ function renderPage(data){
         closeTime.innerHTML = `${data[0].closingTime}`;
         nameStore.innerHTML=`${data[0].adminCafe}`;
         storeIntro.innerHTML=`${data[0].storeIntroduce}`
-        
         // 카테고리별로 박스 만들어서 appendChild로 추가
         const menubox = document.createElement("div");
         menubox.innerHTML = `<a class="MenuItem">
         <h1 class="Menu${i+1}">${data[0].categories[i].categoryName}</h1>
-        <a class="SubItem">
-          <div class="MenuInfo">
-            <div class="MenuName">
-              <h4>
-                <strong class="MenuName1">${data[0].categories[i].menuList[0].menuName}</strong>
-              </h4>
+        </a>`
+        Menu.appendChild(menubox);
+        console.log(data[0].categories[i].menuList)
+        for(let j=0;j<data[0].categories[i].menuList.length;j++){
+            console.log("a")
+            const menulist = document.createElement("div");
+            menulist.innerHTML = `<a class="SubItem">
+            <div class="MenuInfo">
+              <div class="MenuName">
+                <h4>
+                  <strong class="MenuName1">${data[0].categories[i].menuList[j].menuName}</strong>
+                </h4>
+              </div>
+              <span class="MenuPrice1">${data[0].categories[i].menuList[j].menuPrice}</span>
+              <span>원</span>
             </div>
-            <span class="MenuPrice1">${data[0].categories[i].menuList[0].menuPrice}</span>
-            <span>원</span>
-          </div>
-          <div class="MenuImg" style="background-image: URL(/img/Relief.jpg);"></div>
-        </a>
-        <a class="SubItem">
-          <div class="MenuInfo">
-            <div class="MenuName">
-              <h4>
-                <strong class="MenuName2">${data[0].categories[i].menuList[1].menuName}</strong>
-              </h4>
-            </div>
-            <span class="MenuPrice2">${data[0].categories[i].menuList[1].menuPrice}</span>
-            <span>원</span>
-          </div>
-          <div class="MenuImg" style="background-image: URL(/img/Tomahawk.jpg);"></div>
-        </a>
-      </a>
-      <hr class="line"></hr>`
-    Menu.appendChild(menubox);
+            <div class="MenuImg" style="background-image: URL(/img/Relief.jpg);"></div>
+            </a>
+            }`;
+            Menu.appendChild(menulist);
+        }
+        const bar = document.createElement("hr");
+        bar.className = "line";
+        Menu.append(bar)
     }
 }
 
@@ -73,7 +70,6 @@ function openingDay(data){
     const day = String(data[0].weekday);
     let daylist = "";
     for(let i=0;i<day.length;i++){
-        console.log(typeof day[i])
         if(day[i]==="0") daylist+="일 ";
         else if(day[i]==="1") daylist+="월 ";
         else if(day[i]==="2") daylist+="화 ";
@@ -84,3 +80,4 @@ function openingDay(data){
     }
     week.innerHTML = daylist
 }
+
