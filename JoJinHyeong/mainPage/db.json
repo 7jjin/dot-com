@@ -1,0 +1,11 @@
+{
+    "waitingBar" : [
+        {
+            "timeAdded": null,
+            "queueNumber": 5,
+            "storePhone": "011-1234-4566",
+            "adminCafe": "피자치킨 왕자공주",
+            "partySize": 3
+        }
+    ]
+}
