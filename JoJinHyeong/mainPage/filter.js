@@ -1,7 +1,6 @@
 const quickfilter  = document.querySelector(".quickfilter");
 const myplace = document.querySelector(".myplace");
 const menu = document.querySelector(".menu");
-const meun = document.querySelector(".meun");
 const doo = document.querySelector(".doo");
 const si = document.querySelector(".si");
 const body = document.querySelector("body");
