@@ -280,5 +280,17 @@
       "adminCafe": "피자치킨 왕자공주",
       "partySize": 3
     }
+  ],
+  "place": [
+    {
+      "latitude": 37.3805645,
+      "longitude": 126.9268725,
+      "id": 1
+    },
+    {
+      "latitude": 37.3834711,
+      "longitude": 126.9218479,
+      "id": 2
+    }
   ]
 }

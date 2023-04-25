@@ -49,7 +49,6 @@ const subBar = document.querySelector(".toggleOn");
 const header = document.querySelector(".header");
 let toggle = true;
 const headerHeight = header.getBoundingClientRect().height+subBar.getBoundingClientRect().height;
-console.log(headerHeight,window.scrollY)
 document.addEventListener("scroll",()=>{
   if(window.scrollY>headerHeight){
     subBar.style.display="none";
