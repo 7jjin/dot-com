@@ -71,46 +71,46 @@
       "latitude": 0,
       "longitude": 0,
       "categories": [
-          {
-              "categoryName": "스테이크",
-              "menuList": [
-                  {
-                      "menuName": "토마호크 스테이크",
-                      "menuPrice": "20000",
-                      "menusavedNm": "steak1.jpg"
-                  },
-                  {
-                      "menuName": "티본 스테이크",
-                      "menuPrice": "22000",
-                      "menusavedNm": "steak2.jpg"
-                  },
-                  {
-                      "menuName": "즉석 스테이크",
-                      "menuPrice": "29000",
-                      "menusavedNm": "steak3.jpg"
-                  }
-              ]
-          },
-          {
-              "categoryName": "파스타",
-              "menuList": [
-                  {
-                      "menuName": "투움바 파스타",
-                      "menuPrice": "12000",
-                      "menusavedNm": "pasta1.jpg"
-                  },
-                  {
-                      "menuName": "까르보나라 파스타",
-                      "menuPrice": "9000",
-                      "menusavedNm": "pasta2.jpg"
-                  },
-                  {
-                      "menuName": "크림 파스타",
-                      "menuPrice": "10000",
-                      "menusavedNm": "pasta3.jpg"
-                  }
-              ]
-          }
+        {
+          "categoryName": "스테이크",
+          "menuList": [
+            {
+              "menuName": "토마호크 스테이크",
+              "menuPrice": "20000",
+              "menusavedNm": "steak1.jpg"
+            },
+            {
+              "menuName": "티본 스테이크",
+              "menuPrice": "22000",
+              "menusavedNm": "steak2.jpg"
+            },
+            {
+              "menuName": "즉석 스테이크",
+              "menuPrice": "29000",
+              "menusavedNm": "steak3.jpg"
+            }
+          ]
+        },
+        {
+          "categoryName": "파스타",
+          "menuList": [
+            {
+              "menuName": "투움바 파스타",
+              "menuPrice": "12000",
+              "menusavedNm": "pasta1.jpg"
+            },
+            {
+              "menuName": "까르보나라 파스타",
+              "menuPrice": "9000",
+              "menusavedNm": "pasta2.jpg"
+            },
+            {
+              "menuName": "크림 파스타",
+              "menuPrice": "10000",
+              "menusavedNm": "pasta3.jpg"
+            }
+          ]
+        }
       ]
     },
     {
@@ -226,6 +226,50 @@
       "인원": "6",
       "현재시간": "2023-04-15 15:20:38",
       "id": 4
+    }
+  ],
+  "waiting": [
+    {
+      "name": "최현식",
+      "phone_number": "01097553489",
+      "queueNumber": 1,
+      "party_size": 2,
+      "timeAdded": null
+    },
+    {
+      "name": "조승준",
+      "phone_number": "01097553489",
+      "queueNumber": 2,
+      "party_size": 2,
+      "timeAdded": null
+    },
+    {
+      "name": "조진형",
+      "phone_number": "01097553489",
+      "queueNumber": 3,
+      "party_size": 2,
+      "timeAdded": null
+    },
+    {
+      "name": "최용혁",
+      "phone_number": "01097553489",
+      "queueNumber": 4,
+      "party_size": 2,
+      "timeAdded": null
+    },
+    {
+      "name": "지영환",
+      "phone_number": "01097553489",
+      "queueNumber": 5,
+      "party_size": 2,
+      "timeAdded": null
+    },
+    {
+      "name": "지정배",
+      "phone_number": "01097553489",
+      "queueNumber": 6,
+      "party_size": 4,
+      "timeAdded": "2023-04-17T17:58:06"
     }
   ]
 }
