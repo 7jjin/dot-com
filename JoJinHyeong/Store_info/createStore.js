@@ -1,7 +1,7 @@
 const nameStore = document.querySelector(".name");
 const storeIntro = document.querySelector(".storeIntro");
 const addr = document.querySelector(".AddressInfo");
-const Menu = document.querySelector(".Menu");
+const Menu2 = document.querySelector(".Menu");
 const menuName1 = document.querySelector(".MenuName1");
 const menuName2 = document.querySelector(".MenuName2")
 const menuPrice1 = document.querySelector(".MenuPrice1");
@@ -38,7 +38,7 @@ function renderPage(data){
         menubox.innerHTML = `<a class="MenuItem">
         <h1 class="Menu${i+1}">${data[0].categories[i].categoryName}</h1>
         </a>`
-        Menu.appendChild(menubox);
+        Menu2.appendChild(menubox);
         console.log(data[0].categories[i].menuList)
         for(let j=0;j<data[0].categories[i].menuList.length;j++){
             console.log("a")
@@ -55,12 +55,12 @@ function renderPage(data){
             </div>
             <div class="MenuImg" style="background-image: URL(/img/Relief.jpg);"></div>
             </a>
-            }`;
-            Menu.appendChild(menulist);
+            `;
+            Menu2.appendChild(menulist);
         }
         const bar = document.createElement("hr");
         bar.className = "line";
-        Menu.append(bar)
+        Menu2.append(bar)
     }
 }
 
