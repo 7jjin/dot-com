@@ -116,6 +116,9 @@ body{
 }
 #InfoBar{
   width: 100%;
+  display: flex;
+  justify-content: space-around;
+  padding: 22px;
 }
 .infoWapper{
   width: 100%;
