@@ -19,6 +19,7 @@ nowplace.addEventListener("click",function(){
             }
         };
         geocoder.coord2RegionCode(position.coords.longitude,position.coords.latitude,callback);
+        console.log(position.coords.longitude,position.coords.latitude)
     });
 });
 
