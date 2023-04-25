@@ -72,30 +72,17 @@
     </section>
     <!-- 현재 사용자 선택 옵션 -->
     <section id="InfoBar">
-      <div class="infoWapper">
-        <div class="RestaurantName">
-          <p>식당을 골라주세요!</p>
+      <div class="RestaurantName">
+        <p>식당을 골라주세요!</p>
+      </div>
+      <div class="InfoMenu">
+        <div class="call"></div>
+        <div class="memberChange"></div>
+        <div class="map"></div>
+        <div class="wait">
+           <div class="Num">16</div>
         </div>
-        <div class="InfoMenu">
-          <div class="call">
-            <a href="#" onclick="location.href='/JoJinHyeong/mainPage/main.html'"></a>
-          </div>
-          <div class="comfirm">
-            <a href="#" onclick="location.href='/JoJinHyeong/mainPage/main.html'"></a>
-          </div>
-          <div class="memberChange">
-            <a href="#" onclick="location.href='/JoJinHyeong/mainPage/main.html'"></a>
-          </div>
-          <div class="map">
-            <a href="#" onclick="location.href='/JoJinHyeong/mainPage/main.html'"></a>
-          </div>
-          <div class="wait">
-            <a href="#" onclick="location.href='/JoJinHyeong/mainPage/main.html'"></a>
-          </div>
-          <div class="cancel">
-            <a href="#" onclick="location.href='/JoJinHyeong/mainPage/main.html'"></a>
-          </div>
-        </div>
+        <div class="cancel"></div>
       </div>
       
     </section>
@@ -208,10 +195,13 @@
   <section class="mainSection">
     <section class="Store_Zone"></section>
   </section>
-  
-    
-  </section>
-  <script defer src="/JoJinHyeong/mainPage/export.js" type="module"></script>
+
+
+  <script src="/JoJinHyeong/mainPage/main.js"></script>
+  <script src="/JoJinHyeong/mainPage/mainDB.js"></script>
+  <script src="/JoJinHyeong/mainPage/filter.js"></script>
+  <script src="/JoJinHyeong/mainPage/myplace.js"></script>
+  <script type="text/javascript" src="//dapi.kakao.com/v2/maps/sdk.js?appkey=575e00627ad336160ee258c5c9ed0525"></script>
 </body>
 
 </html>

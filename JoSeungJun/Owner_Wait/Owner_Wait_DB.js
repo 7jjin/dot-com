@@ -1,7 +1,7 @@
-const waitingZone = document.querySelector(".wait");
-const wait_Zone = document.querySelector(".wait tbody")
-const TRtables = document.querySelectorAll(".TRtable");
-const NameTDS = document.querySelectorAll(".NameTD");
+const wait_Zone = document.querySelector(".wait tbody");
+const details = document.querySelector(".details");
+const X = document.querySelector(".X-image");
+const BlackBtn = document.querySelector(".BlackBtn");
 
 fetch("http://localhost:4000/waiting")
     .then(res => {
@@ -16,32 +16,48 @@ fetch("http://localhost:4000/waiting")
 
 function waitingList(data) {
     for (let i = 0; i < data.length; i++) {
-        let waitingName = data[i].adminCafe;
-        let waitingNum = data[i].storePhone;
+        let waitingName = data[i].name;
+        let waitingNum = data[i].phone_number;
+        let waitingSize = data[i].party_size;
+        let waitingQue = data[i].queueNumber;
         let waitings = document.createElement("tr");
+        waitings.className = "TRtable";
 
-        waitings.innerHTML = `<tr class = "TRtable" name = "${i+1}">
-        <td class="NumberTD">${i+1} 번</td>
-        <td class="NameTD">${waitingName}</td>
-        <td class="MenTD">2 명</td>
-        <td class="VisitTD">4 번</td>
-        <td class="PhoneTD">${waitingNum}</td>
-        </tr>`;
+        let WaiterName = document.querySelector('.WaiterName');
+        let NumText = document.querySelector('.NumText');
+        let CountNum = document.querySelector('.CountNumText');
+        let PeopleText = document.querySelector('.PepleNumText');
 
+        waitings.innerHTML = `
+            <tr class="TRtable">
+              <td class="NumberTD">${i + 1} 번</td>
+              <td class="NameTD">${waitingName}</td>
+              <td class="MenTD">${waitingSize} 명</td>
+              <td class="VisitTD">${waitingQue} 번</td>
+              <td class="PhoneTD">${waitingNum}</td>
+            </tr>`;
         wait_Zone.append(waitings);
 
-        TRtables.forEach(TRtable => {
-            TRtable.addEventListener('click', () => {
-                const clickTDS = TRtable.querySelectorAll(".NameTD");
-                clickTDS.forEach(e => {
-                    WaiterName.textContent = e.textContent
-                    showdetails();
-                });
+        let Selects = document.querySelectorAll('.TRtable td');
+        Selects.forEach(function (Select) {
+            Select.addEventListener("click", function () {
+                WaiterName.textContent = Select.parentNode.querySelector('.NameTD').textContent;
+                NumText.textContent = Select.parentNode.querySelector('.PhoneTD').textContent;
+                CountNum.textContent = Select.parentNode.querySelector('.VisitTD').textContent;
+                PeopleText.textContent = Select.parentNode.querySelector('.MenTD').textContent;
+                showdetails();
             });
         });
+
     }
 }
 
-function showdetails()  {
-    details.classList.add('show');
+function showdetails() {
+    if (!details.classList.contains('show')) {
+        details.classList.add('show');
+    }
 }
+
+X.addEventListener("click", () => {
+    details.classList.remove("show");
+});

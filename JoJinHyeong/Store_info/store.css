@@ -389,13 +389,13 @@ body{
     font-family: 'Nanum Gothic', sans-serif;
 }
 
-.OpenBox,.CloseBox,.LastBox{
+.OpenBox,.CloseBox{
     margin-left: 50px;
     display: flex;
     font-size: 20px;
 }
 
-.CloseBox,.LastBox{
+.CloseBox{
     margin-top: -40px;
 }
 
@@ -420,28 +420,6 @@ body{
     font-size: 30px;
     margin: 20px 0px 0px 30px;
 }
-.Subtitle{
-    font-size: 20px;
-    color:gray;
-    font-family: 'Nanum Gothic', sans-serif;
-}
-.emg{
-    display: flex;
-}
-.emg .icon{
-    display: flex;
-    justify-content: center;
-    flex-direction: column;
-    align-items: center;
-    margin-right: 35px;
-}
-.emg i{
-    font-size: 35px;
-}
-.emg p{
-    font-size: 20px;
-}
-
 
 .SubItem{
     display: flex;
