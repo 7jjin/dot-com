@@ -40,8 +40,7 @@ function storeList(data){
       </div>
     </div>`;
     stores.onclick = function(event){
-      //const selectedValue = stores.getAttribute("value");
-      sessionStorage.setItem("selectedValue", adminNo);
+      sessionStorage.setItem("selectedValue", adminNo);   //sessionStorage에 가게고유의 adminNo값 저장
       window.location.href="/JoJinHyeong/Store_info/store.html";
     };
     Store_Zone.appendChild(stores);

@@ -12,11 +12,10 @@ nowplace.addEventListener("click",function(){
                 var location = result[0].address_name;
                 nowplace.style.display = "none";
                 var div = document.createElement("div");
+                div.setAttribute("class","localname");
                 var txt = document.createTextNode(`현재 위치는 ${location} 입니다.`);
                 div.appendChild(txt);
                 place.prepend(div);
-                div.style.marginBottom = "30px";
-                div.style.fontSize = "30px";
             }
         };
         geocoder.coord2RegionCode(position.coords.longitude,position.coords.latitude,callback);

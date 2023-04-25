@@ -1,6 +1,4 @@
-html{
-    height: 100%;
-}
+
 body{
     margin:0;
 }
@@ -11,6 +9,7 @@ body{
   left:10%;
 }
 
+
 .header{
     width: 100%;
     height: 90px;
@@ -18,15 +17,13 @@ body{
 
 }
 .headerWapper{
-    width: 1300px;
     height: 100%;
-    margin:0 auto;
 }
 .headerInner{
     display: flex;
     height: 100%;
     width: 100%;
-
+    transition: all 0.5s ease;
 }
 .headerLogo{
     display: flex;
@@ -45,12 +42,12 @@ body{
     width: 100%;
     height: 100%;
     background-size: 130px;
-    
+    transition: all 0.5s ease;
 }
 .headerSearch{
     display: flex;
     align-items: center;
-    flex-basis: 50%;
+    flex-basis: 46%;
     width: 100%;
     height: 100%;
 }
@@ -69,6 +66,7 @@ body{
     background-color: #f8f8f8;
     padding:10px 40px 10px 0px;
     margin: 3px 0px 3px 15px;
+    transition: all 0.5s ease;
 }
 .searchIcon{
     position: relative;
@@ -83,6 +81,10 @@ body{
     width: 100%;
     height: 100%;
 }
+.headerUtil_toggleBar{
+  display: none;
+}
+
 .utilList{
     display: flex;
     margin-top: 5px;
@@ -90,13 +92,38 @@ body{
 .utilList_login ,.utilList_Wait{
     padding-right: 20px;
 }
-#InfoBar{
+.toggleOn{
+  position: fixed;
   display: flex;
-  width: 1300px;
-  height: 110px;
+  width: 100%;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  z-index: 1;
+  background-color: white;
+  height: 0px;
+  overflow: hidden;
+  transition: all 0.5s ease;
+  cursor: pointer;
+}
+.toggleOn > * {
+  padding: 20px;
+  width: 100%;
   margin: 0 auto;
+  display: flex;
+  justify-content: center;
+  border-bottom:2px solid #ddd;
+}
+#InfoBar{
+  width: 100%;
+}
+.infoWapper{
+  width: 100%;
+  display: flex;
+  height: 110px;
   justify-content: space-around;
   align-items: center;
+  transition: all 0.5s ease;
 }
 .RestaurantName{
   display: flex;
@@ -104,6 +131,7 @@ body{
   margin-right: 64px;
 }
 .RestaurantName p{
+  word-break: keep-all;
     margin:0;
     font-size: 40px;
     font-family: 'Noto Sans KR', sans-serif;
@@ -181,6 +209,7 @@ body{
 
 #slideshow-container .mySlides img {
     height: 400px;
+    transition: all .5s ease;
   }
 #slideshow-container{
   position:relative;
@@ -241,7 +270,7 @@ body{
   background-color: white;
   display: inline-block;
   border-radius: 5px;
-  transition: background-color 0.6s ease;
+  transition: all 0.5s ease;
 }
 
 
@@ -252,12 +281,18 @@ body{
 
 .quickfilter{
   position: absolute;
-  width: 1300px;
+  width: 83%;
   top: 85px;
-  left:50%;
-  translate: -650px;
-  margin-top:516px;
+  left: 50%;
+  translate: -50%;
+  margin-top: 516px;
+  transition: all 0.5s ease;
 }
+.localname{
+  margin-bottom: 30px;
+  font-size: 24px;
+}
+
 
 .quickfilter .filterBar_Names button{
   padding:10px;
@@ -273,7 +308,7 @@ body{
 .filterBar_Names{
   display: flex;
     align-items: center;
-    width: 400px;
+    width: 35%;
     position: absolute;
     left: 0;
     top: -86px;
@@ -285,6 +320,7 @@ body{
   margin-right: 5px;
 }
 .filterRegion{
+  width: 90%;
   height: 120px;
   display: flex;
   background-color: white;
@@ -292,8 +328,9 @@ body{
   justify-content: space-between;
   align-items: center;
   padding:30px 50px;
-  box-shadow:rgb(128 128 128 / 85%) 4px 1px 17px 1px;
+  box-shadow:rgb(128 128 128 / 85%) 0px 5px 9px 1px;
   border-radius: 0px 10px 10px 10px;
+  transition: all 0.5s ease;
 }
 .place button{
   margin-bottom: 30px;
@@ -302,15 +339,17 @@ body{
   background-color: #ddd;
   border: none;
   border-radius: 5px;
+  transition: all 0.5s ease;
 }
 .selfplace{
   display: flex;
   align-items: center;
   justify-content: flex-start;
+  width: 65%;
 }
 .doo{
   display: flex;
-  width: 232px;
+  width: 100%;
   margin-right: 40px;
   justify-content: center;
   border-bottom: 2px solid #5c5f67;
@@ -318,9 +357,9 @@ body{
 .doo input{
   border:none;
   font-size: 26px;
-  width: 196px;
+  width: 85%;
   outline: none;
-
+  transition: all 0.5s ease;
 }
 .doo .dooicon{
   font-size: 24px;
@@ -328,7 +367,7 @@ body{
 }
 .si{
   display: flex;
-  width: 232px;
+  width: 100%;
   margin-right: 40px;
   justify-content: center;
   border-bottom: 2px solid #5c5f67;
@@ -336,21 +375,24 @@ body{
 .si input{
   border:none;
   font-size: 26px;
-  width: 196px;
+  width: 85%;
   outline:none;
   background-color:white;
-
+  transition: all 0.5s ease;
 }
 .si .siicon{
   font-size: 24px;
   cursor: pointer;
 }
 .filterRegion .find{
+  width: 100px;
+  height: 56px;
   background:none;
   border:none;
   background-color: #ddd;
   border-radius: 3px;
   font-size: 30px;
+  transition: all 0.5s ease;
 }
 .filterMenu{
   height: 120px;
@@ -478,10 +520,14 @@ body{
 
 .Store_Zone{
   position: absolute;
-  width: 1000px;
+  width: 60%;
   left: 60%;
-  translate: -650px;
+  translate: -69%;
   margin-top: 215px;
+  display: flex;
+  flex-direction: column;
+  align-content: center;
+  transition:all .5s ease;
 }
 
 .Sign{
@@ -497,6 +543,7 @@ body{
 
 .Store_Sign{
   display: flex;
+  align-items: center;
 }
 
 .Store_Image{
@@ -569,4 +616,212 @@ body{
 }
 .store{
   margin-bottom: 20px;
+}
+
+@media screen and (max-width: 1050px) {
+  .headerInner{
+    transform: scale(0.95);
+  }
+  .infoWapper{
+    transform: scale(0.9);
+  }
+  .RestaurantName p{
+    font-size: 30px;
+  }
+  .InfoMenu{
+    width: 500px;
+  }
+  .dot{
+    width: 30px;
+  }
+  .prev, .next {
+    font-size: 30px;
+  }
+  .place button{
+    font-size: 25px;
+  }
+  .doo input, .si input{
+    font-size: 21px;
+  }
+  .doo .dooicon, .si .siicon {
+    font-size: 22px;
+    cursor: pointer;
+  }
+  .filterRegion .find {
+    width: 85px;
+    font-size: 25px;
+  }
+}
+
+@media screen and (max-width: 800px) {
+  .header{
+    height: 60px;
+  }
+  .filterRegion .find {
+    width: 75px;
+    font-size: 19px;
+  }
+  .logo a{
+    background-size: 105px;
+  }
+  .searchForm .search{
+    width: 220px;
+    height: 10px;
+  }
+  .infoWapper {
+    height: 90px;
+  }
+  .InfoMenu{
+    width: 400px;
+  }
+  .InfoMenu>*{
+    height: 46px;
+    margin-right: 10px;
+  }
+  .RestaurantName p{
+    font-size: 25px;
+  }
+  .RestaurantName{
+    margin-right: 0px;
+  }
+  .quickfilter{
+    top:37px;
+  }
+  .filterRegion{
+    height: 90px;
+    width: 85%;
+  }
+  .quickfilter .filterBar_Names button{
+    padding: 0px;
+    font-size: 17px;
+  }
+  .filterBar_Names{
+    top:-58px;
+  }
+  .place button{
+    font-size: 20px;
+  }
+  .doo input, .si input{
+    font-size: 15px;
+  }
+  .doo .dooicon, .si .siicon{
+    font-size: 18px;
+  }
+  .Store_Title {
+    font-size: 20px;
+  }
+  .detail{
+    font-size: 12px;
+  }
+  .Store_Zone {
+    margin-top: 165px;
+  }
+  .rating > *, .tags, .address{
+    font-size: 12px;
+  }
+  .Store_Image {
+    height: 132px;
+  }
+  .localname{
+    font-size: 18px;
+  }
+}
+@media screen and (max-width: 680px) {
+  .logo a{
+    background-size: 90px;
+  }
+  .searchForm .search {
+    width: 100%;
+    height: 5px;
+  }
+  .toggleOn{
+    border-top: 2px solid #ddd;
+  }
+  .headerUtil{
+    display: none;
+  }
+  .headerUtil_toggleBar{
+    display: flex;
+    align-items: center;
+    position: absolute;
+    right: 5%;
+    top: 35%;
+    font-size: 20px;
+  }
+  #slideshow-container .mySlides img{
+    height: 300px;
+  }
+  .prev, .next{
+    top: 34%;
+    font-size: 25px;
+  }
+  .dot {
+    width: 23px;
+  }
+  .quickfilter {
+    top: -63px;
+  }
+.filterRegion {
+  height: 50px;
+  width: 72%;
+  }
+  .quickfilter .filterBar_Names button{
+    font-size: 14px;
+  }
+  .filterBar_Names{
+    top:-44%;
+  }
+  .place button { 
+    font-size: 17px;
+    margin-bottom: 13px;
+  }
+  .selfplace{
+    width: 100%;
+  }
+  .doo {
+    display: flex;
+    width: 100%;
+    margin-right: 10px;
+    justify-content: center;
+    border-bottom: 2px solid #5c5f67;
+  }
+  .doo input, .si input{
+    font-size: 12px;
+  }
+  .doo .dooicon, .si .siicon{
+    font-size: 15px;
+  }
+  .Store_Zone {
+    margin-top: 15px;
+}
+.Sign{
+  height: 131px;
+  padding: 0px 23px;
+}
+.Store_Image {
+  height: 80px;
+}
+.Store_name{
+  font-size: 10px;
+}
+.Store_Title {
+  font-size: 12px;
+}
+.rating > *, .tags, .address {
+  font-size: 9px;
+}
+.Store_Name{
+  height: 100%;
+  line-height: .3;
+}
+.filterRegion .find {
+  width: 70px;
+  font-size: 14px;
+  height: 29px;
+}
+.localname{
+  font-size: 13px;
+  margin-bottom: 18px;
+}
+
 }

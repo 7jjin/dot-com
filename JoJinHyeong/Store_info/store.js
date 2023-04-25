@@ -59,8 +59,57 @@ function change_btn(e) {
 //--------------------------------------------------------------------------------
 const number = document.querySelectorAll(".number span");
 const menu = document.querySelectorAll(".SubItem");
+const storename = document.querySelector(".name");
+
 let cart = [];   // 장바구니 배열
+let list ={};   // 서버에 보낼 리스트
+
+
+const uni1 = sessionStorage.getItem("selectedValue");
+const url1 = `http://localhost:4000/store?adminNo=${uni1}`;
+fetch(url1)
+.then((res)=>{
+    return res.json()
+})
+.then((data)=>{
+    list.가게이름 = data[0].adminCafe;
+    list.전화번호 = data[0].storePhone;
+})
+.catch((err)=>console.log(err))
+// fetch함수로 API가져와서 바로 객체에 데이터 넣어주기 )가게이름,전화번호
+
+
+function getCurrentDateTime() {
+  const date = new Date();
+  const year = date.getFullYear();
+  const month = ('0' + (date.getMonth() + 1)).slice(-2);
+  const day = ('0' + date.getDate()).slice(-2);
+  const dateStr = year + '-' + month + '-' + day;
+  const hours = ('0' + date.getHours()).slice(-2);
+  const minutes = ('0' + date.getMinutes()).slice(-2);
+  const seconds = ('0' + date.getSeconds()).slice(-2);
+  const timeStr = hours + ':' + minutes + ':' + seconds;
+  const today = `${dateStr} ${timeStr}`;
   
+
+  return today;
+}
+// 현재 시간을 알려주는 함수
+
+const date = new Date();
+const year = date.getFullYear();
+const month = ('0' + (date.getMonth() + 1)).slice(-2);
+const day = ('0' + date.getDate()).slice(-2);
+const dateStr = year + '-' + month + '-' + day;
+const hours = ('0' + date.getHours()).slice(-2);
+const minutes = ('0' + date.getMinutes()).slice(-2);
+const seconds = ('0' + date.getSeconds()).slice(-2);
+const timeStr = hours + ':' + minutes + ':' + seconds;
+const today = `${dateStr} ${timeStr}`;
+
+
+
+
     number.forEach((item, index) => {
       item.addEventListener("click", function (e) {
         bar.style.borderRadius = "20px";
@@ -72,15 +121,17 @@ let cart = [];   // 장바구니 배열
         bar.style.height = "none"
         bar.style.alignItems = "normal";
         bar.innerHTML = `<div class="member">
-    <p>인원: ${e.target.innerText}</p>
+    <div>인원:</div>
+    <div>${e.target.innerText}</div>
     </div>
     <div class="bottomline"></div>
     <div class="menuBoxOuter"></div>
     <div class="costHap"></div>
     <div class="count" onclick="sent()"</div>`;
+    list.인원 = `${Number(e.target.innerText[0])}`;
       });
     });
-
+    // 리모트바 원형에서 직사각형으로 모형 바꾸기
 
     // ------ 메뉴추가
     menu.forEach((item) => {
@@ -208,10 +259,13 @@ let cart = [];   // 장바구니 배열
 
     //데이터(인원,메뉴) 내보내는 함수
     //--------------------------------------------------------------------------------------------
+
+
     function sent() {
+      list.현재시간 = getCurrentDateTime();
       fetch("http://localhost:4000/list",{
         method:"post",
-        body:JSON.stringify(cart),
+        body:JSON.stringify(list),
         headers:{
           "Content-Type":"application/json"
         }
@@ -221,12 +275,14 @@ let cart = [];   // 장바구니 배열
         return response.json();
       })
       .then((json) =>{
-        console.log("성공",json);
+        console.log(list);
+        sessionStorage.setItem("selectedValue", adminNo);
       })
       .catch((error)=>{
         console.log("실패",error);
       })
     }
+
     // json-server --watch db.json  가상서버 실행
 
 
