@@ -58,7 +58,6 @@ function change_btn(e) {
 // 인원을 고르면 플로팅 바의 모양이 바뀜
 //--------------------------------------------------------------------------------
 const number = document.querySelectorAll(".number span");
-const menu = document.querySelectorAll(".SubItem");
 const storename = document.querySelector(".name");
 
 let cart = [];   // 장바구니 배열
@@ -132,56 +131,6 @@ const today = `${dateStr} ${timeStr}`;
       });
     });
     // 리모트바 원형에서 직사각형으로 모형 바꾸기
-
-    // ------ 메뉴추가
-    menu.forEach((item) => {
-      item.addEventListener("click", function (e) {
-        const line = document.querySelector(".bottomline");
-        const menuBoxOuter = document.querySelector(".menuBoxOuter");     // 총합DIV을 맨 아래 넣기 위해 각각의 메뉴태그들을 감싸는 부모 태그를 만들었다.
-        if (cart.every((menu) => menu.name !== item.childNodes[1].childNodes[1].innerText)) {
-          menuBoxOuter.innerHTML += `
-      <div class="menuBox">
-            <div class="menuName">${item.childNodes[1].childNodes[1].innerText}</div>
-            <div class="menuCost">
-              <div class="menuCost_left">
-                <button class="delete" onclick="del(this)">X</button>
-                <div class="cost" value="${item.childNodes[1].childNodes[3].innerText}">${item.childNodes[1].childNodes[3].innerText}</div>
-                <div>원</div>
-              </div>
-              <div class="menuCost_right">
-                <button class="minus" onclick="minus(this)">-</button>
-                <div class="su">1</div>
-                <button class="plus" onclick="plus(this)">+</button>
-              </div>
-      </div>`;
-          const product = {
-            name: `${item.childNodes[1].childNodes[1].innerText}`,
-            quantity: 1,
-            price: Number(item.childNodes[1].childNodes[3].innerText)
-          };
-          // 새로 추가될때마다 총합 태그는 가장 아래 위치됨
-          cart.push(product);
-
-          line.style.visibility = "visible";
-          const costhap = document.querySelector(".costHap");
-          const count = document.querySelector(".count");
-          costhap.style.display = "flex";       // 합계 DIV 보이게 하기
-          count.style.display = "block";
-          costhap.innerHTML = `
-      <div class="hapDiv">
-        <div class="hapname">합계: </div>
-        <div class="hap"></div>
-        <div>원</div>
-      </div>
-      `
-          count.innerHTML = `
-      <button>주문하기</button>`
-          hap();
-        }
-      });
-    })
-
-
 
 
     // 인원 추가하기
@@ -302,10 +251,6 @@ const today = `${dateStr} ${timeStr}`;
     const Home_Top = window.pageYOffset + Home.getBoundingClientRect().top;
     const Menu = document.querySelector('.store_Menu');
     const Menu_Top = window.pageYOffset + Menu.getBoundingClientRect().top;
-    const Photo = document.querySelector('.storePhoto');
-    const Photo_Top = window.pageYOffset + Photo.getBoundingClientRect().top;
-    const Review = document.querySelector('.storeReview');
-    const Review_Top = window.pageYOffset + Review.getBoundingClientRect().top;
     const ReviewMore = document.querySelector('.ReviewMore');
     const ReviewMore1 = document.querySelector('.ReviewMore1');
     const ReviewBox = document.querySelector('.ReviewBox');
@@ -344,12 +289,6 @@ const today = `${dateStr} ${timeStr}`;
     MenuTab.addEventListener('click', function () {
       Move(Menu_Top);
     });
-    PhotoTab.addEventListener('click', function () {
-      Move(Photo_Top);
-    });
-    ReviewTab.addEventListener('click', function () {
-      Move(Review_Top);
-    });
 
     Bar_slider.addEventListener('mousemove', function () {
       slider(Bar_slider);
@@ -368,11 +307,6 @@ const today = `${dateStr} ${timeStr}`;
       PhotoReduce.style.display = "block";
       Right.style.visibility = "hidden";
       Left.style.visibility = "hidden";
-    });
-    ReviewMore.addEventListener('click', () => {
-      PhotoBox.style.height = "1000px";
-      ReviewMore.style.display = "none";
-      ReviewReduce.style.display = "block";
     });
 
     PhotoReduce.addEventListener('click', () => {
