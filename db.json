@@ -271,5 +271,14 @@
       "party_size": 4,
       "timeAdded": "2023-04-17T17:58:06"
     }
+  ],
+  "waitingBar": [
+    {
+      "timeAdded": null,
+      "queueNumber": 5,
+      "storePhone": "011-1234-4566",
+      "adminCafe": "피자치킨 왕자공주",
+      "partySize": 3
+    }
   ]
 }
