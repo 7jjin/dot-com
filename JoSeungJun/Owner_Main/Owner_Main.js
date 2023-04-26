@@ -1,7 +1,7 @@
 const Btn = document.querySelector('.Left');
 const ON = document.querySelector('.OnText');
 const OFF = document.querySelector('.OffText');
-const logout = document.querySelector(".IconZone2 logout");
+const logout = document.querySelector(".logout");
 
 
 
@@ -19,6 +19,7 @@ Btn.addEventListener("click", () => {
 
 // 로그아웃 버튼 이벤트
 function admin_logout(){
+    console.log("A")
 fetch("http://localhost:4000/",{
   method:"POST",
   })
@@ -31,5 +32,5 @@ fetch("http://localhost:4000/",{
 }
 
 // 로그아웃 버튼 이벤트
-logout.addEventListener("click",admin_logout());
+logout.addEventListener("click",admin_logout)
 
