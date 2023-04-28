@@ -17,11 +17,10 @@ document.addEventListener("click",filter);
 function filter(event){
     var target = event.target.closest("section").className;
     const quickfilter  = document.querySelector(".quickfilter");
-
     
     if(target!=='quickfilter movein'&&quickfilter.classList.contains("movein")===true){
         quickfilter.classList.remove("movein");
-        quickfilter.classList.add("moveout");
+        quickfilter.classList.add("moveout");       
         wrap.classList.remove("blurin");
         wrap.classList.add("blurout");
         wrap.style.backgroundColor="";

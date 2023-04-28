@@ -10,6 +10,7 @@ const call = document.querySelector(".CallInfo");
 const week = document.querySelector(".Week");
 const openTime = document.querySelector(".OpenTime");
 const closeTime = document.querySelector(".CloseTime");
+const modal = document.querySelector(".modal");
 
 const uni = sessionStorage.getItem("selectedValue");
 const url = `http://localhost:4000/store?adminNo=${uni}`;
@@ -20,7 +21,6 @@ fetch(url)
     .then((data) => {
         openingDay(data);
         renderPage(data);
-
     })
     .catch((err) => console.log(err))
 
@@ -108,16 +108,23 @@ function renderPage(data) {
                 </div>
                 `
                     count.innerHTML = `
-                <button>주문하기</button>`
+                <div class="order">주문하기</div>`
+
+                var orderBTN = document.querySelector(".order");
+                orderBTN.addEventListener("click", function(event) {
+                  modal.style.display = "block";
+                });
+
                     hap();
                   }
                 });
               })
-        }
+        }        
         const bar = document.createElement("hr");
         bar.className = "line";
         Menu2.append(bar)
     }
+    
 }
 
 function Move1(element) {
