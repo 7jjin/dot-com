@@ -479,11 +479,13 @@ body{
   border: 1px solid #999;
   margin:0 auto;
   margin-top: 10px;
+  border-radius: 10px;
 }
 .innerRegion{
   display: flex;
   width: 70%;
-
+  margin: 15px;
+  border: 1px solid #999;
 }
 .Region_doo{
   display: flex;
@@ -494,7 +496,10 @@ body{
   width: 100%;
   display: flex;
   flex-direction: column;
-
+  background-color: #dbf4ff;
+}
+.doo_color{
+  background-color: white;
 }
 .Region_doo li{
   width: 100%;
