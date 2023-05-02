@@ -134,7 +134,7 @@
           "categoryName": "음료",
           "menuList": [
             {
-              "menuName": "크림 파스타",
+              "menuName": "코카-콜라",
               "menuPrice": "11000",
               "menusavedNm": "pasta1.jpg"
             }
@@ -144,17 +144,17 @@
           "categoryName": "피자",
           "menuList": [
             {
-              "menuName": "안심 스테이크",
+              "menuName": "콤비네이션 피자",
               "menuPrice": "20000",
               "menusavedNm": "steak1.jpg"
             },
             {
-              "menuName": "토마호크 스테이크",
+              "menuName": "불고기 피자",
               "menuPrice": "40000",
               "menusavedNm": "steak2.jpg"
             },
             {
-              "menuName": "토마토 파스타",
+              "menuName": "고르곤졸라 피자",
               "menuPrice": "9000",
               "menusavedNm": "pasta2.jpg"
             }
