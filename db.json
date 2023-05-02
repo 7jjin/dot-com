@@ -83,17 +83,17 @@
             {
               "menuName": "토마호크 스테이크",
               "menuPrice": "20000",
-              "menusavedNm": "steak1.jpg"
+              "menusavedNm": "/img/TomaHawk.jpg"
             },
             {
               "menuName": "티본 스테이크",
               "menuPrice": "22000",
-              "menusavedNm": "steak2.jpg"
+              "menusavedNm": "/img/Tbone.jpg"
             },
             {
               "menuName": "즉석 스테이크",
               "menuPrice": "29000",
-              "menusavedNm": "steak3.jpg"
+              "menusavedNm": "/img/TomaHawk.jpg "
             }
           ]
         },
@@ -103,17 +103,17 @@
             {
               "menuName": "투움바 파스타",
               "menuPrice": "12000",
-              "menusavedNm": "pasta1.jpg"
+              "menusavedNm": "/img/TomaHawk.jpg"
             },
             {
               "menuName": "까르보나라 파스타",
               "menuPrice": "9000",
-              "menusavedNm": "pasta2.jpg"
+              "menusavedNm": "/img/TomaHawk.jpg"
             },
             {
               "menuName": "크림 파스타",
               "menuPrice": "10000",
-              "menusavedNm": "pasta3.jpg"
+              "menusavedNm": "/img/TomaHawk.jpg"
             }
           ]
         }
@@ -246,6 +246,20 @@
       "인원": "4",
       "현재시간": "2023-05-02 18:29:11",
       "id": 7
+    },
+    {
+      "가게이름": "파스타를부탁해",
+      "전화번호": "031-1234-4566",
+      "인원": "2",
+      "현재시간": "2023-05-02 18:41:26",
+      "id": 8
+    },
+    {
+      "가게이름": "파스타를부탁해",
+      "전화번호": "031-1234-4566",
+      "인원": "3",
+      "현재시간": "2023-05-02 18:41:46",
+      "id": 9
     }
   ],
   "waiting": [
