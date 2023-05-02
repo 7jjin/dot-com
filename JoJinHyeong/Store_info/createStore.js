@@ -37,7 +37,6 @@ function renderPage(data) {
         <h1 class="Menu${i + 1}">${data[0].categories[i].categoryName}</h1>
         </a>`;
     Menu2.appendChild(menubox);
-    console.log(data[0].categories[i].menuList);
     for (let j = 0; j < data[0].categories[i].menuList.length; j++) {
       const menulist = document.createElement("div");
       menulist.innerHTML = `<a class="SubItem">

@@ -42,6 +42,7 @@ function filter(event) {
     wrap.classList.remove("blurin");
     wrap.classList.add("blurout");
     wrap.style.backgroundColor = "";
+    outerRegion.style.display = "none";
   }
 }
 // 필터를 올리고 내리는 함수

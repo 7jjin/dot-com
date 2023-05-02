@@ -48,6 +48,7 @@ function handleClick(event) {
   });
   event.target.closest("li").classList.add("doo_color");
 }
+
 regionLinks.forEach((e) => {
   if (e.dataset.region === "seoul") {
     e.classList.add("doo_color");
