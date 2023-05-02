@@ -18,6 +18,7 @@ const PhoneText = document.querySelector(".PhoneText");
 const NumText = document.querySelector(".NumText");
 const modalbtn = document.querySelector(".modal-foot");
 
+
 const uni = sessionStorage.getItem("selectedValue");
 const url = `http://localhost:4000/store?adminNo=${uni}`;
 fetch(url)
@@ -44,20 +45,23 @@ function renderPage(data) {
         <h1 class="Menu${i + 1}">${data[0].categories[i].categoryName}</h1>
         </a>`;
     Menu2.appendChild(menubox);
+
     for (let j = 0; j < data[0].categories[i].menuList.length; j++) {
+      const menu = data[0].categories[i].menuList[j];
+
       const menulist = document.createElement("div");
       menulist.innerHTML = `<a class="SubItem">
-            <div class="MenuInfo">
-              <div class="MenuName">
-                <h4>
-                  <strong class="MenuName1">${data[0].categories[i].menuList[j].menuName}</strong>
-                </h4>
-              </div>
-              <span class="MenuPrice1">${data[0].categories[i].menuList[j].menuPrice}</span>
-              <span>원</span>
-            </div>
-            <div class="MenuImg"></div>
-            </a>`;
+      <div class="MenuInfo">
+      <div class="MenuName">
+        <h4>
+          <strong class="MenuName1">${menu.menuName}</strong>
+        </h4>
+      </div>
+      <span class="MenuPrice1">${menu.menuPrice}</span>
+      <span>원</span>
+    </div>
+    <div class="menuImg" style="background-image: url(${menu.menusavedNm})"></div>
+    </a>`;
       Menu2.appendChild(menulist);
 
       PhotoTab.addEventListener("click", function () {
@@ -120,47 +124,49 @@ function renderPage(data) {
                   <div class="hap"></div>
                   <div>원</div>
                 </div>
-                `;
-            count.innerHTML = `
-                <button class="order">주문하기</button>`;
+                `
+                    count.innerHTML = `
+                <button class="order">주문하기</button>`
+                
+                //모달창
+                let orderBTN = document.querySelector(".order");
+                let close = document.querySelector(".close");
 
-            //모달창
-            let orderBTN = document.querySelector(".order");
-            let close = document.querySelector(".close");
+                orderBTN.addEventListener("click", function(event) {
+                  event.preventDefault();
+                  modal.style.display = "flex";
+                });
+                close.addEventListener("click", function(event){
+                  modal.style.display = "none";
+                })
 
-            orderBTN.addEventListener("click", function (event) {
-              event.preventDefault();
-              modal.style.display = "flex";
-            });
-            close.addEventListener("click", function (event) {
-              modal.style.display = "none";
-            });
+                    hap();
+                  }
+                });
+              })
+        }        
+        const bar = document.createElement("hr");
+        bar.className = "line";
+        Menu2.append(bar)
 
-            hap();
-          }
-        });
-      });
+        NameText.innerHTML = data[0].adminCafe;
+
+        //예약하기 버튼 눌렀을 때 데이터 sent()함수
+        function handleClick1() {
+          sent()
+          
+        }
+        //예약하기 버튼 눌렀을 때 성공했다는 메시지 출력 함수
+        function handleClick2() {
+          alert("예약이 완료 되었습니다.");
+        }
+
+        modalbtn.onclick = function() {
+          handleClick1();
+          handleClick2();
+        };
     }
-    const bar = document.createElement("hr");
-    bar.className = "line";
-    Menu2.append(bar);
-
-    NameText.innerHTML = data[0].adminCafe;
-
-    //예약하기 버튼 눌렀을 때 데이터 sent()함수
-    function handleClick1() {
-      sent();
-    }
-    //예약하기 버튼 눌렀을 때 성공했다는 메시지 출력 함수
-    function handleClick2() {
-      alert("예약이 완료 되었습니다.");
-    }
-
-    modalbtn.onclick = function () {
-      handleClick1();
-      handleClick2();
-    };
-  }
+    
 }
 
 function Move1(element) {
