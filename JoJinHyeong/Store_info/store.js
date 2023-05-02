@@ -90,7 +90,6 @@ function getCurrentDateTime() {
   const timeStr = hours + ':' + minutes + ':' + seconds;
   const today = `${dateStr} ${timeStr}`;
   
-
   return today;
 }
 // 현재 시간을 알려주는 함수
@@ -126,8 +125,10 @@ const today = `${dateStr} ${timeStr}`;
     <div class="bottomline"></div>
     <div class="menuBoxOuter"></div>
     <div class="costHap"></div>
-    <div class="count" onclick="sent()"</div>`;
+    <div class="count" </div>`;
     list.인원 = `${Number(e.target.innerText[0])}`;
+
+    NumText.innerHTML = e.target.innerText
       });
     });
     // 리모트바 원형에서 직사각형으로 모형 바꾸기
@@ -204,6 +205,7 @@ const today = `${dateStr} ${timeStr}`;
         hapcost += Number(cart[i].price);
       }
       hapdiv.innerText = hapcost;
+      CostNum.innerText = hapcost;
     }
 
     //데이터(인원,메뉴) 내보내는 함수
@@ -223,16 +225,13 @@ const today = `${dateStr} ${timeStr}`;
         if(!response.ok) throw new Error(response.statusText);
         return response.json();
       })
-      .then((json) =>{
-        console.log(list);
-        sessionStorage.setItem("selectedValue", adminNo);
-      })
+      
       .catch((error)=>{
         console.log("실패",error);
       })
     }
 
-    // json-server --watch db.json  가상서버 실행
+    // // json-server --watch db.json  가상서버 실행
 
 
 

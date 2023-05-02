@@ -2,32 +2,33 @@ const Store_Zone = document.querySelector(".Store_Zone");
 
 // db의 데이터를 가져와서 가게 리스트들을 나열
 fetch("http://localhost:4000/mainpage")
-.then(res=>{
+  .then(res => {
     return res.json();
-})
-.then(data=>{
+  })
+  .then(data => {
     storeList(data);
-})
-.catch(error=>{
+  })
+  .catch(error => {
     console.log(error);
-});
+  });
 
-function storeList(data){
-  for(let i=0;i<data.length;i++){
+function storeList(data) {
+  for (let i = 0; i < data.length; i++) {
     let adminCafe = data[i].adminCafe;
     let intro = data[i].storeIntroduce;
     let addr = data[i].addressName;
     let adminNo = data[i].adminNo;
     let open = data[i].open;
+    let waitingNum = data[i].waitingNum
     let Openstores = document.createElement("div");
     let Closestores = document.createElement("div");
 
-    Openstores.setAttribute("class","store");
-    Closestores.setAttribute("class","store");
-    
+    Openstores.setAttribute("class", "store");
+    Closestores.setAttribute("class", "store");
+
     //stores.setAttribute("value",i+1);
-    if(open === 1){
-    Openstores.innerHTML = `<div class="Sign">
+    if (open === 1) {
+      Openstores.innerHTML = `<div class="Sign">
       <div class="Store_Sign">
         <div class="Store_Image"></div>
         <div class="Store_Name">
@@ -42,9 +43,13 @@ function storeList(data){
           <span class="address">"${addr}"</span>
         </div>
       </div>
+      <div class="WaitingBox">
+      <p class="WaitingNum">${waitingNum}</p>
+      <p>명</p>
+    </div>
     </div>`;
     }
-    else if(open === 0 ){
+    else if (open === 0) {
       Closestores.innerHTML = `<div class="CloseSign">
       <div class="Store_Sign">
         <div class="Store_Image"></div>
@@ -62,9 +67,9 @@ function storeList(data){
       </div>
     </div>`;
     }
-    Openstores.onclick = function(event){
+    Openstores.onclick = function (event) {
       sessionStorage.setItem("selectedValue", adminNo);   //sessionStorage에 가게고유의 adminNo값 저장
-      window.location.href="/JoJinHyeong/Store_info/store.html";
+      window.location.href = "/JoJinHyeong/Store_info/store.html";
     };
     Store_Zone.appendChild(Openstores);
     Store_Zone.appendChild(Closestores);

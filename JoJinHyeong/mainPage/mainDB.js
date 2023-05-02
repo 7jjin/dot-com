@@ -9,6 +9,17 @@ fetch("http://localhost:4000/waitingBar")
         console.log(error);
     });
 
+fetch("http://localhost:4000/userinfo")
+    .then(res => {
+        return res.json();
+    })
+    .then(data => {
+        Users(data);
+    })
+    .catch(error => {
+        console.log(error);
+    });
+
 function waitingBar(data) {
     let PartyBox = document.querySelector(".memberChange");
     let Name = document.querySelector(".RestaurantName p");
@@ -31,4 +42,10 @@ function waitingBar(data) {
     Phone.addEventListener('mouseleave', function() {
         this.innerHTML = '';
     });
+}
+
+function Users(data) {
+    let UserName = document.querySelector(".utilList_User");
+
+    UserName.innerHTML = data.CustomerName;
 }

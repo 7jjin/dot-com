@@ -6,7 +6,7 @@
   <meta http-equiv="X-UA-Compatible" content="IE=edge" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Document</title>
-  <link rel="stylesheet" href="store.css"/>
+  <link rel="stylesheet" href="store.css" />
   <script defer src="./createStore.js"></script>
   <script defer src="./store.js"></script>
 
@@ -289,7 +289,7 @@
               <span class="UserCount">2번째 방문</span>
               <span class="UserDate">2023.03.13</span>
             </div>
-          </div>          
+          </div>
         </div>
       </div>
       <span class="ReviewMore1">더 보기 ↓</span>
@@ -297,9 +297,36 @@
   </div>
 
   <div class="modal">
-    <div class="modal-content">
+    <div class="modal-title">
+      <span>예약 명세서</span>
       <span class="close">&times;</span>
-      <p>Modal Content</p>
+    </div>
+    <div class="modal-contents">
+      <div class="OrderInfo">
+        <div class="RestaurantName">
+          <p >가게명:&nbsp;</p>
+          <p class="NameText">1</p>
+        </div>
+        <div class="OrderName">
+          <p>예약자:&nbsp;</p>
+          <p class="OrderText">1</p>
+        </div>
+        <div class="OrderPhone">
+        <p>핸드폰 번호:&nbsp;</p>
+        <p class="PhoneText">1</p>
+        </div>
+        <div class="OrderNum">
+        <p>인원수:&nbsp;</p>
+        <p class="NumText">1</p>
+        </div>
+      </div>
+      <div class="Cost-Box">
+        <p class="OrderCost">총 가격:&nbsp;</p>
+        <p class="CostNum"></p>
+      </div>
+    </div>
+    <div class="modal-foot" onclick="location.href='/JoJinHyeong/mainPage/main.html'">
+      <p>예약하기</p>
     </div>
   </div>
 

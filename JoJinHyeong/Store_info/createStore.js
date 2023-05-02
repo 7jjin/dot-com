@@ -11,6 +11,13 @@ const week = document.querySelector(".Week");
 const openTime = document.querySelector(".OpenTime");
 const closeTime = document.querySelector(".CloseTime");
 const modal = document.querySelector(".modal");
+const CostNum = document.querySelector(".CostNum");
+const NameText = document.querySelector(".NameText");
+const OrderText = document.querySelector(".OrderText");
+const PhoneText = document.querySelector(".PhoneText");
+const NumText = document.querySelector(".NumText");
+const modalbtn = document.querySelector(".modal-foot");
+
 
 const uni = sessionStorage.getItem("selectedValue");
 const url = `http://localhost:4000/store?adminNo=${uni}`;
@@ -24,8 +31,6 @@ fetch(url)
     })
     .catch((err) => console.log(err))
 
-
-
 function renderPage(data) {
     for (let i = 0; i < data[0].categories.length; i++) {
         addr.innerHTML = `${data[0].addressName}`;
@@ -34,6 +39,7 @@ function renderPage(data) {
         closeTime.innerHTML = `${data[0].closingTime}`;
         nameStore.innerHTML = `${data[0].adminCafe}`;
         storeIntro.innerHTML = `${data[0].storeIntroduce}`
+        
         // 카테고리별로 박스 만들어서 appendChild로 추가
         const menubox = document.createElement("div");
         menubox.innerHTML = `<a class="MenuItem">
@@ -108,12 +114,19 @@ function renderPage(data) {
                 </div>
                 `
                     count.innerHTML = `
-                <div class="order">주문하기</div>`
+                <button class="order">주문하기</button>`
+                
+                //모달창
+                let orderBTN = document.querySelector(".order");
+                let close = document.querySelector(".close");
 
-                var orderBTN = document.querySelector(".order");
                 orderBTN.addEventListener("click", function(event) {
-                  modal.style.display = "block";
+                  event.preventDefault();
+                  modal.style.display = "flex";
                 });
+                close.addEventListener("click", function(event){
+                  modal.style.display = "none";
+                })
 
                     hap();
                   }
@@ -123,6 +136,23 @@ function renderPage(data) {
         const bar = document.createElement("hr");
         bar.className = "line";
         Menu2.append(bar)
+
+        NameText.innerHTML = data[0].adminCafe;
+
+        //예약하기 버튼 눌렀을 때 데이터 sent()함수
+        function handleClick1() {
+          sent()
+          
+        }
+        //예약하기 버튼 눌렀을 때 성공했다는 메시지 출력 함수
+        function handleClick2() {
+          alert("예약이 완료 되었습니다.");
+        }
+
+        modalbtn.onclick = function() {
+          handleClick1();
+          handleClick2();
+        };
     }
     
 }
@@ -147,4 +177,5 @@ function openingDay(data) {
     }
     week.innerHTML = daylist
 }
+
 
