@@ -211,8 +211,11 @@ function sent() {
     .then((response) => {
       response.json();
     })
+    .then(() => {
+      location.href = "/JoJinHyeong/mainPage/main.html";
+    })
     .catch((error) => {
-      console.log("실패", error);
+      alert("실패", error);
     });
 }
 
