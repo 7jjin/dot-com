@@ -45,20 +45,23 @@ function renderPage(data) {
         <h1 class="Menu${i + 1}">${data[0].categories[i].categoryName}</h1>
         </a>`;
     Menu2.appendChild(menubox);
+
     for (let j = 0; j < data[0].categories[i].menuList.length; j++) {
+      const menu = data[0].categories[i].menuList[j];
+
       const menulist = document.createElement("div");
       menulist.innerHTML = `<a class="SubItem">
-            <div class="MenuInfo">
-              <div class="MenuName">
-                <h4>
-                  <strong class="MenuName1">${data[0].categories[i].menuList[j].menuName}</strong>
-                </h4>
-              </div>
-              <span class="MenuPrice1">${data[0].categories[i].menuList[j].menuPrice}</span>
-              <span>원</span>
-            </div>
-            <div class="MenuImg" style="background-image: URL(/img/Relief.jpg);"></div>
-            </a>`;
+      <div class="MenuInfo">
+      <div class="MenuName">
+        <h4>
+          <strong class="MenuName1">${menu.menuName}</strong>
+        </h4>
+      </div>
+      <span class="MenuPrice1">${menu.menuPrice}</span>
+      <span>원</span>
+    </div>
+    <div class="menuImg" style="background-image: url(${menu.menusavedNm})"></div>
+    </a>`;
       Menu2.appendChild(menulist);
 
       PhotoTab.addEventListener("click", function () {
