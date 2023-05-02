@@ -111,10 +111,10 @@ number.forEach((item, index) => {
     <div class="count" </div>`;
     list.인원 = `${Number(e.target.innerText[0])}`;
 
-    NumText.innerHTML = e.target.innerText
-      });
-    });
-    // 리모트바 원형에서 직사각형으로 모형 바꾸기
+    NumText.innerHTML = e.target.innerText;
+  });
+});
+// 리모트바 원형에서 직사각형으로 모형 바꾸기
 
 // 인원 추가하기
 // -------------------------------------------------------------------------------------------------------
@@ -186,16 +186,6 @@ function del(el) {
   hap();
 }
 
-    function hap() {
-      var hapcost = 0;
-      const hapdiv = document.querySelector(".hap");
-      for (let i = 0; i < cart.length; i++) {
-        hapcost += Number(cart[i].price);
-      }
-      hapdiv.innerText = hapcost;
-      CostNum.innerText = hapcost;
-    }
-
 function hap() {
   var hapcost = 0;
   const hapdiv = document.querySelector(".hap");
@@ -203,6 +193,7 @@ function hap() {
     hapcost += Number(cart[i].price);
   }
   hapdiv.innerText = hapcost;
+  CostNum.innerText = hapcost;
 }
 
 //데이터(인원,메뉴) 내보내는 함수
