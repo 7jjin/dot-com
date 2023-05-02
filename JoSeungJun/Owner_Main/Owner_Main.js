@@ -3,8 +3,6 @@ const ON = document.querySelector('.OnText');
 const OFF = document.querySelector('.OffText');
 const logout = document.querySelector(".logout");
 
-
-
 Btn.addEventListener("click", () => {
     if (OFF.style.display === "block") {
         ON.style.display = "block";
@@ -15,7 +13,6 @@ Btn.addEventListener("click", () => {
         OFF.style.display = "block";
     }
 })
-
 
 // 로그아웃 버튼 이벤트
 function admin_logout(){

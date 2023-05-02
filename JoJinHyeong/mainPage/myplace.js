@@ -71,7 +71,7 @@ function findStore(data) {
                   <h4 class="Store_Title">"${adminCafe}"</h4>
                   <p class="detail">"${intro}"</p>
                   <div class="rating">
-                    <span class="Star">⭐</span>
+                    <span class="Star"></span>
                     <span class="Star_Rating">4.5</span>
                     <span class="Review_Rating">(412)</span>
                   </div>

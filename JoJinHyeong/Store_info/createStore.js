@@ -10,6 +10,14 @@ const call = document.querySelector(".CallInfo");
 const week = document.querySelector(".Week");
 const openTime = document.querySelector(".OpenTime");
 const closeTime = document.querySelector(".CloseTime");
+const modal = document.querySelector(".modal");
+const CostNum = document.querySelector(".CostNum");
+const NameText = document.querySelector(".NameText");
+const OrderText = document.querySelector(".OrderText");
+const PhoneText = document.querySelector(".PhoneText");
+const NumText = document.querySelector(".NumText");
+const modalbtn = document.querySelector(".modal-foot");
+
 
 const uni = sessionStorage.getItem("selectedValue");
 const url = `http://localhost:4000/store?adminNo=${uni}`;
@@ -113,18 +121,49 @@ function renderPage(data) {
                   <div class="hap"></div>
                   <div>원</div>
                 </div>
-                `;
-            count.innerHTML = `
-                <button>주문하기</button>`;
-            hap();
-          }
-        });
-      });
+                `
+                    count.innerHTML = `
+                <button class="order">주문하기</button>`
+                
+                //모달창
+                let orderBTN = document.querySelector(".order");
+                let close = document.querySelector(".close");
+
+                orderBTN.addEventListener("click", function(event) {
+                  event.preventDefault();
+                  modal.style.display = "flex";
+                });
+                close.addEventListener("click", function(event){
+                  modal.style.display = "none";
+                })
+
+                    hap();
+                  }
+                });
+              })
+        }        
+        const bar = document.createElement("hr");
+        bar.className = "line";
+        Menu2.append(bar)
+
+        NameText.innerHTML = data[0].adminCafe;
+
+        //예약하기 버튼 눌렀을 때 데이터 sent()함수
+        function handleClick1() {
+          sent()
+          
+        }
+        //예약하기 버튼 눌렀을 때 성공했다는 메시지 출력 함수
+        function handleClick2() {
+          alert("예약이 완료 되었습니다.");
+        }
+
+        modalbtn.onclick = function() {
+          handleClick1();
+          handleClick2();
+        };
     }
-    const bar = document.createElement("hr");
-    bar.className = "line";
-    Menu2.append(bar);
-  }
+    
 }
 
 function Move1(element) {

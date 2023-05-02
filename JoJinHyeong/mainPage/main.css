@@ -1,98 +1,111 @@
-
-body{
-    margin:0;
+body {
+  margin: 0;
 }
 
-.mp_wap{
-  position:absolute;
-  top:53%;
-  left:10%;
+.mp_wap {
+  position: absolute;
+  top: 53%;
+  left: 10%;
 }
 
 
-.header{
-    width: 100%;
-    height: 90px;
-    border-bottom:2px solid #ddd;
+.header {
+  width: 100%;
+  height: 90px;
+  border-bottom: 2px solid #ddd;
 
 }
-.headerWapper{
-    height: 100%;
+
+.headerWapper {
+  height: 100%;
 }
-.headerInner{
-    display: flex;
-    height: 100%;
-    width: 100%;
-    transition: all 0.5s ease;
+
+.headerInner {
+  display: flex;
+  height: 100%;
+  width: 100%;
+  transition: all 0.5s ease;
 }
-.headerLogo{
-    display: flex;
-    flex-basis: 25%;
-    align-items: center;
-    justify-content: center;
+
+.headerLogo {
+  display: flex;
+  flex-basis: 25%;
+  align-items: center;
+  justify-content: center;
 }
-.logo{
-    display: flex;
-    padding-right: 5px;
-    width: 140px;
-    height: 100%;
+
+.logo {
+  display: flex;
+  padding-right: 5px;
+  width: 140px;
+  height: 100%;
 }
-.logo a{
-    background: url("/img/FOODEAT.png") no-repeat center center / 100px 90px;
-    width: 100%;
-    height: 100%;
-    background-size: 130px;
-    transition: all 0.5s ease;
+
+.logo a {
+  background: url("/img/FOODEAT.png") no-repeat center center / 100px 90px;
+  width: 100%;
+  height: 100%;
+  background-size: 130px;
+  transition: all 0.5s ease;
 }
-.headerSearch{
-    display: flex;
-    align-items: center;
-    flex-basis: 46%;
-    width: 100%;
-    height: 100%;
+
+.headerSearch {
+  display: flex;
+  align-items: center;
+  flex-basis: 46%;
+  width: 100%;
+  height: 100%;
 }
-.searchForm{
-    display: flex;
-    align-items: center;
-    border-radius: 20px;
-    background: #f8f8f8;
-    border: 1px solid #ddd;
+
+.searchForm {
+  display: flex;
+  align-items: center;
+  border-radius: 20px;
+  background: #f8f8f8;
+  border: 1px solid #ddd;
 }
-.searchForm .search{
-    outline:none;
-    width: 370px;
-    height: 20px;
-    border-style: none;
-    background-color: #f8f8f8;
-    padding:10px 40px 10px 0px;
-    margin: 3px 0px 3px 15px;
-    transition: all 0.5s ease;
+
+.searchForm .search {
+  outline: none;
+  width: 370px;
+  height: 20px;
+  border-style: none;
+  background-color: #f8f8f8;
+  padding: 10px 40px 10px 0px;
+  margin: 3px 0px 3px 15px;
+  transition: all 0.5s ease;
 }
-.searchIcon{
-    position: relative;
-    right: 20px;
-    display: inline;
+
+.searchIcon {
+  position: relative;
+  right: 20px;
+  display: inline;
 }
-.headerUtil{
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    flex-basis: 25%;
-    width: 100%;
-    height: 100%;
+
+.headerUtil {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-basis: 25%;
+  width: 100%;
+  height: 100%;
 }
-.headerUtil_toggleBar{
+
+.headerUtil_toggleBar {
   display: none;
 }
 
-.utilList{
-    display: flex;
-    margin-top: 5px;
+.utilList {
+  display: flex;
+  margin-top: 5px;
 }
-.utilList_login ,.utilList_Wait{
-    padding-right: 20px;
+
+.utilList_login,
+.utilList_User {
+  padding-right: 20px;
 }
-.toggleOn{
+
+.toggleOn {
   position: fixed;
   display: flex;
   width: 100%;
@@ -106,21 +119,24 @@ body{
   transition: all 0.5s ease;
   cursor: pointer;
 }
-.toggleOn > * {
+
+.toggleOn>* {
   padding: 20px;
   width: 100%;
   margin: 0 auto;
   display: flex;
   justify-content: center;
-  border-bottom:2px solid #ddd;
+  border-bottom: 2px solid #ddd;
 }
-#InfoBar{
+
+#InfoBar {
   width: 100%;
   display: flex;
   justify-content: space-around;
   padding: 22px;
 }
-.infoWapper{
+
+.infoWapper {
   width: 100%;
   display: flex;
   height: 110px;
@@ -128,39 +144,46 @@ body{
   align-items: center;
   transition: all 0.5s ease;
 }
-.RestaurantName{
+
+.RestaurantName {
   display: flex;
   align-items: center;
   margin-right: 64px;
 }
-.RestaurantName p{
+
+.RestaurantName p {
   word-break: keep-all;
-    margin:0;
-    font-size: 40px;
-    font-family: 'Noto Sans KR', sans-serif;
-}
-.InfoMenu{
-    display: flex;
-    width: 500px;
-    height: 100%;
-    align-items: center;
-    
+  margin: 0;
+  font-size: 40px;
+  font-family: 'Noto Sans KR', sans-serif;
 }
 
-.call{
+.InfoMenu {
+  display: flex;
+  width: 500px;
+  height: 100%;
+  align-items: center;
+
+}
+
+.call {
   background: url(/img/phone.png) no-repeat center center;
   background-size: cover;
   width: 100%;
   height: 65px;
   margin-right: 30px;
-  transition: all .35s cubic-bezier(0.4,0,0.2,1);
+  transition: all .35s cubic-bezier(0.4, 0, 0.2, 1);
 }
 
-.call:hover,.memberChange:hover,.map:hover,.wait:hover,.cancel:hover{
-  box-shadow: 0 10px 20px rgba(0,0,0,0.19), 0 6px 6px rgba(0,0,0,0.23);
+.call:hover,
+.memberChange:hover,
+.map:hover,
+.wait:hover,
+.cancel:hover {
+  box-shadow: 0 10px 20px rgba(0, 0, 0, 0.19), 0 6px 6px rgba(0, 0, 0, 0.23);
 }
 
-.call:hover{
+.call:hover {
   background: url(/img/blank.png) no-repeat center center;
   background-size: cover;
   width: 300%;
@@ -173,13 +196,13 @@ body{
   font-size: 15px;
 }
 
-.memberChange:hover{
+.memberChange:hover {
   background: url(/img/blank.png) no-repeat center center;
   background-size: cover;
   width: 100%;
   height: 65px;
   margin-right: 30px;
-  transition: all .35s cubic-bezier(0.4,0,0.2,1);
+  transition: all .35s cubic-bezier(0.4, 0, 0.2, 1);
   display: flex;
   justify-content: center;
   align-items: center;
@@ -187,57 +210,59 @@ body{
   font-size: 30px;
 }
 
-.memberChange{
+.memberChange {
   background: url(/img/people.png) no-repeat center center;
   background-size: cover;
   width: 100%;
   height: 65px;
   margin-right: 30px;
-  transition: all .35s cubic-bezier(0.4,0,0.2,1);
+  transition: all .35s cubic-bezier(0.4, 0, 0.2, 1);
 }
 
-.map{
+.map {
   background: url(/img/map.png) no-repeat center center;
   background-size: cover;
   width: 100%;
   height: 65px;
   margin-right: 30px;
-  transition: all .35s cubic-bezier(0.4,0,0.2,1);
+  transition: all .35s cubic-bezier(0.4, 0, 0.2, 1);
 
 }
-.wait{
+
+.wait {
   background: url(/img/blank.png) no-repeat center center;
   background-size: cover;
   width: 100%;
   height: 65px;
   margin-right: 30px;
-  transition: all .35s cubic-bezier(0.4,0,0.2,1);
+  transition: all .35s cubic-bezier(0.4, 0, 0.2, 1);
   display: flex;
   justify-content: center;
   align-items: center;
 }
 
-.wait .Num{
+.wait .Num {
   font-weight: 600;
   font-size: 30px;
 }
 
-.cancel{
+.cancel {
   background: url(/img/cancel.png) no-repeat center center;
   background-size: cover;
   width: 100%;
   height: 65px;
   margin-right: 30px;
-  transition: all .35s cubic-bezier(0.4,0,0.2,1);
+  transition: all .35s cubic-bezier(0.4, 0, 0.2, 1);
 
 }
 
 #slideshow-container .mySlides img {
-    height: 400px;
-    transition: all .5s ease;
-  }
-#slideshow-container{
-  position:relative;
+  height: 400px;
+  transition: all .5s ease;
+}
+
+#slideshow-container {
+  position: relative;
   height: 400px;
 }
 
@@ -247,7 +272,8 @@ body{
 }
 
 /* Next & previous buttons */
-.prev, .next {
+.prev,
+.next {
   cursor: pointer;
   position: absolute;
   top: 50%;
@@ -269,8 +295,9 @@ body{
 }
 
 /* On hover, add a black background color with a little bit see-through */
-.prev:hover, .next:hover {
-  background-color: rgba(0,0,0,0.8);
+.prev:hover,
+.next:hover {
+  background-color: rgba(0, 0, 0, 0.8);
 }
 
 /* Caption text */
@@ -299,12 +326,13 @@ body{
 }
 
 
-.active, .dot:hover {
+.active,
+.dot:hover {
   background-color: red;
 }
 
 
-.quickfilter{
+.quickfilter {
   position: absolute;
   width: 83%;
   top: 85px;
@@ -313,16 +341,17 @@ body{
   margin-top: 516px;
   transition: all 0.5s ease;
 }
-.localname{
+
+.localname {
   margin-bottom: 30px;
   font-size: 24px;
 }
 
 
-.quickfilter .filterBar_Names button{
-  padding:10px;
+.quickfilter .filterBar_Names button {
+  padding: 10px;
   width: 200px;
-  border:none;
+  border: none;
   border-radius: 10px 10px 0 0;
   font-size: 20px;
   display: flex;
@@ -330,18 +359,21 @@ body{
   justify-content: center;
   cursor: pointer;
 }
-.filterBar_Names{
+
+.filterBar_Names {
   display: flex;
-    align-items: center;
-    width: 35%;
-    position: absolute;
-    left: 0;
-    top: -86px;
+  align-items: center;
+  width: 35%;
+  position: absolute;
+  left: 0;
+  top: -86px;
 }
-.myplaceIcon{
+
+.myplaceIcon {
   margin-right: 5px;
 }
-.menuIcon{
+
+.menuIcon {
   margin-right: 5px;
 }
 .filterRegion{
@@ -351,12 +383,13 @@ body{
   flex-direction: row;
   justify-content: space-between;
   align-items: center;
-  padding:30px 50px;
-  box-shadow:rgb(128 128 128 / 85%) 0px 5px 9px 1px;
+  padding: 30px 50px;
+  box-shadow: rgb(128 128 128 / 85%) 0px 5px 9px 1px;
   border-radius: 0px 10px 10px 10px;
   transition: all 0.5s ease;
 }
-.place button{
+
+.place button {
   margin-bottom: 30px;
   font-size: 30px;
   cursor: pointer;
@@ -365,60 +398,69 @@ body{
   border-radius: 5px;
   transition: all 0.5s ease;
 }
-.selfplace{
+
+.selfplace {
   display: flex;
   align-items: center;
   justify-content: flex-start;
   width: 65%;
 }
-.doo{
+
+.doo {
   display: flex;
   width: 100%;
   margin-right: 40px;
   justify-content: center;
   border-bottom: 2px solid #5c5f67;
 }
-.doo input{
-  border:none;
+
+.doo input {
+  border: none;
   font-size: 26px;
   width: 85%;
   outline: none;
   transition: all 0.5s ease;
 }
-.doo .dooicon{
+
+.doo .dooicon {
   font-size: 24px;
   cursor: pointer;
 }
-.si{
+
+.si {
   display: flex;
   width: 100%;
   margin-right: 40px;
   justify-content: center;
   border-bottom: 2px solid #5c5f67;
 }
-.si input{
-  border:none;
+
+.si input {
+  border: none;
   font-size: 26px;
   width: 85%;
-  outline:none;
-  background-color:white;
+  outline: none;
+  background-color: white;
   transition: all 0.5s ease;
 }
-.si .siicon{
+
+.si .siicon {
   font-size: 24px;
   cursor: pointer;
 }
-.filterRegion .find{
+
+.filterRegion .find {
   width: 100px;
   height: 56px;
-  background:none;
-  border:none;
+  background: none;
+  border: none;
   background-color: #ddd;
   border-radius: 3px;
   font-size: 30px;
   transition: all 0.5s ease;
 }
-.filterMenu{
+
+.filterMenu {
   height: 120px;
   display: flex;
   background-color: white;
@@ -429,14 +471,20 @@ body{
   box-shadow: rgb(128 128 128 / 85%) 4px 1px 17px 1px;
   border-radius: 0px 10px 10px 10px;
 }
-.korea, .japen, .china, .america, .germany, .italy{
+
+.korea,
+.japen,
+.china,
+.america,
+.germany,
+.italy {
   display: flex;
   flex-direction: column;
   align-items: center;
 }
 
 
-.base{
+.base {
   display: flex;
   padding-bottom: 20px;
   flex-direction: column;
@@ -445,25 +493,29 @@ body{
   margin-top: 10px;
 
 }
-.base .storeName{
+
+.base .storeName {
   font-size: 30px;
   display: flex;
   margin-left: 30px;
   align-items: center;
   justify-content: space-between;
 }
-.storeName .distance{
+
+.storeName .distance {
   margin-right: 30px;
 }
-.base p{
+
+.base p {
   display: inline-block;
   margin-left: 62px;
 }
-.base .placeURL{
+
+.base .placeURL {
   margin-left: 62px;
   display: inline-block;
   text-decoration: none;
-  color:inherit;
+  color: inherit;
 }
 
 
@@ -534,72 +586,91 @@ body{
 }
 
 @-webkit-keyframes fade {
-  from {opacity: .4}
-  to {opacity: 1}
+  from {
+    opacity: .4
+  }
+
+  to {
+    opacity: 1
+  }
 }
 
 @keyframes fade {
-  from {opacity: .4}
-  to {opacity: 1}
+  from {
+    opacity: .4
+  }
+
+  to {
+    opacity: 1
+  }
 }
 
 
-.movein{
+.movein {
   animation-name: movein;
   animation-duration: 0.65s;
   animation-fill-mode: forwards;
 }
-@keyframes movein{
-  from{
+
+@keyframes movein {
+  from {
     margin-top: 516px;
   }
-  to{
-    margin-top:100px;
+
+  to {
+    margin-top: 100px;
   }
 }
 
-.moveout{
+.moveout {
   animation-name: moveout;
   animation-duration: 0.65s;
   animation-fill-mode: forwards;
 
 
 }
-@keyframes moveout{
-  from{
+
+@keyframes moveout {
+  from {
     margin-top: 100px;
   }
-  to{
-    margin-top:516px;
+
+  to {
+    margin-top: 516px;
   }
 }
 
 
 
-.blurin{
+.blurin {
   animation: blurin 0.65s forwards;
 }
-@keyframes blurin{
-  from{
+
+@keyframes blurin {
+  from {
     filter: blur(0px);
   }
-  to{
-    filter:blur(6px);
-  }
-}
-.blurout{
-  animation: blurout 0.65s forwards;
-}
-@keyframes blurout{
-  from{
+
+  to {
     filter: blur(6px);
-  }
-  to{
-    filter:blur(0px);
   }
 }
 
-.Store_Zone{
+.blurout {
+  animation: blurout 0.65s forwards;
+}
+
+@keyframes blurout {
+  from {
+    filter: blur(6px);
+  }
+
+  to {
+    filter: blur(0px);
+  }
+}
+
+.Store_Zone {
   position: absolute;
   width: 60%;
   left: 60%;
@@ -608,10 +679,10 @@ body{
   display: flex;
   flex-direction: column;
   align-content: center;
-  transition:all .5s ease;
+  transition: all .5s ease;
 }
 
-.Sign{
+.Sign {
   height: 180px;
   display: flex;
   background-color: white;
@@ -620,14 +691,26 @@ body{
   padding: 0px 50px;
   box-shadow: rgb(128 128 128 / 85%) 4px 1px 17px 1px;
   border-radius: 10px 10px 10px;
+  justify-content: space-between;
 }
 
-.Store_Sign{
+.CloseSign {
+  height: 180px;
+  display: flex;
+  background-color: gray;
+  flex-direction: row;
+  align-items: center;
+  padding: 0px 50px;
+  box-shadow: rgb(128 128 128 / 85%) 4px 1px 17px 1px;
+  border-radius: 10px 10px 10px;
+}
+
+.Store_Sign {
   display: flex;
   align-items: center;
 }
 
-.Store_Image{
+.Store_Image {
   display: flex;
   width: 100px;
   height: 150px;
@@ -638,7 +721,7 @@ body{
   background-size: cover;
 }
 
-.Store_Title{
+.Store_Title {
   font-size: 30px;
   font-weight: 700;
   word-break: break-word;
@@ -647,39 +730,42 @@ body{
   font-family: 'Noto Sans KR', sans-serif;
 }
 
-.detail{
+.detail {
   font-size: 14px;
   line-height: 15px;
   margin: 0px 0px 10px 0px;
   font-family: 'Noto Sans KR', sans-serif;
 }
 
-.rating{
+.rating {
   margin-bottom: 10px;
 }
-.Star_Rating{
+
+.Star_Rating {
   font-size: 15px;
   font-weight: 700;
 }
-.Review_Rating{
+
+.Review_Rating {
   font-size: 15px;
   color: #999;
   font-weight: 400;
 }
 
-.tags, .address{
+.tags,
+.address {
   font-size: 14px;
   line-height: 15px;
   color: #999;
   font-family: 'Noto Sans KR', sans-serif;
 }
 
-.Facilities{
+.Facilities {
   display: flex;
   margin-left: 30px;
 }
 
-.icon{
+.icon {
   display: flex;
   justify-content: center;
   flex-direction: column;
@@ -687,47 +773,60 @@ body{
   margin-right: 35px;
 }
 
-.Facilities .fa-solid{
+.Facilities .fa-solid {
   font-size: 40px;
 }
 
-.Facilities p{
+.Facilities p {
   font-size: 20px;
   font-weight: 700;
 }
-.store{
+
+.store {
   margin-bottom: 20px;
 }
 
 @media screen and (max-width: 1050px) {
-  .headerInner{
+  .headerInner {
     transform: scale(0.95);
   }
-  .infoWapper{
+
+  .infoWapper {
     transform: scale(0.9);
   }
-  .RestaurantName p{
+
+  .RestaurantName p {
     font-size: 30px;
   }
-  .InfoMenu{
+
+  .InfoMenu {
     width: 500px;
   }
-  .dot{
+
+  .dot {
     width: 30px;
   }
-  .prev, .next {
+
+  .prev,
+  .next {
     font-size: 30px;
   }
-  .place button{
+
+  .place button {
     font-size: 25px;
   }
-  .doo input, .si input{
+
+  .doo input,
+  .si input {
     font-size: 21px;
   }
-  .doo .dooicon, .si .siicon {
+
+  .doo .dooicon,
+  .si .siicon {
     font-size: 22px;
     cursor: pointer;
   }
+
   .filterRegion .find {
     width: 85px;
     font-size: 25px;
@@ -735,92 +834,122 @@ body{
 }
 
 @media screen and (max-width: 800px) {
-  .header{
+  .header {
     height: 60px;
   }
+
   .filterRegion .find {
     width: 75px;
     font-size: 19px;
   }
-  .logo a{
+
+  .logo a {
     background-size: 105px;
   }
-  .searchForm .search{
+
+  .searchForm .search {
     width: 220px;
     height: 10px;
   }
+
   .infoWapper {
     height: 90px;
   }
-  .InfoMenu{
+
+  .InfoMenu {
     width: 400px;
   }
-  .InfoMenu>*{
+
+  .InfoMenu>* {
     height: 46px;
     margin-right: 10px;
   }
-  .RestaurantName p{
+
+  .RestaurantName p {
     font-size: 25px;
   }
-  .RestaurantName{
+
+  .RestaurantName {
     margin-right: 0px;
   }
-  .quickfilter{
-    top:37px;
+
+  .quickfilter {
+    top: 37px;
   }
-  .filterRegion{
+
+  .filterRegion {
     height: 90px;
   }
-  .quickfilter .filterBar_Names button{
+
+  .quickfilter .filterBar_Names button {
     padding: 0px;
     font-size: 17px;
   }
-  .filterBar_Names{
-    top:-58px;
+
+  .filterBar_Names {
+    top: -58px;
   }
-  .place button{
+
+  .place button {
     font-size: 20px;
   }
-  .doo input, .si input{
+
+  .doo input,
+  .si input {
     font-size: 15px;
   }
-  .doo .dooicon, .si .siicon{
+
+  .doo .dooicon,
+  .si .siicon {
     font-size: 18px;
   }
+
   .Store_Title {
     font-size: 20px;
   }
-  .detail{
+
+  .detail {
     font-size: 12px;
   }
+
   .Store_Zone {
     margin-top: 165px;
   }
-  .rating > *, .tags, .address{
+
+  .rating>*,
+  .tags,
+  .address {
     font-size: 12px;
   }
+
   .Store_Image {
     height: 132px;
   }
-  .localname{
+
+  .localname {
     font-size: 18px;
   }
 }
+
 @media screen and (max-width: 680px) {
-  .logo a{
+  .logo a {
     background-size: 90px;
   }
+
   .searchForm .search {
     width: 100%;
     height: 5px;
   }
-  .toggleOn{
+
+  .toggleOn {
     border-top: 2px solid #ddd;
   }
-  .headerUtil{
+
+  .headerUtil {
     display: none;
   }
-  .headerUtil_toggleBar{
+
+  .headerUtil_toggleBar {
     display: flex;
     align-items: center;
     position: absolute;
@@ -828,36 +957,47 @@ body{
     top: 35%;
     font-size: 20px;
   }
-  #slideshow-container .mySlides img{
+
+  #slideshow-container .mySlides img {
     height: 300px;
   }
-  .prev, .next{
+
+  .prev,
+  .next {
     top: 34%;
     font-size: 25px;
   }
+
   .dot {
     width: 23px;
   }
+
   .quickfilter {
     top: -63px;
   }
-.filterRegion {
-  height: 50px;
-  width: 72%;
+
+  .filterRegion {
+    height: 50px;
+    width: 72%;
   }
-  .quickfilter .filterBar_Names button{
+
+  .quickfilter .filterBar_Names button {
     font-size: 14px;
   }
-  .filterBar_Names{
-    top:-44%;
+
+  .filterBar_Names {
+    top: -44%;
   }
-  .place button { 
+
+  .place button {
     font-size: 17px;
     margin-bottom: 13px;
   }
-  .selfplace{
+
+  .selfplace {
     width: 100%;
   }
+
   .doo {
     display: flex;
     width: 100%;
@@ -865,43 +1005,69 @@ body{
     justify-content: center;
     border-bottom: 2px solid #5c5f67;
   }
-  .doo input, .si input{
+
+  .doo input,
+  .si input {
     font-size: 12px;
   }
-  .doo .dooicon, .si .siicon{
+
+  .doo .dooicon,
+  .si .siicon {
     font-size: 15px;
   }
+
   .Store_Zone {
     margin-top: 15px;
-}
-.Sign{
-  height: 131px;
-  padding: 0px 23px;
-}
-.Store_Image {
-  height: 80px;
-}
-.Store_name{
-  font-size: 10px;
-}
-.Store_Title {
-  font-size: 12px;
-}
-.rating > *, .tags, .address {
-  font-size: 9px;
-}
-.Store_Name{
-  height: 100%;
-  line-height: .3;
-}
-.filterRegion .find {
-  width: 70px;
-  font-size: 14px;
-  height: 29px;
-}
-.localname{
-  font-size: 13px;
-  margin-bottom: 18px;
+  }
+
+  .Sign {
+    height: 131px;
+    padding: 0px 23px;
+  }
+
+  .Store_Image {
+    height: 80px;
+  }
+
+  .Store_name {
+    font-size: 10px;
+  }
+
+  .Store_Title {
+    font-size: 12px;
+  }
+
+  .rating>*,
+  .tags,
+  .address {
+    font-size: 9px;
+  }
+
+  .Store_Name {
+    height: 100%;
+    line-height: .3;
+  }
+
+  .filterRegion .find {
+    width: 70px;
+    font-size: 14px;
+    height: 29px;
+  }
+
+  .localname {
+    font-size: 13px;
+    margin-bottom: 18px;
+  }
 }
 
+.WaitingBox {
+  background: url(/img/blank.png) no-repeat center center;
+  background-size: cover;
+  width: 10%;
+  height: 65px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-weight: 600;
+  font-size: 15px;
 }
