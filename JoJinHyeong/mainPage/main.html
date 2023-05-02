@@ -24,6 +24,7 @@
   <script defer src="/JoJinHyeong/mainPage/filter.js" ></script>
   <script defer src="/JoJinHyeong/mainPage/storeList.js" type="module"></script>
   <script defer src="/JoJinHyeong/mainPage/myplace.js"></script>
+  <script defer src="/JoJinHyeong/mainPage/RegionFilter.js"></script>
 
  
   <script type="text/javascript" src="//dapi.kakao.com/v2/maps/sdk.js?appkey=575e00627ad336160ee258c5c9ed0525"></script>
@@ -187,6 +188,67 @@
           <img src="/img/italy.png" alt="italy">
         </div>
         <p>이탈리아식</p>
+      </div>
+    </div>
+    <div class="outerRegion" style="display: none;">
+      <div class="innerRegion">
+        <div class="Region_doo">
+          <ul>
+            <li data-region="seoul">
+              <a>서울</a>
+            </li>
+            <li  data-region="gyeonggi">
+              <a>경기</a>
+            </li>
+            <li data-region="incheon">
+              <a>인천</a>
+            </li>
+          </ul>
+        </div>
+        <div class="Region_si">
+          <ul data-region="seoul">
+            <li>
+              <label>
+                <input type="checkbox">
+                <span>서울</span>
+              </label>
+            </li>
+            <li>
+              <label>
+                <input type="checkbox">
+                <span>강남구</span>
+              </label>
+            </li>
+          </ul>
+          <ul data-region="gyeonggi">
+            <li>
+              <label>
+                <input type="checkbox">
+                <span>경기 전체</span>
+              </label>
+            </li>
+            <li>
+              <label>
+                <input type="checkbox">
+                <span>수원</span>
+              </label>
+            </li>
+          </ul>
+          <ul data-region="incheon">
+            <li>
+              <label>
+                <input type="checkbox">
+                <span>인천 전체</span>
+              </label>
+            </li>
+            <li>
+              <label>
+                <input type="checkbox">
+                <span>연수구</span>
+              </label>
+            </li>
+          </ul>
+        </div>
       </div>
     </div>
   </section>

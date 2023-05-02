@@ -1,26 +1,26 @@
-const Bar_slider = document.querySelector('.barlist');
-const Photo_slider = document.querySelector('.PhotoList');
+const Bar_slider = document.querySelector(".barlist");
+const Photo_slider = document.querySelector(".PhotoList");
 // 인원수 가로 스크롤
 // ---------------------------------------------------------------------------
 let isMouseDown = false;
 let startX, scrollLeft;
 
 function slider(Element) {
-  Element.addEventListener('mousedown', (e) => {
+  Element.addEventListener("mousedown", (e) => {
     isMouseDown = true;
     scrollLeft = Element.scrollLeft;
     startX = e.pageX - Element.offsetLeft;
   });
 
-  Element.addEventListener('mouseleave', () => {
+  Element.addEventListener("mouseleave", () => {
     isMouseDown = false;
   });
 
-  Element.addEventListener('mouseup', () => {
+  Element.addEventListener("mouseup", () => {
     isMouseDown = false;
   });
 
-  Element.addEventListener('mousemove', (e) => {
+  Element.addEventListener("mousemove", (e) => {
     if (!isMouseDown) return;
     e.preventDefault();
     const x = e.pageX - Element.offsetLeft;
@@ -34,11 +34,11 @@ function slider(Element) {
 
 const bar = document.querySelector(".remote_Bar");
 
-window.addEventListener('scroll', function () {
+window.addEventListener("scroll", function () {
   bar.style.top = `${window.scrollY}px`;
   bar.style.transition = "all 0.7s ease-out";
   if (window.scrollY === 0) {
-    bar.style.top = '100px';
+    bar.style.top = "100px";
   }
 });
 
@@ -60,66 +60,49 @@ function change_btn(e) {
 const number = document.querySelectorAll(".number span");
 const storename = document.querySelector(".name");
 
-let cart = [];   // 장바구니 배열
-let list ={};   // 서버에 보낼 리스트
-
+let cart = []; // 장바구니 배열
+let list = {}; // 서버에 보낼 리스트
 
 const uni1 = sessionStorage.getItem("selectedValue");
 const url1 = `http://localhost:4000/store?adminNo=${uni1}`;
 fetch(url1)
-.then((res)=>{
-    return res.json()
-})
-.then((data)=>{
+  .then((res) => {
+    return res.json();
+  })
+  .then((data) => {
     list.가게이름 = data[0].adminCafe;
     list.전화번호 = data[0].storePhone;
-})
-.catch((err)=>console.log(err))
+  })
+  .catch((err) => console.log(err));
 // fetch함수로 API가져와서 바로 객체에 데이터 넣어주기 )가게이름,전화번호
-
 
 function getCurrentDateTime() {
   const date = new Date();
   const year = date.getFullYear();
-  const month = ('0' + (date.getMonth() + 1)).slice(-2);
-  const day = ('0' + date.getDate()).slice(-2);
-  const dateStr = year + '-' + month + '-' + day;
-  const hours = ('0' + date.getHours()).slice(-2);
-  const minutes = ('0' + date.getMinutes()).slice(-2);
-  const seconds = ('0' + date.getSeconds()).slice(-2);
-  const timeStr = hours + ':' + minutes + ':' + seconds;
+  const month = ("0" + (date.getMonth() + 1)).slice(-2);
+  const day = ("0" + date.getDate()).slice(-2);
+  const dateStr = year + "-" + month + "-" + day;
+  const hours = ("0" + date.getHours()).slice(-2);
+  const minutes = ("0" + date.getMinutes()).slice(-2);
+  const seconds = ("0" + date.getSeconds()).slice(-2);
+  const timeStr = hours + ":" + minutes + ":" + seconds;
   const today = `${dateStr} ${timeStr}`;
-  
 
   return today;
 }
-// 현재 시간을 알려주는 함수
+//현재 시간을 알려주는 함수
 
-const date = new Date();
-const year = date.getFullYear();
-const month = ('0' + (date.getMonth() + 1)).slice(-2);
-const day = ('0' + date.getDate()).slice(-2);
-const dateStr = year + '-' + month + '-' + day;
-const hours = ('0' + date.getHours()).slice(-2);
-const minutes = ('0' + date.getMinutes()).slice(-2);
-const seconds = ('0' + date.getSeconds()).slice(-2);
-const timeStr = hours + ':' + minutes + ':' + seconds;
-const today = `${dateStr} ${timeStr}`;
-
-
-
-
-    number.forEach((item, index) => {
-      item.addEventListener("click", function (e) {
-        bar.style.borderRadius = "20px";
-        bar.style.justifyContent = 'flex-Start';
-        bar.style.marginLeft = ""
-        bar.style.width = "220px";
-        bar.style.right = "-35%";
-        bar.style.flexDirection = "column";
-        bar.style.height = "none"
-        bar.style.alignItems = "normal";
-        bar.innerHTML = `<div class="member">
+number.forEach((item, index) => {
+  item.addEventListener("click", function (e) {
+    bar.style.borderRadius = "20px";
+    bar.style.justifyContent = "flex-Start";
+    bar.style.marginLeft = "";
+    bar.style.width = "220px";
+    bar.style.right = "-35%";
+    bar.style.flexDirection = "column";
+    bar.style.height = "none";
+    bar.style.alignItems = "normal";
+    bar.innerHTML = `<div class="member">
     <div>인원:</div>
     <div>${e.target.innerText}</div>
     </div>
@@ -128,200 +111,198 @@ const today = `${dateStr} ${timeStr}`;
     <div class="costHap"></div>
     <div class="count" onclick="sent()"</div>`;
     list.인원 = `${Number(e.target.innerText[0])}`;
-      });
-    });
-    // 리모트바 원형에서 직사각형으로 모형 바꾸기
+  });
+});
+// 리모트바 원형에서 직사각형으로 모형 바꾸기
 
+// 인원 추가하기
+// -------------------------------------------------------------------------------------------------------
 
-    // 인원 추가하기
-    // -------------------------------------------------------------------------------------------------------
+function plus(el) {
+  let uni = el.parentNode.parentNode.parentNode.childNodes[1].innerText;
+  const result = el.parentNode.parentNode.childNodes[3].childNodes[3]; //총 인원태그
+  let cost = el.parentNode.parentNode.firstElementChild.childNodes[3]; //총 가격태그
+  let total =
+    el.parentNode.parentNode.firstElementChild.childNodes[3].innerText; //총 가격
+  let number = el.parentNode.parentNode.childNodes[3].childNodes[3].innerText; //총 수
+  const realcost =
+    el.parentNode.parentNode.firstElementChild.childNodes[3].getAttribute(
+      "value"
+    ); //메뉴 하나당 가격(불변)
+  number = parseInt(number) + 1;
+  total = parseInt(total) + parseInt(realcost);
+  result.innerText = number;
+  cost.innerText = `${total}`;
 
-    function plus(el) {
-      let uni = el.parentNode.parentNode.parentNode.childNodes[1].innerText;
-      const result = el.parentNode.parentNode.childNodes[3].childNodes[3];  //총 인원태그
-      let cost = el.parentNode.parentNode.firstElementChild.childNodes[3];  //총 가격태그
-      let total = el.parentNode.parentNode.firstElementChild.childNodes[3].innerText;  //총 가격
-      let number = el.parentNode.parentNode.childNodes[3].childNodes[3].innerText; //총 수
-      const realcost = el.parentNode.parentNode.firstElementChild.childNodes[3].getAttribute("value"); //메뉴 하나당 가격(불변)
-      number = parseInt(number) + 1;
-      total = parseInt(total) + parseInt(realcost);
-      result.innerText = number;
-      cost.innerText = `${total}`;
-
-      for (let i = 0; i < cart.length; i++) {
-        if (cart[i].name === uni) {
-          cart[i].price = total;    // 변화된 가격을 각각의 요소에 맞는 객체를 찾아서 바꿔준다.
-          cart[i].quantity = number;
-        }
-      }
-      hap();
+  for (let i = 0; i < cart.length; i++) {
+    if (cart[i].name === uni) {
+      cart[i].price = total; // 변화된 가격을 각각의 요소에 맞는 객체를 찾아서 바꿔준다.
+      cart[i].quantity = number;
     }
+  }
+  hap();
+}
 
-    function minus(el) {
-      let uni = el.parentNode.parentNode.parentNode.childNodes[1].innerText;
-      const result = el.parentNode.parentNode.childNodes[3].childNodes[3];  //총 인원태그
-      let cost = el.parentNode.parentNode.firstElementChild.childNodes[3];  //총 가격태그
-      let total = el.parentNode.parentNode.firstElementChild.childNodes[3].innerText;  //총 가격
-      let number = el.parentNode.parentNode.childNodes[3].childNodes[3].innerText; //총 수
-      const realcost = el.parentNode.parentNode.firstElementChild.childNodes[3].getAttribute("value"); //메뉴 하나당 가격(불변)
-      if (number > 1) {     // 수량이 1 이상일때마 작동
-        number = parseInt(number) - 1;
-        total = parseInt(total) - parseInt(realcost);
-      }
-      result.innerText = number;
-      cost.innerText = `${total}`;
-      for (let i = 0; i < cart.length; i++) {
-        if (cart[i].name === uni) {
-          cart[i].price = total;
-          cart[i].quantity = number;
-        }
-      }
-
-      hap();
-
+function minus(el) {
+  let uni = el.parentNode.parentNode.parentNode.childNodes[1].innerText;
+  const result = el.parentNode.parentNode.childNodes[3].childNodes[3]; //총 인원태그
+  let cost = el.parentNode.parentNode.firstElementChild.childNodes[3]; //총 가격태그
+  let total =
+    el.parentNode.parentNode.firstElementChild.childNodes[3].innerText; //총 가격
+  let number = el.parentNode.parentNode.childNodes[3].childNodes[3].innerText; //총 수
+  const realcost =
+    el.parentNode.parentNode.firstElementChild.childNodes[3].getAttribute(
+      "value"
+    ); //메뉴 하나당 가격(불변)
+  if (number > 1) {
+    // 수량이 1 이상일때마 작동
+    number = parseInt(number) - 1;
+    total = parseInt(total) - parseInt(realcost);
+  }
+  result.innerText = number;
+  cost.innerText = `${total}`;
+  for (let i = 0; i < cart.length; i++) {
+    if (cart[i].name === uni) {
+      cart[i].price = total;
+      cart[i].quantity = number;
     }
+  }
 
-    function del(el) {         //박스 삭제
-      let uni = el.parentNode.parentNode.parentNode.childNodes[1].innerText;
-      let menuBox = el.parentNode.parentNode.parentNode;
-      menuBox.remove();
-      for (let i = 0; i < cart.length; i++) {
-        if (cart[i].name === uni) {
-          cart.splice(i, 1)
-        }
-      }
+  hap();
+}
 
-      hap();
+function del(el) {
+  //박스 삭제
+  let uni = el.parentNode.parentNode.parentNode.childNodes[1].innerText;
+  let menuBox = el.parentNode.parentNode.parentNode;
+  menuBox.remove();
+  for (let i = 0; i < cart.length; i++) {
+    if (cart[i].name === uni) {
+      cart.splice(i, 1);
     }
+  }
 
-    // 총 가격 구하는 함수
-    //---------------------------------------------------------------------------------------------
+  hap();
+}
 
-    function hap() {
-      var hapcost = 0;
-      const hapdiv = document.querySelector(".hap");
-      for (let i = 0; i < cart.length; i++) {
-        hapcost += Number(cart[i].price);
-      }
-      hapdiv.innerText = hapcost;
-    }
+// 총 가격 구하는 함수
+//---------------------------------------------------------------------------------------------
 
-    //데이터(인원,메뉴) 내보내는 함수
-    //--------------------------------------------------------------------------------------------
+function hap() {
+  var hapcost = 0;
+  const hapdiv = document.querySelector(".hap");
+  for (let i = 0; i < cart.length; i++) {
+    hapcost += Number(cart[i].price);
+  }
+  hapdiv.innerText = hapcost;
+}
 
+//데이터(인원,메뉴) 내보내는 함수
+//--------------------------------------------------------------------------------------------
 
-    function sent() {
-      list.현재시간 = getCurrentDateTime();
-      fetch("http://localhost:4000/list",{
-        method:"post",
-        body:JSON.stringify(list),
-        headers:{
-          "Content-Type":"application/json"
-        }
-      })
-      .then((response)=>{
-        if(!response.ok) throw new Error(response.statusText);
-        return response.json();
-      })
-      .then((json) =>{
-        console.log(list);
-        sessionStorage.setItem("selectedValue", adminNo);
-      })
-      .catch((error)=>{
-        console.log("실패",error);
-      })
-    }
-
-    // json-server --watch db.json  가상서버 실행
-
-
-
-
-    // 버튼 누르면 해당 이벤트 적용
-    // --------------------------------------------------------------------------------------------
-
-    const Filter = document.querySelector('.filter');
-    const Blank = document.querySelector('.blank');
-    const HomeTab = document.querySelector('.homeTab');
-    const MenuTab = document.querySelector('.MenuTab');
-    const PhotoTab = document.querySelector('.photoTab');
-    const ReviewTab = document.querySelector('.userReviewTab');
-    const Photos = document.querySelector('.Photo');
-    const Home = document.querySelector('.store_Home');
-    const Home_Top = window.pageYOffset + Home.getBoundingClientRect().top;
-    const Menu = document.querySelector('.store_Menu');
-    const Menu_Top = window.pageYOffset + Menu.getBoundingClientRect().top;
-    const ReviewMore = document.querySelector('.ReviewMore');
-    const ReviewMore1 = document.querySelector('.ReviewMore1');
-    const ReviewBox = document.querySelector('.ReviewBox');
-    const PhotoMore = document.querySelector('.PhotoMore');
-    const PhotoBox = document.querySelector('.PhotoBox');
-    const Right = document.querySelector('.Right');
-    const Left = document.querySelector('.Left');
-    const PhotoReduce = document.querySelector('.PhotoReduce');
-    const ReviewReduce = document.querySelector('.ReviewReduce');
-
-    function Top() {
-      if (window.scrollY > 625) {
-        Filter.style.position = "fixed";
-        Filter.style.top = "0";
-      }
-      else if (window.scrollY < 625) {
-        Filter.style.position = "";
-        Filter.style.top = "";
-      }
-    }
-
-    function Move(element) {
-      window.scroll({ top: element - 60, behavior: 'smooth' });
-    }
-    function Expansion(Element) {
-      var addHeight = 1000;
-      var currentHeight = Element.clientHeight;
-      var newHeight = currentHeight + addHeight;
-
-      Element.style.height = newHeight + "px";
-    }
-
-    HomeTab.addEventListener('click', function () {
-      Move(Home_Top);
+function sent() {
+  list.현재시간 = getCurrentDateTime();
+  fetch("http://localhost:4000/list", {
+    method: "post",
+    body: JSON.stringify(list),
+    headers: {
+      "Content-Type": "application/json",
+    },
+  })
+    .then((response) => {
+      response.json();
+    })
+    .catch((error) => {
+      console.log("실패", error);
     });
-    MenuTab.addEventListener('click', function () {
-      Move(Menu_Top);
-    });
+}
 
-    Bar_slider.addEventListener('mousemove', function () {
-      slider(Bar_slider);
-    });
-    Photo_slider.addEventListener('mousemove', function () {
-      slider(Photo_slider);
-    });
+// json-server --watch db.json  가상서버 실행
 
-    window.addEventListener('scroll', () => {
-      Top();
-    });
+// 버튼 누르면 해당 이벤트 적용
+// --------------------------------------------------------------------------------------------
 
-    PhotoMore.addEventListener('click', () => {
-      PhotoBox.style.height = "1000px";
-      PhotoMore.style.display = "none";
-      PhotoReduce.style.display = "block";
-      Right.style.visibility = "hidden";
-      Left.style.visibility = "hidden";
-    });
+const Filter = document.querySelector(".filter");
+const Blank = document.querySelector(".blank");
+const HomeTab = document.querySelector(".homeTab");
+const MenuTab = document.querySelector(".MenuTab");
+const PhotoTab = document.querySelector(".photoTab");
+const ReviewTab = document.querySelector(".userReviewTab");
+const Photos = document.querySelector(".Photo");
+const Home = document.querySelector(".store_Home");
+const Home_Top = window.pageYOffset + Home.getBoundingClientRect().top;
+const Menu = document.querySelector(".store_Menu");
+const Menu_Top = window.pageYOffset + Menu.getBoundingClientRect().top;
+const ReviewMore = document.querySelector(".ReviewMore");
+const ReviewMore1 = document.querySelector(".ReviewMore1");
+const ReviewBox = document.querySelector(".ReviewBox");
+const PhotoMore = document.querySelector(".PhotoMore");
+const PhotoBox = document.querySelector(".PhotoBox");
+const Right = document.querySelector(".Right");
+const Left = document.querySelector(".Left");
+const PhotoReduce = document.querySelector(".PhotoReduce");
+const ReviewReduce = document.querySelector(".ReviewReduce");
 
-    PhotoReduce.addEventListener('click', () => {
-      PhotoBox.style.height = "200px";
-      PhotoMore.style.display = "block";
-      PhotoReduce.style.display = "none";
-    });
-    ReviewReduce.addEventListener('click', () => {
-      ReviewBox.style.height = "600px";
-      ReviewMore.style.display = "block";
-      ReviewReduce.style.display = "none";
-    });
+function Top() {
+  if (window.scrollY > 625) {
+    Filter.style.position = "fixed";
+    Filter.style.top = "0";
+  } else if (window.scrollY < 625) {
+    Filter.style.position = "";
+    Filter.style.top = "";
+  }
+}
 
-    ReviewMore1.addEventListener('click', () => {
-      Expansion(ReviewBox);
-      ReviewMore.style.display = "none";
-      ReviewReduce.style.display = "block";
-    });
+function Move(element) {
+  window.scroll({ top: element - 60, behavior: "smooth" });
+}
+function Expansion(Element) {
+  var addHeight = 1000;
+  var currentHeight = Element.clientHeight;
+  var newHeight = currentHeight + addHeight;
+
+  Element.style.height = newHeight + "px";
+}
+
+HomeTab.addEventListener("click", function () {
+  Move(Home_Top);
+});
+MenuTab.addEventListener("click", function () {
+  Move(Menu_Top);
+});
+
+Bar_slider.addEventListener("mousemove", function () {
+  slider(Bar_slider);
+});
+Photo_slider.addEventListener("mousemove", function () {
+  slider(Photo_slider);
+});
+
+window.addEventListener("scroll", () => {
+  Top();
+});
+
+PhotoMore.addEventListener("click", () => {
+  PhotoBox.style.height = "1000px";
+  PhotoMore.style.display = "none";
+  PhotoReduce.style.display = "block";
+  Right.style.visibility = "hidden";
+  Left.style.visibility = "hidden";
+});
+
+PhotoReduce.addEventListener("click", () => {
+  PhotoBox.style.height = "200px";
+  PhotoMore.style.display = "block";
+  PhotoReduce.style.display = "none";
+});
+ReviewReduce.addEventListener("click", () => {
+  ReviewBox.style.height = "600px";
+  ReviewMore.style.display = "block";
+  ReviewReduce.style.display = "none";
+});
+
+ReviewMore1.addEventListener("click", () => {
+  Expansion(ReviewBox);
+  ReviewMore.style.display = "none";
+  ReviewReduce.style.display = "block";
+});
