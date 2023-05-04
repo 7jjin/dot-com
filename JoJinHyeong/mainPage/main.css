@@ -2,7 +2,7 @@ body {
   margin: 0;
 }
 .socialLogin_phone{
-  display: block;
+  display: none;
   position: absolute;
   width: 50%;
   height: 20%;
@@ -49,6 +49,42 @@ body {
   background-color: coral;
 }
 
+.mapWapper{
+  position: absolute;
+    background-color: white;
+    border: 3px solid black;
+    top: 29%;
+    left: 60%;
+    width: 25%;
+    height: 33%;
+    z-index: 999;
+}
+.maptitle{
+
+  height: 10%;
+}
+.maptitle p{
+  margin:0;
+
+
+}
+.mapInner{
+  position: relative;
+  width: 100%;
+  height: 100%;
+}
+#staticMap{
+  position: absolute;
+  width:100%;
+  height:90%;
+  z-index: 999;
+}
+#staticMap img{
+  width: 100%;
+  height: 100%;
+  background-position: center;
+  background-size: contain;
+}
 .mp_wap {
   position: absolute;
   top: 53%;

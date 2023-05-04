@@ -12,6 +12,7 @@ const section = document.querySelector("section");
 const filterBar_button = document.querySelector(".filterBar_Names");
 
 document.addEventListener("click", filter);
+console.log(wrap);
 
 function filter(event) {
   var target = event.target.closest("section").className;

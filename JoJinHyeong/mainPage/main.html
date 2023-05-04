@@ -26,12 +26,22 @@
   <script defer src="/JoJinHyeong/mainPage/myplace.js"></script>
   <script defer src="/JoJinHyeong/mainPage/RegionFilter.js"></script>
   <script defer src="/JoJinHyeong/mainPage/inputPassword.js"></script>
+  <script defer src="/JoJinHyeong/mainPage/map.js"></script>
 
 
   <script type="text/javascript" src="//dapi.kakao.com/v2/maps/sdk.js?appkey=575e00627ad336160ee258c5c9ed0525"></script>
 </head>
 
 <body>
+  <div class="mapWapper" style="display: none;">
+    <div class="mapInner">
+      <div class="maptitle">
+        <p>가게위치&길찾기</p>
+      </div>
+      <div id="staticMap"></div>
+    </div>
+  </div>
+
   <div class="socialLogin_phone">
     <div class="phone_title">
       <p>전화번호를 입력하세요</p>
@@ -44,7 +54,7 @@
       </div>
     </div>
   </div>
-  <div id=" wrap">
+  <div id="wrap">
     <section class="header">
       <div class="headerWapper">
         <div class="headerInner">
@@ -92,7 +102,7 @@
       <div class="InfoMenu">
         <div class="call"></div>
         <div class="memberChange"></div>
-        <div class="map"></div>
+        <div class="map" onclick="findmap()"></div>
         <div class="wait">
           <div class="Num">16</div>
         </div>
