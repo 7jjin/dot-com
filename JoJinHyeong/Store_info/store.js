@@ -216,12 +216,15 @@ function sent() {
       "Content-Type": "application/json",
     },
   })
-  .then((response) => {
-    return response.json(); // JSON 데이터를 추출하고 반환합니다.
-  })
-  .catch((error) => {
-    alert("실패", error);
-  });
+    .then((response) => {
+      response.json();
+    })
+    .then(() => {
+      location.href = "/JoJinHyeong/mainPage/main.html";
+    })
+    .catch((error) => {
+      alert("실패", error);
+    });
 }
 
 // json-server --watch db.json  가상서버 실행

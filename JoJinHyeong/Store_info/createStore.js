@@ -145,35 +145,33 @@ function renderPage(data) {
             });
             close.addEventListener("click", function (event) {
               modal.style.display = "none";
-            })
+            });
 
             hap();
           }
         });
-      })
+      });
     }
     const bar = document.createElement("hr");
     bar.className = "line";
-    Menu2.append(bar)
+    Menu2.append(bar);
 
     NameText.innerHTML = data[0].adminCafe;
 
     //예약하기 버튼 눌렀을 때 데이터 sent()함수
     function handleClick1() {
-      sent()
-
+      sent();
     }
     //예약하기 버튼 눌렀을 때 성공했다는 메시지 출력 함수
-    function handleClick2() {
-      alert("예약이 완료 되었습니다.");
-    }
+    // function handleClick2() {
+    //   alert("예약이 완료 되었습니다.");
+    // }
 
     modalbtn.onclick = function () {
-      handleClick2();
       handleClick1();
+      // handleClick2();
     };
   }
-
 }
 
 function Move1(element) {
