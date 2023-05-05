@@ -514,62 +514,27 @@
     "phoneNumber": "01097553489"
   },
   "password": [
-    {
-      "password": "454-5454-5454",
-      "id": 1
-    },
-    {
-      "password": "666-6666-6666",
-      "id": 2
-    },
-    {
-      "password": "477-7777-7777",
-      "id": 3
-    },
-    {
-      "password": "788-8888-8888",
-      "id": 4
-    },
-    {
-      "password": "341-3414-1414",
-      "id": 5
-    },
-    {
-      "password": "455-6656-4844",
-      "id": 6
-    },
-    {
-      "password": "111-1111-1111",
-      "id": 7
-    },
-    {
-      "password": "000-0000-0000",
-      "id": 8
-    },
-    {
-      "password": "010-6300-9866",
-      "id": 9
-    },
-    {
-      "password": "010-6305-9099",
-      "id": 10
-    },
-    {
-      "password": "456-4654-6546",
-      "id": 11
-    },
-    {
-      "password": "645-6465-4646",
-      "id": 12
-    },
-    {
-      "password": "111-1111-1111",
-      "id": 13
-    }
+    
   ],
   "login": [
     {
-      "provider": "admin"
+      "provider": "kakao",
+      "phoneNumber":"010"
     }
+  ],
+  "waitlist":[
+    {
+      "waitlistId": 5,
+      "name": "",
+      "phone_number": "01097553489",
+      "party_size": 3,
+      "timeAdded": null,
+      "queueNumber": 1,
+      "userNo": 2,
+      "storePhone": "011-1234-4566",
+      "adminCafe": "현식돈국수",
+      "partySize": 3,
+      "phoneNumber": "01097553489"
+  }
   ]
 }

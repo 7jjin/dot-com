@@ -308,3 +308,16 @@ ReviewMore1.addEventListener("click", () => {
   ReviewMore.style.display = "none";
   ReviewReduce.style.display = "block";
 });
+
+const utilList = document.querySelector(".utilList");
+fetch("http://localhost:4000/waitlist")
+  .then((res) => res.json())
+  .then((data) => {
+    console.log(data);
+    if (data[0].name) {
+      let btn = document.createElement("button");
+      btn.innerHTML = "로그아웃";
+      utilList.appendChild(btn);
+    }
+  })
+  .catch((err) => console.log(err));

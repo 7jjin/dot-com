@@ -25,7 +25,6 @@ function findmap() {
       staticMapOption
     );
   } else if (mapWapper.style.display === "block") {
-    console.log("a");
     mapWapper.style.display = "none";
   }
 }
