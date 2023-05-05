@@ -27,7 +27,7 @@ function storeList(data) {
     Closestores.setAttribute("class", "store");
 
     //stores.setAttribute("value",i+1);
-    if (open === 1) {
+    if (open === true) {
       Openstores.innerHTML = `<div class="Sign">
       <div class="Store_Sign">
         <div class="Store_Image"></div>
@@ -49,7 +49,7 @@ function storeList(data) {
     </div>
     </div>`;
     }
-    else if (open === 0) {
+    else if (open === false) {
       Closestores.innerHTML = `<div class="CloseSign">
       <div class="Store_Sign">
         <div class="Store_Image"></div>
@@ -65,9 +65,17 @@ function storeList(data) {
           <span class="address">"${addr}"</span>
         </div>
       </div>
+      <span class="bad">
+      <p>예약</p>
+      <p>불가</p>
+      </span>
     </div>`;
     }
     Openstores.onclick = function (event) {
+      sessionStorage.setItem("selectedValue", adminNo);   //sessionStorage에 가게고유의 adminNo값 저장
+      window.location.href = "/JoJinHyeong/Store_info/store.html";
+    };
+    Closestores.onclick = function (event) {
       sessionStorage.setItem("selectedValue", adminNo);   //sessionStorage에 가게고유의 adminNo값 저장
       window.location.href = "/JoJinHyeong/Store_info/store.html";
     };

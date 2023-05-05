@@ -73,4 +73,15 @@ function showList(){
 }
 toggleBar.addEventListener("click",showList);
 
+//로그아웃 버튼
+const logout = document.querySelector("#logout");
+const login = document.querySelector(".login");
+
+if(login.textContent === '0'){
+  logout.style.display = "none";
+}
+else{
+  logout.style.display = "none"; 
+}
+
 
