@@ -17,6 +17,7 @@ const OrderText = document.querySelector(".OrderText");
 const PhoneText = document.querySelector(".PhoneText");
 const NumText = document.querySelector(".NumText");
 const modalbtn = document.querySelector(".modal-foot");
+const peopleBox = document.querySelector(".people");
 
 const uni = sessionStorage.getItem("selectedValue");
 const url = `http://localhost:4000/store?adminNo=${uni}`;
@@ -27,17 +28,24 @@ fetch(url)
   .then((data) => {
     openingDay(data);
     renderPage(data);
-  })
-  .catch((err) => console.log(err));
-
-function renderPage(data) {
-  for (let i = 0; i < data[0].categories.length; i++) {
     addr.innerHTML = `${data[0].addressName}`;
     call.innerHTML = `${data[0].storePhone}`;
     openTime.innerHTML = `${data[0].openingTime}`;
     closeTime.innerHTML = `${data[0].closingTime}`;
     nameStore.innerHTML = `${data[0].adminCafe}`;
     storeIntro.innerHTML = `${data[0].storeIntroduce}`;
+    //예약 불가능 한 가게 예약 막는 곳//
+    if (data[0].open === 0) {
+      peopleBox.innerHTML = `<div class="ClosingBox">
+      <span class="ClosingText"> 예약이 불가능 한 가게입니다.</span>
+      </div>`
+    }
+    /*-----------------------------------------------------------*/
+  })
+  .catch((err) => console.log(err));
+
+function renderPage(data) {
+  for (let i = 0; i < data[0].categories.length; i++) {
     // 카테고리별로 박스 만들어서 appendChild로 추가
     const menubox = document.createElement("div");
     menubox.innerHTML = `<a class="MenuItem">
@@ -66,13 +74,13 @@ function renderPage(data) {
       PhotoTab.addEventListener("click", function () {
         Move1(
           window.pageYOffset +
-            document.querySelector(".storePhoto").getBoundingClientRect().top
+          document.querySelector(".storePhoto").getBoundingClientRect().top
         );
       });
       ReviewTab.addEventListener("click", function () {
         Move1(
           window.pageYOffset +
-            document.querySelector(".storeReview").getBoundingClientRect().top
+          document.querySelector(".storeReview").getBoundingClientRect().top
         );
       });
 
@@ -123,9 +131,9 @@ function renderPage(data) {
                   <div class="hap"></div>
                   <div>원</div>
                 </div>
-                `;
+                `
             count.innerHTML = `
-                <button class="order">주문하기</button>`;
+                <button class="order">주문하기</button>`
 
             //모달창
             let orderBTN = document.querySelector(".order");

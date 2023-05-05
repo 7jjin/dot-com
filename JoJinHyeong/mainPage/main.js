@@ -70,7 +70,6 @@ function showList() {
     toggle = !toggle;
   }
 }
-toggleBar.addEventListener("click", showList);
 
 const utilList = document.querySelector(".utilList");
 fetch("http://localhost:4000/waitlist")

@@ -33,14 +33,22 @@ function slider(Element) {
 // ---------------------------------------------------------------------------
 
 const bar = document.querySelector(".remote_Bar");
+const Tip = document.querySelector(".remote_Tip");
 
 window.addEventListener("scroll", function () {
   bar.style.top = `${window.scrollY}px`;
   bar.style.transition = "all 0.7s ease-out";
+  Tip.style.top = `${window.scrollY}px`;
+  Tip.style.transition = "all 0.7s ease-out";
+
   if (window.scrollY === 0) {
     bar.style.top = "100px";
   }
+  if (window.scrollY === 0) {
+    Tip.style.top = "100px";
+  }
 });
+
 
 // 가로 스크롤 - 버튼 누르면 해당 버튼의 색이 변하고 다른 버튼을 누르면 해제되는 함수
 // ----------------------------------------------------------------------------
@@ -220,6 +228,7 @@ function sent() {
 }
 
 // json-server --watch db.json  가상서버 실행
+
 
 // 버튼 누르면 해당 이벤트 적용
 // --------------------------------------------------------------------------------------------

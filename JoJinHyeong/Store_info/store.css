@@ -104,6 +104,34 @@ body {
 .utilList_Wait {
     padding-right: 20px;
 }
+.remote_Tip{
+    position: absolute;
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    width: 300px;
+    height: 320px;
+    left: -42%;
+    top: 100px;
+    background-color: #ddd;
+    border: 2px solid black;
+    border-radius: 10%;
+    transition: 1s;
+}
+.remote_Tip p{
+    margin: 10px 10px;
+}
+
+.Tip_title{
+    text-align: center;
+    font-size: 20px;
+    font-weight: 700;
+}
+.Tip_caution{
+    color: red;
+    font-weight: 700;
+}
+
 
 /* 추가내용 */
 .remote_Bar {
@@ -790,4 +818,15 @@ body {
     color: black;
     text-decoration: none;
     cursor: pointer;
+}
+
+.ClosingBox{
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center ;
+}
+.ClosingText{
+    font-size: 40px;
+    font-weight: 700;
 }
