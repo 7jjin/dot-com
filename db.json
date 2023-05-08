@@ -490,7 +490,7 @@
   ],
   "userinfo": {
     "waitlistId": 5,
-    "CustomerName": "조승준",
+    "CustomerName": "",
     "phone_number": "01097553489",
     "party_size": 3,
     "timeAdded": null,
@@ -507,13 +507,17 @@
   "login": [
     {
       "provider": "kakao",
+      "email": "wlsgud6305",
+      "phoneNumber":"010"
+    },{
+      "provider": "local",
       "phoneNumber":"010"
     }
   ],
   "waitlist":[
     {
       "waitlistId": 5,
-      "name": "",
+      "name": "조진형",
       "phone_number": "01097553489",
       "party_size": 3,
       "timeAdded": null,

@@ -1,5 +1,22 @@
 var slideIndex = 0; //slide index
 
+const utilList = document.querySelector(".utilList");
+const formps = document.querySelector(".formps");
+const utilList_login = document.querySelector(".utilList_login");
+fetch("http://localhost:4000/waitlist")
+  .then((res) => res.json())
+  .then((data) => {
+    if (data[0].name) {
+      utilList_login.addEventListener("click", function () {
+        location.href = "/JoSeungJun/MyPage_Account/MyPage_Account.html";
+      });
+      let btn = document.createElement("button");
+      btn.innerHTML = "로그아웃";
+      formps.appendChild(btn);
+    }
+  })
+  .catch((err) => console.log(err));
+
 // HTML 로드가 끝난 후 동작
 window.onload = function () {
   showSlides(slideIndex);
@@ -70,16 +87,3 @@ function showList() {
     toggle = !toggle;
   }
 }
-
-const utilList = document.querySelector(".utilList");
-fetch("http://localhost:4000/waitlist")
-  .then((res) => res.json())
-  .then((data) => {
-    console.log(data);
-    if (data[0].name) {
-      let btn = document.createElement("button");
-      btn.innerHTML = "로그아웃";
-      utilList.appendChild(btn);
-    }
-  })
-  .catch((err) => console.log(err));
