@@ -6,7 +6,7 @@ fetch("http://localhost:4000/userinfo")
     Users(data);
   })
   .catch((error) => {
-    console.lsog(error);
+    console.sog(error);
   });
 
 fetch("http://localhost:4000/waitingBar")

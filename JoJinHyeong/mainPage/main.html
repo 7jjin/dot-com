@@ -165,12 +165,12 @@
         <button class="nowplace">내위치</button>
         <div class="selfplace">
           <div class="doo">
-            <input type="text" placeholder="예) 경기도">
+            <div class="example">예) 경기도 수원시</div>
             <div class="dooicon"><i class="fa-solid fa-location-crosshairs"></i></div>
           </div>
-          <div class="si">
-            <input type="text" placeholder="예) 수원시">
-            <div class="siicon"><i class="fa-solid fa-location-crosshairs"></i></div>
+          <div class="subicon">
+            <i class="fa-sharp fa-regular fa-circle-left" style="color: #f24a4a;"></i>
+            <p>지역을 직접 선택하세요!</p>
           </div>
         </div>
       </div>
@@ -233,46 +233,46 @@
           <ul data-region="seoul">
             <li>
               <label>
-                <input type="checkbox">
-                <span>서울</span>
+                <input type="checkbox" name="region">서울 전체
               </label>
             </li>
             <li>
               <label>
-                <input type="checkbox">
-                <span>강남구</span>
+                <input type="checkbox" name="region">강남구
               </label>
             </li>
           </ul>
           <ul data-region="gyeonggi">
             <li>
               <label>
-                <input type="checkbox">
-                <span>경기 전체</span>
+                <input type="checkbox" name="region">경기 전체
               </label>
             </li>
             <li>
               <label>
-                <input type="checkbox">
-                <span>수원</span>
+                <input type="checkbox" name="region">수원시
               </label>
             </li>
           </ul>
           <ul data-region="incheon">
             <li>
               <label>
-                <input type="checkbox">
-                <span>인천 전체</span>
+                <input type="checkbox" name="region">인천 전체
               </label>
             </li>
             <li>
               <label>
-                <input type="checkbox">
-                <span>연수구</span>
+                <input type="checkbox" name="region">연수구
               </label>
             </li>
           </ul>
         </div>
+      </div>
+      <div class="buttonRegion">
+        <div class="resetbutton">
+          <i class="fa-solid fa-rotate" style="color: #f9c148;">초기화</i>
+        </div>
+        <button class="findRegion">조회</button>
       </div>
     </div>
   </section>

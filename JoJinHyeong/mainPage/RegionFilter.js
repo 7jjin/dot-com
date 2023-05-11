@@ -1,10 +1,14 @@
 const dooicon = document.querySelector(".dooicon");
 const outerRegion = document.querySelector(".outerRegion");
 const regionLinks = outerRegion.querySelectorAll(".Region_doo li");
+const subicon = document.querySelector(".subicon");
+
 dooicon.addEventListener("click", function () {
   if (outerRegion.style.display === "none") {
     outerRegion.style.display = "flex";
+    subicon.style.display = "none";
   } else {
+    subicon.style.display = "flex";
     outerRegion.style.display = "none";
   }
 });
@@ -42,6 +46,7 @@ regionLinks.forEach(function (link) {
   });
 });
 
+// 지역 선택하면 색 바뀌게 하는 함수
 function handleClick(event) {
   regionLinks.forEach((e) => {
     e.classList.remove("doo_color");
@@ -55,3 +60,40 @@ regionLinks.forEach((e) => {
   }
   e.addEventListener("click", handleClick);
 });
+
+// 지역 조회누르면 사용자가 선택한 지역 보여주기(글씨로)
+const checkbox = document.getElementsByName("region");
+const checkedRegion = document.querySelector(".doo .example");
+
+function check() {
+  let array = [];
+  for (let i = 0; i < checkbox.length; i++) {
+    if (checkbox[i].checked === true) {
+      array.push(checkbox[i].parentElement.innerText.trim());
+    }
+  }
+  if (array.length > 1) {
+    checkedRegion.innerHTML = `${array[0]} 외 ${array.length - 1}곳`;
+    checkedRegion.style.color = "black";
+  } else if (array.length === 1) {
+    checkedRegion.innerHTML = array[0];
+    checkedRegion.style.color = "black";
+  } else {
+    checkedRegion.innerHTML = "예) 경기도 수원시";
+    checkedRegion.style.color = "#aaa";
+    subicon.style.display = "flex";
+  }
+  outerRegion.style.display = "none";
+}
+
+document.querySelector(".findRegion").addEventListener("click", check);
+
+//초기화 버튼 기능
+const resetbutton = document.querySelector(".resetbutton");
+function reset() {
+  checkbox.forEach((item) => {
+    item.checked = false;
+  });
+}
+
+resetbutton.addEventListener("click", reset);

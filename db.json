@@ -5,7 +5,7 @@
       "adminNo": 1,
       "adminCafe": "성결대학교",
       "guName": "만안구",
-      "addressName": "성결대학교 만안구 구구구 123",
+      "addressName": "경기도 안양시 만안구 123",
       "clty_loc": null,
       "storeIntroduce": "환영합니다 현식돈국수입니다",
       "foodType": "한식",
@@ -44,7 +44,7 @@
       "adminNo": 3,
       "adminCafe": "안양현식",
       "guName": "만안구",
-      "addressName": "안양대학교 구구구 123",
+      "addressName": "경기도 수원시 123",
       "clty_loc": null,
       "storeIntroduce": "어서오세요 안양현식",
       "foodType": "중식",
@@ -57,7 +57,47 @@
       "longitude": 37.391462944015544,
       "menuList": null,
       "open": true,
-      "waitingNum": 17
+      "waitingNum": 5
+    },
+    {
+      "id": "local",
+      "adminNo": 4,
+      "adminCafe": "교촌치킨",
+      "guName": "만안구",
+      "addressName": "인천 연수구 123",
+      "clty_loc": null,
+      "storeIntroduce": "환영합니다 현식돈국수입니다",
+      "foodType": "한식",
+      "savedNm": "Storeimage1.jpg",
+      "openingTime": "09:00:00",
+      "closingTime": "21:00:00",
+      "weekday": 1234,
+      "storePhone": "031-1234-4566",
+      "latitude": 126.92883626779027,
+      "longitude": 37.37989691469408,
+      "menuList": null,
+      "open": true,
+      "waitingNum": 0
+    },
+    {
+      "id": "local",
+      "adminNo": 5,
+      "adminCafe": "맛있는 피자",
+      "guName": "만안구",
+      "addressName": "경기도 안양시 만안구 123",
+      "clty_loc": null,
+      "storeIntroduce": "환영합니다 현식돈국수입니다",
+      "foodType": "한식",
+      "savedNm": "Storeimage1.jpg",
+      "openingTime": "09:00:00",
+      "closingTime": "21:00:00",
+      "weekday": 1234,
+      "storePhone": "031-1234-4566",
+      "latitude": 126.92883626779027,
+      "longitude": 37.37989691469408,
+      "menuList": null,
+      "open": true,
+      "waitingNum": 3
     }
   ],
   "store": [
@@ -486,6 +526,21 @@
       "latitude": 37.3834711,
       "longitude": 126.9218479,
       "id": 18
+    },
+    {
+      "latitude": 37.2993973,
+      "longitude": 127.0507781,
+      "id": 19
+    },
+    {
+      "latitude": 37.2874495,
+      "longitude": 127.0600198,
+      "id": 20
+    },
+    {
+      "latitude": 37.2993973,
+      "longitude": 127.0507781,
+      "id": 21
     }
   ],
   "userinfo": {
@@ -501,20 +556,19 @@
     "partySize": 3,
     "phoneNumber": "01097553489"
   },
-  "password": [
-    
-  ],
+  "password": [],
   "login": [
     {
       "provider": "kakao",
       "email": "wlsgud6305",
-      "phoneNumber":"010"
-    },{
+      "phoneNumber": "010"
+    },
+    {
       "provider": "local",
-      "phoneNumber":"010"
+      "phoneNumber": "010"
     }
   ],
-  "waitlist":[
+  "waitlist": [
     {
       "waitlistId": 5,
       "name": "조진형",
@@ -527,6 +581,6 @@
       "adminCafe": "현식돈국수",
       "partySize": 3,
       "phoneNumber": "01097553489"
-  }
+    }
   ]
 }
