@@ -440,7 +440,7 @@ body button{
 
 .localname {
   margin-bottom: 30px;
-  font-size: 24px;
+  font-size: 18px;
 }
 
 
@@ -483,8 +483,15 @@ body button{
   border-radius: 0px 10px 10px 10px;
   transition: all 0.5s ease;
 }
+.place{
+  width: 100%;
+}
+.nowplace{
+  display: flex;
+}
 
 .place button {
+  padding: 5px;
   margin-bottom: 30px;
   font-size: 30px;
   cursor: pointer;
@@ -495,28 +502,32 @@ body button{
 }
 
 .selfplace {
-  display: flex;
+  display: inline;
   align-items: center;
   justify-content: flex-start;
-  width: 105%;
+  width: 100%;
 }
 
 .doo {
-  display: flex;
+  display: inline;
+  padding-bottom: 5px;
   width: 128%;
   justify-content: center;
   border-bottom: 2px solid #5c5f67;
 }
 
 .doo .example {
+  display: inline;
   color: #aaa;
+  font-size: 20px;
   transition: all 0.5s ease;
 }
 
 .doo .dooicon {
+  display: inline;
   padding-left: 15px;
   margin-bottom: 3px;
-  font-size: 24px;
+  font-size: 20px;
   cursor: pointer;
 }
 
@@ -531,7 +542,7 @@ body button{
 }
 .subicon{
   width: 100%;
-  display: flex;
+  display: inline;
   align-items: center;
   margin-left: 15px;
   animation: show-region .5s ease infinite alternate;
@@ -539,7 +550,7 @@ body button{
 .subicon p {
   font-size: 10px;
     margin: 0px;
-    display: flex;
+    display: inline;
     width: 100%;
     padding-left: 5px;
 }

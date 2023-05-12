@@ -112,9 +112,3 @@ find.addEventListener("click", function () {
       });
   });
 });
-
-// function findStore(data) {
-//   find.addEventListener("click", function () {
-
-//   });
-// }
