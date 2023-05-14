@@ -95,7 +95,6 @@ function check() {
             let Closestores = document.createElement("div");
             Openstores.setAttribute("class", "store");
             Closestores.setAttribute("class", "store");
-            console.log(item.adminCafe);
             //stores.setAttribute("value",i+1);
             if (open === true) {
               Openstores.innerHTML = `<div class="Sign">
