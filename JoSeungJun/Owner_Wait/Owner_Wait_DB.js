@@ -1,6 +1,7 @@
 const wait_Zone = document.querySelector(".wait tbody");
 const details = document.querySelector(".details");
 const X = document.querySelector(".X-image");
+const BlackBtn = document.querySelector(".BlackBtn");
 const lockBtn = document.querySelector(".lockBtn");
 const unlockBtn = document.querySelector(".unlockBtn");
 const BlackPeople = document.querySelector(".BlackPeople");
@@ -78,6 +79,32 @@ function waitingList(data) {
       });
     });
   }
+
+  let Selects = document.querySelectorAll(".TRtable td");
+  Selects.forEach(function (Select) {
+    Select.addEventListener("click", function () {
+      WaiterName.textContent =
+        Select.parentNode.querySelector(".NameTD").textContent;
+      NumText.textContent =
+        Select.parentNode.querySelector(".PhoneTD").textContent;
+      CountNum.textContent =
+        Select.parentNode.querySelector(".VisitTD").textContent;
+      PeopleText.textContent =
+        Select.parentNode.querySelector(".MenTD").textContent;
+
+      if (Select.parentNode.classList.contains("black")) {
+        lockBtn.style.display = "block";
+        unlockBtn.style.display = "none";
+        BlackPeople.style.display = "block";
+      } else {
+        lockBtn.style.display = "none";
+        unlockBtn.style.display = "block";
+        BlackPeople.style.display = "none";
+      }
+
+      showdetails();
+    });
+  });
 }
 
 function showdetails() {
