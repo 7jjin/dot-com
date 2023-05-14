@@ -317,6 +317,7 @@ ReviewMore1.addEventListener("click", () => {
   ReviewReduce.style.display = "block";
 });
 
+
 const utilList = document.querySelector(".utilList");
 fetch("http://localhost:4000/waitlist")
   .then((res) => res.json())
@@ -327,5 +328,6 @@ fetch("http://localhost:4000/waitlist")
       btn.innerHTML = "로그아웃";
       utilList.appendChild(btn);
     }
+
   })
   .catch((err) => console.log(err));

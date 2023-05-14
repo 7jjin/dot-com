@@ -1,6 +1,9 @@
 body {
   margin: 0;
 }
+body button{
+  padding:0px;
+}
 .socialLogin_phone{
   display: none;
   position: absolute;
@@ -437,7 +440,7 @@ body {
 
 .localname {
   margin-bottom: 30px;
-  font-size: 24px;
+  font-size: 18px;
 }
 
 
@@ -474,15 +477,21 @@ body {
   display: flex;
   background-color: white;
   flex-direction: row;
-  justify-content: space-between;
   align-items: center;
   padding: 30px 50px;
   box-shadow: rgb(128 128 128 / 85%) 0px 5px 9px 1px;
   border-radius: 0px 10px 10px 10px;
   transition: all 0.5s ease;
 }
+.place{
+  width: 100%;
+}
+.nowplace{
+  display: flex;
+}
 
 .place button {
+  padding: 5px;
   margin-bottom: 30px;
   font-size: 30px;
   cursor: pointer;
@@ -493,32 +502,59 @@ body {
 }
 
 .selfplace {
-  display: flex;
+  display: inline;
   align-items: center;
   justify-content: flex-start;
-  width: 65%;
+  width: 100%;
 }
 
 .doo {
-  display: flex;
-  width: 100%;
-  margin-right: 40px;
+  display: inline;
+  padding-bottom: 5px;
+  width: 128%;
   justify-content: center;
   border-bottom: 2px solid #5c5f67;
 }
 
-.doo input {
-  border: none;
-  font-size: 26px;
-  width: 85%;
-  outline: none;
+.doo .example {
+  display: inline;
+  color: #aaa;
+  font-size: 20px;
   transition: all 0.5s ease;
 }
 
 .doo .dooicon {
-  font-size: 24px;
+  display: inline;
+  padding-left: 15px;
+  margin-bottom: 3px;
+  font-size: 20px;
   cursor: pointer;
 }
+
+
+@keyframes show-region {
+  0%{
+    margin-left: 15px;
+  }
+  100%{
+    margin-left: 5px;
+  }
+}
+.subicon{
+  width: 100%;
+  display: inline;
+  align-items: center;
+  margin-left: 15px;
+  animation: show-region .5s ease infinite alternate;
+}
+.subicon p {
+  font-size: 10px;
+    margin: 0px;
+    display: inline;
+    width: 100%;
+    padding-left: 5px;
+}
+
 
 .si {
   display: flex;
@@ -543,6 +579,8 @@ body {
 }
 
 .filterRegion .find {
+  position: absolute;
+  right: 9%;
   width: 100px;
   height: 56px;
   background: none;
@@ -619,6 +657,7 @@ body {
   margin: 0px;
 }
 .outerRegion{
+  position: relative;
   background-color: white;
   width: 95%;
   border: 1px solid #999;
@@ -667,6 +706,31 @@ body {
     padding-left: 14px;
     padding:10px 0px;
     margin:10px 0px
+}
+
+.buttonRegion{
+  width: 30%;
+    display: block;
+    position: relative;
+}
+.resetbutton{
+  position: absolute;
+  display: flex;
+  top: 10%;
+  right: 50%;
+}
+.fa-rotate:before, .fa-sync-alt:before{
+  margin-right: 5px;
+}
+.findRegion{
+  position: absolute;
+    font-size: 25px;
+    border: none;
+    border-radius: 3px;
+    background-color: #ddd;
+    width: 85px;
+    top: 66%;
+    right: 25%;
 }
 
 

@@ -38,7 +38,7 @@ function submitpassword() {
 fetch("http://localhost:4000/login")
   .then((res) => res.json())
   .then((data) => {
-    if (data[0].provider === "kakao" && data[0].phoneNumber === false) {
+    if (data[0].email && data[0].phoneNumber === false) {
       document.querySelector(".socialLogin_phone").style.display = "block";
     }
   })
