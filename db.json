@@ -3,7 +3,7 @@
     {
       "id": "local",
       "adminNo": 1,
-      "adminCafe": "성결대학교",
+      "adminCafe": "파스타를부탁해",
       "guName": "만안구",
       "addressName": "성결대학교 만안구 구구구 123",
       "clty_loc": null,
@@ -342,35 +342,40 @@
       "phone_number": "01097553489",
       "queueNumber": 1,
       "party_size": 2,
-      "timeAdded": null
+      "timeAdded": null,
+      "black": 0
     },
     {
       "name": "조승준",
       "phone_number": "01097553489",
       "queueNumber": 2,
       "party_size": 2,
-      "timeAdded": null
+      "timeAdded": null,
+      "black": 1
     },
     {
       "name": "조진형",
       "phone_number": "01097553489",
       "queueNumber": 3,
       "party_size": 2,
-      "timeAdded": null
+      "timeAdded": null,
+      "black": 0
     },
     {
       "name": "최용혁",
       "phone_number": "01097553489",
       "queueNumber": 4,
       "party_size": 2,
-      "timeAdded": null
+      "timeAdded": null,
+      "black": 0
     },
     {
       "name": "지영환",
       "phone_number": "01097553489",
       "queueNumber": 5,
       "party_size": 2,
-      "timeAdded": null
+      "timeAdded": null,
+      "black": 1
     },
     {
       "name": "지정배",
@@ -379,7 +384,8 @@
       "party_size": 4,
       "timeAdded": "2023-04-17T17:58:06",
       "현재시간": "2023-05-02 10:23:41",
-      "id": 2
+      "id": 2,
+      "black": 0
     }
   ],
   "waitingBar": [
@@ -416,76 +422,6 @@
       "latitude": 37.3834711,
       "longitude": 126.9218479,
       "id": 5
-    },
-    {
-      "latitude": 37.3834711,
-      "longitude": 126.9218479,
-      "id": 6
-    },
-    {
-      "latitude": 37.3756742,
-      "longitude": 126.9433486,
-      "id": 7
-    },
-    {
-      "latitude": 37.3756742,
-      "longitude": 126.9433486,
-      "id": 8
-    },
-    {
-      "latitude": 37.3756742,
-      "longitude": 126.9433486,
-      "id": 9
-    },
-    {
-      "latitude": 37.3864811,
-      "longitude": 126.9333301,
-      "id": 9
-    },
-    {
-      "latitude": 37.3756742,
-      "longitude": 126.9433486,
-      "id": 10
-    },
-    {
-      "latitude": 37.3756742,
-      "longitude": 126.9433486,
-      "id": 11
-    },
-    {
-      "latitude": 37.3756742,
-      "longitude": 126.9433486,
-      "id": 12
-    },
-    {
-      "latitude": 37.3834711,
-      "longitude": 126.9218479,
-      "id": 13
-    },
-    {
-      "latitude": 37.3834711,
-      "longitude": 126.9218479,
-      "id": 14
-    },
-    {
-      "latitude": 37.3834711,
-      "longitude": 126.9218479,
-      "id": 15
-    },
-    {
-      "latitude": 37.3834711,
-      "longitude": 126.9218479,
-      "id": 16
-    },
-    {
-      "latitude": 37.3834711,
-      "longitude": 126.9218479,
-      "id": 17
-    },
-    {
-      "latitude": 37.3834711,
-      "longitude": 126.9218479,
-      "id": 18
     }
   ],
   "userinfo": {
@@ -497,20 +433,18 @@
     "queueNumber": 1,
     "userNo": 2,
     "storePhone": "011-1234-4566",
-    "adminCafe": "현식돈국수",
+    "adminCafe": "연어식탁",
     "partySize": 3,
     "phoneNumber": "01097553489"
   },
-  "password": [
-    
-  ],
+  "password": [],
   "login": [
     {
       "provider": "kakao",
-      "phoneNumber":"010"
+      "phoneNumber": "010"
     }
   ],
-  "waitlist":[
+  "waitlist": [
     {
       "waitlistId": 5,
       "name": "",
@@ -523,6 +457,28 @@
       "adminCafe": "현식돈국수",
       "partySize": 3,
       "phoneNumber": "01097553489"
+    }
+  ],
+  "Review": [
+    {
+      "ReviewID": "jsj487",
+      "ReviewProfile": "/img/ProfileImg.jpg",
+      "ReviewImg": "/img/ReviewImg.jpg",
+      "ReviewContent": "간짬뽕은 처음인데 색다르니 맛있었어요!!ㅎㅎ 국물없는 짬뽕이라니!!😋",
+      "ReviewDate": "2023.05.13"
+    },
+    {
+      "ReviewID": "tmdwns487",
+      "ReviewProfile": "/img/ProfileImg2.jpg",
+      "ReviewImg": "/img/ReviewImg2.jpg",
+      "ReviewContent": "짜장면, 탕수육도 맛있어서 세트 드시는 거 추천이요ㅎㅎ",
+      "ReviewDate": "2023.05.12"
+    },
+    {      "ReviewImg": "/img/ReviewImg3.jpg"
+  },
+    {      "ReviewImg": "/img/ReviewImg4.jpg"
+  },
+    {      "ReviewImg": "/img/ReviewImg5.jpg"
   }
   ]
 }

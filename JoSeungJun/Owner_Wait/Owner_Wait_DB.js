@@ -1,7 +1,9 @@
 const wait_Zone = document.querySelector(".wait tbody");
 const details = document.querySelector(".details");
 const X = document.querySelector(".X-image");
-const BlackBtn = document.querySelector(".BlackBtn");
+const lockBtn = document.querySelector(".lockBtn");
+const unlockBtn = document.querySelector(".unlockBtn");
+const BlackPeople = document.querySelector(".BlackPeople");
 
 fetch("http://localhost:4000/waiting")
     .then(res => {
@@ -20,8 +22,13 @@ function waitingList(data) {
         let waitingNum = data[i].phone_number;
         let waitingSize = data[i].party_size;
         let waitingQue = data[i].queueNumber;
+        let blacklist = data[i].black;
         let waitings = document.createElement("tr");
-        waitings.className = "TRtable";
+        if (blacklist === 1) {
+            waitings.className = "TRtable black";
+          } else {
+            waitings.className = "TRtable";
+          }
 
         let WaiterName = document.querySelector('.WaiterName');
         let NumText = document.querySelector('.NumText');
@@ -38,6 +45,13 @@ function waitingList(data) {
             </tr>`;
         wait_Zone.append(waitings);
 
+        let waitingsChildren = waitings.children;
+        if (blacklist === 1) {
+            for (let i = 0; i < waitingsChildren.length; i++) {
+              waitingsChildren[i].style.color = "red";
+          }
+        }
+          
         let Selects = document.querySelectorAll('.TRtable td');
         Selects.forEach(function (Select) {
             Select.addEventListener("click", function () {
@@ -45,10 +59,20 @@ function waitingList(data) {
                 NumText.textContent = Select.parentNode.querySelector('.PhoneTD').textContent;
                 CountNum.textContent = Select.parentNode.querySelector('.VisitTD').textContent;
                 PeopleText.textContent = Select.parentNode.querySelector('.MenTD').textContent;
-                showdetails();
+
+                if (Select.parentNode.classList.contains('black')) {
+                    lockBtn.style.display = "block";
+                    unlockBtn.style.display = "none";
+                    BlackPeople.style.display = "block"
+                  } else {
+                    lockBtn.style.display = "none";
+                    unlockBtn.style.display = "block";
+                    BlackPeople.style.display = "none";
+                  }
+
+                showdetails();     
             });
         });
-
     }
 }
 

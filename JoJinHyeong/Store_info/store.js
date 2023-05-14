@@ -239,7 +239,6 @@ const HomeTab = document.querySelector(".homeTab");
 const MenuTab = document.querySelector(".MenuTab");
 const PhotoTab = document.querySelector(".photoTab");
 const ReviewTab = document.querySelector(".userReviewTab");
-const Photos = document.querySelector(".Photo");
 const Home = document.querySelector(".store_Home");
 const Home_Top = window.pageYOffset + Home.getBoundingClientRect().top;
 const Menu = document.querySelector(".store_Menu");

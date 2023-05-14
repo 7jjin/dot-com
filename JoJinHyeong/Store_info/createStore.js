@@ -18,6 +18,9 @@ const PhoneText = document.querySelector(".PhoneText");
 const NumText = document.querySelector(".NumText");
 const modalbtn = document.querySelector(".modal-foot");
 const peopleBox = document.querySelector(".people");
+const ReviewZone = document.querySelector(".ReviewZone");
+const PhotoNum = document.querySelector(".PhotoNum");
+const ReviewCount = document.querySelector(".ReviewCount");
 
 const uni = sessionStorage.getItem("selectedValue");
 const url = `http://localhost:4000/store?adminNo=${uni}`;
@@ -44,6 +47,17 @@ fetch(url)
   })
   .catch((err) => console.log(err));
 
+fetch("http://localhost:4000/Review")
+  .then(res => {
+    return res.json();
+  })
+  .then(data => {
+    ReviewBoxes(data);
+  })
+  .catch(error => {
+    console.log(error);
+  });
+
 function renderPage(data) {
   for (let i = 0; i < data[0].categories.length; i++) {
     // 카테고리별로 박스 만들어서 appendChild로 추가
@@ -54,8 +68,8 @@ function renderPage(data) {
     Menu2.appendChild(menubox);
 
     for (let j = 0; j < data[0].categories[i].menuList.length; j++) {
+      // ------ 메뉴추가
       const menu = data[0].categories[i].menuList[j];
-
       const menulist = document.createElement("div");
       menulist.innerHTML = `<a class="SubItem">
       <div class="MenuInfo">
@@ -70,6 +84,8 @@ function renderPage(data) {
     <div class="menuImg" style="background-image: url(${menu.menusavedNm})"></div>
     </a>`;
       Menu2.appendChild(menulist);
+
+      // ------ 탭 클릭 이동 이벤트
 
       PhotoTab.addEventListener("click", function () {
         Move1(
@@ -162,15 +178,56 @@ function renderPage(data) {
     function handleClick1() {
       sent();
     }
-    //예약하기 버튼 눌렀을 때 성공했다는 메시지 출력 함수
-    // function handleClick2() {
-    //   alert("예약이 완료 되었습니다.");
-    // }
 
     modalbtn.onclick = function () {
       handleClick1();
-      // handleClick2();
     };
+  }
+}
+
+// ------ 리뷰추가
+function ReviewBoxes(data) {
+
+
+  for (let i = 0; i < data.length; i++) {
+    ReviewCount.textContent = data.length;
+    const ReviewDB = data[i];
+    const Reviewbox = document.createElement("div");
+    Reviewbox.innerHTML = `<div class="ReviewOne">
+    <div class="UserZone">
+      <span class="UserProfile" style="background-image: url(${ReviewDB.ReviewProfile}")></span>
+      <h4 class="NickName">${ReviewDB.ReviewID}</h4>
+    </div>
+    <li class="Review">
+      <div class="ReviewPhoto" style="background-image: url(${ReviewDB.ReviewImg})"></div>
+      <div class="ReviewContent">${ReviewDB.ReviewContent}</div>
+    </li>
+    <div class="DateInfo">
+      <span class="UserCount">2번째 방문</span>
+      <span class="UserDate">${ReviewDB.ReviewDate}</span>
+    </div>
+  </div>`;
+    ReviewZone.appendChild(Reviewbox);
+
+    let photoItem = document.createElement("li");
+    let image = document.createElement("img");
+    photoItem.className = "Photo";
+    image.src = data[i].ReviewImg;
+    photoItem.appendChild(image);
+    PhotoNum.appendChild(photoItem);
+
+    var photos = document.querySelectorAll('.Photo');
+    for (let i = 0; i < photos.length; i++) {
+      photos[i].addEventListener('click', function () {
+        var src = this.src.replace('data[i].ReviewImg', 'big'); // 대표 이미지에서 원본 이미지 경로 추출
+        var alt = this.alt; // 대표 이미지 alt 속성 값 추출
+        openModal(src, alt); // 모달창 열기 함수 호출
+      });
+    }
+
+    modal.addEventListener('click', function() {
+      closeModal(); // 모달창 닫기 함수 호출
+    });
   }
 }
 
@@ -192,4 +249,15 @@ function openingDay(data) {
     else if (day[i] === "6") daylist += "토 ";
   }
   week.innerHTML = daylist;
+}
+
+function openModal(src, alt) {
+  modal.style.display = 'block'; // 모달창 열기
+  modalImg.src = src; // 모달창 이미지 변경
+  captionText.innerHTML = alt; // 모달창 캡션 변경
+}
+
+// 모달창 닫기 함수
+function closeModal() {
+  modal.style.display = 'none';
 }

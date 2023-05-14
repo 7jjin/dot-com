@@ -19,6 +19,18 @@ function userinfo(data) {
     Restaurant.innerHTML = data.adminCafe;
 }
 
+fetch("http://localhost:4000/mainpage")
+  .then(res => {
+    return res.json();
+  })
+  .then(jsonData => {
+    data = jsonData;
+    open_res(  data);
+  })
+  .catch(error => {
+    console.log(error);
+  });
+
 function updateData(data) {
     fetch("http://localhost:4000/mainpage", {
         method: "PUT",
@@ -54,24 +66,12 @@ function open_res(data) {
     }
 
 
-    if (obj.open === false) {
+    if (obj.open === true) {
         ON.style.display = 'none';
         OFF.style.display = 'block';
     }
-    else if (obj.open === true) {
+    else if (obj.open === false) {
         ON.style.display = 'block';
         OFF.style.display = 'none';
     }
 }
-
-fetch("http://localhost:4000/mainpage")
-    .then(res => {
-        return res.json();
-    })
-    .then(data => {
-        open_res(data);
-    })
-    .catch(error => {
-        console.log(error);
-    });
-
