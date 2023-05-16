@@ -374,6 +374,13 @@
       "인원": "5",
       "현재시간": "2023-05-02 20:23:47",
       "id": 16
+    },
+    {
+      "가게이름": "진형식당",
+      "전화번호": "031-1234-4566",
+      "인원": "3",
+      "현재시간": "2023-05-15 13:51:18",
+      "id": 17
     }
   ],
   "waiting": [
@@ -519,11 +526,27 @@
       "ReviewContent": "짜장면, 탕수육도 맛있어서 세트 드시는 거 추천이요ㅎㅎ",
       "ReviewDate": "2023.05.12"
     },
-    {      "ReviewImg": "/img/ReviewImg3.jpg"
-  },
-    {      "ReviewImg": "/img/ReviewImg4.jpg"
-  },
-    {      "ReviewImg": "/img/ReviewImg5.jpg"
-  }
+    {
+      "ReviewID": "wlsgud6305",
+      "ReviewProfile": "/img/ProfileImg2.jpg",
+      "ReviewImg": "/img/ReviewImg3.jpg",
+      "ReviewContent": "짜장면, 탕수육도 맛있어서 세트 드시는 거 추천이요ㅎㅎ",
+      "ReviewDate": "2023.05.12"
+    },
+    {
+      "ReviewID": "abcdef",
+      "ReviewProfile": "/img/ProfileImg2.jpg",
+      "ReviewImg": "/img/ReviewImg4.jpg",
+      "ReviewContent": "짜장면, 탕수육도 맛있어서 세트 드시는 거 추천이요ㅎㅎ",
+      "ReviewDate": "2023.05.12"
+    },
+    {
+      "ReviewID": "aaa47589",
+      "ReviewProfile": "/img/ProfileImg2.jpg",
+      "ReviewImg": "/img/ReviewImg5.jpg",
+      "ReviewContent": "짜장면, 탕수육도 맛있어서 세트 드시는 거 추천이요ㅎㅎ",
+      "ReviewDate": "2023.05.12"
+    }
+    
   ]
 }
