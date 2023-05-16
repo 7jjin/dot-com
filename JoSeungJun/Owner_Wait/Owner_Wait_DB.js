@@ -6,6 +6,7 @@ const BlackBtn = document.querySelector(".BlackBtn");
 const lockBtn = document.querySelector(".lockBtn");
 const unlockBtn = document.querySelector(".unlockBtn");
 const BlackPeople = document.querySelector(".BlackPeople");
+const modal = document.querySelector(".modal");
 
 fetch("http://localhost:4000/waiting")
     .then(res => {
@@ -75,9 +76,12 @@ function waitingList(data) {
                 showdetails();     
             });
         });
-
+        lockBtn.addEventListener("click", function() {
+          modal.style.display = "block";
+        });
     }
 }
+
 
 function showdetails() {
   if (!details.classList.contains('show')) {

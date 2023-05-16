@@ -158,6 +158,34 @@
             }
           ]
         }
+      ],
+      "Review": [
+        {
+          "ReviewID": "jsj487",
+          "ReviewProfile": "/img/ProfileImg.jpg",
+          "ReviewImg": "/img/ReviewImg.jpg",
+          "ReviewContent": "간짬뽕은 처음인데 색다르니 맛있었어요!!ㅎㅎ 국물없는 짬뽕이라니!!😋",
+          "ReviewDate": "2023.05.13"
+        },
+        {
+          "ReviewID": "tmdwns487",
+          "ReviewProfile": "/img/ProfileImg2.jpg",
+          "ReviewImg": "/img/ReviewImg2.jpg",
+          "ReviewContent": "짜장면, 탕수육도 맛있어서 세트 드시는 거 추천이요ㅎㅎ",
+          "ReviewDate": "2023.05.12"
+        },
+        {
+          "ReviewImg": "/img/ReviewImg3.jpg"
+        },
+        {
+          "ReviewImg": "/img/ReviewImg4.jpg"
+        },
+        {
+          "ReviewImg": "/img/ReviewImg5.jpg"
+        },
+        {
+          "ReviewImg": "/img/ReviewImg5.jpg"
+        }
       ]
     },
     {
@@ -206,6 +234,15 @@
             }
           ]
         }
+      ],
+      "Review": [
+        {
+          "ReviewID": "jsj487",
+          "ReviewProfile": "/img/ProfileImg.jpg",
+          "ReviewImg": "/img/ReviewImg.jpg",
+          "ReviewContent": "간짬뽕은 처음인데 색다르니 맛있었어요!!ㅎㅎ 국물없는 짬뽕이라니!!😋",
+          "ReviewDate": "2023.05.13"
+        }
       ]
     },
     {
@@ -223,7 +260,9 @@
       "storePhone": "031-1234-4566",
       "latitude": 0,
       "longitude": 0,
-      "categories": []
+      "categories": [],
+      "Review": [
+      ]
     }
   ],
   "local": [
@@ -374,6 +413,13 @@
       "인원": "5",
       "현재시간": "2023-05-02 20:23:47",
       "id": 16
+    },
+    {
+      "가게이름": "진형식당",
+      "전화번호": "031-1234-4566",
+      "인원": "3",
+      "현재시간": "2023-05-16 15:47:27",
+      "id": 17
     }
   ],
   "waiting": [
@@ -462,6 +508,11 @@
       "latitude": 37.3834711,
       "longitude": 126.9218479,
       "id": 5
+    },
+    {
+      "latitude": 37.3787447,
+      "longitude": 126.9296186,
+      "id": 6
     }
   ],
   "userinfo": {
@@ -503,27 +554,5 @@
       "partySize": 3,
       "phoneNumber": "01097553489"
     }
-  ],
-  "Review": [
-    {
-      "ReviewID": "jsj487",
-      "ReviewProfile": "/img/ProfileImg.jpg",
-      "ReviewImg": "/img/ReviewImg.jpg",
-      "ReviewContent": "간짬뽕은 처음인데 색다르니 맛있었어요!!ㅎㅎ 국물없는 짬뽕이라니!!😋",
-      "ReviewDate": "2023.05.13"
-    },
-    {
-      "ReviewID": "tmdwns487",
-      "ReviewProfile": "/img/ProfileImg2.jpg",
-      "ReviewImg": "/img/ReviewImg2.jpg",
-      "ReviewContent": "짜장면, 탕수육도 맛있어서 세트 드시는 거 추천이요ㅎㅎ",
-      "ReviewDate": "2023.05.12"
-    },
-    {      "ReviewImg": "/img/ReviewImg3.jpg"
-  },
-    {      "ReviewImg": "/img/ReviewImg4.jpg"
-  },
-    {      "ReviewImg": "/img/ReviewImg5.jpg"
-  }
   ]
 }
