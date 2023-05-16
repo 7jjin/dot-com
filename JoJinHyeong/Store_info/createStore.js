@@ -21,6 +21,10 @@ const peopleBox = document.querySelector(".people");
 const ReviewZone = document.querySelector(".ReviewZone");
 const PhotoNum = document.querySelector(".PhotoNum");
 const ReviewCount = document.querySelector(".ReviewCount");
+const Imgmodal = document.querySelector(".Imgmodal");
+const modalImg = document.querySelector(".Img-modal-content");
+const Imgclose = document.querySelector(".Imgclose");
+
 
 const uni = sessionStorage.getItem("selectedValue");
 const url = `http://localhost:4000/store?adminNo=${uni}`;
@@ -31,6 +35,7 @@ fetch(url)
   .then((data) => {
     openingDay(data);
     renderPage(data);
+    ReviewBoxes(data);
     addr.innerHTML = `${data[0].addressName}`;
     call.innerHTML = `${data[0].storePhone}`;
     openTime.innerHTML = `${data[0].openingTime}`;
@@ -46,17 +51,6 @@ fetch(url)
     /*-----------------------------------------------------------*/
   })
   .catch((err) => console.log(err));
-
-fetch("http://localhost:4000/Review")
-  .then(res => {
-    return res.json();
-  })
-  .then(data => {
-    ReviewBoxes(data);
-  })
-  .catch(error => {
-    console.log(error);
-  });
 
 function renderPage(data) {
   for (let i = 0; i < data[0].categories.length; i++) {
@@ -160,7 +154,7 @@ function renderPage(data) {
               modal.style.display = "flex";
             });
             close.addEventListener("click", function (event) {
-              modal.style.display = "none";
+              closeModal(modal)
             });
 
             hap();
@@ -171,7 +165,6 @@ function renderPage(data) {
     const bar = document.createElement("hr");
     bar.className = "line";
     Menu2.append(bar);
-
     NameText.innerHTML = data[0].adminCafe;
 
     //예약하기 버튼 눌렀을 때 데이터 sent()함수
@@ -187,11 +180,9 @@ function renderPage(data) {
 
 // ------ 리뷰추가
 function ReviewBoxes(data) {
-
-
-  for (let i = 0; i < data.length; i++) {
-    ReviewCount.textContent = data.length;
-    const ReviewDB = data[i];
+  for (let i = 0; i < data[0].Review.length; i++) {
+    ReviewCount.textContent = data[0].Review.length;
+    const ReviewDB = data[0].Review[i];
     const Reviewbox = document.createElement("div");
     Reviewbox.innerHTML = `<div class="ReviewOne">
     <div class="UserZone">
@@ -212,24 +203,25 @@ function ReviewBoxes(data) {
     let photoItem = document.createElement("li");
     let image = document.createElement("img");
     photoItem.className = "Photo";
-    image.src = data[i].ReviewImg;
+    image.src = ReviewDB.ReviewImg;
     photoItem.appendChild(image);
     PhotoNum.appendChild(photoItem);
 
     var photos = document.querySelectorAll('.Photo');
-    for (let i = 0; i < photos.length; i++) {
+    for (let j = 0; j < photos; j++) {
       photos[i].addEventListener('click', function () {
-        var src = this.src.replace('data[i].ReviewImg', 'big'); // 대표 이미지에서 원본 이미지 경로 추출
-        var alt = this.alt; // 대표 이미지 alt 속성 값 추출
-        openModal(src, alt); // 모달창 열기 함수 호출
+        var src = ReviewDB.ReviewImg; // 대표 이미지에서 원본 이미지 경로 추출
+        ImgModal(src); // 모달창 열기 함수 호출
       });
     }
-
-    modal.addEventListener('click', function() {
-      closeModal(); // 모달창 닫기 함수 호출
-    });
   }
+
+  Imgmodal.addEventListener('click', function () {
+    closeModal(modalImg); // 모달창 닫기 함수 호출
+  });
 }
+
+
 
 function Move1(element) {
   window.scroll({ top: element - 95, behavior: "smooth" });
@@ -251,13 +243,13 @@ function openingDay(data) {
   week.innerHTML = daylist;
 }
 
-function openModal(src, alt) {
-  modal.style.display = 'block'; // 모달창 열기
+function ImgModal(src) {
+  Imgmodal.style.display = 'flex'; // 모달창 열기
   modalImg.src = src; // 모달창 이미지 변경
-  captionText.innerHTML = alt; // 모달창 캡션 변경
 }
 
 // 모달창 닫기 함수
-function closeModal() {
-  modal.style.display = 'none';
+function closeModal(e) {
+  e.style.display = 'none';
 }
+
