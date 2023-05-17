@@ -83,6 +83,7 @@ function check() {
         checkedRegion.innerHTML = `${array[0]} 외 ${array.length - 1}곳`;
         checkedRegion.style.color = "black";
         Store_Zone.innerHTML = "";
+
         data.forEach((item) => {
           if (array.includes(item.addressName.split(" ")[1])) {
             let adminCafe = item.adminCafe;
@@ -91,11 +92,13 @@ function check() {
             let adminNo = item.adminNo;
             let open = item.open;
             let waitingNum = item.waitingNum;
+            let foodType = item.foodType;
             let Openstores = document.createElement("div");
             let Closestores = document.createElement("div");
+            Openstores.setAttribute("value", foodType);
+            Closestores.setAttribute("value", foodType);
             Openstores.setAttribute("class", "store");
             Closestores.setAttribute("class", "store");
-            //stores.setAttribute("value",i+1);
             if (open === true) {
               Openstores.innerHTML = `<div class="Sign">
             <div class="Store_Sign">
@@ -156,11 +159,13 @@ function check() {
             let adminNo = item.adminNo;
             let open = item.open;
             let waitingNum = item.waitingNum;
+            let foodType = item.foodType;
             let Openstores = document.createElement("div");
             let Closestores = document.createElement("div");
+            Openstores.setAttribute("value", foodType);
+            Closestores.setAttribute("value", foodType);
             Openstores.setAttribute("class", "store");
             Closestores.setAttribute("class", "store");
-            console.log(item.adminCafe);
             //stores.setAttribute("value",i+1);
             if (open === true) {
               Openstores.innerHTML = `<div class="Sign">
@@ -222,9 +227,12 @@ function check() {
           let adminNo = data[i].adminNo;
           let open = data[i].open;
           let waitingNum = data[i].waitingNum;
+          let foodType = data[i].foodType;
           let Openstores = document.createElement("div");
           let Closestores = document.createElement("div");
 
+          Openstores.setAttribute("value", foodType);
+          Closestores.setAttribute("value", foodType);
           Openstores.setAttribute("class", "store");
           Closestores.setAttribute("class", "store");
 

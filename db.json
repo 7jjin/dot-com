@@ -28,7 +28,7 @@
       "addressName": "서울시 강남구 마곡동 785-2",
       "clty_loc": null,
       "storeIntroduce": "안녕하세요 현식돈국수입니다.",
-      "foodType": "분식",
+      "foodType": "일식",
       "savedNm": "Storeimage2.png",
       "openingTime": "09:00:00",
       "closingTime": "20:00:00",
@@ -67,7 +67,7 @@
       "addressName": "인천 연수구 123",
       "clty_loc": null,
       "storeIntroduce": "환영합니다 현식돈국수입니다",
-      "foodType": "한식",
+      "foodType": "미국식",
       "savedNm": "Storeimage1.jpg",
       "openingTime": "09:00:00",
       "closingTime": "21:00:00",
@@ -87,7 +87,27 @@
       "addressName": "경기도 안양시 만안구 123",
       "clty_loc": null,
       "storeIntroduce": "환영합니다 현식돈국수입니다",
-      "foodType": "한식",
+      "foodType": "프랑스식",
+      "savedNm": "Storeimage1.jpg",
+      "openingTime": "09:00:00",
+      "closingTime": "21:00:00",
+      "weekday": 1234,
+      "storePhone": "031-1234-4566",
+      "latitude": 126.92883626779027,
+      "longitude": 37.37989691469408,
+      "menuList": null,
+      "open": true,
+      "waitingNum": 3
+    },
+    {
+      "id": "local",
+      "adminNo": 6,
+      "adminCafe": "이게 뭐죵",
+      "guName": "만안구",
+      "addressName": "경기도 안양시 만안구 123",
+      "clty_loc": null,
+      "storeIntroduce": "환영합니다 이게 뭐죵입니다",
+      "foodType": "이탈리아식",
       "savedNm": "Storeimage1.jpg",
       "openingTime": "09:00:00",
       "closingTime": "21:00:00",
@@ -261,8 +281,7 @@
       "latitude": 0,
       "longitude": 0,
       "categories": [],
-      "Review": [
-      ]
+      "Review": []
     }
   ],
   "local": [
@@ -513,6 +532,26 @@
       "latitude": 37.3787447,
       "longitude": 126.9296186,
       "id": 6
+    },
+    {
+      "latitude": 37.3834711,
+      "longitude": 126.9218479,
+      "id": 7
+    },
+    {
+      "latitude": 37.3834711,
+      "longitude": 126.9218479,
+      "id": 8
+    },
+    {
+      "latitude": 37.2993543,
+      "longitude": 127.0509458,
+      "id": 9
+    },
+    {
+      "latitude": 37.2875206,
+      "longitude": 127.059897,
+      "id": 10
     }
   ],
   "userinfo": {
