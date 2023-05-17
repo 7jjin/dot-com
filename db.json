@@ -118,6 +118,26 @@
       "menuList": null,
       "open": true,
       "waitingNum": 3
+    },
+    {
+      "id": "local",
+      "adminNo": 7,
+      "adminCafe": "맛없는 식당",
+      "guName": "만안구",
+      "addressName": "서울시 광진구 만안구 123",
+      "clty_loc": null,
+      "storeIntroduce": "환영합니다 맛없는 식당입니다",
+      "foodType": "한식",
+      "savedNm": "Storeimage1.jpg",
+      "openingTime": "09:00:00",
+      "closingTime": "21:00:00",
+      "weekday": 1234,
+      "storePhone": "031-1234-4566",
+      "latitude": 126.92883626779027,
+      "longitude": 37.37989691469408,
+      "menuList": null,
+      "open": true,
+      "waitingNum": 3
     }
   ],
   "store": [
@@ -552,6 +572,11 @@
       "latitude": 37.2875206,
       "longitude": 127.059897,
       "id": 10
+    },
+    {
+      "latitude": 37.2875252,
+      "longitude": 127.0599219,
+      "id": 11
     }
   ],
   "userinfo": {
