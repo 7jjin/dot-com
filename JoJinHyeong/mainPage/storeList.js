@@ -89,7 +89,7 @@ function storeList(data) {
   }
 }
 
-// 음식 분야에 따른 가게 리스트 출력
+// 음식 종류에 따른 가게 리스트 출력
 function menuClick(data) {
   const sortedMenu = document.querySelectorAll("#sortedMenu");
   sortedMenu.forEach((el) => {

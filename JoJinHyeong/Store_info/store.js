@@ -49,7 +49,6 @@ window.addEventListener("scroll", function () {
   }
 });
 
-
 // 가로 스크롤 - 버튼 누르면 해당 버튼의 색이 변하고 다른 버튼을 누르면 해제되는 함수
 // ----------------------------------------------------------------------------
 function change_btn(e) {
@@ -229,7 +228,6 @@ function sent() {
 
 // json-server --watch db.json  가상서버 실행
 
-
 // 버튼 누르면 해당 이벤트 적용
 // --------------------------------------------------------------------------------------------
 
@@ -317,17 +315,14 @@ ReviewMore1.addEventListener("click", () => {
   ReviewReduce.style.display = "block";
 });
 
-
 const utilList = document.querySelector(".utilList");
 fetch("http://localhost:4000/waitlist")
   .then((res) => res.json())
   .then((data) => {
-    console.log(data);
     if (data[0].name) {
       let btn = document.createElement("button");
       btn.innerHTML = "로그아웃";
       utilList.appendChild(btn);
     }
-
   })
   .catch((err) => console.log(err));

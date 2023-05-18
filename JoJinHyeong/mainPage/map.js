@@ -28,3 +28,5 @@ function findmap() {
     mapWapper.style.display = "none";
   }
 }
+
+document.querySelector(".map").addEventListener("click", findmap);

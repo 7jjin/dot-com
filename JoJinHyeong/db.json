@@ -69,8 +69,8 @@
       "closingTime": "12:00:00",
       "weekday": 1234,
       "storePhone": "031-1234-4566",
-      "latitude": 0,
-      "longitude": 0,
+      "latitude": 126.92883626779027,
+      "longitude": 37.37989691469408,
       "categories": [
         {
           "categoryName": "스테이크",
@@ -127,8 +127,8 @@
       "closingTime": "21:00:00",
       "weekday": 1234,
       "storePhone": "031-1234-4566",
-      "latitude": 0,
-      "longitude": 0,
+      "latitude": 127.0243,
+      "longitude": 37.5434,
       "categories": [
         {
           "categoryName": "음료",

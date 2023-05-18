@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="ko">
 
 <head>
   <meta charset="UTF-8" />
@@ -7,8 +7,12 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Document</title>
   <link rel="stylesheet" href="store.css" />
+  <script type="text/javascript"
+    src="//dapi.kakao.com/v2/maps/sdk.js?appkey=575e00627ad336160ee258c5c9ed0525&libraries=services"></script>
+
   <script defer src="./createStore.js"></script>
   <script defer src="./store.js"></script>
+  <script defer src="./findmap.js"></script>
 
 
 
@@ -50,6 +54,7 @@
       </div>
   </section>
   <div class="Entire">
+
     <section class="remote_Tip">
       <p class="Tip_title">예약 방법</p>
       <p class="Tip_first">1. 음식점을 방문 할 인원수를 선택해주세요.</p>
@@ -89,9 +94,9 @@
             <i class="fa-regular fa-heart"></i>
             <p>1,120</p>
           </div>
-          <div class="share">
-            <i class="fa-solid fa-arrow-up-right-from-square"></i>
-            <p>공유</p>
+          <div class="map">
+            <i class="fa-regular fa-map"></i>
+            <p>위치</p>
           </div>
         </div>
       </section>
@@ -102,6 +107,14 @@
           <div class="photoTab">사진</div>
           <div class="userReviewTab">리뷰</div>
         </section>
+        <div class="mapWapper" style="display: none;">
+          <div class="mapInner">
+            <div class="maptitle">
+              <p>가게위치&길찾기</p>
+            </div>
+            <div id="staticMap"></div>
+          </div>
+        </div>
       </div>
       <section class="store_Home">
         <div class="people">
@@ -302,7 +315,5 @@
     <img class="Img-modal-content" src="">
   </div>
 </body>
-
-
 
 </html>

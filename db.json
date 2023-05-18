@@ -154,8 +154,8 @@
       "closingTime": "12:00:00",
       "weekday": 1234,
       "storePhone": "031-1234-4566",
-      "latitude": 0,
-      "longitude": 0,
+      "latitude": 126.92883626779027,
+      "longitude": 37.37989691469408,
       "open": 0,
       "categories": [
         {
@@ -241,8 +241,8 @@
       "closingTime": "21:00:00",
       "weekday": 1234,
       "storePhone": "031-1234-4566",
-      "latitude": 0,
-      "longitude": 0,
+      "latitude": 127.0243,
+      "longitude": 37.5434,
       "categories": [
         {
           "categoryName": "음료",
@@ -298,8 +298,8 @@
       "closingTime": "21:00:00",
       "weekday": 123,
       "storePhone": "031-1234-4566",
-      "latitude": 0,
-      "longitude": 0,
+      "latitude": 126.92042079261175,
+      "longitude": 37.391462944015544,
       "categories": [],
       "Review": []
     }
