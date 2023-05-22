@@ -46,5 +46,5 @@ function waitingBar(data) {
 
 function Users(data) {
   let UserName = document.querySelector(".utilList_User");
-  UserName.innerHTML = data[0].CustomerName;
+  UserName.innerHTML = data.CustomerName;
 }

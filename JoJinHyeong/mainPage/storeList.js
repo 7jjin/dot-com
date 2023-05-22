@@ -12,7 +12,6 @@ fetch("http://localhost:4000/mainpage")
       })
       .then(data2 => {
         storeList(data1, data2); // 두 개의 데이터를 모두 전달하여 처리
-        storeList(data1);
         menuClick(data1);
       }) 
   .catch((error) => {
@@ -30,6 +29,7 @@ function storeList(data1,data2) {
     let adminNo = data1[i].adminNo;
     let open = data1[i].open;
     let waitingNum = data1[i].waitingNum;
+    let foodType = data1[i].foodType;
     let review = data2[i].Review.length;  
 
     let Openstores = document.createElement("div");
@@ -114,8 +114,10 @@ function menuClick(data) {
           let open = item.open;
           let waitingNum = item.waitingNum;
           let foodType = item.foodType;
+
           let Openstores = document.createElement("div");
           let Closestores = document.createElement("div");
+          
           Openstores.setAttribute("value", foodType);
           Closestores.setAttribute("value", foodType);
 
@@ -133,7 +135,7 @@ function menuClick(data) {
                   <div class="rating">
                     <span class="Star">⭐</span>
                     <span class="Star_Rating">4.5</span>
-                    <span class="Review_Rating">(412)</span>
+                    <span class="Review_Rating">(${review})</span>
                   </div>
                   <span class="tags">연어 및 각종 일식</span><br>
                   <span class="address">"${addr}"</span>
@@ -154,7 +156,7 @@ function menuClick(data) {
                   <div class="rating">
                     <span class="Star">⭐</span>
                     <span class="Star_Rating">4.5</span>
-                    <span class="Review_Rating">(412)</span>
+                    <span class="Review_Rating">(${review})</span>
                   </div>
                   <span class="tags">연어 및 각종 일식</span><br>
                   <span class="address">"${addr}"</span>

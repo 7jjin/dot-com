@@ -374,7 +374,7 @@
       "storePhone": "014-1234-4566",
       "latitude": 0,
       "longitude": 0,
-      "categories": null,
+      "categories": [],
       "Review": []
     }
   ],
@@ -622,6 +622,21 @@
       "latitude": 37.2875252,
       "longitude": 127.0599219,
       "id": 11
+    },
+    {
+      "latitude": 37.53447,
+      "longitude": 127.1464055,
+      "id": 12
+    },
+    {
+      "latitude": 37.5454702,
+      "longitude": 127.1365699,
+      "id": 13
+    },
+    {
+      "latitude": 37.5342244,
+      "longitude": 127.1464754,
+      "id": 14
     }
   ],
   "userinfo": {
@@ -664,8 +679,7 @@
       "phoneNumber": "01097553489"
     }
   ],
-
-  "history" :[
+  "history": [
     {
       "id": "local",
       "adminNo": 1,
