@@ -53,12 +53,13 @@ find.addEventListener("click", function () {
           let adminNo = data[i].adminNo;
           let open = data[i].open;
           let waitingNum = data[i].waitingNum;
+          let foodType = data[i].foodType;
           let Openstores = document.createElement("div");
           let Closestores = document.createElement("div");
-
+          Openstores.setAttribute("value", foodType);
+          Closestores.setAttribute("value", foodType);
           Openstores.setAttribute("class", "store");
           Closestores.setAttribute("class", "store");
-
           //stores.setAttribute("value",i+1);
           if (open === 1) {
             Openstores.innerHTML = `<div class="Sign">

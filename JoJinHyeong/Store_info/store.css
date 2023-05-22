@@ -312,11 +312,55 @@ body {
 
 .phone,
 .hart,
-.share {
+.map {
     display: flex;
     align-items: center;
     justify-content: center;
 }
+
+/* 지도 css */
+.mapWapper{
+    position: absolute;
+    background-color: white;
+    border: 3px solid black;
+    left: 58%;
+    width: 30%;
+    height: 6%;
+    z-index: 999;
+  }
+  .maptitle{
+  
+    height: 10%;
+  }
+  .maptitle p{
+    margin:0;
+  font-size: 1rem;
+  
+  }
+  .mapInner{
+    position: relative;
+    width: 100%;
+    height: 100%;
+  }
+  #staticMap{
+    position: absolute;
+    width:100%;
+    height:90%;
+    z-index: 999;
+  }
+  #staticMap img{
+    width: 100%;
+    height: 100%;
+    background-position: center;
+    background-size: contain;
+  }
+  .mp_wap {
+    position: absolute;
+    top: 53%;
+    left: 10%;
+  }
+
+
 
 .etc p {
     margin-left: 5px;

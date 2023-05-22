@@ -33,7 +33,7 @@
 
 
 
-  <script type="text/javascript" src="//dapi.kakao.com/v2/maps/sdk.js?appkey=575e00627ad336160ee258c5c9ed0525"></script>
+  <!-- <script type="text/javascript" src="//dapi.kakao.com/v2/maps/sdk.js?appkey=575e00627ad336160ee258c5c9ed0525"></script> -->
 </head>
 
 <body>
@@ -102,7 +102,7 @@
       <div class="InfoMenu">
         <div class="call"></div>
         <div class="memberChange"></div>
-        <div class="map" onclick="findmap()"></div>
+        <div class="map"></div>
         <div class="wait">
           <div class="Num">16</div>
         </div>
@@ -178,37 +178,37 @@
     </div>
     <div class="filterMenu" style="display:none">
       <div class="korea">
-        <div class="imgKorea">
+        <div class="imgKorea" id="sortedMenu">
           <img src="/img/kor.png" alt="kor">
         </div>
         <p>한식</p>
       </div>
       <div class="japen">
-        <div class="imgJapen">
+        <div class="imgJapen" id="sortedMenu">
           <img src="/img/japen.png" alt="jap">
         </div>
         <p>일식</p>
       </div>
       <div class="china">
-        <div class="imgChina">
+        <div class="imgChina" id="sortedMenu">
           <img src="/img/china.png" alt="chi">
         </div>
         <p>중식</p>
       </div>
       <div class="america">
-        <div class="imgAmerica">
+        <div class="imgAmerica" id="sortedMenu">
           <img src="/img/america.png" alt="america">
         </div>
         <p>미국식</p>
       </div>
-      <div class="germany">
-        <div class="imgGermany">
-          <img src="/img/germany.png" alt="Ger">
+      <div class="france">
+        <div class="imgfrance" id="sortedMenu">
+          <img src="/img/france.png" alt="France">
         </div>
-        <p>독일식</p>
+        <p>프랑스식</p>
       </div>
       <div class="italy">
-        <div class="imgItaly">
+        <div class="imgItaly" id="sortedMenu">
           <img src="/img/italy.png" alt="italy">
         </div>
         <p>이탈리아식</p>
