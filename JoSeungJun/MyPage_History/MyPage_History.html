@@ -7,7 +7,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
     <link rel="stylesheet" href="./MyPage_History.css" />
-    <script src="./MyPage_History.js"></script>
+    <script defer src="./MyPage_History.js"></script>
 </head>
 
 <body>
@@ -26,7 +26,6 @@
                     <div class="Photo">
                         <img src="/img/Profile.png" alt="profile_image">
                         <span class="Photo_Edit">
-                            
                         </span>
                     </div>
                     <div class="Profile">
@@ -64,6 +63,35 @@
             </div>
         </div>
     </div>
+    <div class="historyBox">
+    </div>
+    <form action="" class="reviewBox">
+        <div class="modal">
+            <div class="modal-title">
+                <div class="userName">
+                    <span>리뷰 등록</span>
+                    <p class="userInfo">작성자:&nbsp;</p>
+                    <p class="NameText"></p>
+                </div>
+                <span class="close">&times;</span>
+            </div>
+            <div class="modal-contents">
+                <div class="PhotoContent">
+                    <div>
+                        <img src="" alt="Review_img" class="Review_img">
+                    </div>
+                    <input type="file" accept="image/*" class="Upload">
+                    <p>사진을 올려주세요</p>
+                </div>
+                <div class="ReviewContent">
+                    <textarea required class="ReviewInput" placeholder="음식과 서비스에 대한 솔직한 리뷰를 남겨주세요..."></textarea>
+                </div>
+            </div>
+            <div class="modal-foot">
+                <input class="ReviewBtn" type="submit" value="등록하기" />
+            </div>
+        </div>
+    </form>
 </body>
 
 </html>

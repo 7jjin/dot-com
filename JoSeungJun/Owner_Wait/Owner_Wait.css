@@ -32,7 +32,7 @@ body{
     cursor: pointer;
 }
 .HomeName{
-    width: 80px;
+    width: 200px;
     margin-left: 20px;
     font-weight: 600;
     font-size: 20px;
@@ -320,16 +320,6 @@ body{
     flex-direction: column;
     justify-content: space-between;
   }
-  .RestaurantName,.OrderName,.OrderPhone,.OrderNum{
-    display: flex;
-  }
-  .Cost-Box{
-    display: flex;
-    font-size: 20px;
-  }
-  .CostNum{
-    font-weight: 700;
-  }
 
   .modal-foot{
     display: flex;
@@ -356,13 +346,29 @@ body{
     cursor: pointer;
 }
 
-.ClosingBox{
-    height: 100%;
+.BlackName,.BlackPhone{
     display: flex;
-    justify-content: center;
-    align-items: center ;
 }
-.ClosingText{
-    font-size: 40px;
+
+.PhoneNumText,.NameText{
     font-weight: 700;
+}
+
+.BlackInput{
+    resize: none;
+    margin-top: 10px;
+    width: 95%;
+    height: 90%;
+    border: 1px solid rgb(151, 151, 151);
+    border-radius: 10px;
+    padding: 10px;
+}
+
+.BlackBtn{
+    width: 100%;
+    height: 100%;
+    border: 1px solid #fcaa72;
+    background-color: #fcaa72;
+    font-weight: 600;
+    font-size: 20px;
 }

@@ -5,21 +5,34 @@ fetch("http://localhost:4000/mainpage")
   .then(res => {
     return res.json();
   })
-  .then(data => {
-    storeList(data);
+  .then(data1 => {
+    fetch("http://localhost:4000/store")
+      .then(res => {
+        return res.json();
+      })
+      .then(data2 => {
+        storeList(data1, data2); // 두 개의 데이터를 모두 전달하여 처리
+      })
+      .catch(error => {
+        console.log(error);
+      });
   })
   .catch(error => {
     console.log(error);
   });
 
-function storeList(data) {
-  for (let i = 0; i < data.length; i++) {
-    let adminCafe = data[i].adminCafe;
-    let intro = data[i].storeIntroduce;
-    let addr = data[i].addressName;
-    let adminNo = data[i].adminNo;
-    let open = data[i].open;
-    let waitingNum = data[i].waitingNum
+function storeList(data1,data2) {
+  const maxLength = Math.max(data1.length, data2.length);
+
+  for (let i = 0; i < maxLength; i++) {
+    let adminCafe = data1[i].adminCafe;
+    let intro = data1[i].storeIntroduce;
+    let addr = data1[i].addressName;
+    let adminNo = data1[i].adminNo;
+    let open = data1[i].open;
+    let waitingNum = data1[i].waitingNum;
+    let review = data2[i].Review.length;  
+
     let Openstores = document.createElement("div");
     let Closestores = document.createElement("div");
 
@@ -37,7 +50,7 @@ function storeList(data) {
           <div class="rating">
             <span class="Star">⭐</span>
             <span class="Star_Rating">4.5</span>
-            <span class="Review_Rating">(412)</span>
+            <span class="Review_Rating">(${review})</span>
           </div>
           <span class="tags">연어 및 각종 일식</span><br>
           <span class="address">"${addr}"</span>
@@ -59,7 +72,7 @@ function storeList(data) {
           <div class="rating">
             <span class="Star">⭐</span>
             <span class="Star_Rating">4.5</span>
-            <span class="Review_Rating">(412)</span>
+            <span class="Review_Rating">(${review})</span>
           </div>
           <span class="tags">연어 및 각종 일식</span><br>
           <span class="address">"${addr}"</span>
@@ -81,8 +94,5 @@ function storeList(data) {
     };
     Store_Zone.appendChild(Openstores);
     Store_Zone.appendChild(Closestores);
-
   }
 }
-
-

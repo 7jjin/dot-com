@@ -6,6 +6,9 @@ const lockBtn = document.querySelector(".lockBtn");
 const unlockBtn = document.querySelector(".unlockBtn");
 const BlackPeople = document.querySelector(".BlackPeople");
 const modal = document.querySelector(".modal");
+const closeBtn = document.querySelector(".close");
+const NameText = document.querySelector(".NameText");
+const PhoneNumText = document.querySelector(".PhoneNumText");
 
 fetch("http://localhost:4000/waiting")
   .then((res) => {
@@ -45,57 +48,29 @@ function waitingList(data) {
               <td class="VisitTD">${waitingQue} 번</td>
               <td class="PhoneTD">${waitingNum}</td>
             </tr>`;
-        wait_Zone.append(waitings);
+    wait_Zone.append(waitings);
 
-        let waitingsChildren = waitings.children;
-        if (blacklist === 1) {
-            for (let i = 0; i < waitingsChildren.length; i++) {
-              waitingsChildren[i].style.color = "red";
-          }
-        }
-          
-        let Selects = document.querySelectorAll('.TRtable td');
-        Selects.forEach(function (Select) {
-            Select.addEventListener("click", function () {
-                WaiterName.textContent = Select.parentNode.querySelector('.NameTD').textContent;
-                NumText.textContent = Select.parentNode.querySelector('.PhoneTD').textContent;
-                CountNum.textContent = Select.parentNode.querySelector('.VisitTD').textContent;
-                PeopleText.textContent = Select.parentNode.querySelector('.MenTD').textContent;
-
-                if (Select.parentNode.classList.contains('black')) {
-                    lockBtn.style.display = "block";
-                    unlockBtn.style.display = "none";
-                    BlackPeople.style.display = "block"
-                  } else {
-                    lockBtn.style.display = "none";
-                    unlockBtn.style.display = "block";
-                    BlackPeople.style.display = "none";
-                  }
-
-                showdetails();     
-            });
-        });
-        lockBtn.addEventListener("click", function() {
-          modal.style.display = "block";
-        });
+    let waitingsChildren = waitings.children;
+    if (blacklist === 1) {
+      for (let i = 0; i < waitingsChildren.length; i++) {
+        waitingsChildren[i].style.color = "red";
+      }
     }
 
-    let Selects = document.querySelectorAll(".TRtable td");
+    let Selects = document.querySelectorAll('.TRtable td');
     Selects.forEach(function (Select) {
       Select.addEventListener("click", function () {
-        WaiterName.textContent =
-          Select.parentNode.querySelector(".NameTD").textContent;
-        NumText.textContent =
-          Select.parentNode.querySelector(".PhoneTD").textContent;
-        CountNum.textContent =
-          Select.parentNode.querySelector(".VisitTD").textContent;
-        PeopleText.textContent =
-          Select.parentNode.querySelector(".MenTD").textContent;
+        WaiterName.textContent = Select.parentNode.querySelector('.NameTD').textContent;
+        NameText.textContent = Select.parentNode.querySelector('.NameTD').textContent;
+        NumText.textContent = Select.parentNode.querySelector('.PhoneTD').textContent;
+        PhoneNumText.textContent = Select.parentNode.querySelector('.PhoneTD').textContent;
+        CountNum.textContent = Select.parentNode.querySelector('.VisitTD').textContent;
+        PeopleText.textContent = Select.parentNode.querySelector('.MenTD').textContent;
 
-        if (Select.parentNode.classList.contains("black")) {
+        if (Select.parentNode.classList.contains('black')) {
           lockBtn.style.display = "block";
           unlockBtn.style.display = "none";
-          BlackPeople.style.display = "block";
+          BlackPeople.style.display = "block"
         } else {
           lockBtn.style.display = "none";
           unlockBtn.style.display = "block";
@@ -105,35 +80,14 @@ function waitingList(data) {
         showdetails();
       });
     });
-  }
-
-  let Selects = document.querySelectorAll(".TRtable td");
-  Selects.forEach(function (Select) {
-    Select.addEventListener("click", function () {
-      WaiterName.textContent =
-        Select.parentNode.querySelector(".NameTD").textContent;
-      NumText.textContent =
-        Select.parentNode.querySelector(".PhoneTD").textContent;
-      CountNum.textContent =
-        Select.parentNode.querySelector(".VisitTD").textContent;
-      PeopleText.textContent =
-        Select.parentNode.querySelector(".MenTD").textContent;
-
-      if (Select.parentNode.classList.contains("black")) {
-        lockBtn.style.display = "block";
-        unlockBtn.style.display = "none";
-        BlackPeople.style.display = "block";
-      } else {
-        lockBtn.style.display = "none";
-        unlockBtn.style.display = "block";
-        BlackPeople.style.display = "none";
-      }
-
-      showdetails();
+    unlockBtn.addEventListener("click", function () {
+      modal.style.display = "flex";
     });
-  });
-
-
+    closeBtn.addEventListener("click", function () {
+      closeModal(modal)
+    });
+  }
+}
 
 function showdetails() {
   if (!details.classList.contains("show")) {
@@ -144,3 +98,10 @@ function showdetails() {
 X.addEventListener("click", () => {
   details.classList.remove("show");
 });
+
+
+// 모달창 닫기 함수
+function closeModal(e) {
+  e.style.display = 'none';
+}
+

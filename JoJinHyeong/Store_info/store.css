@@ -283,7 +283,7 @@ body {
 .storeRank {
     display: flex;
     font-size: 20px;
-    margin-top: 20px;
+    margin: 10px 0px 10px 0px;
     padding-left: 30px;
 }
 
@@ -296,18 +296,11 @@ body {
     justify-content: flex-start;
     align-items: center;
     padding-left: 30px;
-    margin-top: 10px;
     color: grey;
+    font-weight: 700;
 }
 
 .review .client {
-    margin-right: 10px;
-}
-
-.bar {
-    background-color: rgba(128, 128, 128, 0.693);
-    width: 1.7px;
-    height: 16px;
     margin-right: 10px;
 }
 

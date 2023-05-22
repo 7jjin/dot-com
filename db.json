@@ -261,8 +261,43 @@
       "latitude": 0,
       "longitude": 0,
       "categories": [],
-      "Review": [
-      ]
+      "Review": []
+    },
+    {
+      "adminNo": 3,
+      "adminCafe": "안양현식",
+      "guName": "만안구",
+      "addressName": "경기도 수원시",
+      "clty_loc": null,
+      "storeIntroduce": "환영합니다 진형입니다",
+      "foodType": "한식",
+      "savedNm": "Storeimage1.jpg",
+      "openingTime": "09:00:00",
+      "closingTime": "21:00:00",
+      "weekday": 123,
+      "storePhone": "031-1234-4566",
+      "latitude": 0,
+      "longitude": 0,
+      "categories": [],
+      "Review": []
+    },
+    {
+      "adminNo": 3,
+      "adminCafe": "안양현식",
+      "guName": "만안구",
+      "addressName": "경기도 수원시",
+      "clty_loc": null,
+      "storeIntroduce": "환영합니다 진형입니다",
+      "foodType": "한식",
+      "savedNm": "Storeimage1.jpg",
+      "openingTime": "09:00:00",
+      "closingTime": "21:00:00",
+      "weekday": 123,
+      "storePhone": "031-1234-4566",
+      "latitude": 0,
+      "longitude": 0,
+      "categories": [],
+      "Review": []
     }
   ],
   "local": [
@@ -281,7 +316,8 @@
       "storePhone": "031-1234-4566",
       "latitude": 0,
       "longitude": 0,
-      "categories": null
+      "categories": null,
+      "Review": []
     },
     {
       "adminNo": 3,
@@ -298,7 +334,8 @@
       "storePhone": "014-1234-4566",
       "latitude": 0,
       "longitude": 0,
-      "categories": null
+      "categories": null,
+      "Review": []
     }
   ],
   "list": [
@@ -420,6 +457,13 @@
       "인원": "3",
       "현재시간": "2023-05-16 15:47:27",
       "id": 17
+    },
+    {
+      "가게이름": "진형식당",
+      "전화번호": "031-1234-4566",
+      "인원": "3",
+      "현재시간": "2023-05-16 17:40:57",
+      "id": 18
     }
   ],
   "waiting": [
@@ -433,7 +477,7 @@
     },
     {
       "name": "조승준",
-      "phone_number": "01097553489",
+      "phone_number": "01089649828",
       "queueNumber": 2,
       "party_size": 2,
       "timeAdded": null,
@@ -441,7 +485,7 @@
     },
     {
       "name": "조진형",
-      "phone_number": "01097553489",
+      "phone_number": "0102739112",
       "queueNumber": 3,
       "party_size": 2,
       "timeAdded": null,
@@ -517,7 +561,7 @@
   ],
   "userinfo": {
     "waitlistId": 5,
-    "CustomerName": "",
+    "CustomerName": "조승준",
     "phone_number": "01097553489",
     "party_size": 3,
     "timeAdded": null,
@@ -553,6 +597,68 @@
       "adminCafe": "현식돈국수",
       "partySize": 3,
       "phoneNumber": "01097553489"
+    }
+  ],
+
+  "history" :[
+    {
+      "id": "local",
+      "adminNo": 1,
+      "adminCafe": "파스타를부탁해",
+      "guName": "만안구",
+      "addressName": "경기도 수원시 만안구 123",
+      "clty_loc": null,
+      "storeIntroduce": "환영합니다 현식돈국수입니다",
+      "foodType": "한식",
+      "savedNm": "Storeimage1.jpg",
+      "openingTime": "09:00:00",
+      "closingTime": "21:00:00",
+      "weekday": 1234,
+      "storePhone": "031-1234-4566",
+      "latitude": 126.92883626779027,
+      "longitude": 37.37989691469408,
+      "menuList": null,
+      "open": false,
+      "waitingNum": 3
+    },
+    {
+      "id": "local",
+      "adminNo": 2,
+      "adminCafe": "현식돈국수",
+      "guName": "강남구",
+      "addressName": "서울시 강남구 마곡동 785-2",
+      "clty_loc": null,
+      "storeIntroduce": "안녕하세요 현식돈국수입니다.",
+      "foodType": "분식",
+      "savedNm": "Storeimage2.png",
+      "openingTime": "09:00:00",
+      "closingTime": "20:00:00",
+      "weekday": 123,
+      "storePhone": "011-1234-4566",
+      "latitude": 127.0243,
+      "longitude": 37.5434,
+      "menuList": null,
+      "open": true,
+      "waitingNum": 6
+    },
+    {
+      "adminNo": 3,
+      "adminCafe": "안양현식",
+      "guName": "만안구",
+      "addressName": "경기도 수원시 123",
+      "clty_loc": null,
+      "storeIntroduce": "어서오세요 안양현식",
+      "foodType": "중식",
+      "savedNm": "Storeimage3.png",
+      "openingTime": "08:00:00",
+      "closingTime": "19:00:00",
+      "weekday": 123456,
+      "storePhone": "014-1234-4566",
+      "latitude": 126.92042079261175,
+      "longitude": 37.391462944015544,
+      "menuList": null,
+      "open": true,
+      "waitingNum": 5
     }
   ]
 }

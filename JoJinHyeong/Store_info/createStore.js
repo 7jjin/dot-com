@@ -24,6 +24,7 @@ const ReviewCount = document.querySelector(".ReviewCount");
 const Imgmodal = document.querySelector(".Imgmodal");
 const modalImg = document.querySelector(".Img-modal-content");
 const Imgclose = document.querySelector(".Imgclose");
+const clientNum = document.querySelector(".clientNum");
 
 
 const uni = sessionStorage.getItem("selectedValue");
@@ -182,6 +183,7 @@ function renderPage(data) {
 function ReviewBoxes(data) {
   for (let i = 0; i < data[0].Review.length; i++) {
     ReviewCount.textContent = data[0].Review.length;
+    clientNum.textContent = data[0].Review.length;
     const ReviewDB = data[0].Review[i];
     const Reviewbox = document.createElement("div");
     Reviewbox.innerHTML = `<div class="ReviewOne">
@@ -208,16 +210,18 @@ function ReviewBoxes(data) {
     PhotoNum.appendChild(photoItem);
 
     var photos = document.querySelectorAll('.Photo');
-    for (let j = 0; j < photos; j++) {
-      photos[i].addEventListener('click', function () {
-        var src = ReviewDB.ReviewImg; // 대표 이미지에서 원본 이미지 경로 추출
-        ImgModal(src); // 모달창 열기 함수 호출
+    for (let j = 0; j < photos.length; j++) {
+      const photo = photos[j];
+      const imageSrc = photo.firstChild.src; // 이미지 경로 추출
+
+      photo.addEventListener('click', function () {
+        ImgModal(imageSrc); // 모달창 열기 함수 호출
       });
     }
   }
 
   Imgmodal.addEventListener('click', function () {
-    closeModal(modalImg); // 모달창 닫기 함수 호출
+    closeModal(Imgmodal); // 모달창 닫기 함수 호출
   });
 }
 
@@ -252,4 +256,5 @@ function ImgModal(src) {
 function closeModal(e) {
   e.style.display = 'none';
 }
+
 
