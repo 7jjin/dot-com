@@ -3,7 +3,7 @@
     {
       "id": "local",
       "adminNo": 1,
-      "adminCafe": "파스타를부탁해",
+      "adminCafe": "현식돈국수",
       "guName": "만안구",
       "addressName": "경기도 수원시 만안구 123",
       "clty_loc": null,
@@ -18,16 +18,17 @@
       "longitude": 37.37989691469408,
       "menuList": null,
       "open": false,
-      "waitingNum": 3
+      "waitingNum": 3,
+      "review_length": 6
     },
     {
       "id": "local",
       "adminNo": 2,
-      "adminCafe": "현식돈국수",
+      "adminCafe": "연어식당",
       "guName": "강남구",
       "addressName": "서울시 강남구 마곡동 785-2",
       "clty_loc": null,
-      "storeIntroduce": "안녕하세요 현식돈국수입니다.",
+      "storeIntroduce": "안녕하세요 연어식당입니다.",
       "foodType": "일식",
       "savedNm": "Storeimage2.png",
       "openingTime": "09:00:00",
@@ -38,15 +39,16 @@
       "longitude": 37.5434,
       "menuList": null,
       "open": true,
-      "waitingNum": 6
+      "waitingNum": 6,
+      "review_length": 3
     },
     {
       "adminNo": 3,
-      "adminCafe": "안양현식",
+      "adminCafe": "중찬미식",
       "guName": "만안구",
       "addressName": "경기도 수원시 123",
       "clty_loc": null,
-      "storeIntroduce": "어서오세요 안양현식",
+      "storeIntroduce": "어서오세요 중찬미식입니다.",
       "foodType": "중식",
       "savedNm": "Storeimage3.png",
       "openingTime": "08:00:00",
@@ -57,16 +59,17 @@
       "longitude": 37.391462944015544,
       "menuList": null,
       "open": true,
-      "waitingNum": 5
+      "waitingNum": 5,
+      "review_length": 2
     },
     {
       "id": "local",
       "adminNo": 4,
-      "adminCafe": "교촌치킨",
+      "adminCafe": "롯데날드",
       "guName": "만안구",
       "addressName": "인천 연수구 123",
       "clty_loc": null,
-      "storeIntroduce": "환영합니다 현식돈국수입니다",
+      "storeIntroduce": "환영합니다 롯데날드입니다",
       "foodType": "미국식",
       "savedNm": "Storeimage1.jpg",
       "openingTime": "09:00:00",
@@ -86,7 +89,7 @@
       "guName": "만안구",
       "addressName": "경기도 안양시 만안구 123",
       "clty_loc": null,
-      "storeIntroduce": "환영합니다 현식돈국수입니다",
+      "storeIntroduce": "환영합니다 맛있는 피자입니다",
       "foodType": "프랑스식",
       "savedNm": "Storeimage1.jpg",
       "openingTime": "09:00:00",
@@ -241,8 +244,8 @@
       "closingTime": "21:00:00",
       "weekday": 1234,
       "storePhone": "031-1234-4566",
-      "latitude": 127.0243,
-      "longitude": 37.5434,
+      "latitude": 126.97589780848364,
+      "longitude": 37.20885181947479, 
       "categories": [
         {
           "categoryName": "음료",
