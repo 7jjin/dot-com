@@ -6,21 +6,21 @@ let isMouseDown = false;
 let startX, scrollLeft;
 
 function slider(Element) {
-  Element.addEventListener("mousedown", (e) => {
+  document.addEventListener("mousedown", (e) => {
     isMouseDown = true;
     scrollLeft = Element.scrollLeft;
     startX = e.pageX - Element.offsetLeft;
   });
 
-  Element.addEventListener("mouseleave", () => {
+  document.addEventListener("mouseleave", () => {
     isMouseDown = false;
   });
 
-  Element.addEventListener("mouseup", () => {
+  document.addEventListener("mouseup", () => {
     isMouseDown = false;
   });
 
-  Element.addEventListener("mousemove", (e) => {
+  document.addEventListener("mousemove", (e) => {
     if (!isMouseDown) return;
     e.preventDefault();
     const x = e.pageX - Element.offsetLeft;

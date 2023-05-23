@@ -901,3 +901,32 @@ body {
     color: #f1f1f1;
     cursor: pointer;
   }
+
+  .Img_Left, .Img_Right{
+    overflow: hidden;
+    display: inline-block;
+    width: 100px;
+    height: 100px;
+    font-size: 70px;
+    color: white;
+    background-color: transparent;
+    border: 0px solid;
+    vertical-align: top;
+    background-position: -102px 0;
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    margin: auto;
+  }
+  .Img_Left{
+    left: 0;
+    margin-left: 20px;
+  }
+  .Img_Right{
+    right: 0;
+    margin-right: 20px;
+  }
+
+  .fa-heart{
+    cursor: pointer;
+  }

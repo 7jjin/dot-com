@@ -25,6 +25,11 @@ const Imgmodal = document.querySelector(".Imgmodal");
 const modalImg = document.querySelector(".Img-modal-content");
 const Imgclose = document.querySelector(".Imgclose");
 const clientNum = document.querySelector(".clientNum");
+const ImgLeft = document.querySelector(".Img_Left");
+const ImgRight = document.querySelector(".Img_Right");
+const heart = document.querySelector(".fa-heart");
+let currentPhotoIndex = 0; // 현재 보여지고 있는 사진의 인덱스
+let photos = [];
 
 
 const uni = sessionStorage.getItem("selectedValue");
@@ -209,23 +214,23 @@ function ReviewBoxes(data) {
     photoItem.appendChild(image);
     PhotoNum.appendChild(photoItem);
 
-    var photos = document.querySelectorAll('.Photo');
+    photos = document.querySelectorAll('.Photo');
+
     for (let j = 0; j < photos.length; j++) {
       const photo = photos[j];
-      const imageSrc = photo.firstChild.src; // 이미지 경로 추출
+      const imageSrc = photo.childNodes[0].src;
 
       photo.addEventListener('click', function () {
-        ImgModal(imageSrc); // 모달창 열기 함수 호출
+        ImgModal(imageSrc);
       });
+
     }
   }
 
-  Imgmodal.addEventListener('click', function () {
+  Imgclose.addEventListener('click', function () {
     closeModal(Imgmodal); // 모달창 닫기 함수 호출
   });
 }
-
-
 
 function Move1(element) {
   window.scroll({ top: element - 95, behavior: "smooth" });
@@ -257,4 +262,41 @@ function closeModal(e) {
   e.style.display = 'none';
 }
 
+function showPhoto(index) {
+  const photo = photos[index];
+  const imageSrc = photo.childNodes[0].src;
+  ImgModal(imageSrc);
+}
 
+function showNextPhoto() {
+  currentPhotoIndex++;
+  if (currentPhotoIndex >= photos.length) {
+    currentPhotoIndex = 0;
+  }
+  showPhoto(currentPhotoIndex);
+}
+
+function showPreviousPhoto() {
+  currentPhotoIndex--;
+  if (currentPhotoIndex < 0) {
+    currentPhotoIndex = photos.length - 1;
+  }
+  showPhoto(currentPhotoIndex);
+}
+
+ImgRight.addEventListener('click', showNextPhoto);
+ImgLeft.addEventListener('click', showPreviousPhoto);
+
+heart.addEventListener("click", function () {
+  if (heart.classList.contains("fa-regular")) {
+    // 현재 아이콘이 비어있는 하트인 경우
+    heart.classList.remove("fa-regular");
+    heart.classList.add("fa-solid");
+    heart.style.color = "#ff0000";
+  } else {
+    // 현재 아이콘이 채워진 하트인 경우
+    heart.classList.remove("fa-solid");
+    heart.classList.add("fa-regular");
+    heart.style.color = "";
+  }
+});
