@@ -105,17 +105,28 @@ function closeModal(e) {
   e.style.display = "none";
 }
 
+const content = document.querySelector(".content");
+const modalFoot = document.querySelector(".modal-foot");
 const reviewDom = document.querySelectorAll("fieldset input");
 reviewDom.forEach((item) => {
   item.addEventListener("click", function () {
-    review = item.value;
-    fetch("API 주소", {
-      method: "POST",
-      body: JSON.stringify({
-        review: item.value,
-      }),
-    })
-      .then((response) => response.json())
-      .catch((err) => console.log(err));
+    rating = item.value;
+
+    modalFoot.addEventListener("click", function () {
+      console.log(content.value);
+      let formData = new FormData();
+      formData.append("file", document.querySelector(".reviewBox")[0].files[0]);
+      formData.append("rating", item.value);
+      formData.append("content", content.value);
+      formData.append("adminNo", sessionStorage.getItem("selectedValue"));
+
+      fetch("API", {
+        method: "post",
+        headers: {},
+        body: formData,
+      })
+        .then((res) => res.json)
+        .catch((err) => console.log(err));
+    });
   });
 });
