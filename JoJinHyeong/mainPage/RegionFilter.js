@@ -93,6 +93,8 @@ function check() {
             let open = item.open;
             let waitingNum = item.waitingNum;
             let foodType = item.foodType;
+            let review = item.review_length; 
+
             let Openstores = document.createElement("div");
             let Closestores = document.createElement("div");
             Openstores.setAttribute("value", foodType);
@@ -109,7 +111,7 @@ function check() {
                 <div class="rating">
                   <span class="Star">⭐</span>
                   <span class="Star_Rating">4.5</span>
-                  <span class="Review_Rating">(412)</span>
+                  <span class="Review_Rating">(${review})</span>
                 </div>
                 <span class="tags">연어 및 각종 일식</span><br>
                 <span class="address">"${addr}"</span>
@@ -130,13 +132,17 @@ function check() {
                 <div class="rating">
                   <span class="Star">⭐</span>
                   <span class="Star_Rating">4.5</span>
-                  <span class="Review_Rating">(412)</span>
+                  <span class="Review_Rating">(${review})</span>
                 </div>
                 <span class="tags">연어 및 각종 일식</span><br>
                 <span class="address">"${addr}"</span>
               </div>
             </div>
-          </div>`;
+          <span class="bad">
+              <p>예약</p>
+              <p>불가</p>
+              </span>
+            </div>`;
             }
             Openstores.onclick = function (event) {
               sessionStorage.setItem("selectedValue", adminNo); //sessionStorage에 가게고유의 adminNo값 저장
@@ -161,8 +167,11 @@ function check() {
             let open = item.open;
             let waitingNum = item.waitingNum;
             let foodType = item.foodType;
+            let review = item.review_length; 
+
             let Openstores = document.createElement("div");
             let Closestores = document.createElement("div");
+            
             Openstores.setAttribute("value", foodType);
             Closestores.setAttribute("value", foodType);
             Openstores.setAttribute("class", "store");
@@ -178,7 +187,7 @@ function check() {
                 <div class="rating">
                   <span class="Star">⭐</span>
                   <span class="Star_Rating">4.5</span>
-                  <span class="Review_Rating">(412)</span>
+                  <span class="Review_Rating">(${review})</span>
                 </div>
                 <span class="tags">연어 및 각종 일식</span><br>
                 <span class="address">"${addr}"</span>
@@ -199,7 +208,7 @@ function check() {
                 <div class="rating">
                   <span class="Star">⭐</span>
                   <span class="Star_Rating">4.5</span>
-                  <span class="Review_Rating">(412)</span>
+                  <span class="Review_Rating">(${review})</span>
                 </div>
                 <span class="tags">연어 및 각종 일식</span><br>
                 <span class="address">"${addr}"</span>
@@ -230,6 +239,8 @@ function check() {
           let open = data[i].open;
           let waitingNum = data[i].waitingNum;
           let foodType = data[i].foodType;
+          let review = data[i].review_length; 
+
           let Openstores = document.createElement("div");
           let Closestores = document.createElement("div");
 
@@ -249,7 +260,7 @@ function check() {
                 <div class="rating">
                   <span class="Star">⭐</span>
                   <span class="Star_Rating">4.5</span>
-                  <span class="Review_Rating">(412)</span>
+                  <span class="Review_Rating">(${review})</span>
                 </div>
                 <span class="tags">연어 및 각종 일식</span><br>
                 <span class="address">"${addr}"</span>
@@ -270,7 +281,7 @@ function check() {
                 <div class="rating">
                   <span class="Star">⭐</span>
                   <span class="Star_Rating">4.5</span>
-                  <span class="Review_Rating">(412)</span>
+                  <span class="Review_Rating">(${review})</span>
                 </div>
                 <span class="tags">연어 및 각종 일식</span><br>
                 <span class="address">"${addr}"</span>
@@ -313,6 +324,8 @@ function menuClick_Mul(data, array) {
           let open = item.open;
           let waitingNum = item.waitingNum;
           let foodType = item.foodType;
+          let review = item.review_length; 
+
           let Openstores = document.createElement("div");
           let Closestores = document.createElement("div");
           Openstores.setAttribute("value", foodType);
@@ -332,7 +345,7 @@ function menuClick_Mul(data, array) {
                   <div class="rating">
                     <span class="Star">⭐</span>
                     <span class="Star_Rating">4.5</span>
-                    <span class="Review_Rating">(412)</span>
+                    <span class="Review_Rating">(${review})</span>
                   </div>
                   <span class="tags">연어 및 각종 일식</span><br>
                   <span class="address">"${addr}"</span>
@@ -353,7 +366,7 @@ function menuClick_Mul(data, array) {
                   <div class="rating">
                     <span class="Star">⭐</span>
                     <span class="Star_Rating">4.5</span>
-                    <span class="Review_Rating">(412)</span>
+                    <span class="Review_Rating">(${review})</span>
                   </div>
                   <span class="tags">연어 및 각종 일식</span><br>
                   <span class="address">"${addr}"</span>
@@ -398,6 +411,8 @@ function menuClick_sol(data, array) {
           let open = item.open;
           let waitingNum = item.waitingNum;
           let foodType = item.foodType;
+          let review = item.review_length; 
+
           let Openstores = document.createElement("div");
           let Closestores = document.createElement("div");
           Openstores.setAttribute("value", foodType);
@@ -417,7 +432,7 @@ function menuClick_sol(data, array) {
                   <div class="rating">
                     <span class="Star">⭐</span>
                     <span class="Star_Rating">4.5</span>
-                    <span class="Review_Rating">(412)</span>
+                    <span class="Review_Rating">(${review})</span>
                   </div>
                   <span class="tags">연어 및 각종 일식</span><br>
                   <span class="address">"${addr}"</span>
@@ -438,7 +453,7 @@ function menuClick_sol(data, array) {
                   <div class="rating">
                     <span class="Star">⭐</span>
                     <span class="Star_Rating">4.5</span>
-                    <span class="Review_Rating">(412)</span>
+                    <span class="Review_Rating">(${review})</span>
                   </div>
                   <span class="tags">연어 및 각종 일식</span><br>
                   <span class="address">"${addr}"</span>
@@ -480,6 +495,8 @@ function menuClick(data) {
           let open = item.open;
           let waitingNum = item.waitingNum;
           let foodType = item.foodType;
+          let review = item.review_length; 
+
           let Openstores = document.createElement("div");
           let Closestores = document.createElement("div");
           Openstores.setAttribute("value", foodType);
@@ -499,7 +516,7 @@ function menuClick(data) {
                   <div class="rating">
                     <span class="Star">⭐</span>
                     <span class="Star_Rating">4.5</span>
-                    <span class="Review_Rating">(412)</span>
+                    <span class="Review_Rating">(${review})</span>
                   </div>
                   <span class="tags">연어 및 각종 일식</span><br>
                   <span class="address">"${addr}"</span>
@@ -520,7 +537,7 @@ function menuClick(data) {
                   <div class="rating">
                     <span class="Star">⭐</span>
                     <span class="Star_Rating">4.5</span>
-                    <span class="Review_Rating">(412)</span>
+                    <span class="Review_Rating">(${review})</span>
                   </div>
                   <span class="tags">연어 및 각종 일식</span><br>
                   <span class="address">"${addr}"</span>
