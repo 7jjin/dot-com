@@ -366,3 +366,31 @@ body {
     font-weight: 600;
     font-size: 20px;
 }
+
+
+/* 별점 */
+ fieldset{
+    display:flex;
+    direction: rtl;
+    border:0;
+}
+fieldset legend{
+    text-align: right;
+}
+input[type=radio]{
+    display: none;
+}
+label{
+    font-size: 3em;
+    color: transparent;
+    text-shadow: 0 0 0 #f0f0f0;
+}
+label:hover{
+    text-shadow: 0 0 0 rgba(250, 208, 0, 0.99);
+}
+label:hover ~ label{
+    text-shadow: 0 0 0 rgba(250, 208, 0, 0.99);
+}
+input[type=radio]:checked ~ label{
+    text-shadow: 0 0 0 rgba(250, 208, 0, 0.99);
+}
