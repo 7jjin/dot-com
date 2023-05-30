@@ -201,34 +201,6 @@
             }
           ]
         }
-      ],
-      "Review": [
-        {
-          "ReviewID": "jsj487",
-          "ReviewProfile": "/img/ProfileImg.jpg",
-          "ReviewImg": "/img/ReviewImg.jpg",
-          "ReviewContent": "간짬뽕은 처음인데 색다르니 맛있었어요!!ㅎㅎ 국물없는 짬뽕이라니!!😋",
-          "ReviewDate": "2023.05.13"
-        },
-        {
-          "ReviewID": "tmdwns487",
-          "ReviewProfile": "/img/ProfileImg2.jpg",
-          "ReviewImg": "/img/ReviewImg2.jpg",
-          "ReviewContent": "짜장면, 탕수육도 맛있어서 세트 드시는 거 추천이요ㅎㅎ",
-          "ReviewDate": "2023.05.12"
-        },
-        {
-          "ReviewImg": "/img/ReviewImg3.jpg"
-        },
-        {
-          "ReviewImg": "/img/ReviewImg4.jpg"
-        },
-        {
-          "ReviewImg": "/img/ReviewImg5.jpg"
-        },
-        {
-          "ReviewImg": "/img/ReviewImg5.jpg"
-        }
       ]
     },
     {
@@ -245,7 +217,7 @@
       "weekday": 1234,
       "storePhone": "031-1234-4566",
       "latitude": 126.97589780848364,
-      "longitude": 37.20885181947479, 
+      "longitude": 37.20885181947479,
       "categories": [
         {
           "categoryName": "음료",
@@ -277,15 +249,6 @@
             }
           ]
         }
-      ],
-      "Review": [
-        {
-          "ReviewID": "jsj487",
-          "ReviewProfile": "/img/ProfileImg.jpg",
-          "ReviewImg": "/img/ReviewImg.jpg",
-          "ReviewContent": "간짬뽕은 처음인데 색다르니 맛있었어요!!ㅎㅎ 국물없는 짬뽕이라니!!😋",
-          "ReviewDate": "2023.05.13"
-        }
       ]
     },
     {
@@ -303,8 +266,7 @@
       "storePhone": "031-1234-4566",
       "latitude": 126.92042079261175,
       "longitude": 37.391462944015544,
-      "categories": [],
-      "Review": []
+      "categories": []
     },
     {
       "adminNo": 3,
@@ -321,8 +283,7 @@
       "storePhone": "031-1234-4566",
       "latitude": 0,
       "longitude": 0,
-      "categories": [],
-      "Review": []
+      "categories": []
     },
     {
       "adminNo": 3,
@@ -339,8 +300,7 @@
       "storePhone": "031-1234-4566",
       "latitude": 0,
       "longitude": 0,
-      "categories": [],
-      "Review": []
+      "categories": []
     }
   ],
   "local": [
@@ -359,8 +319,7 @@
       "storePhone": "031-1234-4566",
       "latitude": 0,
       "longitude": 0,
-      "categories": null,
-      "Review": []
+      "categories": null
     },
     {
       "adminNo": 3,
@@ -377,8 +336,7 @@
       "storePhone": "014-1234-4566",
       "latitude": 0,
       "longitude": 0,
-      "categories": [],
-      "Review": []
+      "categories": []
     }
   ],
   "list": [
@@ -746,6 +704,96 @@
       "menuList": null,
       "open": true,
       "waitingNum": 5
+    }
+  ],
+  "wish": [
+    {
+      "id": "local",
+      "adminNo": 1,
+      "adminCafe": "파스타를부탁해",
+      "guName": "만안구",
+      "addressName": "경기도 수원시 만안구 123",
+      "clty_loc": null,
+      "storeIntroduce": "환영합니다 현식돈국수입니다",
+      "foodType": "한식",
+      "savedNm": "Storeimage1.jpg",
+      "openingTime": "09:00:00",
+      "closingTime": "21:00:00",
+      "weekday": 1234,
+      "storePhone": "031-1234-4566",
+      "latitude": 126.92883626779027,
+      "longitude": 37.37989691469408,
+      "menuList": null,
+      "open": false,
+      "waitingNum": 3
+    },
+    {
+      "id": "local",
+      "adminNo": 2,
+      "adminCafe": "현식돈국수",
+      "guName": "강남구",
+      "addressName": "서울시 강남구 마곡동 785-2",
+      "clty_loc": null,
+      "storeIntroduce": "안녕하세요 현식돈국수입니다.",
+      "foodType": "분식",
+      "savedNm": "Storeimage2.png",
+      "openingTime": "09:00:00",
+      "closingTime": "20:00:00",
+      "weekday": 123,
+      "storePhone": "011-1234-4566",
+      "latitude": 127.0243,
+      "longitude": 37.5434,
+      "menuList": null,
+      "open": true,
+      "waitingNum": 6
+    },
+    {
+      "adminNo": 3,
+      "adminCafe": "안양현식",
+      "guName": "만안구",
+      "addressName": "경기도 수원시 123",
+      "clty_loc": null,
+      "storeIntroduce": "어서오세요 안양현식",
+      "foodType": "중식",
+      "savedNm": "Storeimage3.png",
+      "openingTime": "08:00:00",
+      "closingTime": "19:00:00",
+      "weekday": 123456,
+      "storePhone": "014-1234-4566",
+      "latitude": 126.92042079261175,
+      "longitude": 37.391462944015544,
+      "menuList": null,
+      "open": true,
+      "waitingNum": 5
+    }
+  ],
+  "Review": [
+    {
+      "id": 1,
+      "userNo": "조승준",
+      "adminNo": 1,
+      "rating": 3,
+      "imageNamed": "/img/ReviewImg.jpg",
+      "content": "안123",
+      "date": "2023-05-28"
+    },
+    {
+      "id": 2,
+      "userNo": "최현식",
+      "adminNo": 2,
+      "rating": 2,
+      "imageNamed": "/img/ReviewImg.jpg",
+      "content": "안13123",
+      "date": "2023-05-28"
+    },
+    {
+      "id": 3,
+      "userNo": "조승준",
+      "adminNo": 2,
+      "rating": 3,
+      "imageNamed": "/img/ReviewImg.jpg",
+      "content": "안123",
+      "date": "2023-05-28"
     }
   ]
 }

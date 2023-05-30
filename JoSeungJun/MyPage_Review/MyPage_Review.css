@@ -3,6 +3,7 @@ html {
 }
 
 body {
+    display: flex;
     margin: 0;
     background-color: rgb(245, 246, 247);
 }
@@ -133,4 +134,116 @@ body {
     font-weight: 700;
     margin-top: 30px;
     color: black;
+}
+
+/*----------------------*/
+.mainZone{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+.mainText{
+    display: flex;
+    margin-left: 100px;
+    margin-bottom: 15px;
+}
+.mainZone p{
+    margin: 0;
+    font-size: 20px;
+    font-weight: 700;
+    line-height: 24px;
+    letter-spacing: -.2px;
+    color: #303038;
+}
+.mainBox{
+    margin-left: 100px;
+    height: 600px;
+    padding: 0 17px;
+    list-style: none;
+    border-radius: 5px;
+    box-shadow: 1px 1px 10px 0 rgb(72 75 108 / 8%);
+    border: 2px solid #fcaa72;
+    background-color: #fff;
+}
+
+.ReviewBox {
+    display: flex;
+    justify-content: center;
+    width: 100%;
+    height: 600px;
+}
+
+.ReviewZone {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    margin: 20px 0px 20px 0px;
+    height: 90%;
+    overflow: hidden;
+}
+
+.Review {
+    display: flex;
+    padding: 20px 80px 20px 10px;
+    height: 150px;
+    border-radius: 5px;
+    background-color: #fafafa;
+    list-style: none;
+    border: 1px solid black;
+    font-family: 'Nanum Gothic', sans-serif;
+    box-shadow: 9px 5px 0px 0px #ddd;
+}
+
+.ReviewPhoto {
+    width: 150px;
+    height: 150px;
+    border: 1px solid black;
+    background-repeat: no-repeat;
+    background-position: center center;
+    background-size: cover;
+}
+
+.UserZone {
+    display: flex;
+    margin-bottom: 5px;
+}
+
+.UserInfo {
+    display: flex;
+    margin: 0px 0px 10px 0px;
+}
+
+.UserProfile {
+    height: 40px;
+    width: 40px;
+    border-radius: 50%;
+    background-position: center;
+    background-size: cover;
+}
+
+.NickName {
+    display: flex;
+    align-items: center;
+    padding-bottom: 10px;
+    font-size: 20px;
+    margin: 0px 0px 0px 10px;
+}
+
+.DateInfo {
+    display: flex;
+    justify-content: flex-end;
+    margin-bottom: 10px;
+}
+
+.UserCount,
+.UserDate {
+    margin-left: 10px;
+    color: #8f8f8f;
+}
+
+.ReviewContent {
+    display: flex;
+    align-items: center;
+    margin-left: 20px;
+    width: 80%;
 }

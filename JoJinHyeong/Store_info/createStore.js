@@ -28,9 +28,10 @@ const clientNum = document.querySelector(".clientNum");
 const ImgLeft = document.querySelector(".Img_Left");
 const ImgRight = document.querySelector(".Img_Right");
 const heart = document.querySelector(".fa-heart");
+const rating = document.querySelector(".rating");
+
 let currentPhotoIndex = 0; // 현재 보여지고 있는 사진의 인덱스
 let photos = [];
-
 
 const uni = sessionStorage.getItem("selectedValue");
 const url = `http://localhost:4000/store?adminNo=${uni}`;
@@ -41,7 +42,6 @@ fetch(url)
   .then((data) => {
     openingDay(data);
     renderPage(data);
-    ReviewBoxes(data);
     addr.innerHTML = `${data[0].addressName}`;
     call.innerHTML = `${data[0].storePhone}`;
     openTime.innerHTML = `${data[0].openingTime}`;
@@ -55,6 +55,17 @@ fetch(url)
       </div>`
     }
     /*-----------------------------------------------------------*/
+  })
+  .catch((err) => console.log(err));
+
+const uni2 = sessionStorage.getItem("selectedValue");
+const url2 = `http://localhost:4000/Review?adminNo=${uni2}`;
+fetch(url2)
+  .then((res) => {
+    return res.json();
+  })
+  .then((data) => {
+    ReviewBoxes(data);
   })
   .catch((err) => console.log(err));
 
@@ -186,23 +197,29 @@ function renderPage(data) {
 
 // ------ 리뷰추가
 function ReviewBoxes(data) {
-  for (let i = 0; i < data[0].Review.length; i++) {
-    ReviewCount.textContent = data[0].Review.length;
-    clientNum.textContent = data[0].Review.length;
-    const ReviewDB = data[0].Review[i];
+  for (let i = 0; i < data.length; i++) {
     const Reviewbox = document.createElement("div");
+    let imageNamed = data[i].imageNamed;
+    let userNo = data[i].userNo;
+    let content = data[i].content;
+    let date = data[i].date;
+
+    ReviewCount.textContent = data.length;
+    clientNum.textContent = data.length;
+
     Reviewbox.innerHTML = `<div class="ReviewOne">
     <div class="UserZone">
-      <span class="UserProfile" style="background-image: url(${ReviewDB.ReviewProfile}")></span>
-      <h4 class="NickName">${ReviewDB.ReviewID}</h4>
+      <span class="UserProfile"></span>
+      <h4 class="NickName">${userNo}</h4>
+      <h4 class="rating"></h4>
     </div>
     <li class="Review">
-      <div class="ReviewPhoto" style="background-image: url(${ReviewDB.ReviewImg})"></div>
-      <div class="ReviewContent">${ReviewDB.ReviewContent}</div>
+      <div class="ReviewPhoto" style="background-image: url(${imageNamed})"></div>
+      <div class="ReviewContent">${content}</div>
     </li>
     <div class="DateInfo">
       <span class="UserCount">2번째 방문</span>
-      <span class="UserDate">${ReviewDB.ReviewDate}</span>
+      <span class="UserDate">${date}</span>
     </div>
   </div>`;
     ReviewZone.appendChild(Reviewbox);
@@ -210,7 +227,7 @@ function ReviewBoxes(data) {
     let photoItem = document.createElement("li");
     let image = document.createElement("img");
     photoItem.className = "Photo";
-    image.src = ReviewDB.ReviewImg;
+    image.src = imageNamed;
     photoItem.appendChild(image);
     PhotoNum.appendChild(photoItem);
 
@@ -225,11 +242,24 @@ function ReviewBoxes(data) {
       });
 
     }
+    let rating = document.querySelectorAll(".rating")    
+    const Star = String(data[i].rating);
+    let ratinglist = "";
+
+    for (let i = 0; i < Star.length; i++) {
+      if (Star[i] === "1") ratinglist += "⭐";
+      else if (Star[i] === "2") ratinglist += "⭐⭐";
+      else if (Star[i] === "3") ratinglist += "⭐⭐⭐";
+      else if (Star[i] === "4") ratinglist += "⭐⭐⭐⭐";
+      else if (Star[i] === "5") ratinglist += "⭐⭐⭐⭐⭐";
+    }
+    rating[i].innerHTML = ratinglist;
   }
 
-  Imgclose.addEventListener('click', function () {
-    closeModal(Imgmodal); // 모달창 닫기 함수 호출
-  });
+
+Imgclose.addEventListener('click', function () {
+  closeModal(Imgmodal); // 모달창 닫기 함수 호출
+});
 }
 
 function Move1(element) {

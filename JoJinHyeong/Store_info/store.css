@@ -680,7 +680,7 @@ body {
     max-height: 100%;
   }
 .ReviewCount {
-    margin-left: 20px;
+    margin-left: 5px;
     color: #fcaa72;
 }
 
@@ -737,7 +737,7 @@ body {
     background-size: cover;
 }
 
-.NickName {
+.NickName,.rating {
     display: flex;
     align-items: center;
     padding-bottom: 10px;
