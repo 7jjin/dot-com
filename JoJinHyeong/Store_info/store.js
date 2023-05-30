@@ -16,8 +16,9 @@ function slider(Element) {
     isMouseDown = false;
   });
 
-  document.addEventListener("mouseup", () => {
+  document.addEventListener("mouseup", (e) => {
     isMouseDown = false;
+    e.preventDefault();
   });
 
   document.addEventListener("mousemove", (e) => {
@@ -26,7 +27,7 @@ function slider(Element) {
     const x = e.pageX - Element.offsetLeft;
     const walk = (x - startX) * 1;
     Element.scrollLeft = scrollLeft - walk;
-  });
+  })
 }
 
 // 플로팅 버튼
