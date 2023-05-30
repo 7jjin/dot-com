@@ -245,7 +245,7 @@
       "weekday": 1234,
       "storePhone": "031-1234-4566",
       "latitude": 126.97589780848364,
-      "longitude": 37.20885181947479, 
+      "longitude": 37.20885181947479,
       "categories": [
         {
           "categoryName": "음료",
@@ -746,6 +746,14 @@
       "menuList": null,
       "open": true,
       "waitingNum": 5
+    }
+  ],
+  "file": [
+    {
+      "id": 1
+    },
+    {
+      "id": 2
     }
   ]
 }
