@@ -157,6 +157,7 @@ body {
 }
 .mainBox{
     margin-left: 100px;
+    width: 800px;
     height: 600px;
     padding: 0 17px;
     list-style: none;
@@ -175,16 +176,18 @@ body {
 
 .ReviewZone {
     display: flex;
+    justify-content: flex-start;
     flex-direction: column;
-    justify-content: center;
     margin: 20px 0px 20px 0px;
-    height: 90%;
-    overflow: hidden;
+    height: 88%;
+    overflow: scroll;
+    overflow-x: hidden;
 }
 
 .Review {
     display: flex;
     padding: 20px 80px 20px 10px;
+    width: 640px;
     height: 150px;
     border-radius: 5px;
     background-color: #fafafa;
@@ -192,6 +195,10 @@ body {
     border: 1px solid black;
     font-family: 'Nanum Gothic', sans-serif;
     box-shadow: 9px 5px 0px 0px #ddd;
+}
+.ReviewOne{
+    margin-left: 20px;
+    width: 732px;
 }
 
 .ReviewPhoto {
@@ -233,6 +240,7 @@ body {
     display: flex;
     justify-content: flex-end;
     margin-bottom: 10px;
+    margin-top: 7px;
 }
 
 .UserCount,

@@ -219,6 +219,7 @@ body{
     margin-right: 60px;
 }
 .ReserveBtn,.lockBtn,.unlockBtn{
+    width: 145px;
     padding: 20px 20px 20px 20px;
     background-color: #FAD0C9;
     border: 0px solid;
