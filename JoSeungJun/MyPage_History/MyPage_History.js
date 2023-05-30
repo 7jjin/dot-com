@@ -48,7 +48,6 @@ function storeList(data1, data2, data3) {
     let intro = data1[i].storeIntroduce;
     let addr = data1[i].addressName;
     let adminNo = data1[i].adminNo;
-    let review = data2[i].Review.length;
 
     let stores = document.createElement("div");
 
@@ -63,7 +62,6 @@ function storeList(data1, data2, data3) {
             <div class="rating">
                 <span class="Star">⭐</span>
                 <span class="Star_Rating">4.5</span>
-                <span class="Review_Rating">(${review})</span>
             </div>
             <span class="tags">연어 및 각종 일식</span><br>
             <span class="address">"${addr}"</span>
@@ -139,29 +137,20 @@ function closeModal(e) {
 
 // form 데이터(별점,파일,내용) 서버로 내보내기
 function submitForm(event) {
-  event.preventDefault(); // 폼 제출을 중단하여 페이지가 새로고침되는 것을 방지
-
   let form = document.querySelector(".reviewBox");
   let rating = form.querySelector('input[name="reviewStar"]:checked').value;
   let fileInput = form.querySelector(".Upload");
-  let file = fileInput.files[0].name;
+  let file = fileInput.files[0];
   let content = form.querySelector(".content").value;
+  let adminNo = sessionStorage.getItem("selectedValue");
 
-  //console.log(rating, file, content);
   var formData = new FormData();
   formData.append("reviewStar", rating);
   formData.append("photo", file);
   formData.append("content", content);
+  formData.append("adminNo", adminNo);
 
-  // console.log(formData);
-  // for (var key of formData.keys()) {
-  //   console.log(key);
-  // }
-
-  // for (var value of formData.values()) {
-  //   console.log(value);
-  // }
-
+  console.log(file);
   fetch("http://localhost:4000/file", {
     method: "POST",
     body: formData,
