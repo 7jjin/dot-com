@@ -1,7 +1,7 @@
 const ReviewZone = document.querySelector(".ReviewZone");
 const mainBox = document.querySelector('.mainBox');
 let isMouseDown = false;
-let startX, scrollLeft;
+let startY, scrollDown;
 
 const url = `http://localhost:4000/Review`;
 fetch(url)
@@ -17,14 +17,12 @@ fetch(url)
 
 function ReviewBoxes(data) {
   for (let i = 0; i < data.length; i++) {
-    for (let j = 0; j < data.length; j++) {
-      const ReviewDB = data[i];
-      const Reviewout = document.createElement("div");
+    const ReviewDB = data[i];
+    const Reviewout = document.createElement("div");
+    Reviewout.classList.add("ReviewOne");
+
       const ReviewIn = document.createElement("div");
-
-      Reviewout.innerHTML = `<div class="ReviewOne">
-      </div>`;
-
+  
       ReviewIn.innerHTML = `
         <div class="UserZone">
           <h4 class="NickName">${ReviewDB.adminCafe}</h4>
@@ -37,19 +35,20 @@ function ReviewBoxes(data) {
           <span class="UserCount">2번째 방문</span>
           <span class="UserDate">${ReviewDB.ReviewDate}</span>
         </div>`;
-      let ReviewOne = document.querySelector(".ReviewOne");
-
-      ReviewOne.appendChild(ReviewIn)
-      ReviewZone.appendChild(Reviewout);
-    }
+  
+      Reviewout.appendChild(ReviewIn);
+    
+  
+    let ReviewZone = document.querySelector(".ReviewZone");
+    ReviewZone.appendChild(Reviewout);
   }
 }
 
 function slider(Element) {
   document.addEventListener("mousedown", (e) => {
     isMouseDown = true;
-    scrollLeft = Element.scrollLeft;
-    startX = e.pageX - Element.offsetLeft;
+    scrollDown = Element.scrollDown;
+    startY = e.pageY - Element.offsetDown;
   });
 
   document.addEventListener("mouseleave", () => {
@@ -63,12 +62,12 @@ function slider(Element) {
   document.addEventListener("mousemove", (e) => {
     if (!isMouseDown) return;
     e.preventDefault();
-    const x = e.pageX - Element.offsetLeft;
-    const walk = (x - startX) * 1;
-    Element.scrollLeft = scrollLeft - walk;
+    const x = e.pageY - Element.offsetDown;
+    const walk = (x - startY) * 1;
+    Element.scrollDown = scrollDown - walk;
   })
 }
 
-mainBox.addEventListener("mousemove", function () {
-  slider(mainBox);
+ReviewZone.addEventListener("mousemove", function () {
+  slider(ReviewZone);
 });

@@ -29,6 +29,7 @@ const ImgLeft = document.querySelector(".Img_Left");
 const ImgRight = document.querySelector(".Img_Right");
 const heart = document.querySelector(".fa-heart");
 const rating = document.querySelector(".rating");
+const staravg = document.querySelector(".staravg");
 
 let currentPhotoIndex = 0; // 현재 보여지고 있는 사진의 인덱스
 let photos = [];
