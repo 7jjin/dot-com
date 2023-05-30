@@ -137,7 +137,7 @@ function closeModal(e) {
 //   });
 // });
 
-//form 데이터(별점,파일,내용) 서버로 내보내기
+// form 데이터(별점,파일,내용) 서버로 내보내기
 function submitForm(event) {
   event.preventDefault(); // 폼 제출을 중단하여 페이지가 새로고침되는 것을 방지
 
@@ -161,6 +161,7 @@ function submitForm(event) {
   // for (var value of formData.values()) {
   //   console.log(value);
   // }
+
   fetch("http://localhost:4000/file", {
     method: "POST",
     body: formData,
