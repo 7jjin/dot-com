@@ -103,38 +103,6 @@ function closeModal(e) {
   e.style.display = "none";
 }
 
-// const content = document.querySelector(".content");
-// const modalFoot = document.querySelector(".modal-foot");
-// const reviewDom = document.querySelectorAll("fieldset input");
-// reviewDom.forEach((item) => {
-//   item.addEventListener("click", function () {
-//     console.log(item.value);
-//     modalFoot.addEventListener("click", function () {
-//       console.log(content.value);
-//       let formData = new FormData();
-//       formData.append("file", document.querySelector(".reviewBox")[0].files[0]);
-//       formData.append("rating", item.value);
-//       formData.append("content", content.value);
-//       formData.append("adminNo", sessionStorage.getItem("selectedValue"));
-//       console.log(formData);
-//       for (var key of formData.keys()) {
-//         console.log(key);
-//       }
-
-//       for (var value of formData.values()) {
-//         console.log(value);
-//       }
-//       fetch("http://localhost:4000/file", {
-//         method: "post",
-//         body: formData,
-//       })
-//         .then((res) => res.json)
-//         .then(console.log("성공했습니다."))
-//         .catch((err) => console.log(err));
-//     });
-//   });
-// });
-
 // form 데이터(별점,파일,내용) 서버로 내보내기
 function submitForm(event) {
   let form = document.querySelector(".reviewBox");
@@ -150,7 +118,6 @@ function submitForm(event) {
   formData.append("content", content);
   formData.append("adminNo", adminNo);
 
-  console.log(file);
   fetch("http://localhost:4000/file", {
     method: "POST",
     body: formData,

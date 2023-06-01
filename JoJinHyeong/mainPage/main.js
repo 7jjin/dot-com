@@ -60,6 +60,7 @@ function showSlides(n) {
   dots[n].className += " active";
 }
 
+//  반응형
 //  스크롤을 내리면 유틸바 사라지고 다시 올라갔을때도 사라지게 함.
 const toggleBar = document.querySelector(".headerUtil_toggleBar");
 const subBar = document.querySelector(".toggleOn");
@@ -84,6 +85,18 @@ function showList() {
     toggle = !toggle;
   } else {
     subBar.style.height = "0px";
+    toggle = !toggle;
+  }
+}
+
+//반응형일 떄 검색 버튼 함수
+const search_box_moblie = document.querySelector(".search_box_moblie");
+function showSearch() {
+  if (toggle) {
+    search_box_moblie.style.height = "120px";
+    toggle = !toggle;
+  } else {
+    search_box_moblie.style.height = "0px";
     toggle = !toggle;
   }
 }
