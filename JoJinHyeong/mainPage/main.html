@@ -157,146 +157,146 @@
         <span class="dot" onclick="currentSlide(4)"></span>
         <span class="dot" onclick="currentSlide(5)"></span>
       </div>
+
+    </section>
+    <section class="quickfilter">
+      <div class="filterBar_Names">
+        <button class="myplace" style="background-color: #ffffff;">
+          <div class="myplaceIcon">
+            <i class="fa-solid fa-location-dot"></i>
+          </div>
+          <p>지역</p>
+        </button>
+        <button class="menu" style="background-color:#da9c68bf">
+          <div class="menuIcon">
+            <i class="fa-solid fa-utensils"></i>
+          </div>
+          <p>메뉴</p>
+        </button>
+      </div>
+      <div class="filterRegion">
+        <div class="place">
+          <button class="nowplace">내위치</button>
+          <div class="selfplace">
+            <div class="doo">
+              <div class="example">예) 경기도 수원시</div>
+              <div class="dooicon"><i class="fa-solid fa-location-crosshairs"></i></div>
+            </div>
+            <div class="subicon">
+              <i class="fa-sharp fa-regular fa-circle-left" style="color: #f24a4a;"></i>
+              <p>지역을 직접 선택하세요!</p>
+            </div>
+          </div>
+        </div>
+        <button type="button" class="find">조회</button>
+      </div>
+      <div class="filterMenu" style="display:none">
+        <div class="korea">
+          <div class="imgKorea" id="sortedMenu">
+            <img src="/img/kor.png" alt="kor">
+          </div>
+          <p>한식</p>
+        </div>
+        <div class="japen">
+          <div class="imgJapen" id="sortedMenu">
+            <img src="/img/japen.png" alt="jap">
+          </div>
+          <p>일식</p>
+        </div>
+        <div class="china">
+          <div class="imgChina" id="sortedMenu">
+            <img src="/img/china.png" alt="chi">
+          </div>
+          <p>중식</p>
+        </div>
+        <div class="america">
+          <div class="imgAmerica" id="sortedMenu">
+            <img src="/img/america.png" alt="america">
+          </div>
+          <p>미국식</p>
+        </div>
+        <div class="france">
+          <div class="imgfrance" id="sortedMenu">
+            <img src="/img/france.png" alt="France">
+          </div>
+          <p>프랑스식</p>
+        </div>
+        <div class="italy">
+          <div class="imgItaly" id="sortedMenu">
+            <img src="/img/italy.png" alt="italy">
+          </div>
+          <p>이탈리아식</p>
+        </div>
+      </div>
+      <div class="outerRegion" style="display: none;">
+        <div class="innerRegion">
+          <div class="Region_doo">
+            <ul>
+              <li data-region="seoul">
+                <a>서울</a>
+              </li>
+              <li data-region="gyeonggi">
+                <a>경기</a>
+              </li>
+              <li data-region="incheon">
+                <a>인천</a>
+              </li>
+            </ul>
+          </div>
+          <div class="Region_si">
+            <ul data-region="seoul">
+              <li>
+                <label>
+                  <input type="checkbox" name="region">광진구
+                </label>
+              </li>
+              <li>
+                <label>
+                  <input type="checkbox" name="region">강남구
+                </label>
+              </li>
+            </ul>
+            <ul data-region="gyeonggi">
+              <li>
+                <label>
+                  <input type="checkbox" name="region">안양시
+                </label>
+              </li>
+              <li>
+                <label>
+                  <input type="checkbox" name="region">수원시
+                </label>
+              </li>
+            </ul>
+            <ul data-region="incheon">
+              <li>
+                <label>
+                  <input type="checkbox" name="region">부평구
+                </label>
+              </li>
+              <li>
+                <label>
+                  <input type="checkbox" name="region">연수구
+                </label>
+              </li>
+            </ul>
+          </div>
+        </div>
+        <div class="buttonRegion">
+          <div class="resetbutton">
+            <i class="fa-solid fa-rotate" style="color: #f9c148;">초기화</i>
+          </div>
+          <button class="findRegion">조회</button>
+        </div>
+      </div>
+    </section>
+    <section class="mainSection">
+      <section class="Store_Zone"></section>
+    </section>
   </div>
   <br />
 
-  </section>
-  <section class="quickfilter">
-    <div class="filterBar_Names">
-      <button class="myplace" style="background-color: #ffffff;">
-        <div class="myplaceIcon">
-          <i class="fa-solid fa-location-dot"></i>
-        </div>
-        <p>지역</p>
-      </button>
-      <button class="menu" style="background-color:#da9c68bf">
-        <div class="menuIcon">
-          <i class="fa-solid fa-utensils"></i>
-        </div>
-        <p>메뉴</p>
-      </button>
-    </div>
-    <div class="filterRegion">
-      <div class="place">
-        <button class="nowplace">내위치</button>
-        <div class="selfplace">
-          <div class="doo">
-            <div class="example">예) 경기도 수원시</div>
-            <div class="dooicon"><i class="fa-solid fa-location-crosshairs"></i></div>
-          </div>
-          <div class="subicon">
-            <i class="fa-sharp fa-regular fa-circle-left" style="color: #f24a4a;"></i>
-            <p>지역을 직접 선택하세요!</p>
-          </div>
-        </div>
-      </div>
-      <button type="button" class="find">조회</button>
-    </div>
-    <div class="filterMenu" style="display:none">
-      <div class="korea">
-        <div class="imgKorea" id="sortedMenu">
-          <img src="/img/kor.png" alt="kor">
-        </div>
-        <p>한식</p>
-      </div>
-      <div class="japen">
-        <div class="imgJapen" id="sortedMenu">
-          <img src="/img/japen.png" alt="jap">
-        </div>
-        <p>일식</p>
-      </div>
-      <div class="china">
-        <div class="imgChina" id="sortedMenu">
-          <img src="/img/china.png" alt="chi">
-        </div>
-        <p>중식</p>
-      </div>
-      <div class="america">
-        <div class="imgAmerica" id="sortedMenu">
-          <img src="/img/america.png" alt="america">
-        </div>
-        <p>미국식</p>
-      </div>
-      <div class="france">
-        <div class="imgfrance" id="sortedMenu">
-          <img src="/img/france.png" alt="France">
-        </div>
-        <p>프랑스식</p>
-      </div>
-      <div class="italy">
-        <div class="imgItaly" id="sortedMenu">
-          <img src="/img/italy.png" alt="italy">
-        </div>
-        <p>이탈리아식</p>
-      </div>
-    </div>
-    <div class="outerRegion" style="display: none;">
-      <div class="innerRegion">
-        <div class="Region_doo">
-          <ul>
-            <li data-region="seoul">
-              <a>서울</a>
-            </li>
-            <li data-region="gyeonggi">
-              <a>경기</a>
-            </li>
-            <li data-region="incheon">
-              <a>인천</a>
-            </li>
-          </ul>
-        </div>
-        <div class="Region_si">
-          <ul data-region="seoul">
-            <li>
-              <label>
-                <input type="checkbox" name="region">광진구
-              </label>
-            </li>
-            <li>
-              <label>
-                <input type="checkbox" name="region">강남구
-              </label>
-            </li>
-          </ul>
-          <ul data-region="gyeonggi">
-            <li>
-              <label>
-                <input type="checkbox" name="region">안양시
-              </label>
-            </li>
-            <li>
-              <label>
-                <input type="checkbox" name="region">수원시
-              </label>
-            </li>
-          </ul>
-          <ul data-region="incheon">
-            <li>
-              <label>
-                <input type="checkbox" name="region">부평구
-              </label>
-            </li>
-            <li>
-              <label>
-                <input type="checkbox" name="region">연수구
-              </label>
-            </li>
-          </ul>
-        </div>
-      </div>
-      <div class="buttonRegion">
-        <div class="resetbutton">
-          <i class="fa-solid fa-rotate" style="color: #f9c148;">초기화</i>
-        </div>
-        <button class="findRegion">조회</button>
-      </div>
-    </div>
-  </section>
-  </div>
-  </div>
-  <section class="mainSection">
-    <section class="Store_Zone"></section>
-  </section>
+
 
 
 

@@ -10,6 +10,9 @@ const filterMenu = document.querySelector(".filterMenu");
 const nowbutton = document.querySelector(".nowplace button");
 const section = document.querySelector("section");
 const filterBar_button = document.querySelector(".filterBar_Names");
+const InfoBar = document.querySelector("#InfoBar");
+const slideshow_container = document.querySelector("#slideshow-container");
+const mainSection = document.querySelector(".mainSection");
 
 document.addEventListener("click", filter);
 
@@ -32,15 +35,27 @@ function filter(event) {
     {
       quickfilter.classList.remove("moveout");
       quickfilter.classList.add("movein");
-      wrap.classList.remove("blurout");
-      wrap.classList.add("blurin");
+      header.classList.remove("blurout");
+      InfoBar.classList.remove("blurout");
+      mainSection.classList.remove("blurout");
+      slideshow_container.classList.remove("blurout");
+      header.classList.add("blurin");
+      InfoBar.classList.add("blurin");
+      mainSection.classList.add("blurin");
+      slideshow_container.classList.add("blurin");
       wrap.style.backgroundColor = "rgb(128 128 128 / 26%)";
     }
   } else if (isFilterUp) {
     quickfilter.classList.remove("movein");
     quickfilter.classList.add("moveout");
-    wrap.classList.remove("blurin");
-    wrap.classList.add("blurout");
+    header.classList.remove("blurin");
+    InfoBar.classList.remove("blurin");
+    mainSection.classList.remove("blurin");
+    slideshow_container.classList.remove("blurin");
+    header.classList.add("blurout");
+    InfoBar.classList.add("blurout");
+    mainSection.classList.add("blurout");
+    slideshow_container.classList.add("blurout");
     wrap.style.backgroundColor = "";
     outerRegion.style.display = "none";
   }

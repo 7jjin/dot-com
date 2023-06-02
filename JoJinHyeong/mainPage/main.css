@@ -98,6 +98,8 @@ body button{
 
 .header {
   position: fixed;
+  top:0;
+  left: 0;
   z-index: 999;
   background-color: white;
   display: block;
@@ -234,7 +236,7 @@ body button{
   width: 100%;
   display: flex;
   justify-content: space-around;
-  padding: 113px 22px 22px 22px;
+  padding: 113px 0px 22px 0px;
   align-items: center;
 }
 
