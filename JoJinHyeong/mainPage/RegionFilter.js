@@ -2,13 +2,17 @@ const dooicon = document.querySelector(".dooicon");
 const outerRegion = document.querySelector(".outerRegion");
 const regionLinks = outerRegion.querySelectorAll(".Region_doo li");
 const subicon = document.querySelector(".subicon");
-
+const MediaQuery = matchMedia("screen and (max-width: 1024px)").mathch;
 dooicon.addEventListener("click", function () {
   if (outerRegion.style.display === "none") {
     outerRegion.style.display = "flex";
     subicon.style.display = "none";
   } else {
-    subicon.style.display = "inline";
+    if (MediaQuery) {
+      subicon.style.display = "inline";
+    } else {
+      subicon.style.display = "none";
+    }
     outerRegion.style.display = "none";
   }
 });
@@ -93,7 +97,7 @@ function check() {
             let open = item.open;
             let waitingNum = item.waitingNum;
             let foodType = item.foodType;
-            let review = item.review_length; 
+            let review = item.review_length;
 
             let Openstores = document.createElement("div");
             let Closestores = document.createElement("div");
@@ -167,11 +171,11 @@ function check() {
             let open = item.open;
             let waitingNum = item.waitingNum;
             let foodType = item.foodType;
-            let review = item.review_length; 
+            let review = item.review_length;
 
             let Openstores = document.createElement("div");
             let Closestores = document.createElement("div");
-            
+
             Openstores.setAttribute("value", foodType);
             Closestores.setAttribute("value", foodType);
             Openstores.setAttribute("class", "store");
@@ -227,9 +231,13 @@ function check() {
         menuClick_sol(data, array);
       } else {
         // 지역 선택을 안했을 경우
+        if (MediaQuery) {
+          subicon.style.display = "inline";
+        } else {
+          subicon.style.display = "none";
+        }
         checkedRegion.innerHTML = "예) 경기도 수원시";
         checkedRegion.style.color = "#aaa";
-        subicon.style.display = "inline";
         Store_Zone.innerHTML = "";
         for (let i = 0; i < data.length; i++) {
           let adminCafe = data[i].adminCafe;
@@ -239,7 +247,7 @@ function check() {
           let open = data[i].open;
           let waitingNum = data[i].waitingNum;
           let foodType = data[i].foodType;
-          let review = data[i].review_length; 
+          let review = data[i].review_length;
 
           let Openstores = document.createElement("div");
           let Closestores = document.createElement("div");
@@ -324,7 +332,7 @@ function menuClick_Mul(data, array) {
           let open = item.open;
           let waitingNum = item.waitingNum;
           let foodType = item.foodType;
-          let review = item.review_length; 
+          let review = item.review_length;
 
           let Openstores = document.createElement("div");
           let Closestores = document.createElement("div");
@@ -411,7 +419,7 @@ function menuClick_sol(data, array) {
           let open = item.open;
           let waitingNum = item.waitingNum;
           let foodType = item.foodType;
-          let review = item.review_length; 
+          let review = item.review_length;
 
           let Openstores = document.createElement("div");
           let Closestores = document.createElement("div");
@@ -495,7 +503,7 @@ function menuClick(data) {
           let open = item.open;
           let waitingNum = item.waitingNum;
           let foodType = item.foodType;
-          let review = item.review_length; 
+          let review = item.review_length;
 
           let Openstores = document.createElement("div");
           let Closestores = document.createElement("div");

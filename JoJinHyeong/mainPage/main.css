@@ -670,7 +670,7 @@ body button{
 .outerRegion{
   position: relative;
   background-color: white;
-  width: 95%;
+  width: 75%;
   border: 1px solid #999;
   margin:0 auto;
   margin-top: 10px;
@@ -728,7 +728,6 @@ body button{
   position: absolute;
   display: flex;
   top: 10%;
-  right: 50%;
 }
 .fa-rotate:before, .fa-sync-alt:before{
   margin-right: 5px;
@@ -739,8 +738,8 @@ body button{
     border: none;
     border-radius: 3px;
     background-color: #ddd;
-    width: 85px;
-    top: 66%;
+    width: 100px;
+    top: 76%;
     right: 25%;
 }
 
@@ -800,7 +799,7 @@ body button{
 
 @keyframes moveout {
   from {
-    margin-top: 100px;
+    margin-top: 200px;
   }
 
   to {
@@ -1147,8 +1146,14 @@ body button{
     top: -78px;
   }
 
-  .filterRegion {
+  .filterRegion , .filterMenu{
     height: 90px;
+    padding: 20px 30px;
+  }
+
+
+  .place{
+    width: 70%;
   }
 
   .quickfilter .filterBar_Names button {
@@ -1157,7 +1162,7 @@ body button{
   }
 
   .filterBar_Names {
-    top: -52px;
+    top: -50px;
   }
 
   .mp_wap{
@@ -1176,6 +1181,10 @@ body button{
   .doo .dooicon,
   .si .siicon {
     font-size: 18px;
+  }
+
+  .doo .example {
+    font-size: 17px;
   }
 
   .subicon{
@@ -1206,6 +1215,67 @@ body button{
 
   .localname {
     font-size: 18px;
+    word-break: keep-all;
+  }
+
+  .filterMenu img{
+    width: 30px;
+  }
+
+  .filterMenu p{
+    font-size: 13px;
+  }
+
+  .Region_doo a{
+    font-size: 13px;
+  }
+
+  .Region_doo li{
+    padding:10px 0px;
+  }
+
+  .Region_si label{
+    font-size: 13px;
+    padding: 4px 0px;
+  }
+
+  .resetbutton{
+    font-size: 13px;
+    top: 12%;
+  }
+
+  .findRegion{
+    font-size: 20px;
+    width: 55px;
+    top:71%
+  }
+
+  @keyframes movein {
+    from {
+      margin-top: 516px;
+    }
+  
+    to {
+      margin-top: 300px;
+    }
+  }
+  
+  .moveout {
+    animation-name: moveout;
+    animation-duration: 0.65s;
+    animation-fill-mode: forwards;
+  
+  
+  }
+  
+  @keyframes moveout {
+    from {
+      margin-top: 300px;
+    }
+  
+    to {
+      margin-top: 516px;
+    }
   }
 }
 
