@@ -863,14 +863,14 @@ body button{
   justify-content: space-between;
 }
 
-.CloseSign {
+.CloseSign , .Sign{
   position:relative;
   height: 180px;
   display: flex;
   background-color: rgb(209, 209, 209);
   flex-direction: row;
   align-items: center;
-  padding: 0px 50px;
+  padding: 0px 30px;
   box-shadow: rgb(128 128 128 / 85%) 4px 1px 17px 1px;
   border-radius: 10px 10px 10px;
   justify-content: space-between;
@@ -884,7 +884,7 @@ body button{
   border-radius: 4px;
   text-align: center;
   line-height: 1.4;
-  padding: 15px 20px;
+  padding: 15px 15px;
 }
 .bad p{
   font-size: 20px;
@@ -893,7 +893,7 @@ body button{
 
 .Store_Sign {
   display: flex;
-  align-items: center;
+  align-items: flex-start;
 }
 
 .Store_Image {
@@ -908,7 +908,7 @@ body button{
 }
 
 .Store_Title {
-  font-size: 30px;
+  font-size: 25px;
   font-weight: 700;
   word-break: break-word;
   line-height: 1.4;
@@ -918,6 +918,7 @@ body button{
 
 .detail {
   font-size: 14px;
+  word-break: keep-all;
   line-height: 15px;
   margin: 0px 0px 10px 0px;
   font-family: 'Noto Sans KR', sans-serif;
@@ -927,20 +928,25 @@ body button{
   margin-bottom: 10px;
 }
 
+.rating > *{
+  font-size: 13px;
+}
+
 .Star_Rating {
-  font-size: 15px;
+  font-size: 13px;
   font-weight: 700;
 }
 
 .Review_Rating {
-  font-size: 15px;
+  font-size: 13px;
   color: #999;
   font-weight: 400;
 }
 
 .tags,
 .address {
-  font-size: 14px;
+  word-break: keep-all;
+  font-size: 12px;
   line-height: 15px;
   color: #999;
   font-family: 'Noto Sans KR', sans-serif;
@@ -970,6 +976,19 @@ body button{
 
 .store {
   margin-bottom: 20px;
+}
+
+.WaitingBox {
+  background: url(/img/blank.png) no-repeat center center;
+  background-size: inherit;
+  width: 70px;
+  height: 86px;
+  border-radius: 4px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-weight: 600;
+  font-size: 15px;
 }
 
 
@@ -1193,27 +1212,96 @@ body button{
     display: none;
   }
 
-  .Store_Title {
-    font-size: 20px;
-  }
+  
 
-  .detail {
-    font-size: 12px;
-  }
 
   .Store_Zone {
+    position: relative;
+    left: 0;
+    translate: 0;
+    width: 100%;
     margin-top: 165px;
+    flex-direction: row;
+    flex-wrap: wrap;
   }
+  
+  .store{
+    width: 44%;
+    margin: 10px;
+}
 
-  .rating>*,
-  .tags,
-  .address {
-    font-size: 12px;
-  }
+.CloseSign ,.Sign{
+  padding:0px;
+  justify-content: center;
+  height: 100%;
+}
 
-  .Store_Image {
-    height: 132px;
-  }
+.Store_Sign{
+  width: 100%;
+  height: 100%;
+  flex-direction: column;
+}
+.Store_Image{
+  width: 100%;
+  margin-right: 0px;
+  border-radius: 10px;
+}
+
+.Store_Name{
+  padding: 7px;
+  display: flex;
+    flex-direction: column;
+    align-content: flex-start;
+}
+.Store_Title {
+  font-size: 14px;
+}
+
+.detail {
+  font-size: 12px;
+  margin-bottom: 5px;
+}
+
+.rating > *{
+  font-size: 12px;
+
+}
+
+.rating{
+  margin-bottom: 5px;
+}
+
+.address{
+  display: none;
+}
+
+.tags{
+  font-size: 12px;
+}
+
+.WaitingBox{
+  height: 34px;
+  width: 24px;
+  border-radius: 4px;
+}
+
+.bad, .WaitingBox{
+  position: absolute;
+  bottom: 8%;
+  right: 10%;
+  padding: 5px;
+}
+
+
+
+.WaitingBox > P{
+  margin:0;
+}
+
+.bad > P{
+  font-size: 12px;
+}
+
 
   .localname {
     font-size: 18px;
@@ -1397,14 +1485,3 @@ body button{
   }
 }
 
-.WaitingBox {
-  background: url(/img/blank.png) no-repeat center center;
-  background-size: cover;
-  width: 10%;
-  height: 65px;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  font-weight: 600;
-  font-size: 15px;
-}
