@@ -30,28 +30,49 @@
           <div class="logo">
             <a href="#" onclick="location.href='/JoJinHyeong/mainPage/main.html'"></a>
           </div>
-          <div class="headerSearch">
-            <form class="searchForm">
-              <input type="text" class="search" placeholder="식당을 입력하세요" />
-              <div class="searchIcon">
-                <i class="fa-solid fa-magnifying-glass"></i>
-              </div>
-            </form>
-            <div class="iconBox"></div>
-          </div>
-          <div class="headerUtil">
-            <div class="utilList">
-              <div class="utilList_login">
-                <i class="fa-regular fa-user" style="font-size: 25px"
-                  onclick="location.href='/JoJinHyeong/loginPage/login.html'"></i>
-              </div>
-              <div class="utilList_Wait">
-                <i class="fa-regular fa-clock" style="font-size: 25px"></i>
-              </div>
+        </div>
+        <div class="headerSearch">
+          <form class="searchForm">
+            <input type="text" class="search" placeholder="식당을 입력하세요" />
+            <div class="searchIcon">
+              <i class="fa-solid fa-magnifying-glass"></i>
             </div>
+          </form>
+          <div class="searchIcon_moblie" onclick="showSearch()">
+            <i class="fa-solid fa-magnifying-glass"></i>
           </div>
         </div>
+        <div class="headerUtil">
+          <div class="utilList">
+            <div class="utilList_login">
+              <i class="fa-regular fa-user" style="font-size: 25px"
+                onclick="location.href='/JoJinHyeong/loginPage/login.html'"></i>
+            </div>
+            <div class="UserInfo">
+              <div class="utilList_User"></div>
+            </div>
+            <form class="formps" action="/logout" method="post"></form>
+          </div>
+        </div>
+        <div class="headerUtil_toggleBar" onclick="showList()">
+          <i class="fa-solid fa-bars"></i>
+        </div>
       </div>
+    </div>
+    <div class="toggleOn">
+      <div class="Myinfo">내정보</div>
+      <div class="logout">로그아웃</div>
+    </div>
+    <div class="search_box_moblie">
+      <div class="search_box_wrapper">
+        <form class="searchForm_moblie">
+          <input type="text" class="search_moblie" placeholder="식당을 입력하세요" />
+          <div class="searchIcon_box_icon">
+            <i class="fa-solid fa-magnifying-glass"></i>
+          </div>
+        </form>
+      </div>
+    </div>
   </section>
   <div class="Entire">
 
@@ -81,8 +102,8 @@
           <div class="staravg">5.0</div>
         </div>
         <div class="review">
-            <div class="client">총 리뷰</div>
-            <div class="clientNum"></div>
+          <div class="client">총 리뷰</div>
+          <div class="clientNum"></div>
         </div>
         <div class="etc">
           <div class="phone">

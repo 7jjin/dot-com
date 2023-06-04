@@ -27,7 +27,7 @@ function slider(Element) {
     const x = e.pageX - Element.offsetLeft;
     const walk = (x - startX) * 1;
     Element.scrollLeft = scrollLeft - walk;
-  })
+  });
 }
 
 // 플로팅 버튼
@@ -37,9 +37,9 @@ const bar = document.querySelector(".remote_Bar");
 const Tip = document.querySelector(".remote_Tip");
 
 window.addEventListener("scroll", function () {
-  bar.style.top = `${window.scrollY}px`;
+  bar.style.top = `${window.scrollY + 90}px`;
   bar.style.transition = "all 0.7s ease-out";
-  Tip.style.top = `${window.scrollY}px`;
+  Tip.style.top = `${window.scrollY + 90}px`;
   Tip.style.transition = "all 0.7s ease-out";
 
   if (window.scrollY === 0) {
@@ -327,3 +327,32 @@ fetch("http://localhost:4000/waitlist")
     }
   })
   .catch((err) => console.log(err));
+
+//  반응형
+//  스크롤을 내리면 유틸바 사라지고 다시 올라갔을때도 사라지게 함.
+const toggleBar = document.querySelector(".headerUtil_toggleBar");
+const subBar = document.querySelector(".toggleOn");
+const header = document.querySelector(".header");
+let toggle_info_Bar = true;
+let toggle_search_Bar = true;
+function showList() {
+  if (toggle_info_Bar) {
+    subBar.style.height = "120px";
+    toggle_info_Bar = !toggle_info_Bar;
+  } else {
+    subBar.style.height = "0px";
+    toggle_info_Bar = !toggle_info_Bar;
+  }
+}
+
+//반응형일 떄 검색 버튼 함수
+const search_box_moblie = document.querySelector(".search_box_moblie");
+function showSearch() {
+  if (toggle_search_Bar) {
+    search_box_moblie.style.height = "120px";
+    toggle_search_Bar = !toggle_search_Bar;
+  } else {
+    search_box_moblie.style.height = "0px";
+    toggle_search_Bar = !toggle_search_Bar;
+  }
+}

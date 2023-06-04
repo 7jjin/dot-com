@@ -96,6 +96,7 @@ body button{
 }
 
 
+/* header CSS */
 .header {
   position: fixed;
   top:0;
@@ -232,6 +233,8 @@ body button{
   border-bottom: 2px solid #ddd;
 }
 
+
+/* infoBar CSS */
 #InfoBar {
   width: 100%;
   display: flex;
@@ -849,6 +852,7 @@ body button{
   flex-direction: column;
   align-content: center;
   transition: all .5s ease;
+  justify-content: center;
 }
 
 .Sign {
