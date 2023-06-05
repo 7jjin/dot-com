@@ -4,6 +4,7 @@ body {
 body button{
   padding:0px;
 }
+
 .socialLogin_phone{
   display: none;
   position: absolute;
@@ -95,7 +96,14 @@ body button{
 }
 
 
+/* header CSS */
 .header {
+  position: fixed;
+  top:0;
+  left: 0;
+  z-index: 999;
+  background-color: white;
+  display: block;
   width: 100%;
   height: 90px;
   border-bottom: 2px solid #ddd;
@@ -151,9 +159,13 @@ body button{
   border: 1px solid #ddd;
 }
 
+.search_box_moblie{
+  display: none;
+}
+
 .searchForm .search {
   outline: none;
-  width: 370px;
+  width: 315px;
   height: 20px;
   border-style: none;
   background-color: #f8f8f8;
@@ -167,6 +179,12 @@ body button{
   right: 20px;
   display: inline;
 }
+
+.searchIcon_moblie{
+  display: none;
+}
+
+
 
 .headerUtil {
   display: flex;
@@ -215,11 +233,14 @@ body button{
   border-bottom: 2px solid #ddd;
 }
 
+
+/* infoBar CSS */
 #InfoBar {
   width: 100%;
   display: flex;
   justify-content: space-around;
-  padding: 22px;
+  padding: 113px 0px 22px 0px;
+  align-items: center;
 }
 
 .infoWapper {
@@ -272,8 +293,6 @@ body button{
 .call:hover {
   background: url(/img/blank.png) no-repeat center center;
   background-size: cover;
-  width: 300%;
-  height: 65px;
   z-index: 1;
   display: flex;
   justify-content: center;
@@ -285,9 +304,6 @@ body button{
 .memberChange:hover {
   background: url(/img/blank.png) no-repeat center center;
   background-size: cover;
-  width: 100%;
-  height: 65px;
-  margin-right: 30px;
   transition: all .35s cubic-bezier(0.4, 0, 0.2, 1);
   display: flex;
   justify-content: center;
@@ -659,7 +675,7 @@ body button{
 .outerRegion{
   position: relative;
   background-color: white;
-  width: 95%;
+  width: 75%;
   border: 1px solid #999;
   margin:0 auto;
   margin-top: 10px;
@@ -717,7 +733,6 @@ body button{
   position: absolute;
   display: flex;
   top: 10%;
-  right: 50%;
 }
 .fa-rotate:before, .fa-sync-alt:before{
   margin-right: 5px;
@@ -728,8 +743,8 @@ body button{
     border: none;
     border-radius: 3px;
     background-color: #ddd;
-    width: 85px;
-    top: 66%;
+    width: 100px;
+    top: 76%;
     right: 25%;
 }
 
@@ -775,7 +790,7 @@ body button{
   }
 
   to {
-    margin-top: 100px;
+    margin-top: 200px;
   }
 }
 
@@ -789,7 +804,7 @@ body button{
 
 @keyframes moveout {
   from {
-    margin-top: 100px;
+    margin-top: 200px;
   }
 
   to {
@@ -837,6 +852,7 @@ body button{
   flex-direction: column;
   align-content: center;
   transition: all .5s ease;
+  justify-content: center;
 }
 
 .Sign {
@@ -851,14 +867,14 @@ body button{
   justify-content: space-between;
 }
 
-.CloseSign {
+.CloseSign , .Sign{
   position:relative;
   height: 180px;
   display: flex;
   background-color: rgb(209, 209, 209);
   flex-direction: row;
   align-items: center;
-  padding: 0px 50px;
+  padding: 0px 30px;
   box-shadow: rgb(128 128 128 / 85%) 4px 1px 17px 1px;
   border-radius: 10px 10px 10px;
   justify-content: space-between;
@@ -872,7 +888,7 @@ body button{
   border-radius: 4px;
   text-align: center;
   line-height: 1.4;
-  padding: 15px 20px;
+  padding: 15px 15px;
 }
 .bad p{
   font-size: 20px;
@@ -881,7 +897,7 @@ body button{
 
 .Store_Sign {
   display: flex;
-  align-items: center;
+  align-items: flex-start;
 }
 
 .Store_Image {
@@ -896,7 +912,7 @@ body button{
 }
 
 .Store_Title {
-  font-size: 30px;
+  font-size: 25px;
   font-weight: 700;
   word-break: break-word;
   line-height: 1.4;
@@ -906,6 +922,7 @@ body button{
 
 .detail {
   font-size: 14px;
+  word-break: keep-all;
   line-height: 15px;
   margin: 0px 0px 10px 0px;
   font-family: 'Noto Sans KR', sans-serif;
@@ -915,20 +932,25 @@ body button{
   margin-bottom: 10px;
 }
 
+.rating > *{
+  font-size: 13px;
+}
+
 .Star_Rating {
-  font-size: 15px;
+  font-size: 13px;
   font-weight: 700;
 }
 
 .Review_Rating {
-  font-size: 15px;
+  font-size: 13px;
   color: #999;
   font-weight: 400;
 }
 
 .tags,
 .address {
-  font-size: 14px;
+  word-break: keep-all;
+  font-size: 12px;
   line-height: 15px;
   color: #999;
   font-family: 'Noto Sans KR', sans-serif;
@@ -960,7 +982,22 @@ body button{
   margin-bottom: 20px;
 }
 
-@media screen and (max-width: 1050px) {
+.WaitingBox {
+  background: url(/img/blank.png) no-repeat center center;
+  background-size: inherit;
+  width: 70px;
+  height: 86px;
+  border-radius: 4px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-weight: 600;
+  font-size: 15px;
+}
+
+
+/* PC 반응형 */
+@media screen and (max-width: 1024px) {
   .headerInner {
     transform: scale(0.95);
   }
@@ -1007,23 +1044,97 @@ body button{
   }
 }
 
-@media screen and (max-width: 800px) {
+@media screen and (max-width: 765px) {
   .header {
     height: 60px;
   }
+  #InfoBar{
+    padding-top: 80px;
+    flex-direction: column;
+  }
+  .toggleOn {
+    border-top: 2px solid #ddd;
+  }
+
+  .headerUtil {
+    display: none;
+  }
+  .headerUtil_toggleBar {
+    display: flex;
+    align-items: center;
+    position: absolute;
+    right: 5%;
+    top: 35%;
+    font-size: 20px;
+  }
 
   .filterRegion .find {
-    width: 75px;
-    font-size: 19px;
-  }
+    width: 20%;
+    font-size: 17px;
+    height: 25%;
+}
+  
 
   .logo a {
     background-size: 105px;
   }
+  .searchIcon_moblie{
+    display: flex;
+    position: absolute;
+    right: 11%;
+    margin-right: 13px;
+  }
 
-  .searchForm .search {
-    width: 220px;
-    height: 10px;
+  .searchForm{
+    display: none;
+  }
+
+  
+
+  .search_box_moblie{
+    height: 0;
+    overflow: hidden;
+    display: flex;
+    transition: height 0.3s ease;
+    position: fixed;
+    width: 100%;
+    z-index: 20;
+    background-color: antiquewhite;
+    justify-content: center;
+    align-content: center;
+    align-items: center;
+}
+  
+.search_box_wrapper{
+  height: 100%;
+  padding: 30px;
+  width: 100%;
+}
+  
+
+  .searchForm_moblie{
+    
+    height: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+
+
+  .search_moblie{
+
+    border-radius: 20px;
+    padding: 15px;
+    font-size: 1rem;
+    width: 60%;
+    border: none;
+    height: 1rem;
+  }
+
+
+  .searchIcon_box_icon{
+    position: absolute;
+    right: 25%;
   }
 
   .infoWapper {
@@ -1031,41 +1142,60 @@ body button{
   }
 
   .InfoMenu {
-    width: 400px;
+    width: 250px;
   }
 
   .InfoMenu>* {
     height: 46px;
     margin-right: 10px;
+    font-size: 12px;
   }
 
   .RestaurantName p {
-    font-size: 25px;
+    font-size: 20px;
   }
 
   .RestaurantName {
     margin-right: 0px;
+    margin-bottom: 10px;
   }
+  #slideshow-container{
+    height: 250px;
+  }
+
+  #slideshow-container .mySlides img {
+    height: 250px;
+}
 
   .quickfilter {
-    top: 37px;
+    top: -78px;
   }
 
-  .filterRegion {
+  .filterRegion , .filterMenu{
     height: 90px;
+    padding: 20px 30px;
+  }
+
+
+  .place{
+    width: 70%;
   }
 
   .quickfilter .filterBar_Names button {
     padding: 0px;
-    font-size: 17px;
+    font-size: 15px;
   }
 
   .filterBar_Names {
-    top: -58px;
+    top: -50px;
+  }
+
+  .mp_wap{
+    display: none;
   }
 
   .place button {
-    font-size: 20px;
+    font-size: 15px;
   }
 
   .doo input,
@@ -1078,34 +1208,172 @@ body button{
     font-size: 18px;
   }
 
-  .Store_Title {
-    font-size: 20px;
+  .doo .example {
+    font-size: 17px;
   }
 
-  .detail {
-    font-size: 12px;
+  .subicon{
+    display: none;
   }
+
+  
+
 
   .Store_Zone {
+    position: relative;
+    left: 0;
+    translate: 0;
+    width: 100%;
     margin-top: 165px;
+    flex-direction: row;
+    flex-wrap: wrap;
   }
+  
+  .store{
+    width: 44%;
+    margin: 10px;
+}
 
-  .rating>*,
-  .tags,
-  .address {
-    font-size: 12px;
-  }
+.CloseSign ,.Sign{
+  padding:0px;
+  justify-content: center;
+  height: 100%;
+}
 
-  .Store_Image {
-    height: 132px;
-  }
+.Store_Sign{
+  width: 100%;
+  height: 100%;
+  flex-direction: column;
+}
+.Store_Image{
+  width: 100%;
+  margin-right: 0px;
+  border-radius: 10px;
+}
+
+.Store_Name{
+  padding: 7px;
+  display: flex;
+    flex-direction: column;
+    align-content: flex-start;
+}
+.Store_Title {
+  font-size: 14px;
+}
+
+.detail {
+  font-size: 12px;
+  margin-bottom: 5px;
+}
+
+.rating > *{
+  font-size: 12px;
+
+}
+
+.rating{
+  margin-bottom: 5px;
+}
+
+.address{
+  display: none;
+}
+
+.tags{
+  font-size: 12px;
+}
+
+.WaitingBox{
+  height: 34px;
+  width: 24px;
+  border-radius: 4px;
+}
+
+.bad, .WaitingBox{
+  position: absolute;
+  bottom: 8%;
+  right: 10%;
+  padding: 5px;
+}
+
+
+
+.WaitingBox > P{
+  margin:0;
+}
+
+.bad > P{
+  font-size: 12px;
+}
+
 
   .localname {
     font-size: 18px;
+    word-break: keep-all;
+  }
+
+  .filterMenu img{
+    width: 30px;
+  }
+
+  .filterMenu p{
+    font-size: 13px;
+  }
+
+  .Region_doo a{
+    font-size: 13px;
+  }
+
+  .Region_doo li{
+    padding:10px 0px;
+  }
+
+  .Region_si label{
+    font-size: 13px;
+    padding: 4px 0px;
+  }
+
+  .resetbutton{
+    font-size: 13px;
+    top: 12%;
+  }
+
+  .findRegion{
+    font-size: 20px;
+    width: 55px;
+    top:71%
+  }
+
+  @keyframes movein {
+    from {
+      margin-top: 516px;
+    }
+  
+    to {
+      margin-top: 300px;
+    }
+  }
+  
+  .moveout {
+    animation-name: moveout;
+    animation-duration: 0.65s;
+    animation-fill-mode: forwards;
+  
+  
+  }
+  
+  @keyframes moveout {
+    from {
+      margin-top: 300px;
+    }
+  
+    to {
+      margin-top: 516px;
+    }
   }
 }
 
-@media screen and (max-width: 680px) {
+@media screen and (max-width: 400px) {
   .logo a {
     background-size: 90px;
   }
@@ -1115,22 +1383,9 @@ body button{
     height: 5px;
   }
 
-  .toggleOn {
-    border-top: 2px solid #ddd;
-  }
+  
 
-  .headerUtil {
-    display: none;
-  }
-
-  .headerUtil_toggleBar {
-    display: flex;
-    align-items: center;
-    position: absolute;
-    right: 5%;
-    top: 35%;
-    font-size: 20px;
-  }
+  
 
   #slideshow-container .mySlides img {
     height: 300px;
@@ -1234,14 +1489,3 @@ body button{
   }
 }
 
-.WaitingBox {
-  background: url(/img/blank.png) no-repeat center center;
-  background-size: cover;
-  width: 10%;
-  height: 65px;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  font-weight: 600;
-  font-size: 15px;
-}

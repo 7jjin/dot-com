@@ -6,104 +6,151 @@ body {
 
 .Entire {
     position: relative;
-    width: 800px;
+    width: 60%;
     margin: 0 auto;
     box-shadow: 0px 20px 20px 0px #ddd;
 }
 
 .header {
+    position: fixed;
+    top:0;
+    left: 0;
+    z-index: 999;
+    background-color: white;
+    display: block;
     width: 100%;
     height: 90px;
     border-bottom: 2px solid #ddd;
-
-}
-
-.headerWapper {
-    width: 1300px;
+  
+  }
+  
+  .headerWapper {
     height: 100%;
-    margin: 0 auto;
-}
-
-.headerInner {
+  }
+  
+  .headerInner {
     display: flex;
-    justify-content: center;
     height: 100%;
     width: 100%;
-
-}
-
-.headerLogo {
+    transition: all 0.5s ease;
+  }
+  
+  .headerLogo {
     display: flex;
     flex-basis: 25%;
     align-items: center;
     justify-content: center;
-}
-
-.logo {
+  }
+  
+  .logo {
     display: flex;
     padding-right: 5px;
     width: 140px;
     height: 100%;
-}
-
-.logo a {
+  }
+  
+  .logo a {
     background: url("/img/FOODEAT.png") no-repeat center center / 100px 90px;
     width: 100%;
     height: 100%;
     background-size: 130px;
-
-}
-
-.headerSearch {
+    transition: all 0.5s ease;
+  }
+  
+  .headerSearch {
     display: flex;
     align-items: center;
-    flex-basis: 50%;
+    flex-basis: 46%;
     width: 100%;
     height: 100%;
-}
-
-.searchForm {
+  }
+  
+  .searchForm {
     display: flex;
     align-items: center;
     border-radius: 20px;
     background: #f8f8f8;
     border: 1px solid #ddd;
-}
-
-.searchForm .search {
+  }
+  
+  .search_box_moblie{
+    display: none;
+  }
+  
+  .searchForm .search {
     outline: none;
-    width: 370px;
+    width: 315px;
     height: 20px;
     border-style: none;
     background-color: #f8f8f8;
     padding: 10px 40px 10px 0px;
     margin: 3px 0px 3px 15px;
-}
-
-.searchIcon {
+    transition: all 0.5s ease;
+  }
+  
+  .searchIcon {
     position: relative;
     right: 20px;
     display: inline;
-}
-
-.headerUtil {
+  }
+  
+  .searchIcon_moblie{
+    display: none;
+  }
+  
+  
+  
+  .headerUtil {
     display: flex;
     align-items: center;
     justify-content: center;
     flex-basis: 25%;
     width: 100%;
     height: 100%;
-}
-
-.utilList {
+  }
+  
+  .headerUtil_toggleBar {
+    display: none;
+  }
+  
+  .utilList {
     display: flex;
     margin-top: 5px;
-}
-
-.utilList_login,
-.utilList_Wait {
+  }
+  
+  .utilList_login,
+  .utilList_User {
     padding-right: 20px;
-}
+  }
+  
+  .toggleOn {
+    position: fixed;
+    display: flex;
+    width: 100%;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    z-index: 1;
+    background-color: white;
+    height: 0px;
+    overflow: hidden;
+    transition: all 0.5s ease;
+    cursor: pointer;
+  }
+  
+  .toggleOn>* {
+    padding: 20px;
+    width: 100%;
+    margin: 0 auto;
+    display: flex;
+    justify-content: center;
+    border-bottom: 2px solid #ddd;
+  }
+
+  .Entire_Width{
+    width: 100%;
+    margin-top: 90px;
+  }
 .remote_Tip{
     position: absolute;
     display: flex;
@@ -238,7 +285,7 @@ body {
 }
 
 .store_Img {
-    width: 800px;
+    width: 100%;
     height: 300px;
     margin-right: auto;
     margin-left: auto;
@@ -250,7 +297,7 @@ body {
 
 .store_Info {
     display: flex;
-    width: 800px;
+    width: 100%;
     flex-direction: column;
     justify-content: center;
     margin-right: auto;
@@ -267,7 +314,7 @@ body {
     align-items: baseline;
 }
 
-.storeName .storePlace {
+.storePlace {
     font-size: 15px;
     margin-left: 5px;
     color: gray;
@@ -383,7 +430,7 @@ body {
 }
 
 .blank {
-    width: 800px;
+    width: 100%;
     display: flex;
     justify-content: space-around;
     align-items: center;
@@ -408,7 +455,7 @@ body {
 }
 
 .store_Home {
-    width: 800px;
+    width: 100%;
     margin: 0 auto;
     background-color: white;
 }
@@ -930,3 +977,213 @@ body {
   .fa-heart{
     cursor: pointer;
   }
+
+  /* PC 반응형 */
+@media screen and (max-width: 1024px) {
+    .headerInner {
+      transform: scale(0.95);
+    }
+  }
+
+  @media screen and (max-width: 765px) {
+    .remote_Tip ,.remote_Bar{
+        display: none;
+    }
+    
+    .header {
+      height: 60px;
+    }
+    #InfoBar{
+      padding-top: 80px;
+      flex-direction: column;
+    }
+    .toggleOn {
+      border-top: 2px solid #ddd;
+    }
+  
+    .headerUtil {
+      display: none;
+    }
+    .headerUtil_toggleBar {
+      display: flex;
+      align-items: center;
+      position: absolute;
+      right: 5%;
+      top: 35%;
+      font-size: 20px;
+    }
+  
+    .filterRegion .find {
+      width: 20%;
+      font-size: 17px;
+      height: 25%;
+  }
+    
+  
+    .logo a {
+      background-size: 105px;
+    }
+    .searchIcon_moblie{
+      display: flex;
+      position: absolute;
+      right: 11%;
+      margin-right: 13px;
+    }
+  
+    .searchForm{
+      display: none;
+    }
+  
+    
+  
+    .search_box_moblie{
+      height: 0;
+      overflow: hidden;
+      display: flex;
+      transition: height 0.3s ease;
+      position: fixed;
+      width: 100%;
+      z-index: 20;
+      background-color: antiquewhite;
+      justify-content: center;
+      align-content: center;
+      align-items: center;
+  }
+    
+  .search_box_wrapper{
+    height: 100%;
+    padding: 30px;
+    width: 100%;
+  }
+    
+  
+    .searchForm_moblie{
+      
+      height: 100%;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+    }
+  
+  
+    .search_moblie{
+  
+      border-radius: 20px;
+      padding: 15px;
+      font-size: 1rem;
+      width: 60%;
+      border: none;
+      height: 1rem;
+    }
+  
+  
+    .searchIcon_box_icon{
+      position: absolute;
+      right: 25%;
+    }
+
+
+    .Entire{
+        width: 100%;
+    }
+
+    .store_Img{
+        width: 100%;
+        height: 250px;
+    }
+    .Entire_Width{
+        margin-top: 60px;
+    }
+
+    .name{
+        font-size: 20px;
+    }
+    .storePlace{
+        font-size: 12px;
+    }
+
+    .storeIntro ,.storeRank {
+      font-size:15px ;
+    }
+
+    .review{
+      font-size: 13px;
+    }
+
+    .etc{
+      font-size: 14px;
+    }
+
+    .filter{
+      font-size: 16px;
+    }
+
+    .ClosingText{
+      font-size: 27px;
+    }
+
+    .Ex P{
+      font-size: 20px;
+    }
+    .AddressInfo {
+      margin-left: 81px;
+    }
+    .Time, .Date, .Address, .Introduce, .Call {
+    font-size: 15px;
+    font-family: 'Nanum Gothic', sans-serif;
+    }
+    .OpenBox, .CloseBox {
+    font-size: 15px;
+    }
+    .people p{
+      font-size: 20px;
+    }
+    .numberSlide span {
+      width: 50px;
+      height: 50px;
+    }
+
+    .SubEx{
+      flex-basis: 25%;
+    }
+
+    .AddressInfo ,.CallInfo,.Week,.TimeBox,.IntroInfo{
+      flex-basis: 75%;
+      margin-left: 0;
+    }
+    .OpenBox,.CloseBox{
+      margin-left: 0;
+    }
+    .Menu1,
+    .Menu2 {
+    font-size: 20px;
+    }
+    .SubItem{
+      font-size: 15px;
+    }
+
+    .menuImg {
+      background-position: center center;
+      width: 120px;
+      height: 100px;
+  }
+  .PhotoMore,.ReviewMore{
+    font-size: 17px;
+  }
+  .Img_Left, .Img_Right{
+    width: 35px;
+    font-size: 54px;
+  }
+  .Img-modal-content {
+    max-width: 66%;
+  }
+  .NickName, .rating{
+    font-size: 17px;
+  }
+  .Review,.ReviewPhoto {
+    height: 120px;
+  }
+  .ReviewContent,.DateInfo{
+    font-size: 14px;
+  }
+  }  

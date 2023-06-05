@@ -48,7 +48,6 @@ function storeList(data1, data2, data3) {
     let intro = data1[i].storeIntroduce;
     let addr = data1[i].addressName;
     let adminNo = data1[i].adminNo;
-    let review = data2[i].Review.length;
 
     let stores = document.createElement("div");
 
@@ -63,7 +62,6 @@ function storeList(data1, data2, data3) {
             <div class="rating">
                 <span class="Star">⭐</span>
                 <span class="Star_Rating">4.5</span>
-                <span class="Review_Rating">(${review})</span>
             </div>
             <span class="tags">연어 및 각종 일식</span><br>
             <span class="address">"${addr}"</span>
@@ -105,62 +103,20 @@ function closeModal(e) {
   e.style.display = "none";
 }
 
-// const content = document.querySelector(".content");
-// const modalFoot = document.querySelector(".modal-foot");
-// const reviewDom = document.querySelectorAll("fieldset input");
-// reviewDom.forEach((item) => {
-//   item.addEventListener("click", function () {
-//     console.log(item.value);
-//     modalFoot.addEventListener("click", function () {
-//       console.log(content.value);
-//       let formData = new FormData();
-//       formData.append("file", document.querySelector(".reviewBox")[0].files[0]);
-//       formData.append("rating", item.value);
-//       formData.append("content", content.value);
-//       formData.append("adminNo", sessionStorage.getItem("selectedValue"));
-//       console.log(formData);
-//       for (var key of formData.keys()) {
-//         console.log(key);
-//       }
-
-//       for (var value of formData.values()) {
-//         console.log(value);
-//       }
-//       fetch("http://localhost:4000/file", {
-//         method: "post",
-//         body: formData,
-//       })
-//         .then((res) => res.json)
-//         .then(console.log("성공했습니다."))
-//         .catch((err) => console.log(err));
-//     });
-//   });
-// });
-
 // form 데이터(별점,파일,내용) 서버로 내보내기
 function submitForm(event) {
-  event.preventDefault(); // 폼 제출을 중단하여 페이지가 새로고침되는 것을 방지
-
   let form = document.querySelector(".reviewBox");
   let rating = form.querySelector('input[name="reviewStar"]:checked').value;
   let fileInput = form.querySelector(".Upload");
-  let file = fileInput.files[0].name;
+  let file = fileInput.files[0];
   let content = form.querySelector(".content").value;
+  let adminNo = sessionStorage.getItem("selectedValue");
 
-  //console.log(rating, file, content);
   var formData = new FormData();
   formData.append("reviewStar", rating);
   formData.append("photo", file);
   formData.append("content", content);
-
-  // console.log(formData);
-  // for (var key of formData.keys()) {
-  //   console.log(key);
-  // }
-
-  // for (var value of formData.values()) {
-  //   console.log(value);
-  // }
+  formData.append("adminNo", adminNo);
 
   fetch("http://localhost:4000/file", {
     method: "POST",

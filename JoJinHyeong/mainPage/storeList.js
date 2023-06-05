@@ -5,10 +5,10 @@ fetch("http://localhost:4000/mainpage")
   .then((res) => {
     return res.json();
   })
-  .then(data => {
-      storeList(data);
-      menuClick(data);
-    }) 
+  .then((data) => {
+    storeList(data);
+    menuClick(data);
+  })
   .catch((error) => {
     console.log(error);
   });
@@ -22,18 +22,15 @@ function storeList(data) {
     let open = data[i].open;
     let waitingNum = data[i].waitingNum;
     let foodType = data[i].foodType;
-    let review = data[i].review_length;  
+    let review = data[i].review_length;
 
     let Openstores = document.createElement("div");
     let Closestores = document.createElement("div");
-    Openstores.setAttribute("value", foodType);
-    Closestores.setAttribute("value", foodType);
-
-    Openstores.setAttribute("class", "store");
-    Closestores.setAttribute("class", "store");
 
     //stores.setAttribute("value",i+1);
     if (open === true) {
+      Openstores.setAttribute("value", foodType);
+      Openstores.setAttribute("class", "store");
       Openstores.innerHTML = `<div class="Sign">
       <div class="Store_Sign">
         <div class="Store_Image"></div>
@@ -55,6 +52,8 @@ function storeList(data) {
     </div>
     </div>`;
     } else if (open === false) {
+      Closestores.setAttribute("value", foodType);
+      Closestores.setAttribute("class", "store");
       Closestores.innerHTML = `<div class="CloseSign">
       <div class="Store_Sign">
         <div class="Store_Image"></div>
@@ -87,7 +86,6 @@ function storeList(data) {
     Store_Zone.appendChild(Openstores);
     Store_Zone.appendChild(Closestores);
   }
-
 }
 
 // 음식 종류에 따른 가게 리스트 출력
@@ -107,11 +105,11 @@ function menuClick(data) {
           let open = item.open;
           let waitingNum = item.waitingNum;
           let foodType = item.foodType;
-          let review = item.review_length; 
+          let review = item.review_length;
 
           let Openstores = document.createElement("div");
           let Closestores = document.createElement("div");
-          
+
           Openstores.setAttribute("value", foodType);
           Closestores.setAttribute("value", foodType);
 

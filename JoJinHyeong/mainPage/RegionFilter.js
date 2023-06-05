@@ -2,13 +2,17 @@ const dooicon = document.querySelector(".dooicon");
 const outerRegion = document.querySelector(".outerRegion");
 const regionLinks = outerRegion.querySelectorAll(".Region_doo li");
 const subicon = document.querySelector(".subicon");
-
+const MediaQuery = matchMedia("screen and (max-width: 1024px)").mathch;
 dooicon.addEventListener("click", function () {
   if (outerRegion.style.display === "none") {
     outerRegion.style.display = "flex";
     subicon.style.display = "none";
   } else {
-    subicon.style.display = "inline";
+    if (MediaQuery) {
+      subicon.style.display = "inline";
+    } else {
+      subicon.style.display = "none";
+    }
     outerRegion.style.display = "none";
   }
 });
@@ -93,15 +97,14 @@ function check() {
             let open = item.open;
             let waitingNum = item.waitingNum;
             let foodType = item.foodType;
-            let review = item.review_length; 
+            let review = item.review_length;
 
             let Openstores = document.createElement("div");
             let Closestores = document.createElement("div");
-            Openstores.setAttribute("value", foodType);
-            Closestores.setAttribute("value", foodType);
-            Openstores.setAttribute("class", "store");
-            Closestores.setAttribute("class", "store");
             if (open === true) {
+              Openstores.setAttribute("value", foodType);
+              Openstores.setAttribute("class", "store");
+
               Openstores.innerHTML = `<div class="Sign">
             <div class="Store_Sign">
               <div class="Store_Image"></div>
@@ -123,6 +126,9 @@ function check() {
           </div>
           </div>`;
             } else if (open === false) {
+              Closestores.setAttribute("value", foodType);
+              Closestores.setAttribute("class", "store");
+
               Closestores.innerHTML = `<div class="CloseSign">
             <div class="Store_Sign">
               <div class="Store_Image"></div>
@@ -167,17 +173,16 @@ function check() {
             let open = item.open;
             let waitingNum = item.waitingNum;
             let foodType = item.foodType;
-            let review = item.review_length; 
+            let review = item.review_length;
 
             let Openstores = document.createElement("div");
             let Closestores = document.createElement("div");
-            
-            Openstores.setAttribute("value", foodType);
-            Closestores.setAttribute("value", foodType);
-            Openstores.setAttribute("class", "store");
-            Closestores.setAttribute("class", "store");
+
             //stores.setAttribute("value",i+1);
             if (open === true) {
+              Openstores.setAttribute("value", foodType);
+              Openstores.setAttribute("class", "store");
+
               Openstores.innerHTML = `<div class="Sign">
             <div class="Store_Sign">
               <div class="Store_Image"></div>
@@ -199,6 +204,8 @@ function check() {
           </div>
           </div>`;
             } else if (open === false) {
+              Closestores.setAttribute("value", foodType);
+              Closestores.setAttribute("class", "store");
               Closestores.innerHTML = `<div class="CloseSign">
             <div class="Store_Sign">
               <div class="Store_Image"></div>
@@ -227,9 +234,13 @@ function check() {
         menuClick_sol(data, array);
       } else {
         // 지역 선택을 안했을 경우
+        if (MediaQuery) {
+          subicon.style.display = "inline";
+        } else {
+          subicon.style.display = "none";
+        }
         checkedRegion.innerHTML = "예) 경기도 수원시";
         checkedRegion.style.color = "#aaa";
-        subicon.style.display = "inline";
         Store_Zone.innerHTML = "";
         for (let i = 0; i < data.length; i++) {
           let adminCafe = data[i].adminCafe;
@@ -239,18 +250,16 @@ function check() {
           let open = data[i].open;
           let waitingNum = data[i].waitingNum;
           let foodType = data[i].foodType;
-          let review = data[i].review_length; 
+          let review = data[i].review_length;
 
           let Openstores = document.createElement("div");
           let Closestores = document.createElement("div");
 
-          Openstores.setAttribute("value", foodType);
-          Closestores.setAttribute("value", foodType);
-          Openstores.setAttribute("class", "store");
-          Closestores.setAttribute("class", "store");
-
           //stores.setAttribute("value",i+1);
           if (open === true) {
+            Openstores.setAttribute("value", foodType);
+            Openstores.setAttribute("class", "store");
+
             Openstores.innerHTML = `<div class="Sign">
             <div class="Store_Sign">
               <div class="Store_Image"></div>
@@ -272,6 +281,8 @@ function check() {
           </div>
           </div>`;
           } else if (open === false) {
+            Closestores.setAttribute("value", foodType);
+            Closestores.setAttribute("class", "store");
             Closestores.innerHTML = `<div class="CloseSign">
             <div class="Store_Sign">
               <div class="Store_Image"></div>
@@ -300,6 +311,21 @@ function check() {
       }
       outerRegion.style.display = "none";
     })
+    .then(() => {
+      // 조회하고 필터 내리기
+      quickfilter.classList.remove("movein");
+      quickfilter.classList.add("moveout");
+      header.classList.remove("blurin");
+      InfoBar.classList.remove("blurin");
+      mainSection.classList.remove("blurin");
+      slideshow_container.classList.remove("blurin");
+      header.classList.add("blurout");
+      InfoBar.classList.add("blurout");
+      mainSection.classList.add("blurout");
+      slideshow_container.classList.add("blurout");
+      wrap.style.backgroundColor = "";
+      outerRegion.style.display = "none";
+    })
     .catch((error) => {
       console.log(error);
     });
@@ -324,18 +350,16 @@ function menuClick_Mul(data, array) {
           let open = item.open;
           let waitingNum = item.waitingNum;
           let foodType = item.foodType;
-          let review = item.review_length; 
+          let review = item.review_length;
 
           let Openstores = document.createElement("div");
           let Closestores = document.createElement("div");
-          Openstores.setAttribute("value", foodType);
-          Closestores.setAttribute("value", foodType);
-
-          Openstores.setAttribute("class", "store");
-          Closestores.setAttribute("class", "store");
 
           //stores.setAttribute("value",i+1);
           if (open === true) {
+            Openstores.setAttribute("value", foodType);
+            Openstores.setAttribute("class", "store");
+
             Openstores.innerHTML = `<div class="Sign">
               <div class="Store_Sign">
                 <div class="Store_Image"></div>
@@ -357,6 +381,9 @@ function menuClick_Mul(data, array) {
             </div>
             </div>`;
           } else if (open === false) {
+            Closestores.setAttribute("value", foodType);
+
+            Closestores.setAttribute("class", "store");
             Closestores.innerHTML = `<div class="CloseSign">
               <div class="Store_Sign">
                 <div class="Store_Image"></div>
@@ -411,18 +438,16 @@ function menuClick_sol(data, array) {
           let open = item.open;
           let waitingNum = item.waitingNum;
           let foodType = item.foodType;
-          let review = item.review_length; 
+          let review = item.review_length;
 
           let Openstores = document.createElement("div");
           let Closestores = document.createElement("div");
-          Openstores.setAttribute("value", foodType);
-          Closestores.setAttribute("value", foodType);
-
-          Openstores.setAttribute("class", "store");
-          Closestores.setAttribute("class", "store");
 
           //stores.setAttribute("value",i+1);
           if (open === true) {
+            Openstores.setAttribute("value", foodType);
+            Openstores.setAttribute("class", "store");
+
             Openstores.innerHTML = `<div class="Sign">
               <div class="Store_Sign">
                 <div class="Store_Image"></div>
@@ -444,6 +469,9 @@ function menuClick_sol(data, array) {
             </div>
             </div>`;
           } else if (open === false) {
+            Closestores.setAttribute("value", foodType);
+
+            Closestores.setAttribute("class", "store");
             Closestores.innerHTML = `<div class="CloseSign">
               <div class="Store_Sign">
                 <div class="Store_Image"></div>
@@ -495,18 +523,16 @@ function menuClick(data) {
           let open = item.open;
           let waitingNum = item.waitingNum;
           let foodType = item.foodType;
-          let review = item.review_length; 
+          let review = item.review_length;
 
           let Openstores = document.createElement("div");
           let Closestores = document.createElement("div");
-          Openstores.setAttribute("value", foodType);
-          Closestores.setAttribute("value", foodType);
-
-          Openstores.setAttribute("class", "store");
-          Closestores.setAttribute("class", "store");
 
           //stores.setAttribute("value",i+1);
           if (open === true) {
+            Openstores.setAttribute("value", foodType);
+            Openstores.setAttribute("class", "store");
+
             Openstores.innerHTML = `<div class="Sign">
               <div class="Store_Sign">
                 <div class="Store_Image"></div>
@@ -528,6 +554,9 @@ function menuClick(data) {
             </div>
             </div>`;
           } else if (open === false) {
+            Closestores.setAttribute("value", foodType);
+
+            Closestores.setAttribute("class", "store");
             Closestores.innerHTML = `<div class="CloseSign">
               <div class="Store_Sign">
                 <div class="Store_Image"></div>
