@@ -511,54 +511,34 @@
   ],
   "waiting": [
     {
+      "userNo": 2,
+      "adminNo": 4,
       "name": "최현식",
       "phone_number": "01097553489",
       "queueNumber": 1,
-      "party_size": 2,
-      "timeAdded": null,
-      "black": 0
-    },
-    {
-      "name": "조승준",
-      "phone_number": "01089649828",
-      "queueNumber": 2,
-      "party_size": 2,
-      "timeAdded": null,
-      "black": 1
-    },
-    {
-      "name": "조진형",
-      "phone_number": "0102739112",
-      "queueNumber": 3,
-      "party_size": 2,
-      "timeAdded": null,
-      "black": 0
-    },
-    {
-      "name": "최용혁",
-      "phone_number": "01097553489",
-      "queueNumber": 4,
-      "party_size": 2,
-      "timeAdded": null,
-      "black": 0
-    },
-    {
-      "name": "지영환",
-      "phone_number": "01097553489",
-      "queueNumber": 5,
-      "party_size": 2,
-      "timeAdded": null,
-      "black": 1
-    },
-    {
-      "name": "지정배",
-      "phone_number": "01097553489",
-      "queueNumber": 6,
       "party_size": 4,
-      "timeAdded": "2023-04-17T17:58:06",
-      "현재시간": "2023-05-02 10:23:41",
-      "id": 2,
-      "black": 0
+      "timeAdded": "2023-06-05T15:39:41",
+      "blacklisted": true
+    },
+    {
+      "userNo": 9000001,
+      "adminNo": 4,
+      "name": "최현식",
+      "phone_number": "01097553489",
+      "queueNumber": 2,
+      "party_size": 3,
+      "timeAdded": "2023-06-05T15:42:05",
+      "blacklisted": false
+    },
+    {
+      "userNo": 5,
+      "adminNo": 4,
+      "name": "최현식",
+      "phone_number": "01097553489",
+      "queueNumber": 3,
+      "party_size": 4,
+      "timeAdded": "2023-06-05T15:42:35",
+      "blacklisted": false
     }
   ],
   "waitingBar": [
@@ -748,9 +728,118 @@
       "waitingNum": 5
     }
   ],
+  "wish": [
+    {
+      "id": "local",
+      "adminNo": 1,
+      "adminCafe": "파스타를부탁해",
+      "guName": "만안구",
+      "addressName": "경기도 수원시 만안구 123",
+      "clty_loc": null,
+      "storeIntroduce": "환영합니다 현식돈국수입니다",
+      "foodType": "한식",
+      "savedNm": "Storeimage1.jpg",
+      "openingTime": "09:00:00",
+      "closingTime": "21:00:00",
+      "weekday": 1234,
+      "storePhone": "031-1234-4566",
+      "latitude": 126.92883626779027,
+      "longitude": 37.37989691469408,
+      "menuList": null,
+      "open": false,
+      "waitingNum": 3
+    },
+    {
+      "id": "local",
+      "adminNo": 2,
+      "adminCafe": "현식돈국수",
+      "guName": "강남구",
+      "addressName": "서울시 강남구 마곡동 785-2",
+      "clty_loc": null,
+      "storeIntroduce": "안녕하세요 현식돈국수입니다.",
+      "foodType": "분식",
+      "savedNm": "Storeimage2.png",
+      "openingTime": "09:00:00",
+      "closingTime": "20:00:00",
+      "weekday": 123,
+      "storePhone": "011-1234-4566",
+      "latitude": 127.0243,
+      "longitude": 37.5434,
+      "menuList": null,
+      "open": true,
+      "waitingNum": 6
+    },
+    {
+      "adminNo": 3,
+      "adminCafe": "안양현식",
+      "guName": "만안구",
+      "addressName": "경기도 수원시 123",
+      "clty_loc": null,
+      "storeIntroduce": "어서오세요 안양현식",
+      "foodType": "중식",
+      "savedNm": "Storeimage3.png",
+      "openingTime": "08:00:00",
+      "closingTime": "19:00:00",
+      "weekday": 123456,
+      "storePhone": "014-1234-4566",
+      "latitude": 126.92042079261175,
+      "longitude": 37.391462944015544,
+      "menuList": null,
+      "open": true,
+      "waitingNum": 5
+    }
+  ],
   "file": [
     {
       "id": 1
     }
-  ]
+  ],
+  "Review": [
+    {
+      "id": 1,
+      "userNo": "조승준",
+      "adminNo": 1,
+      "rating": 5,
+      "imageNamed": null,
+      "content": "안123",
+      "date": "2023-05-28"
+    },
+    {
+      "id": 2,
+      "userNo": "최현식",
+      "adminNo": 1,
+      "rating": 4,
+      "imageNamed": null,
+      "content": "안13123",
+      "date": "2023-05-29"
+    }
+  ],
+  "userinfomation": {
+    "userNo": 14,
+    "userId": "asd2135",
+    "userPw": "$2a$10$e98i2faUYoPISCHAoeLyOe0s9VuMxeZ0MrM95TCIYKeI8M38Hm6bu",
+    "userName": "최현식",
+    "userAuth": "ROLE_ADMIN",
+    "userPhone": "01097553489",
+    "userEmail": "chsshc_@naver.com",
+    "userBirth": "1999-08-03 00:00:00",
+    "appendDate": "2023-04-18 20:47:33",
+    "updateDate": "2023-04-18 20:47:33",
+    "userCafe": "니뽕내뽕",
+    "savedNm": null,
+    "admin_id": 4,
+    "accountNonLocked": true,
+    "authorities": [
+      {
+        "authority": "ROLE_ADMIN"
+      }
+    ],
+    "authkey": null,
+    "authstatus": 0,
+    "username": "asd2135",
+    "password": "$2a$10$e98i2faUYoPISCHAoeLyOe0s9VuMxeZ0MrM95TCIYKeI8M38Hm6bu",
+    "accountNonExpired": true,
+    "credentialsNonExpired": true,
+    "enabled": true
+  }
 }

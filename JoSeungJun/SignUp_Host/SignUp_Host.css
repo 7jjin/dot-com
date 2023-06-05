@@ -1,39 +1,48 @@
-body{
+body {
   background-color: rgb(245, 246, 247);
 }
 
-#box{
+#box {
   margin: 0 auto;
-    max-width: 768px;
-    min-width: 460px;
+  max-width: 768px;
+  min-width: 460px;
+  width: 100%;
+  display: flex;
+  justify-content: center;
 }
 
-#logo{
+#logo {
   width: 100%;
   height: 100px;
   display: flex;
   justify-content: center;
   align-items: center;
 }
-#logo img{
+
+#logo img {
   width: 240px;
+  /* 추가된 내용: 모바일에서 로고 이미지 크기 조정 */
+  max-width: 100%;
 }
 
-#Info{
+#Info {
   display: flex;
   justify-content: center;
 }
 
-#Id_Table{
+#Id_Table {
   display: flex;
-}
-.IdInput{
-  width: 340px;
-  height: 25px;
-  padding: 10px;
+  /* 추가된 내용: 아이디 관련 요소들을 행 단위로 정렬 */
 }
 
-.IdBtn{
+.IdInput {
+  width: 75%;
+  height: 25px;
+  padding: 10px 0px 10px 10px;
+  /* 추가된 내용: 아이디 입력란의 너비 수정 */
+}
+
+.IdBtn {
   margin-left: 20px;
   font-size: 15px;
   font-weight: 700;
@@ -44,65 +53,42 @@ body{
   border-radius: 6px;
 }
 
-.IdPwBtn{
+.IdPwBtn {
   margin-top: 5px;
 }
-#PassInput{
-  width: 460px;
+
+#PassInput,
+#ConfirmPassInput,
+.NameInput,
+.PhoneInput,
+.EmailInput,
+.StoreInput {
+  width: 98%;
   margin-top: 5px;
   height: 25px;
-  padding: 10px;
+  padding: 10px 0px 10px 10px;
+  /* 추가된 내용: 비밀번호 확인 입력란의 너비 수정 */
 }
-#ConfirmPassInput{
-  width: 460px;
-  margin-top: 5px;
-  height: 25px;
-  padding: 10px;
-}
-#BadPass{
-  font-size: 5px;
-}
-#GoodPass{
-  font-size: 10px;
-}
-.Name{
-  margin-top: 10px;
-}
-.NameInput{
-  width: 460px;
-  height: 25px;
-  padding: 10px;
-}
-.DateBirth{
-  margin-top: 20px;
-}
-.Date{
+
+.Date {
   width: 134px;
   height: 25px;
   padding: 10px;
 }
-#Phone{
-  margin-top: 20px;
+
+#BadPass,
+#GoodPass {
+  font-size: 5px;
 }
-.PhoneInput{
-  width: 460px;
-  height: 25px;
-  padding: 10px;
+
+.Name,
+.DateBirth,
+#Phone,
+.Email {
+  margin-top: 10px;
 }
-.Email{
-  margin-top: 20px;
-}
-.EmailInput{
-  width: 460px;
-  height: 25px;
-  padding: 10px;
-}
-.StoreInput{
-  width: 460px;
-  height: 25px;
-  padding: 10px;
-}
-#email_errorbox{
+
+#email_errorbox {
   font-size: 10px;
   color: red;
   display: block;
@@ -112,13 +98,16 @@ body{
 .hidden {
   display: none;
 }
-#Join{
+
+#Join {
   text-align: center;
-  width: 484px;
+  width: 100%;
+  /* 추가된 내용: 가입 버튼의 너비 수정 */
 }
-.joinBtn{
+
+.joinBtn {
   margin-top: 30px;
-  width: 484px;
+  width: 100%;
   background-color: #fcaa72;
   border: #fcaa72;
   padding: 8px 0 8px;
@@ -126,9 +115,10 @@ body{
   font-size: 18px;
   font-weight: 700;
 }
-.NotBtn{
+
+.NotBtn {
   margin-top: 30px;
-  width: 484px;
+  width: 100%;
   background-color: hwb(25 64% 0%);
   border: hwb(25 64% 0%);
   padding: 8px 0 8px;
@@ -137,43 +127,123 @@ body{
   font-weight: 700;
 }
 
-#Id_label{
+#Id_label,
+#Pass_label,
+#ConfirmPass_label,
+#Name_label,
+#Birth_label,
+#Phone_label,
+#Email_label,
+#Store_label {
   margin: 19px 0 8px;
   font-size: 14px;
   font-weight: 700;
 }
-#Pass_label{
-  margin: 19px 0 8px;
-  font-size: 14px;
-  font-weight: 700;
+
+/* 추가된 내용: 모바일에 대한 미디어 쿼리 */
+@media (max-width: 400px) {
+  #box {
+    max-width: 100%;
+    min-width: initial;  
+  }
+  
+  #info{
+    flex-direction: column;
+    align-items: center;
+  }
+
+  #PassInput,
+  #ConfirmPassInput,
+  .NameInput,
+  .Date,
+  .PhoneInput,
+  .EmailInput,
+  .IdInput,
+  .StoreInput {
+    width: 95%;
+  }
+
+  .IdBtn {
+    margin-left: 0px;
+    margin-top: 5px;
+    font-size: 15px;
+    font-weight: 700;
+    width: 99%;
+    height: 40px;
+    background-color: #fcaa72;
+    border: #fcaa72;
+    border-radius: 6px;
 }
-#ConfirmPass_label{
-  margin: 19px 0 8px;
-  font-size: 14px;
-  font-weight: 700;
+
+  .Date{
+    margin-bottom: 3px;
+  }
+
+  #Id_Table{
+    display: flex;
+    flex-direction: column;
+  }
+
+  .joinBtn,
+  .NotBtn {
+    width: 100%;
+  }
 }
-#Name_label{
-  margin: 19px 0 8px;
-  font-size: 14px;
-  font-weight: 700;
+
+/* 추가된 내용: 태블릿에 대한 미디어 쿼리 */
+@media (max-width: 765px) and (min-width: 401px) {
+  #box {
+    max-width: 100%;
+  }
+
+  #PassInput,
+  #ConfirmPassInput,
+  .NameInput,
+  .Date,
+  .PhoneInput,
+  .EmailInput,
+  .StoreInput {
+    width: 98%;
+  }
+
+  .Date {
+    width: 134px;
+    height: 25px;
+    padding: 10px;
+  }
+
+  .IdInput{
+    width: 75%;
+  }
+
+  .joinBtn,
+  .NotBtn {
+    width: 100%;
+  }
 }
-#Birth_label{
-  margin: 19px 0 8px;
-  font-size: 14px;
-  font-weight: 700;
-}
-#Phone_label{
-  margin: 19px 0 8px;
-  font-size: 14px;
-  font-weight: 700;
-}
-#Email_label{
-  margin: 19px 0 8px;
-  font-size: 14px;
-  font-weight: 700;
-}
-#Store_label{
-  margin: 19px 0 8px;
-  font-size: 14px;
-  font-weight: 700;
+
+/* 추가된 내용: PC에 대한 미디어 쿼리 */
+@media (max-width: 1024px) and (min-width: 766px) {
+  #box {
+    max-width: 1024px;
+  }
+
+  #PassInput,
+  #ConfirmPassInput,
+  .NameInput,
+  .PhoneInput,
+  .EmailInput,
+  .StoreInput {
+    width: 98%;
+  }
+
+  .Date {
+    width: 134px;
+    height: 25px;
+    padding: 10px;
+  }
+
+  .IdInput{
+    width: 75%;
+  }
 }

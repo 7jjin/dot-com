@@ -4,11 +4,13 @@ const X = document.querySelector(".X-image");
 const BlackBtn = document.querySelector(".BlackBtn");
 const lockBtn = document.querySelector(".lockBtn");
 const unlockBtn = document.querySelector(".unlockBtn");
+const ReserveBtn = document.querySelector(".ReserveBtn");
 const BlackPeople = document.querySelector(".BlackPeople");
 const modal = document.querySelector(".modal");
 const closeBtn = document.querySelector(".close");
 const NameText = document.querySelector(".NameText");
 const PhoneNumText = document.querySelector(".PhoneNumText");
+
 
 fetch("http://localhost:4000/waiting")
   .then((res) => {
@@ -21,19 +23,46 @@ fetch("http://localhost:4000/waiting")
     console.log(error);
   });
 
+  //adminNo,userNo에 데이터를 보낸는 함수
+  function sendData(adminNo, userNo) {
+    fetch("http://localhost:4000/waiting", {
+      method: "POST",
+      body: JSON.stringify({ adminNo, userNo }),
+      headers: {
+        "Content-Type": "application/json",
+      },
+    })
+      .then((response) => {
+        if (response.ok) {
+          console.log("데이터 전송 성공");
+          location.reload();
+        } else {
+          console.log("데이터 전송 실패");
+        }
+      })
+      .catch((error) => {
+        console.log("데이터 전송 중 오류 발생:", error);
+      });
+  }
+  
 function waitingList(data) {
   for (let i = 0; i < data.length; i++) {
     let waitingName = data[i].name;
     let waitingNum = data[i].phone_number;
     let waitingSize = data[i].party_size;
     let waitingQue = data[i].queueNumber;
-    let blacklist = data[i].black;
+    let blacklist = data[i].blacklisted;
+    let userNo = data[i].userNo;
+    let adminNo = data[i].adminNo;
     let waitings = document.createElement("tr");
-    if (data[i].black === 1) {
+    if (blacklist === true) {
       waitings.className = "TRtable black";
     } else {
       waitings.className = "TRtable";
     }
+
+    waitings.dataset.userNo = userNo;
+    waitings.dataset.adminNo = adminNo;
 
     let WaiterName = document.querySelector(".WaiterName");
     let NumText = document.querySelector(".NumText");
@@ -51,40 +80,40 @@ function waitingList(data) {
     wait_Zone.append(waitings);
 
     let waitingsChildren = waitings.children;
-    if (blacklist === 1) {
+    if (blacklist === true) {
       for (let i = 0; i < waitingsChildren.length; i++) {
         waitingsChildren[i].style.color = "red";
       }
     }
 
-    let Selects = document.querySelectorAll('.TRtable td');
-    Selects.forEach(function (Select) {
-      Select.addEventListener("click", function () {
-        WaiterName.textContent = Select.parentNode.querySelector('.NameTD').textContent;
-        NameText.textContent = Select.parentNode.querySelector('.NameTD').textContent;
-        NumText.textContent = Select.parentNode.querySelector('.PhoneTD').textContent;
-        PhoneNumText.textContent = Select.parentNode.querySelector('.PhoneTD').textContent;
-        CountNum.textContent = Select.parentNode.querySelector('.VisitTD').textContent;
-        PeopleText.textContent = Select.parentNode.querySelector('.MenTD').textContent;
+    waitings.addEventListener("click", function () {
+      WaiterName.textContent = this.querySelector('.NameTD').textContent;
+      NameText.textContent = this.querySelector('.NameTD').textContent;
+      NumText.textContent = this.querySelector('.PhoneTD').textContent;
+      PhoneNumText.textContent = this.querySelector('.PhoneTD').textContent;
+      CountNum.textContent = this.querySelector('.VisitTD').textContent;
+      PeopleText.textContent = this.querySelector('.MenTD').textContent;
 
-        if (Select.parentNode.classList.contains('black')) {
-          lockBtn.style.display = "block";
-          unlockBtn.style.display = "none";
-          BlackPeople.style.display = "block"
-        } else {
-          lockBtn.style.display = "none";
-          unlockBtn.style.display = "block";
-          BlackPeople.style.display = "none";
-        }
+      if (this.classList.contains('black')) {
+        lockBtn.style.display = "block";
+        unlockBtn.style.display = "none";
+        BlackPeople.style.display = "block";
+      } else {
+        lockBtn.style.display = "none";
+        unlockBtn.style.display = "block";
+        BlackPeople.style.display = "none";
+      }
 
-        showdetails();
+      lockBtn.addEventListener("click", function () {
+        console.log(adminNo, userNo)
+        sendData(adminNo, userNo);
       });
-    });
-    unlockBtn.addEventListener("click", function () {
-      modal.style.display = "flex";
-    });
-    closeBtn.addEventListener("click", function () {
-      closeModal(modal)
+      ReserveBtn.addEventListener("click", function () {
+        console.log(adminNo, userNo)
+        sendData(adminNo, userNo);
+      });
+
+      showdetails();
     });
   }
 }
@@ -95,13 +124,20 @@ function showdetails() {
   }
 }
 
-X.addEventListener("click", () => {
-  details.classList.remove("show");
-});
-
-
 // 모달창 닫기 함수
 function closeModal(e) {
   e.style.display = 'none';
 }
+
+X.addEventListener("click", () => {
+  details.classList.remove("show");
+});
+
+unlockBtn.addEventListener("click", function () {
+  modal.style.display = "flex";
+});
+
+closeBtn.addEventListener("click", function () {
+  closeModal(modal)
+});
 

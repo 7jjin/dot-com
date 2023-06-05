@@ -11,3 +11,4 @@ fetch("http://localhost:4000/waitlist")
   .catch((error) => {
     console.log(error);
   });
+
