@@ -233,6 +233,10 @@ body button{
   border-bottom: 2px solid #ddd;
 }
 
+.login:hover ,.Myinfo:hover ,.logout:hover{
+  /* border: 2px solid black; */
+  color:#ba68c8;
+}
 
 /* infoBar CSS */
 #InfoBar {

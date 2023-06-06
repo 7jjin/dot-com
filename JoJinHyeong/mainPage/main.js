@@ -3,16 +3,39 @@ var slideIndex = 0; //slide index
 const utilList = document.querySelector(".utilList");
 const formps = document.querySelector(".formps");
 const utilList_login = document.querySelector(".utilList_login");
+const toggleOn = document.querySelector(".toggleOn");
 fetch("http://localhost:4000/waitlist")
   .then((res) => res.json())
   .then((data) => {
+    // 로그인 정보가 있을때
     if (data[0].name) {
       utilList_login.addEventListener("click", function () {
         location.href = "/JoSeungJun/MyPage_Account/MyPage_Account.html";
       });
+
       let btn = document.createElement("button");
+      let btn_Moblie = document.createElement("div");
+      let btn_Myinfo = document.createElement("div");
+      btn_Moblie.setAttribute("class", "logout");
+      btn_Myinfo.setAttribute("class", "Myinfo");
+      btn_Moblie.innerHTML = "로그아웃";
+      btn_Myinfo.innerHTML = "내정보";
       btn.innerHTML = "로그아웃";
       formps.appendChild(btn);
+      toggleOn.appendChild(btn_Myinfo);
+      toggleOn.appendChild(btn_Moblie);
+      btn_Myinfo.addEventListener("click", function () {
+        location.href = "/JoSeungJun/MyPage_Account/MyPage_Account.html";
+      });
+    } else {
+      let login = document.createElement("div");
+      login.setAttribute("class", "login");
+      login.innerHTML = "회원가입";
+      toggleOn.appendChild(login);
+      toggleOn.style.Height = "65px";
+      login.addEventListener("click", function () {
+        location.href = "/JoJinHyeong/loginPage/login.html";
+      });
     }
   })
   .catch((err) => console.log(err));
@@ -63,7 +86,7 @@ function showSlides(n) {
 //  반응형
 //  스크롤을 내리면 유틸바 사라지고 다시 올라갔을때도 사라지게 함.
 const toggleBar = document.querySelector(".headerUtil_toggleBar");
-const subBar = document.querySelector(".toggleOn");
+
 const header = document.querySelector(".header");
 let toggle_info_Bar = true;
 let toggle_search_Bar = true;
@@ -81,13 +104,21 @@ let toggle_search_Bar = true;
 
 // 토클 버튼누르면 유틸바 내려옴
 function showList() {
-  if (toggle_info_Bar) {
-    subBar.style.height = "120px";
-    toggle_info_Bar = !toggle_info_Bar;
-  } else {
-    subBar.style.height = "0px";
-    toggle_info_Bar = !toggle_info_Bar;
-  }
+  fetch("http://localhost:4000/waitlist")
+    .then((res) => res.json())
+    .then((data) => {
+      //로그인 했을 때
+      if (toggle_info_Bar) {
+        if (data[0].name) toggleOn.style.height = "120px";
+        else toggleOn.style.height = "64px";
+        toggle_info_Bar = !toggle_info_Bar;
+      }
+      //로그인 안했을 때
+      else {
+        toggleOn.style.height = "0px";
+        toggle_info_Bar = !toggle_info_Bar;
+      }
+    });
 }
 
 //반응형일 떄 검색 버튼 함수
