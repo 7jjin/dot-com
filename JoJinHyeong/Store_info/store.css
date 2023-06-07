@@ -1032,11 +1032,20 @@ body {
     .logo a {
       background-size: 105px;
     }
-    .searchIcon_moblie{
+    .cart_Moblie{
+      width: 24px;
+      height: 24px;
       display: flex;
       position: absolute;
-      right: 11%;
+      right: 10%;
       margin-right: 13px;
+      top: 29%;
+    }
+    .cart_icon{
+      width: 100%;
+      height: 100%;
+      background: url("/img/Cart.png") no-repeat 100% 100%;
+      background-size: contain;
     }
   
     .searchForm{

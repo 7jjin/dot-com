@@ -883,26 +883,7 @@
       "date": "2023-05-28"
     }
   ],
-  "Review": [
-    {
-      "id": 1,
-      "userNo": "조승준",
-      "adminNo": 1,
-      "rating": 5,
-      "imageNamed": null,
-      "content": "안123",
-      "date": "2023-05-28"
-    },
-    {
-      "id": 2,
-      "userNo": "최현식",
-      "adminNo": 1,
-      "rating": 4,
-      "imageNamed": null,
-      "content": "안13123",
-      "date": "2023-05-29"
-    }
-  ],
+  
   "userinfomation": {
     "userNo": 14,
     "userId": "asd2135",

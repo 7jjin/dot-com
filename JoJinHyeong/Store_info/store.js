@@ -117,6 +117,7 @@ number.forEach((item, index) => {
     <div class="menuBoxOuter"></div>
     <div class="costHap"></div>
     <div class="count" </div>`;
+    cart = []; // 인원 바꿀 시 배열 초기화
     list.인원 = `${Number(e.target.innerText[0])}`;
 
     NumText.innerHTML = e.target.innerText;
@@ -377,16 +378,4 @@ function showList() {
         toggle_info_Bar = !toggle_info_Bar;
       }
     });
-}
-
-//반응형일 떄 검색 버튼 함수
-const search_box_moblie = document.querySelector(".search_box_moblie");
-function showSearch() {
-  if (toggle_search_Bar) {
-    search_box_moblie.style.height = "95px";
-    toggle_search_Bar = !toggle_search_Bar;
-  } else {
-    search_box_moblie.style.height = "0px";
-    toggle_search_Bar = !toggle_search_Bar;
-  }
 }
