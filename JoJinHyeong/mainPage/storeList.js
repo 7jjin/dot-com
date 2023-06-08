@@ -77,10 +77,12 @@ function storeList(data) {
     }
     Openstores.onclick = function (event) {
       sessionStorage.setItem("selectedValue", adminNo); //sessionStorage에 가게고유의 adminNo값 저장
+
       window.location.href = "/JoJinHyeong/Store_info/store.html";
     };
     Closestores.onclick = function (event) {
       sessionStorage.setItem("selectedValue", adminNo); //sessionStorage에 가게고유의 adminNo값 저장
+
       window.location.href = "/JoJinHyeong/Store_info/store.html";
     };
     Store_Zone.appendChild(Openstores);

@@ -316,12 +316,15 @@ function showPreviousPhoto() {
 ImgRight.addEventListener("click", showNextPhoto);
 ImgLeft.addEventListener("click", showPreviousPhoto);
 
+//찜 목록 설정하기
+
 fetch("http://localhost:4000/userinformation")
   .then((res) => res.json())
   .then((data) => {
-    heart.addEventListener("click", function () {
+    heart.addEventListener("click", function (event) {
       if (heart.classList.contains("fa-regular")) {
         // 현재 아이콘이 비어있는 하트인 경우
+        // 찜 목록에 추가
         fetch("http://localhost:4000/file", {
           method: "post",
           body: JSON.stringify({
@@ -335,20 +338,35 @@ fetch("http://localhost:4000/userinformation")
           .then((response) => {
             response.json();
           })
-          .then(() => {
-            location.href = "/JoJinHyeong/mainPage/main.html";
-          })
           .catch((error) => {
             alert("실패", error);
           });
+
         heart.classList.remove("fa-regular");
         heart.classList.add("fa-solid");
         heart.style.color = "#ff0000";
       } else {
         // 현재 아이콘이 채워진 하트인 경우
-        heart.classList.remove("fa-solid");
+        // fetch("/delete2/" + adminNo + "/" + userNo, {
+        //   method: "delete",
+        // });
+
         heart.classList.add("fa-regular");
         heart.style.color = "";
       }
     });
+  });
+
+fetch("http://localhost:4000/file")
+  .then((res) => res.json())
+  .then((data) => {
+    console.log(data);
+    console.log(typeof uni, typeof data[0].adminNo);
+    if (uni === String(data[0].adminNo)) {
+      heart.classList.add("fa-solid");
+      heart.style.color = "#ff0000";
+    } else {
+      heart.classList.remove("fa-solid");
+      heart.style.color = "";
+    }
   });

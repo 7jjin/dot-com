@@ -813,17 +813,12 @@
   ],
   "file": [
     {
+      "adminNo": "4",
       "id": 1
     },
     {
+      "adminNo": "4",
       "id": 2
-    },
-    {
-      "id": 3
-    },
-    {
-      "adminNo": "2",
-      "id": 4
     }
   ],
   "userinformation": [
