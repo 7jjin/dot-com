@@ -316,16 +316,39 @@ function showPreviousPhoto() {
 ImgRight.addEventListener("click", showNextPhoto);
 ImgLeft.addEventListener("click", showPreviousPhoto);
 
-heart.addEventListener("click", function () {
-  if (heart.classList.contains("fa-regular")) {
-    // 현재 아이콘이 비어있는 하트인 경우
-    heart.classList.remove("fa-regular");
-    heart.classList.add("fa-solid");
-    heart.style.color = "#ff0000";
-  } else {
-    // 현재 아이콘이 채워진 하트인 경우
-    heart.classList.remove("fa-solid");
-    heart.classList.add("fa-regular");
-    heart.style.color = "";
-  }
-});
+fetch("http://localhost:4000/userinformation")
+  .then((res) => res.json())
+  .then((data) => {
+    heart.addEventListener("click", function () {
+      if (heart.classList.contains("fa-regular")) {
+        // 현재 아이콘이 비어있는 하트인 경우
+        fetch("http://localhost:4000/file", {
+          method: "post",
+          body: JSON.stringify({
+            adminNo: sessionStorage.getItem("selectedValue"),
+            userNo: data.userNo,
+          }),
+          headers: {
+            "Content-Type": "application/json",
+          },
+        })
+          .then((response) => {
+            response.json();
+          })
+          .then(() => {
+            location.href = "/JoJinHyeong/mainPage/main.html";
+          })
+          .catch((error) => {
+            alert("실패", error);
+          });
+        heart.classList.remove("fa-regular");
+        heart.classList.add("fa-solid");
+        heart.style.color = "#ff0000";
+      } else {
+        // 현재 아이콘이 채워진 하트인 경우
+        heart.classList.remove("fa-solid");
+        heart.classList.add("fa-regular");
+        heart.style.color = "";
+      }
+    });
+  });

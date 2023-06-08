@@ -820,6 +820,16 @@
     },
     {
       "id": 3
+    },
+    {
+      "adminNo": "2",
+      "id": 4
+    }
+  ],
+  "userinformation": [
+    {
+      "id": 1,
+      "userNo": 14
     }
   ],
   "Review": [
