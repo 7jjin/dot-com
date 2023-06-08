@@ -53,7 +53,7 @@ fetch(url)
     if (data[0].open === 0) {
       peopleBox.innerHTML = `<div class="ClosingBox">
       <span class="ClosingText"> 예약이 불가능 한 가게입니다.</span>
-      </div>`
+      </div>`;
     }
     /*-----------------------------------------------------------*/
   })
@@ -102,17 +102,17 @@ function renderPage(data) {
       PhotoTab.addEventListener("click", function () {
         Move1(
           window.pageYOffset +
-          document.querySelector(".storePhoto").getBoundingClientRect().top
+            document.querySelector(".storePhoto").getBoundingClientRect().top
         );
       });
       ReviewTab.addEventListener("click", function () {
         Move1(
           window.pageYOffset +
-          document.querySelector(".storeReview").getBoundingClientRect().top
+            document.querySelector(".storeReview").getBoundingClientRect().top
         );
       });
 
-      // ------ 메뉴추가
+      // ------ 메뉴 클릭시 카트에 메뉴추가
       const menu3 = document.querySelectorAll(".SubItem");
 
       menu3.forEach((item) => {
@@ -159,9 +159,9 @@ function renderPage(data) {
                   <div class="hap"></div>
                   <div>원</div>
                 </div>
-                `
+                `;
             count.innerHTML = `
-                <button class="order">주문하기</button>`
+                <button class="order">주문하기</button>`;
 
             //모달창
             let orderBTN = document.querySelector(".order");
@@ -172,7 +172,7 @@ function renderPage(data) {
               modal.style.display = "flex";
             });
             close.addEventListener("click", function (event) {
-              closeModal(modal)
+              closeModal(modal);
             });
 
             hap();
@@ -232,18 +232,17 @@ function ReviewBoxes(data) {
     photoItem.appendChild(image);
     PhotoNum.appendChild(photoItem);
 
-    photos = document.querySelectorAll('.Photo');
+    photos = document.querySelectorAll(".Photo");
 
     for (let j = 0; j < photos.length; j++) {
       const photo = photos[j];
       const imageSrc = photo.childNodes[0].src;
 
-      photo.addEventListener('click', function () {
+      photo.addEventListener("click", function () {
         ImgModal(imageSrc);
       });
-
     }
-    let rating = document.querySelectorAll(".rating")    
+    let rating = document.querySelectorAll(".rating");
     const Star = String(data[i].rating);
     let ratinglist = "";
 
@@ -257,10 +256,9 @@ function ReviewBoxes(data) {
     rating[i].innerHTML = ratinglist;
   }
 
-
-Imgclose.addEventListener('click', function () {
-  closeModal(Imgmodal); // 모달창 닫기 함수 호출
-});
+  Imgclose.addEventListener("click", function () {
+    closeModal(Imgmodal); // 모달창 닫기 함수 호출
+  });
 }
 
 function Move1(element) {
@@ -284,13 +282,13 @@ function openingDay(data) {
 }
 
 function ImgModal(src) {
-  Imgmodal.style.display = 'flex'; // 모달창 열기
+  Imgmodal.style.display = "flex"; // 모달창 열기
   modalImg.src = src; // 모달창 이미지 변경
 }
 
 // 모달창 닫기 함수
 function closeModal(e) {
-  e.style.display = 'none';
+  e.style.display = "none";
 }
 
 function showPhoto(index) {
@@ -315,8 +313,8 @@ function showPreviousPhoto() {
   showPhoto(currentPhotoIndex);
 }
 
-ImgRight.addEventListener('click', showNextPhoto);
-ImgLeft.addEventListener('click', showPreviousPhoto);
+ImgRight.addEventListener("click", showNextPhoto);
+ImgLeft.addEventListener("click", showPreviousPhoto);
 
 heart.addEventListener("click", function () {
   if (heart.classList.contains("fa-regular")) {

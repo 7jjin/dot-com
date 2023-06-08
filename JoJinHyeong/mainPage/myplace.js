@@ -56,12 +56,12 @@ find.addEventListener("click", function () {
           let foodType = data[i].foodType;
           let Openstores = document.createElement("div");
           let Closestores = document.createElement("div");
-          Openstores.setAttribute("value", foodType);
-          Closestores.setAttribute("value", foodType);
-          Openstores.setAttribute("class", "store");
-          Closestores.setAttribute("class", "store");
+
           //stores.setAttribute("value",i+1);
           if (open === 1) {
+            Openstores.setAttribute("value", foodType);
+            Openstores.setAttribute("class", "store");
+
             Openstores.innerHTML = `<div class="Sign">
             <div class="Store_Sign">
               <div class="Store_Image"></div>
@@ -83,6 +83,8 @@ find.addEventListener("click", function () {
           </div>
           </div>`;
           } else if (open === 0) {
+            Closestores.setAttribute("value", foodType);
+            Closestores.setAttribute("class", "store");
             Closestores.innerHTML = `<div class="CloseSign">
             <div class="Store_Sign">
               <div class="Store_Image"></div>

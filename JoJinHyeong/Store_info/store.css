@@ -98,6 +98,9 @@ body {
     display: none;
   }
   
+  .cart_Moblie{
+    display: none;
+  }
   
   
   .headerUtil {
@@ -698,11 +701,13 @@ body {
     margin-left: auto;
     overflow: hidden;
     display: flex;
+    align-items: center;
 }
 
 .PhotoNum {
     display: flex;
     height: 99%;
+    align-items: center;
 }
 
 .Right,
@@ -842,7 +847,7 @@ body {
     position: fixed;
     z-index: 1;
     left: 0;
-    top: 0;
+    top: 40px;
     width: 100%;
     height: 100%;
     overflow: auto;
@@ -1047,7 +1052,20 @@ body {
       background: url("/img/Cart.png") no-repeat 100% 100%;
       background-size: contain;
     }
-  
+    .moblie_cart_number{
+      position: absolute;
+      display: flex;
+      justify-content: center;
+    top: -5px;
+    left: 14px;
+    font-size: 11px;
+    width: 7px;
+    height: 14px;
+    line-height: 14px;
+    padding: 1px 5px 1px 5px;
+    background-color: #fcaa72;
+    border-radius: 50%;
+    }
     .searchForm{
       display: none;
     }
@@ -1185,6 +1203,9 @@ body {
       width: 120px;
       height: 100px;
   }
+  .Photo{
+    height: 140px;
+  }
   .PhotoMore,.ReviewMore{
     font-size: 17px;
   }
@@ -1204,4 +1225,22 @@ body {
   .ReviewContent,.DateInfo{
     font-size: 14px;
   }
-  }  
+  .Reservation_moblie{
+    position: fixed;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    bottom: -65px;
+    background-color: #f27e7e;
+    border-top: 1px solid #d9d9d9;
+    z-index: 1;
+    width: 100%;
+    height: 65px;
+    transition:all .35s;
+    cursor: pointer;
+  }
+  .Reservation_box{
+    font-size: 20px;
+    font-weight: 500;
+  }
+}  

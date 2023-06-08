@@ -101,26 +101,38 @@ function getCurrentDateTime() {
 
 number.forEach((item, index) => {
   item.addEventListener("click", function (e) {
-    bar.style.borderRadius = "20px";
-    bar.style.justifyContent = "flex-Start";
-    bar.style.marginLeft = "";
-    bar.style.width = "220px";
-    bar.style.right = "-35%";
-    bar.style.flexDirection = "column";
-    bar.style.height = "none";
-    bar.style.alignItems = "normal";
-    bar.innerHTML = `<div class="member">
-    <div>인원:</div>
-    <div>${e.target.innerText}</div>
-    </div>
-    <div class="bottomline"></div>
-    <div class="menuBoxOuter"></div>
-    <div class="costHap"></div>
-    <div class="count" </div>`;
-    cart = []; // 인원 바꿀 시 배열 초기화
-    list.인원 = `${Number(e.target.innerText[0])}`;
+    if (matchMedia("screen and (min-width: 765px)").matches) {
+      // 765px 이상에서 사용할 JavaScript
+      bar.style.borderRadius = "20px";
+      bar.style.justifyContent = "flex-Start";
+      bar.style.marginLeft = "";
+      bar.style.width = "220px";
+      bar.style.right = "-35%";
+      bar.style.flexDirection = "column";
+      bar.style.height = "none";
+      bar.style.alignItems = "normal";
+      bar.innerHTML = `<div class="member">
+      <div>인원:</div>
+      <div>${e.target.innerText}</div>
+      </div>
+      <div class="bottomline"></div>
+      <div class="menuBoxOuter"></div>
+      <div class="costHap"></div>
+      <div class="count" </div>`;
+      cart = []; // 인원 바꿀 시 배열 초기화
+      list.인원 = `${Number(e.target.innerText[0])}`;
 
-    NumText.innerHTML = e.target.innerText;
+      NumText.innerHTML = e.target.innerText;
+    } else {
+      // 765px 미만에서 사용할 JavaScript
+      const Reservation_moblie = document.querySelector(".Reservation_moblie");
+      Reservation_moblie.style.bottom = "0px";
+      document.querySelector(".Entire").style.marginBottom = "65px";
+      Reservation_moblie.addEventListener("click", function () {
+        modal.style.display = "flex";
+        NumText.innerHTML = e.target.innerHTML;
+      });
+    }
   });
 });
 // 리모트바 원형에서 직사각형으로 모형 바꾸기

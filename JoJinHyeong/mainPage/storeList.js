@@ -110,14 +110,11 @@ function menuClick(data) {
           let Openstores = document.createElement("div");
           let Closestores = document.createElement("div");
 
-          Openstores.setAttribute("value", foodType);
-          Closestores.setAttribute("value", foodType);
-
-          Openstores.setAttribute("class", "store");
-          Closestores.setAttribute("class", "store");
-
           //stores.setAttribute("value",i+1);
           if (open === true) {
+            Openstores.setAttribute("value", foodType);
+            Openstores.setAttribute("class", "store");
+
             Openstores.innerHTML = `<div class="Sign">
               <div class="Store_Sign">
                 <div class="Store_Image"></div>
@@ -139,6 +136,9 @@ function menuClick(data) {
             </div>
             </div>`;
           } else if (open === false) {
+            Closestores.setAttribute("value", foodType);
+
+            Closestores.setAttribute("class", "store");
             Closestores.innerHTML = `<div class="CloseSign">
               <div class="Store_Sign">
                 <div class="Store_Image"></div>
