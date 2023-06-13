@@ -167,15 +167,33 @@ function renderPage(data) {
             let orderBTN = document.querySelector(".order");
             let close = document.querySelector(".close");
 
-            orderBTN.addEventListener("click", function (event) {
-              event.preventDefault();
-              modal.style.display = "flex";
-            });
-            close.addEventListener("click", function (event) {
-              closeModal(modal);
-            });
-
-            hap();
+            function button_ON_OFF(data) {
+              // 로그인 정보가 있을때
+              if (data[0].name) {
+                orderBTN.addEventListener("click", function (event) {
+                  modal.style.display = "flex";
+                });
+                close.addEventListener("click", function (event) {
+                  closeModal(modal);
+                });
+                hap();
+              } else {
+                orderBTN.addEventListener("click", function (event) {
+                  alert("로그인 후 사용해주세요");
+                  orderBTN.disabled = true;
+                });
+              }
+            }
+            fetch("http://localhost:4000/waitlist")
+              .then((res) => res.json())
+              .then((data) => {
+                button_ON_OFF(data);
+              });
+            fetch("http://localhost:4000/waitlist1")
+              .then((res) => res.json())
+              .then((data) => {
+                button_ON_OFF(data);
+              });
           }
         });
       });
@@ -360,8 +378,6 @@ fetch("http://localhost:4000/userinformation")
 fetch("http://localhost:4000/file")
   .then((res) => res.json())
   .then((data) => {
-    console.log(data);
-    console.log(typeof uni, typeof data[0].adminNo);
     if (uni === String(data[0].adminNo)) {
       heart.classList.add("fa-solid");
       heart.style.color = "#ff0000";

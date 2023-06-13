@@ -144,6 +144,7 @@ body button{
 }
 
 .headerSearch {
+  /* position: relative; */
   display: flex;
   align-items: center;
   flex-basis: 46%;
@@ -182,6 +183,18 @@ body button{
 
 .searchIcon_moblie{
   display: none;
+}
+
+/* 현재 선택된 검색어 */
+.autocomplete > div.active {
+  background: #e0e5f6;
+  color: #000;
+}
+
+.autocomplete{
+  width: 100%;
+  position: absolute;
+  bottom:0;
 }
 
 
@@ -865,13 +878,13 @@ body button{
   background-color: white;
   flex-direction: row;
   align-items: center;
-  padding: 0px 50px;
+  padding: 0px 30px;
   box-shadow: rgb(128 128 128 / 85%) 4px 1px 17px 1px;
   border-radius: 10px 10px 10px;
   justify-content: space-between;
 }
 
-.CloseSign , .Sign{
+.CloseSign{
   position:relative;
   height: 180px;
   display: flex;
@@ -1239,6 +1252,7 @@ body button{
 }
 
 .CloseSign ,.Sign{
+  position: relative;
   padding:0px;
   justify-content: center;
   height: 100%;
@@ -1295,7 +1309,7 @@ body button{
 
 .bad, .WaitingBox{
   position: absolute;
-  bottom: 8%;
+  bottom: 10%;
   right: 10%;
   padding: 5px;
 }

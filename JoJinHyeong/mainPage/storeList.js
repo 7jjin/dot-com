@@ -35,14 +35,14 @@ function storeList(data) {
       <div class="Store_Sign">
         <div class="Store_Image"></div>
         <div class="Store_Name">
-          <h4 class="Store_Title">"${adminCafe}"</h4>
+          <h4 class="Store_Title">${adminCafe}</h4>
           <p class="detail">"${intro}"</p>
           <div class="rating">
             <span class="Star">⭐</span>
             <span class="Star_Rating">4.5</span>
             <span class="Review_Rating">(${review})</span>
           </div>
-          <span class="tags">연어 및 각종 일식</span><br>
+          <span class="tags">${foodType}</span><br>
           <span class="address">"${addr}"</span>
         </div>
       </div>
@@ -58,14 +58,14 @@ function storeList(data) {
       <div class="Store_Sign">
         <div class="Store_Image"></div>
         <div class="Store_Name">
-          <h4 class="Store_Title">"${adminCafe}"</h4>
+          <h4 class="Store_Title">${adminCafe}</h4>
           <p class="detail">"${intro}"</p>
           <div class="rating">
             <span class="Star">⭐</span>
             <span class="Star_Rating">4.5</span>
             <span class="Review_Rating">(${review})</span>
           </div>
-          <span class="tags">연어 및 각종 일식</span><br>
+          <span class="tags">${foodType}</span><br>
           <span class="address">"${addr}"</span>
         </div>
       </div>
@@ -121,14 +121,14 @@ function menuClick(data) {
               <div class="Store_Sign">
                 <div class="Store_Image"></div>
                 <div class="Store_Name">
-                  <h4 class="Store_Title">"${adminCafe}"</h4>
+                  <h4 class="Store_Title">${adminCafe}</h4>
                   <p class="detail">"${intro}"</p>
                   <div class="rating">
                     <span class="Star">⭐</span>
                     <span class="Star_Rating">4.5</span>
                     <span class="Review_Rating">(${review})</span>
                   </div>
-                  <span class="tags">연어 및 각종 일식</span><br>
+                  <span class="tags">${foodType}</span><br>
                   <span class="address">"${addr}"</span>
                 </div>
               </div>
@@ -145,14 +145,14 @@ function menuClick(data) {
               <div class="Store_Sign">
                 <div class="Store_Image"></div>
                 <div class="Store_Name">
-                  <h4 class="Store_Title">"${adminCafe}"</h4>
+                  <h4 class="Store_Title">${adminCafe}</h4>
                   <p class="detail">"${intro}"</p>
                   <div class="rating">
                     <span class="Star">⭐</span>
                     <span class="Star_Rating">4.5</span>
                     <span class="Review_Rating">(${review})</span>
                   </div>
-                  <span class="tags">연어 및 각종 일식</span><br>
+                  <span class="tags">${foodType}</span><br>
                   <span class="address">"${addr}"</span>
                 </div>
               </div>

@@ -17,7 +17,7 @@
       "latitude": 126.92883626779027,
       "longitude": 37.37989691469408,
       "menuList": null,
-      "open": false,
+      "open": true,
       "waitingNum": 3,
       "review_length": 6
     },
@@ -38,7 +38,7 @@
       "latitude": 127.0243,
       "longitude": 37.5434,
       "menuList": null,
-      "open": true,
+      "open": false,
       "waitingNum": 6,
       "review_length": 3
     },
@@ -484,6 +484,27 @@
       "인원": "5",
       "현재시간": "2023-06-07 23:06:28",
       "id": 21
+    },
+    {
+      "가게이름": "진형식당",
+      "전화번호": "031-1234-4566",
+      "인원": "5",
+      "현재시간": "2023-06-13 15:39:40",
+      "id": 22
+    },
+    {
+      "가게이름": "진형식당",
+      "전화번호": "031-1234-4566",
+      "인원": "5",
+      "현재시간": "2023-06-13 15:56:11",
+      "id": 23
+    },
+    {
+      "가게이름": "진형식당",
+      "전화번호": "031-1234-4566",
+      "인원": "5",
+      "현재시간": "2023-06-13 16:04:04",
+      "id": 24
     }
   ],
   "waiting": [
@@ -647,6 +668,21 @@
       "latitude": 37.2996219,
       "longitude": 127.0507571,
       "id": 24
+    },
+    {
+      "latitude": 37.4710448,
+      "longitude": 126.986331,
+      "id": 25
+    },
+    {
+      "latitude": 37.4710448,
+      "longitude": 126.986331,
+      "id": 26
+    },
+    {
+      "latitude": 37.3834711,
+      "longitude": 126.9218479,
+      "id": 27
     }
   ],
   "userinfo": {
@@ -677,7 +713,22 @@
   "waitlist": [
     {
       "waitlistId": 5,
-      "name": "조진형",
+      "name": "",
+      "phone_number": "01097553489",
+      "party_size": 3,
+      "timeAdded": null,
+      "queueNumber": 1,
+      "userNo": 2,
+      "storePhone": "011-1234-4566",
+      "adminCafe": "현식돈국수",
+      "partySize": 3,
+      "phoneNumber": "01097553489"
+    }
+  ],
+  "waitlist1": [
+    {
+      "waitlistId": 5,
+      "name": "",
       "phone_number": "01097553489",
       "party_size": 3,
       "timeAdded": null,
@@ -819,6 +870,14 @@
     {
       "adminNo": "4",
       "id": 2
+    },
+    {
+      "adminNo": "4",
+      "id": 3
+    },
+    {
+      "adminNo": "4",
+      "id": 4
     }
   ],
   "userinformation": [
@@ -856,32 +915,41 @@
       "date": "2023-05-28"
     }
   ],
-  "userinfomation": {
-    "userNo": 14,
-    "userId": "asd2135",
-    "userPw": "$2a$10$e98i2faUYoPISCHAoeLyOe0s9VuMxeZ0MrM95TCIYKeI8M38Hm6bu",
-    "userName": "최현식",
-    "userAuth": "ROLE_ADMIN",
-    "userPhone": "01097553489",
-    "userEmail": "chsshc_@naver.com",
-    "userBirth": "1999-08-03 00:00:00",
-    "appendDate": "2023-04-18 20:47:33",
-    "updateDate": "2023-04-18 20:47:33",
-    "userCafe": "니뽕내뽕",
-    "savedNm": null,
-    "admin_id": 4,
-    "accountNonLocked": true,
-    "authorities": [
-      {
-        "authority": "ROLE_ADMIN"
-      }
-    ],
-    "authkey": null,
-    "authstatus": 0,
-    "username": "asd2135",
-    "password": "$2a$10$e98i2faUYoPISCHAoeLyOe0s9VuMxeZ0MrM95TCIYKeI8M38Hm6bu",
-    "accountNonExpired": true,
-    "credentialsNonExpired": true,
-    "enabled": true
-  }
+  "userinfomation": [
+    {
+      "userNo": 14,
+      "userId": "asd2135",
+      "userPw": "$2a$10$e98i2faUYoPISCHAoeLyOe0s9VuMxeZ0MrM95TCIYKeI8M38Hm6bu",
+      "userName": "최현식",
+      "userAuth": "ROLE_ADMIN",
+      "userPhone": "01097553489",
+      "userEmail": "chsshc_@naver.com",
+      "userBirth": "1999-08-03 00:00:00",
+      "appendDate": "2023-04-18 20:47:33",
+      "updateDate": "2023-04-18 20:47:33",
+      "userCafe": "니뽕내뽕",
+      "savedNm": null,
+      "admin_id": 4,
+      "accountNonLocked": true,
+      "authorities": [
+        {
+          "authority": "ROLE_ADMIN"
+        }
+      ],
+      "authkey": null,
+      "authstatus": 0,
+      "username": "asd2135",
+      "password": "$2a$10$e98i2faUYoPISCHAoeLyOe0s9VuMxeZ0MrM95TCIYKeI8M38Hm6bu",
+      "accountNonExpired": true,
+      "credentialsNonExpired": true,
+      "enabled": true
+    }
+  ],
+  "content": [
+    {
+      "name": "조진형",
+      "party_size": 3,
+      "timeAdded": "2022"
+    }
+  ]
 }

@@ -1,3 +1,7 @@
+const Btn = document.querySelector(".Left");
+const OnText = document.querySelector(".OnText");
+const OffText = document.querySelector(".OffText");
+
 fetch("http://localhost:4000/userinfo")
   .then((res) => {
     return res.json();
@@ -48,6 +52,7 @@ function updateData(data) {
 
 function open_res(data) {
   const obj = data[0]; // 첫 번째 객체 선택
+  console.log(obj);
 
   if (obj.open === false) {
     Btn.addEventListener("click", () => {
@@ -62,10 +67,10 @@ function open_res(data) {
   }
 
   if (obj.open === false) {
-    ON.style.display = "none";
-    OFF.style.display = "block";
+    OnText.style.display = "none";
+    OffText.style.display = "block";
   } else if (obj.open === true) {
-    ON.style.display = "block";
-    OFF.style.display = "none";
+    OnText.style.display = "block";
+    OffText.style.display = "none";
   }
 }

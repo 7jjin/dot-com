@@ -109,7 +109,7 @@ function check() {
             <div class="Store_Sign">
               <div class="Store_Image"></div>
               <div class="Store_Name">
-                <h4 class="Store_Title">"${adminCafe}"</h4>
+                <h4 class="Store_Title">${adminCafe}</h4>
                 <p class="detail">"${intro}"</p>
                 <div class="rating">
                   <span class="Star">⭐</span>
@@ -133,7 +133,7 @@ function check() {
             <div class="Store_Sign">
               <div class="Store_Image"></div>
               <div class="Store_Name">
-                <h4 class="Store_Title">"${adminCafe}"</h4>
+                <h4 class="Store_Title">${adminCafe}</h4>
                 <p class="detail">"${intro}"</p>
                 <div class="rating">
                   <span class="Star">⭐</span>
@@ -151,6 +151,10 @@ function check() {
             </div>`;
             }
             Openstores.onclick = function (event) {
+              sessionStorage.setItem("selectedValue", adminNo); //sessionStorage에 가게고유의 adminNo값 저장
+              window.location.href = "/JoJinHyeong/Store_info/store.html";
+            };
+            Closestores.onclick = function (event) {
               sessionStorage.setItem("selectedValue", adminNo); //sessionStorage에 가게고유의 adminNo값 저장
               window.location.href = "/JoJinHyeong/Store_info/store.html";
             };
@@ -187,7 +191,7 @@ function check() {
             <div class="Store_Sign">
               <div class="Store_Image"></div>
               <div class="Store_Name">
-                <h4 class="Store_Title">"${adminCafe}"</h4>
+                <h4 class="Store_Title">${adminCafe}</h4>
                 <p class="detail">"${intro}"</p>
                 <div class="rating">
                   <span class="Star">⭐</span>
@@ -210,7 +214,7 @@ function check() {
             <div class="Store_Sign">
               <div class="Store_Image"></div>
               <div class="Store_Name">
-                <h4 class="Store_Title">"${adminCafe}"</h4>
+                <h4 class="Store_Title">${adminCafe}</h4>
                 <p class="detail">"${intro}"</p>
                 <div class="rating">
                   <span class="Star">⭐</span>
@@ -224,6 +228,10 @@ function check() {
           </div>`;
             }
             Openstores.onclick = function (event) {
+              sessionStorage.setItem("selectedValue", adminNo); //sessionStorage에 가게고유의 adminNo값 저장
+              window.location.href = "/JoJinHyeong/Store_info/store.html";
+            };
+            Closestores.onclick = function (event) {
               sessionStorage.setItem("selectedValue", adminNo); //sessionStorage에 가게고유의 adminNo값 저장
               window.location.href = "/JoJinHyeong/Store_info/store.html";
             };
@@ -264,7 +272,7 @@ function check() {
             <div class="Store_Sign">
               <div class="Store_Image"></div>
               <div class="Store_Name">
-                <h4 class="Store_Title">"${adminCafe}"</h4>
+                <h4 class="Store_Title">${adminCafe}</h4>
                 <p class="detail">"${intro}"</p>
                 <div class="rating">
                   <span class="Star">⭐</span>
@@ -287,7 +295,7 @@ function check() {
             <div class="Store_Sign">
               <div class="Store_Image"></div>
               <div class="Store_Name">
-                <h4 class="Store_Title">"${adminCafe}"</h4>
+                <h4 class="Store_Title">${adminCafe}</h4>
                 <p class="detail">"${intro}"</p>
                 <div class="rating">
                   <span class="Star">⭐</span>
@@ -301,6 +309,10 @@ function check() {
           </div>`;
           }
           Openstores.onclick = function (event) {
+            sessionStorage.setItem("selectedValue", adminNo); //sessionStorage에 가게고유의 adminNo값 저장
+            window.location.href = "/JoJinHyeong/Store_info/store.html";
+          };
+          Closestores.onclick = function (event) {
             sessionStorage.setItem("selectedValue", adminNo); //sessionStorage에 가게고유의 adminNo값 저장
             window.location.href = "/JoJinHyeong/Store_info/store.html";
           };
@@ -364,14 +376,14 @@ function menuClick_Mul(data, array) {
               <div class="Store_Sign">
                 <div class="Store_Image"></div>
                 <div class="Store_Name">
-                  <h4 class="Store_Title">"${adminCafe}"</h4>
+                  <h4 class="Store_Title">${adminCafe}</h4>
                   <p class="detail">"${intro}"</p>
                   <div class="rating">
                     <span class="Star">⭐</span>
                     <span class="Star_Rating">4.5</span>
                     <span class="Review_Rating">(${review})</span>
                   </div>
-                  <span class="tags">연어 및 각종 일식</span><br>
+                  <span class="tags">${foodType}</span><br>
                   <span class="address">"${addr}"</span>
                 </div>
               </div>
@@ -388,14 +400,14 @@ function menuClick_Mul(data, array) {
               <div class="Store_Sign">
                 <div class="Store_Image"></div>
                 <div class="Store_Name">
-                  <h4 class="Store_Title">"${adminCafe}"</h4>
+                  <h4 class="Store_Title">${adminCafe}</h4>
                   <p class="detail">"${intro}"</p>
                   <div class="rating">
                     <span class="Star">⭐</span>
                     <span class="Star_Rating">4.5</span>
                     <span class="Review_Rating">(${review})</span>
                   </div>
-                  <span class="tags">연어 및 각종 일식</span><br>
+                  <span class="tags">${foodType}</span><br>
                   <span class="address">"${addr}"</span>
                 </div>
               </div>
@@ -452,14 +464,14 @@ function menuClick_sol(data, array) {
               <div class="Store_Sign">
                 <div class="Store_Image"></div>
                 <div class="Store_Name">
-                  <h4 class="Store_Title">"${adminCafe}"</h4>
+                  <h4 class="Store_Title">${adminCafe}</h4>
                   <p class="detail">"${intro}"</p>
                   <div class="rating">
                     <span class="Star">⭐</span>
                     <span class="Star_Rating">4.5</span>
                     <span class="Review_Rating">(${review})</span>
                   </div>
-                  <span class="tags">연어 및 각종 일식</span><br>
+                  <span class="tags">${foodType}</span><br>
                   <span class="address">"${addr}"</span>
                 </div>
               </div>
@@ -476,14 +488,14 @@ function menuClick_sol(data, array) {
               <div class="Store_Sign">
                 <div class="Store_Image"></div>
                 <div class="Store_Name">
-                  <h4 class="Store_Title">"${adminCafe}"</h4>
+                  <h4 class="Store_Title">${adminCafe}</h4>
                   <p class="detail">"${intro}"</p>
                   <div class="rating">
                     <span class="Star">⭐</span>
                     <span class="Star_Rating">4.5</span>
                     <span class="Review_Rating">(${review})</span>
                   </div>
-                  <span class="tags">연어 및 각종 일식</span><br>
+                  <span class="tags">${foodType}</span><br>
                   <span class="address">"${addr}"</span>
                 </div>
               </div>
@@ -537,14 +549,14 @@ function menuClick(data) {
               <div class="Store_Sign">
                 <div class="Store_Image"></div>
                 <div class="Store_Name">
-                  <h4 class="Store_Title">"${adminCafe}"</h4>
+                  <h4 class="Store_Title">${adminCafe}</h4>
                   <p class="detail">"${intro}"</p>
                   <div class="rating">
                     <span class="Star">⭐</span>
                     <span class="Star_Rating">4.5</span>
                     <span class="Review_Rating">(${review})</span>
                   </div>
-                  <span class="tags">연어 및 각종 일식</span><br>
+                  <span class="tags">${foodType}</span><br>
                   <span class="address">"${addr}"</span>
                 </div>
               </div>
@@ -561,14 +573,14 @@ function menuClick(data) {
               <div class="Store_Sign">
                 <div class="Store_Image"></div>
                 <div class="Store_Name">
-                  <h4 class="Store_Title">"${adminCafe}"</h4>
+                  <h4 class="Store_Title">${adminCafe}</h4>
                   <p class="detail">"${intro}"</p>
                   <div class="rating">
                     <span class="Star">⭐</span>
                     <span class="Star_Rating">4.5</span>
                     <span class="Review_Rating">(${review})</span>
                   </div>
-                  <span class="tags">연어 및 각종 일식</span><br>
+                  <span class="tags">${foodType}</span><br>
                   <span class="address">"${addr}"</span>
                 </div>
               </div>

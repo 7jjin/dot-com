@@ -1,100 +1,79 @@
 <!DOCTYPE html>
 <html lang="ko">
-  <head>
-    <meta charset="UTF-8" />
-    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Log-in</title>
-    <link rel="stylesheet" href="login.css" />
-    <link rel="preconnect" href="https://fonts.googleapis.com" />
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-    <link
-      href="https://fonts.googleapis.com/css2?family=Cabin:wght@400;500;600;700&family=Open+Sans:wght@300;400;500;600;700;800&display=swap"
-      rel="stylesheet"
-    />
-    <script
-      src="https://kit.fontawesome.com/06b646a751.js"
-      crossorigin="anonymous"
-    ></script>
-  </head>
-  <body>
-    <div id="login_out">
-      <div class="login_in">
-        <div class="logo">
-          <img src="/img/FOODEAT.png" alt="logo" />
-        </div>
-        <div class="middle">
-          <form class="main_login">
-            <div class="input_row" id="id_box">
-              <div class="icon_box">
-                <div class="icon"><i class="fa-regular fa-user"></i></div>
-              </div>
-              <input
-                required
-                class="id"
-                type="text"
-                style="border: 0 solid black"
-                placeholder="아이디 또는 이메일"
-              />
-              <div class="X_box" id="id_remove">
-                <div class="X_icon">
-                  <i class="fa-solid fa-circle-xmark"></i>
-                </div>
-              </div>
-            </div>
-            <div class="input_row" id="password_box">
-              <div class="icon_box">
-                <div class="icon"><i class="fa-solid fa-lock"></i></div>
-              </div>
-              <input
-                required
-                class="password"
-                type="password"
-                style="border: 0 solid black"
-                placeholder="비밀번호"
-              />
-              <div class="X_box" id="pw_remove">
-                <div class="X_icon">
-                  <i class="fa-solid fa-circle-xmark"></i>
-                </div>
-              </div>
-            </div>
 
-            <input class="confirm" type="submit" value="로그인" />
-          </form>
+<head>
+  <meta charset="UTF-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Log-in</title>
+  <link rel="stylesheet" href="login.css" />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link
+    href="https://fonts.googleapis.com/css2?family=Cabin:wght@400;500;600;700&family=Open+Sans:wght@300;400;500;600;700;800&display=swap"
+    rel="stylesheet" />
+  <script src="https://kit.fontawesome.com/06b646a751.js" crossorigin="anonymous"></script>
+</head>
+
+<body>
+  <div id="login_out">
+    <div class="login_in">
+      <div class="logo">
+        <img src="/img/FOODEAT.png" alt="logo" />
+      </div>
+      <div class="middle">
+        <form class="main_login">
+          <div class="input_row" id="id_box">
+            <div class="icon_box">
+              <div class="icon"><i class="fa-regular fa-user"></i></div>
+            </div>
+            <input required class="id" type="text" style="border: 0 solid black" placeholder="아이디 또는 이메일" />
+            <div class="X_box" id="id_remove">
+              <div class="X_icon">
+                <i class="fa-solid fa-circle-xmark"></i>
+              </div>
+            </div>
+          </div>
+          <div class="input_row" id="password_box">
+            <div class="icon_box">
+              <div class="icon"><i class="fa-solid fa-lock"></i></div>
+            </div>
+            <input required class="password" type="password" style="border: 0 solid black" placeholder="비밀번호" />
+            <div class="X_box" id="pw_remove">
+              <div class="X_icon">
+                <i class="fa-solid fa-circle-xmark"></i>
+              </div>
+            </div>
+          </div>
+          <div class="error_login"></div>
+          <input class="confirm" type="submit" value="로그인" />
+        </form>
+      </div>
+      <div class="bottom">
+        <div class="find">
+          <a href="#" onclick="location.href='/JoSeungJun/SignUp_Class/SignUp_Class.html'">회원가입</a>
+          <a>|</a>
+          <a href="#" onclick="location.href='/JoSeungJun/IdFind/IdFind.html'">아이디 찾기</a>
+          <a>|</a>
+          <a href="#" onclick="location.href='/JoSeungJun/PassFind/PassFind.html'">비밀번호 찾기</a>
         </div>
-        <div class="bottom">
-          <div class="find">
-            <a href="#" onclick="location.href='/JoSeungJun/SignUp_Class/SignUp_Class.html'"
-              >회원가입</a
-            >
-            <a>|</a>
-            <a href="#" onclick="location.href='/JoSeungJun/IdFind/IdFind.html'"
-              >아이디 찾기</a
-            >
-            <a>|</a>
-            <a
-              href="#"
-              onclick="location.href='/JoSeungJun/PassFind/PassFind.html'"
-              >비밀번호 찾기</a
-            >
-          </div>
-          <div class="kakao_login">
-            <button type="button">
-              <img src="/img/kakao.png" alt="kakao" />
-              <p>카카오 로그인</p>
-            </button>
-          </div>
-          <div class="naver_login">
-            <button type="button">
-              <img src="/img/Naver.png" alt="naver" />
-              <p>네이버 로그인</p>
-            </button>
-          </div>
+        <div class="kakao_login">
+          <button type="button">
+            <img src="/img/kakao.png" alt="kakao" />
+            <p>카카오 로그인</p>
+          </button>
+        </div>
+        <div class="naver_login">
+          <button type="button">
+            <img src="/img/Naver.png" alt="naver" />
+            <p>네이버 로그인</p>
+          </button>
         </div>
       </div>
     </div>
-    <script src="/JoJinHyeong/loginPage/id&pw.js"></script>
-  </body>
+  </div>
+  <script src="/JoJinHyeong/loginPage/id&pw.js"></script>
+</body>
+
 </html>

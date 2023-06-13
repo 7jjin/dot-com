@@ -11,7 +11,6 @@ const closeBtn = document.querySelector(".close");
 const NameText = document.querySelector(".NameText");
 const PhoneNumText = document.querySelector(".PhoneNumText");
 
-
 fetch("http://localhost:4000/waiting")
   .then((res) => {
     return res.json();
@@ -23,28 +22,28 @@ fetch("http://localhost:4000/waiting")
     console.log(error);
   });
 
-  //adminNo,userNo에 데이터를 보낸는 함수
-  function sendData(adminNo, userNo) {
-    fetch("http://localhost:4000/waiting", {
-      method: "POST",
-      body: JSON.stringify({ adminNo, userNo }),
-      headers: {
-        "Content-Type": "application/json",
-      },
+//adminNo,userNo에 데이터를 보낸는 함수
+function sendData(adminNo, userNo) {
+  fetch("http://localhost:4000/waiting", {
+    method: "POST",
+    body: JSON.stringify({ adminNo, userNo }),
+    headers: {
+      "Content-Type": "application/json",
+    },
+  })
+    .then((response) => {
+      if (response.ok) {
+        console.log("데이터 전송 성공");
+        location.reload();
+      } else {
+        console.log("데이터 전송 실패");
+      }
     })
-      .then((response) => {
-        if (response.ok) {
-          console.log("데이터 전송 성공");
-          location.reload();
-        } else {
-          console.log("데이터 전송 실패");
-        }
-      })
-      .catch((error) => {
-        console.log("데이터 전송 중 오류 발생:", error);
-      });
-  }
-  
+    .catch((error) => {
+      console.log("데이터 전송 중 오류 발생:", error);
+    });
+}
+
 function waitingList(data) {
   for (let i = 0; i < data.length; i++) {
     let waitingName = data[i].name;
@@ -54,6 +53,7 @@ function waitingList(data) {
     let blacklist = data[i].blacklisted;
     let userNo = data[i].userNo;
     let adminNo = data[i].adminNo;
+    let timeAdded = data[i].timeAdded;
     let waitings = document.createElement("tr");
     if (blacklist === true) {
       waitings.className = "TRtable black";
@@ -67,18 +67,20 @@ function waitingList(data) {
     let WaiterName = document.querySelector(".WaiterName");
     let NumText = document.querySelector(".NumText");
     let CountNum = document.querySelector(".CountNumText");
-    let PeopleText = document.querySelector(".PepleNumText");
+    let PeopleText = document.querySelector(".PeopleNumText");
+    let DateText = document.querySelector(".DateText");
 
     waitings.innerHTML = `
             <tr class="TRtable">
               <td class="NumberTD">${i + 1} 번</td>
               <td class="NameTD">${waitingName}</td>
               <td class="MenTD">${waitingSize} 명</td>
-              <td class="VisitTD">${waitingQue} 번</td>
               <td class="PhoneTD">${waitingNum}</td>
             </tr>`;
+    let time = timeAdded;
+    let people = waitingSize;
     wait_Zone.append(waitings);
-
+    console.log(time, people);
     let waitingsChildren = waitings.children;
     if (blacklist === true) {
       for (let i = 0; i < waitingsChildren.length; i++) {
@@ -87,14 +89,14 @@ function waitingList(data) {
     }
 
     waitings.addEventListener("click", function () {
-      WaiterName.textContent = this.querySelector('.NameTD').textContent;
-      NameText.textContent = this.querySelector('.NameTD').textContent;
-      NumText.textContent = this.querySelector('.PhoneTD').textContent;
-      PhoneNumText.textContent = this.querySelector('.PhoneTD').textContent;
-      CountNum.textContent = this.querySelector('.VisitTD').textContent;
-      PeopleText.textContent = this.querySelector('.MenTD').textContent;
+      WaiterName.textContent = this.querySelector(".NameTD").textContent;
+      NameText.textContent = this.querySelector(".NameTD").textContent;
+      NumText.textContent = this.querySelector(".PhoneTD").textContent;
+      PhoneNumText.textContent = this.querySelector(".PhoneTD").textContent;
+      DateText.innerHTML = time;
+      PeopleText.innerHTML = `${people}명`;
 
-      if (this.classList.contains('black')) {
+      if (this.classList.contains("black")) {
         lockBtn.style.display = "block";
         unlockBtn.style.display = "none";
         BlackPeople.style.display = "block";
@@ -105,11 +107,11 @@ function waitingList(data) {
       }
 
       lockBtn.addEventListener("click", function () {
-        console.log(adminNo, userNo)
+        console.log(adminNo, userNo);
         sendData(adminNo, userNo);
       });
       ReserveBtn.addEventListener("click", function () {
-        console.log(adminNo, userNo)
+        console.log(adminNo, userNo);
         sendData(adminNo, userNo);
       });
 
@@ -126,7 +128,7 @@ function showdetails() {
 
 // 모달창 닫기 함수
 function closeModal(e) {
-  e.style.display = 'none';
+  e.style.display = "none";
 }
 
 X.addEventListener("click", () => {
@@ -138,6 +140,5 @@ unlockBtn.addEventListener("click", function () {
 });
 
 closeBtn.addEventListener("click", function () {
-  closeModal(modal)
+  closeModal(modal);
 });
-

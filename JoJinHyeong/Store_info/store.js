@@ -338,6 +338,8 @@ fetch("http://localhost:4000/waitlist")
   .then((data) => {
     // 로그인 정보가 있을때
     if (data[0].name) {
+      const order = document.querySelector(".order");
+      console.log(order);
       utilList_login.addEventListener("click", function () {
         location.href = "/JoSeungJun/MyPage_Account/MyPage_Account.html";
       });

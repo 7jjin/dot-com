@@ -28,6 +28,7 @@
   <script defer src="/JoJinHyeong/mainPage/inputPassword.js"></script>
   <script defer src="/JoJinHyeong/mainPage/map.js"></script>
   <script defer src="/JoJinHyeong/mainPage/mainDB.js"></script>
+  <script defer src="/JoJinHyeong/mainPage/search.js"></script>"
 
 
 
@@ -69,7 +70,9 @@
           </div>
           <div class="headerSearch">
             <form class="searchForm">
-              <input type="text" class="search" placeholder="식당을 입력하세요" />
+              <input type="text" class="search" placeholder="식당을 입력하세요" autocomplete="off" />
+              <!-- 자동완성 단어 리스트 -->
+              <div class="autocomplete"></div>
               <div class="searchIcon">
                 <i class="fa-solid fa-magnifying-glass"></i>
               </div>
@@ -78,6 +81,7 @@
               <i class="fa-solid fa-magnifying-glass"></i>
             </div>
           </div>
+
           <div class="headerUtil">
             <div class="utilList">
               <div class="utilList_login">
@@ -246,7 +250,7 @@
             <ul data-region="seoul">
               <li>
                 <label>
-                  <input type="checkbox" name="region">광진구
+                  <input type="checkbox" name="region">강동구
                 </label>
               </li>
               <li>
@@ -264,6 +268,11 @@
               <li>
                 <label>
                   <input type="checkbox" name="region">수원시
+                </label>
+              </li>
+              <li>
+                <label>
+                  <input type="checkbox" name="region">김포시
                 </label>
               </li>
             </ul>
